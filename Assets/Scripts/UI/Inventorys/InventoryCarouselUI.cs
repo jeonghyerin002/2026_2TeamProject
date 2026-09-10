@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
+using System;
 
 /// <summary>
 /// 두 슬롯을 재사용해 인벤토리 순환 이동과 중앙 확대를 관리함
-/// 아직 확장성 없음
+/// Group 연결 시 선택 상태는 Group이 관리하고 이 컴포넌트는 표시를 담당함
 /// </summary>
 public class InventoryCarouselUI : MonoBehaviour
 {
@@ -26,7 +27,7 @@ public class InventoryCarouselUI : MonoBehaviour
     [SerializeField]
     private AnimationCurve moveCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
 
-    private bool startOpen;
+    private bool startOpen = false;
 
     private InventorySlotView currentView;
     private InventorySlotView bufferView;
@@ -39,21 +40,50 @@ public class InventoryCarouselUI : MonoBehaviour
     private int lastRequestFrame = -10;
 
     private bool isMoving;
+    private UIGroupController groupController;
+    private int presentationVersion;
 
     public bool IsOpen => inventoryPanel != null && inventoryPanel.activeSelf;
+    internal bool IsMoving => isMoving;
+    private int ItemCount => groupController != null ? groupController.Data.ItemCount : itemSprites?.Length ?? 0;
 
 
     private void Awake()
     {
+        if (!EnsureReferences() || groupController != null)
+        {
+            return;
+        }
+
+        inventoryPanel.SetActive(startOpen);
+        RefreshImmediate();
+    }
+
+    internal void Initialize(UIGroupController controller)
+    {
+        groupController = controller;
+        EnsureReferences();
+    }
+
+    private bool EnsureReferences()
+    {
+        if (currentView != null && bufferView != null)
+        {
+            return true;
+        }
+
+        if (inventoryPanel == null || slotViews == null || slotViews.Length < 2 || slotViews[0] == null || slotViews[1] == null || slotViews[0] == slotViews[1])
+        {
+            return false;
+        }
+
         currentView = slotViews[0];
         bufferView = slotViews[1];
 
         currentGroup = GetCanvasGroup(currentView);
         bufferGroup = GetCanvasGroup(bufferView);
 
-        inventoryPanel.SetActive(startOpen);
-
-        RefreshImmediate();
+        return true;
     }
 
 
@@ -66,16 +96,18 @@ public class InventoryCarouselUI : MonoBehaviour
     //인벤토리 UI를 열거나 닫음
     public void SetOpen(bool isOpen)
     {
+        if (groupController != null)
+        {
+            groupController.RequestOpen(isOpen);
+            return;
+        }
+
         if (inventoryPanel == null)
         {
             return;
         }
 
-        StopAllCoroutines();
-
-        isMoving = false;
-        requestedDirection = 0;
-        lastRequestFrame = -10;
+        StopPresentation();
 
         inventoryPanel.SetActive(isOpen);
 
@@ -91,6 +123,39 @@ public class InventoryCarouselUI : MonoBehaviour
         Move(-1);
     }
 
+    internal void StopPresentation()
+    {
+        presentationVersion++;
+        StopAllCoroutines();
+        isMoving = false;
+        requestedDirection = 0;
+        lastRequestFrame = -10;
+    }
+
+    private void OnDisable()
+    {
+        StopPresentation();
+    }
+
+    internal void RefreshSelection()
+    {
+        StopPresentation();
+        selectedIndex = groupController.SelectedIndex;
+        RefreshImmediate();
+    }
+
+    internal bool AnimateSelection(int itemIndex, int direction, Action onCompleted)
+    {
+        if (!isActiveAndEnabled || !IsOpen || isMoving || !EnsureReferences() || itemIndex < 0 || itemIndex >= ItemCount)
+        {
+            return false;
+        }
+
+        StopAllCoroutines();
+        StartCoroutine(MoveRoutine(direction, itemIndex, onCompleted));
+        return true;
+    }
+
     public void MoveRight()
     {
         Move(1);
@@ -102,7 +167,13 @@ public class InventoryCarouselUI : MonoBehaviour
     /// </summary>
     private void Move(int direction)
     {
-        if (!IsOpen || itemSprites == null || itemSprites.Length <= 1) return;
+        if (groupController != null)
+        {
+            groupController.RequestMove(direction);
+            return;
+        }
+
+        if (!isActiveAndEnabled || !IsOpen || ItemCount <= 1 || !EnsureReferences()) return;
         
 
         requestedDirection = direction;
@@ -114,20 +185,19 @@ public class InventoryCarouselUI : MonoBehaviour
         // 대기 슬롯 페이드가 실행 중이면 종료함
         StopAllCoroutines();
 
-        StartCoroutine(MoveRoutine(direction));
+        StartCoroutine(MoveRoutine(direction, WrapIndex(selectedIndex + direction)));
     }
 
 
     /// <summary>
     /// 두 슬롯의 이동, 확대, 페이드, 역할 교체를 처리함
     /// </summary>
-    private IEnumerator MoveRoutine(int direction)
+    private IEnumerator MoveRoutine(int direction, int targetIndex, Action onCompleted = null)
     {
         isMoving = true;
+        int version = ++presentationVersion;
 
-        int targetIndex = WrapIndex(selectedIndex + direction);
-
-        bufferView.SetSprite(itemSprites[targetIndex]);
+        bufferView.SetSprite(GetSprite(targetIndex));
         ApplyView(bufferView, direction * slotSpacing);
 
         bufferGroup.alpha = 0f;
@@ -177,17 +247,22 @@ public class InventoryCarouselUI : MonoBehaviour
         bufferGroup.alpha = 0f;
 
         isMoving = false;
-
-        // 키가 계속 눌려 있으면 바로 다음 이동을 시작함
-        if (Time.frameCount - lastRequestFrame <= 1)
+        onCompleted?.Invoke();
+        if (version != presentationVersion || !IsOpen || !isActiveAndEnabled)
         {
-            StartCoroutine(MoveRoutine(requestedDirection));
             yield break;
         }
 
-        int nextIndex = WrapIndex(selectedIndex + direction);
+        // 키가 계속 눌려 있으면 바로 다음 이동을 시작함
+        if (groupController == null && moveDuration > 0f && Time.frameCount - lastRequestFrame <= 1)
+        {
+            StartCoroutine(MoveRoutine(requestedDirection, WrapIndex(selectedIndex + requestedDirection)));
+            yield break;
+        }
 
-        bufferView.SetSprite(itemSprites[nextIndex]);
+        int nextIndex = GetAdjacentIndex(selectedIndex, direction);
+
+        bufferView.SetSprite(GetSprite(nextIndex));
         ApplyView(bufferView, direction * slotSpacing);
 
         if (restFadeDuration <= 0f)
@@ -218,7 +293,7 @@ public class InventoryCarouselUI : MonoBehaviour
     {
         view.SetPosition(new Vector2(positionX, 0f));
 
-        float distance = Mathf.Clamp01(Mathf.Abs(positionX) / slotSpacing);
+        float distance = Mathf.Clamp01(Mathf.Abs(positionX) / Mathf.Max(0.01f, slotSpacing));
 
         float centerWeight = Mathf.SmoothStep(1f, 0f, distance);
 
@@ -231,15 +306,12 @@ public class InventoryCarouselUI : MonoBehaviour
     /// </summary>
     private void RefreshImmediate()
     {
-        if (currentView == null || 
-            bufferView == null || 
-            itemSprites == null || 
-            itemSprites.Length == 0) return;
+        if (!EnsureReferences()) return;
         
 
-        currentView.SetSprite(itemSprites[selectedIndex]);
+        currentView.SetSprite(GetSprite(selectedIndex));
 
-        bufferView.SetSprite(itemSprites[WrapIndex(selectedIndex + 1)]);
+        bufferView.SetSprite(GetSprite(GetAdjacentIndex(selectedIndex, 1)));
 
         ApplyView(currentView, 0f);
         ApplyView(bufferView, slotSpacing);
@@ -267,9 +339,23 @@ public class InventoryCarouselUI : MonoBehaviour
     // 배열 끝을 넘어가면 반대쪽으로 순환시킴
     private int WrapIndex(int index)
     {
-        int count = itemSprites.Length;
+        int count = ItemCount;
 
-        return (index % count + count) % count;
+        return count > 0 ? (index % count + count) % count : -1;
     }
 
+    private int GetAdjacentIndex(int index, int direction)
+    {
+        return groupController != null ? groupController.GetAdjacentIndex(index, direction) : WrapIndex(index + direction);
+    }
+
+    private Sprite GetSprite(int index)
+    {
+        if (index < 0 || index >= ItemCount)
+        {
+            return null;
+        }
+
+        return groupController != null ? groupController.GetItemSprite(index) : itemSprites[index];
+    }
 }

@@ -9,6 +9,7 @@ public class InventoryInput : MonoBehaviour
 {
     [Tooltip("연결하면 Group 입력만 처리한다. 항상 활성인 입력용 GameObject에 하나만 배치한다.")]
     [SerializeField] private UINavigationManager navigationManager;
+    [SerializeField] private Key toggleKey = Key.Q;
     [SerializeField] private InventoryCarouselUI carouselUI;
 
 
@@ -54,9 +55,20 @@ public class InventoryInput : MonoBehaviour
 
     private void ProcessGroupInput()
     {
-        UIGroupController controller = navigationManager.CurrentController;
         Keyboard keyboard = Keyboard.current;
-        if (controller == null || !controller.CanReceiveInput || keyboard == null)
+        if (keyboard == null || !navigationManager.isActiveAndEnabled)
+        {
+            return;
+        }
+
+        if (toggleKey != Key.None && Enum.IsDefined(typeof(Key), toggleKey) && keyboard[toggleKey].wasPressedThisFrame)
+        {
+            navigationManager.ToggleInitialGroup();
+            return;
+        }
+
+        UIGroupController controller = navigationManager.CurrentController;
+        if (controller == null || !controller.CanReceiveInput)
         {
             return;
         }
@@ -71,7 +83,7 @@ public class InventoryInput : MonoBehaviour
                 continue;
             }
 
-            if (keyboard[binding.Key].wasPressedThisFrame)
+            if (binding.RepeatWhileHeld ? keyboard[binding.Key].isPressed : keyboard[binding.Key].wasPressedThisFrame)
             {
                 controller.ExecuteInteraction(binding.Interaction);
                 // 한 프레임에 하나만 처리해 이동 입력이 다음 Group으로 전파되지 않게 한다.

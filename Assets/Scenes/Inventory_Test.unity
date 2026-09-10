@@ -215,6 +215,7 @@ RectTransform:
   m_Children:
   - {fileID: 379874516}
   - {fileID: 1159327896}
+  - {fileID: 2100000001}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -233,6 +234,7 @@ GameObject:
   - component: {fileID: 379874516}
   - component: {fileID: 379874515}
   - component: {fileID: 379874514}
+  - component: {fileID: 1328333856}
   m_Layer: 5
   m_Name: InventoryPanel
   m_TagString: Untagged
@@ -488,9 +490,7 @@ MonoBehaviour:
   slotViews:
   - {fileID: 1625907130}
   - {fileID: 1872031727}
-  itemSprites:
-  - {fileID: 2556273050524669763, guid: 92d983e89a483d14894a41c95def433c, type: 3}
-  - {fileID: 6194237872147809408, guid: dcab639f22579ba4185c903f981c191f, type: 3}
+  itemSprites: []
   slotSpacing: 260
   centerScale: 1.2
   sideScale: 0.8
@@ -533,6 +533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbdc7fc0d2b79d849aa6a2bb9598ab33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventoryInput
+  navigationManager: {fileID: 2100000002}
+  toggleKey: 31
   carouselUI: {fileID: 1159327897}
 --- !u!1 &1328333851
 GameObject:
@@ -581,20 +583,45 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328333851}
   m_CullTransparentMesh: 1
---- !u!114 &1328333855
-MonoBehaviour:
+--- !u!225 &1328333855
+CanvasGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328333851}
   m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
+--- !u!114 &1328333856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 379874513}
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
+  m_Script: {fileID: 11500000, guid: 7341e73aabcc9cd4c938571d6b0045cd, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RectMask2D
-  m_Padding: {x: 0, y: 0, z: 0, w: 0}
-  m_Softness: {x: 0, y: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::UIGroupController
+  data: {fileID: 2100000003}
+  carouselUI: {fileID: 1159327897}
+  itemViews: []
+  selectedScale: 1.2
+  normalScale: 0.8
+  feedbackAudioSource: {fileID: 0}
+  onSelectionChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onItemInvoked:
+    m_PersistentCalls:
+      m_Calls: []
+  onFeedbackRequested:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1625907126
 GameObject:
   m_ObjectHideFlags: 0
@@ -852,6 +879,131 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InventorySlotView
   iconImage: {fileID: 1872031725}
+--- !u!1 &2100000000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100000001}
+  - component: {fileID: 2100000002}
+  m_Layer: 5
+  m_Name: UINavigationManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2100000001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100000000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 96126212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2100000002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100000000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14321a285bacd094597a60b789592978, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::UINavigationManager
+  initialGroup: {fileID: 2100000003}
+  startOpen: 0
+  groups:
+  - {fileID: 1328333856}
+  onGroupChanged:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &2100000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f0bd7e2e15adf48b4f81a61bf46aa9, type: 3}
+  m_Name: Inventory_Test_InventoryGroup
+  m_EditorClassIdentifier: Assembly-CSharp::UIGroupData
+  id: inventory
+  items:
+  - id: item_0
+    sprite: {fileID: 2556273050524669763, guid: 92d983e89a483d14894a41c95def433c, type: 3}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id:
+      sound: {fileID: 0}
+      volume: 1
+  - id: item_1
+    sprite: {fileID: 6194237872147809408, guid: dcab639f22579ba4185c903f981c191f, type: 3}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id:
+      sound: {fileID: 0}
+      volume: 1
+  inputBindings:
+  - key: 15
+    repeatWhileHeld: 1
+    interaction:
+      action: 1
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+  - key: 18
+    repeatWhileHeld: 1
+    interaction:
+      action: 2
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+  initialItemIndex: 0
+  wrapSelection: 1
+  wrapImageStates: 1
+  feedback:
+    id:
+    sound: {fileID: 0}
+    volume: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

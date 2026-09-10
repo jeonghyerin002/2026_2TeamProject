@@ -44,15 +44,22 @@ public class UIInteractionData
     public int ItemIndex => itemIndex;
     public UIGroupData TargetGroup => targetGroup;
     public UIFeedbackData Feedback => feedback;
+
+    public UIInteractionData(UIActionType action = UIActionType.Invoke)
+    {
+        this.action = action;
+    }
 }
 
-/// <summary>한 번 누른 키와 행동을 연결한다. 목록 앞쪽의 일치하는 키가 우선한다.</summary>
+/// <summary>키와 행동을 연결하며 목록 앞쪽의 일치하는 키가 우선함</summary>
 [Serializable]
 public class UIInputBinding
 {
     [SerializeField] private Key key = Key.None;
+    [SerializeField] private bool repeatWhileHeld;
     [SerializeField] private UIInteractionData interaction = new UIInteractionData();
 
     public Key Key => key;
+    public bool RepeatWhileHeld => repeatWhileHeld;
     public UIInteractionData Interaction => interaction;
 }

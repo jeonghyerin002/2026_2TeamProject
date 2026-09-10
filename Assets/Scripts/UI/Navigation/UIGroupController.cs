@@ -10,6 +10,8 @@ using UnityEngine.Events;
 public class UIGroupController : MonoBehaviour
 {
     [SerializeField] private UIGroupData data;
+    [Tooltip("연결하면 두 슬롯의 표시와 애니메이션을 캐러셀에 맡긴다.")]
+    [SerializeField] private InventoryCarouselUI carouselUI;
     [SerializeField] private InventorySlotView[] itemViews = Array.Empty<InventorySlotView>();
     [SerializeField, Min(0f)] private float selectedScale = 1.1f;
     [SerializeField, Min(0f)] private float normalScale = 1f;
@@ -26,6 +28,8 @@ public class UIGroupController : MonoBehaviour
     private int[] imageStateIndices = Array.Empty<int>();
     private bool isOpen;
     private bool isExecuting;
+    private readonly UIInteractionData previousInteraction = new UIInteractionData(UIActionType.SelectPrevious);
+    private readonly UIInteractionData nextInteraction = new UIInteractionData(UIActionType.SelectNext);
 
     public UIGroupData Data => data;
     public int SelectedIndex => selectedIndex;
@@ -64,6 +68,11 @@ public class UIGroupController : MonoBehaviour
             }
         }
 
+        if (carouselUI != null)
+        {
+            carouselUI.Initialize(this);
+        }
+
         return true;
     }
 
@@ -71,16 +80,39 @@ public class UIGroupController : MonoBehaviour
     internal void SetOpen(bool open)
     {
         isOpen = open;
-        if (open)
+        if (!open && carouselUI != null)
         {
-            RefreshViews();
+            carouselUI.StopPresentation();
         }
 
         gameObject.SetActive(open);
         if (open)
         {
+            RefreshViews();
             onSelectionChanged?.Invoke(selectedIndex);
         }
+    }
+
+    internal void RequestOpen(bool open)
+    {
+        if (navigation == null)
+        {
+            return;
+        }
+
+        if (open)
+        {
+            navigation.TryOpenGroup(data);
+        }
+        else if (navigation.CurrentController == this)
+        {
+            navigation.Close();
+        }
+    }
+
+    internal bool RequestMove(int direction)
+    {
+        return ExecuteInteraction(direction < 0 ? previousInteraction : nextInteraction);
     }
 
     /// <summary>Button.onClick에 정수 Item Index를 지정하여 연결할 수 있다.</summary>
@@ -114,8 +146,7 @@ public class UIGroupController : MonoBehaviour
         }
     }
 
-    private bool ExecuteCore(UIInteractionData interaction, int contextIndex, bool allowConfirm,
-        UIFeedbackData feedbackOverride = null)
+    private bool ExecuteCore(UIInteractionData interaction, int contextIndex, bool allowConfirm, UIFeedbackData feedbackOverride = null)
     {
         if (interaction == null || interaction.Action == UIActionType.None || interaction.ItemIndex < -1)
         {
@@ -157,11 +188,9 @@ public class UIGroupController : MonoBehaviour
         switch (interaction.Action)
         {
             case UIActionType.SelectPrevious:
-                executed = MoveSelection(-1);
-                break;
+                return MoveSelection(-1, feedbackOverride ?? interaction.Feedback);
             case UIActionType.SelectNext:
-                executed = MoveSelection(1);
-                break;
+                return MoveSelection(1, feedbackOverride ?? interaction.Feedback);
             case UIActionType.PreviousImage:
                 executed = ChangeImage(itemIndex, -1);
                 break;
@@ -191,23 +220,63 @@ public class UIGroupController : MonoBehaviour
 
         if (executed)
         {
-            UIItemData feedbackItem = interaction.Action == UIActionType.SelectPrevious ||
-                interaction.Action == UIActionType.SelectNext ? SelectedItem : item;
-            PlayFeedback(feedbackOverride ?? interaction.Feedback, feedbackItem?.Feedback);
+            PlayFeedback(feedbackOverride ?? interaction.Feedback, item?.Feedback);
         }
 
         return executed;
     }
 
-    private bool MoveSelection(int direction)
+    private bool MoveSelection(int direction, UIFeedbackData feedback)
     {
-        int count = data.ItemCount;
-        if (count == 0)
+        if (carouselUI != null && carouselUI.IsMoving)
         {
             return false;
         }
 
-        int index = selectedIndex < 0 ? (direction > 0 ? -1 : count) : selectedIndex;
+        int index = GetAdjacentIndex(selectedIndex, direction);
+        if (index < 0)
+        {
+            return false;
+        }
+
+        if (carouselUI != null)
+        {
+            return carouselUI.AnimateSelection(index, direction, () =>
+            {
+                if (!CanReceiveInput)
+                {
+                    return;
+                }
+
+                bool wasExecuting = isExecuting;
+                isExecuting = true;
+                try
+                {
+                    selectedIndex = index;
+                    onSelectionChanged?.Invoke(selectedIndex);
+                    PlayFeedback(feedback, data.GetItem(index)?.Feedback);
+                }
+                finally
+                {
+                    isExecuting = wasExecuting;
+                }
+            });
+        }
+
+        SetSelection(index);
+        PlayFeedback(feedback, data.GetItem(index)?.Feedback);
+        return true;
+    }
+
+    internal int GetAdjacentIndex(int fromIndex, int direction)
+    {
+        int count = data.ItemCount;
+        if (count == 0)
+        {
+            return -1;
+        }
+
+        int index = fromIndex < 0 ? (direction > 0 ? -1 : count) : fromIndex;
         for (int checkedCount = 0; checkedCount < count; checkedCount++)
         {
             index += direction;
@@ -215,7 +284,7 @@ public class UIGroupController : MonoBehaviour
             {
                 if (!data.WrapSelection)
                 {
-                    return false;
+                    return -1;
                 }
 
                 index = (index + count) % count;
@@ -223,17 +292,21 @@ public class UIGroupController : MonoBehaviour
 
             if (data.GetItem(index) != null)
             {
-                if (index == selectedIndex)
+                if (index == fromIndex)
                 {
-                    return false;
+                    return -1;
                 }
 
-                SetSelection(index);
-                return true;
+                return index;
             }
         }
 
-        return false;
+        return -1;
+    }
+
+    internal Sprite GetItemSprite(int itemIndex)
+    {
+        return data.GetItem(itemIndex)?.GetSprite(GetImageStateIndex(itemIndex));
     }
 
     private void SetSelection(int index)
@@ -271,6 +344,12 @@ public class UIGroupController : MonoBehaviour
 
     private void RefreshViews()
     {
+        if (carouselUI != null)
+        {
+            carouselUI.RefreshSelection();
+            return;
+        }
+
         if (itemViews == null || data == null)
         {
             return;
