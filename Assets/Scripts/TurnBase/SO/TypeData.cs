@@ -1,8 +1,8 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 [CreateAssetMenu(fileName = "TypeData", menuName = "TurnBased/TypeData")]
 public class TypeData : ScriptableObject
 {
     public string typeName;
-    public float damageMultiplier = 1.0f; //»ó¼º¿¡ µû¸¥ °ø°İ·Â(¿¹ºñ)
+    public float damageMultiplier = 1.0f; //ìƒì„±ì— ë”°ë¥¸ ê³µê²©ë ¥(ì˜ˆë¹„)
 }

@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using System.Collections.Generic;
 
 [CreateAssetMenu(fileName = "CharacterData", menuName = "TurnBased/CharacterData")]
@@ -10,7 +10,7 @@ public class CharacterData : ScriptableObject
     public int speed;
     public List<AttackData> attackList = new List<AttackData>();
 
-    public void Init() //ÃßÈÄ¿¡ ÇöÀç hp¸¦ ÃæÀüÇàµ¿ÇÏÁö ¾ÊÀ¸¸é ÃÊ±âÈ­ ¾øÀÌ ÁøÇàÇÏµµ·Ï ¼öÁ¤
+    public void Init() //ì¶”í›„ì— í˜„ì¬ hpë¥¼ ì¶©ì „í–‰ë™í•˜ì§€ ì•Šìœ¼ë©´ ì´ˆê¸°í™” ì—†ì´ ì§„í–‰í•˜ë„ë¡ ìˆ˜ì •
     {
         currentHP = fullHP;
         foreach (var attack in attackList)

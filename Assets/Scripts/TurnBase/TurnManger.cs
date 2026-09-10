@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +16,7 @@ public class TurnManager : MonoBehaviour
 
     private void Start()
     {
-        // 1. ÃÊ±âÈ­ ¹× ÅÏ ½ÃÀÛ
+        // 1. ì´ˆê¸°í™” ë° í„´ ì‹œì‘
         player.Init();
         enemy.Init();
         StartCoroutine(TurnLoop());
@@ -26,14 +26,14 @@ public class TurnManager : MonoBehaviour
     {
         while (true)
         {
-            // 2. HP ¹× ÇÃ·¹ÀÌ¾î °ø°İ È½¼ö È®ÀÎ
+            // 2. HP ë° í”Œë ˆì´ì–´ ê³µê²© íšŸìˆ˜ í™•ì¸
             if (CheckBattleEnd())
             {
-                Debug.Log("ÀüÅõ Á¾·á Á¶°Ç ¸¸Á·!");
+                Debug.Log("ì „íˆ¬ ì¢…ë£Œ ì¡°ê±´ ë§Œì¡±!");
                 yield break;
             }
 
-            // 3. AttackPanel È°¼ºÈ­ ¹× ÇÃ·¹ÀÌ¾î °ø°İ ¼±ÅÃ ´ë±â
+            // 3. AttackPanel í™œì„±í™” ë° í”Œë ˆì´ì–´ ê³µê²© ì„ íƒ ëŒ€ê¸°
             attackPanel.SetActive(true);
             isAttackSelected = false;
 
@@ -41,17 +41,17 @@ public class TurnManager : MonoBehaviour
 
             attackPanel.SetActive(false);
 
-            // Àû ½ºÅ³ ·£´ı ¼±ÅÃ (Å×½ºÆ®¿ë)
+            // ì  ìŠ¤í‚¬ ëœë¤ ì„ íƒ (í…ŒìŠ¤íŠ¸ìš©)
             AttackData enemyAttack = GetRandomEnemyAttack();
 
-            // 4. ½ºÇÇµå ºñ±³ ÈÄ ¼±Á¦ °ø°İ ÁøÇà
+            // 4. ìŠ¤í”¼ë“œ ë¹„êµ í›„ ì„ ì œ ê³µê²© ì§„í–‰
             yield return StartCoroutine(ExecuteCombat(selectedPlayerAttack, enemyAttack));
 
-            // 6. Loop¸¦ ÅëÇØ 2¹ø ´Ü°è·Î µ¹¾Æ°¨
+            // 6. Loopë¥¼ í†µí•´ 2ë²ˆ ë‹¨ê³„ë¡œ ëŒì•„ê°
         }
     }
 
-    // UI ¹öÆ° Å¬¸¯ ÀÌº¥Æ®¿¡ ¿¬°áÇÒ ¸Ş¼­µå (0~3¹ø ÀÎµ¦½º)
+    // UI ë²„íŠ¼ í´ë¦­ ì´ë²¤íŠ¸ì— ì—°ê²°í•  ë©”ì„œë“œ (0~3ë²ˆ ì¸ë±ìŠ¤)
     public void OnSelectAttackButton(int attackIndex)
     {
         if (attackIndex < player.attackList.Count)
@@ -64,7 +64,7 @@ public class TurnManager : MonoBehaviour
             }
             else
             {
-                Debug.Log("ÇØ´ç ±â¼úÀÇ ³²Àº È½¼ö°¡ ¾ø½À´Ï´Ù.");
+                Debug.Log("í•´ë‹¹ ê¸°ìˆ ì˜ ë‚¨ì€ íšŸìˆ˜ê°€ ì—†ìŠµë‹ˆë‹¤.");
             }
         }
     }
@@ -78,25 +78,25 @@ public class TurnManager : MonoBehaviour
         AttackData firstSkill = playerFirst ? pAttack : eAttack;
         AttackData secondSkill = playerFirst ? eAttack : pAttack;
 
-        // --- Ã¹ ¹øÂ° °ø°İÀÚ Çàµ¿ ---
+        // --- ì²« ë²ˆì§¸ ê³µê²©ì í–‰ë™ ---
         PerformAttack(firstAttacker, secondAttacker, firstSkill);
 
-        // 5. °ø°İ¹ŞÀº ´ë»óÀÇ HP È®ÀÎ
+        // 5. ê³µê²©ë°›ì€ ëŒ€ìƒì˜ HP í™•ì¸
         if (secondAttacker.currentHP <= 0)
         {
-            Debug.Log($"{secondAttacker.characterName} ¾²·¯Áü! ÅÏÀ» Á¾·áÇÕ´Ï´Ù.");
-            yield break; // ÅÏ Áï½Ã Á¾·á ÈÄ ´ÙÀ½ Loop·Î ÁøÀÔÇÏ¿© ÀüÅõ Á¾·á Ã³¸®
+            Debug.Log($"{secondAttacker.characterName} ì“°ëŸ¬ì§! í„´ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
+            yield break; // í„´ ì¦‰ì‹œ ì¢…ë£Œ í›„ ë‹¤ìŒ Loopë¡œ ì§„ì…í•˜ì—¬ ì „íˆ¬ ì¢…ë£Œ ì²˜ë¦¬
         }
 
-        yield return new WaitForSeconds(1.0f); // ¿¬Ãâ ´ë±â ½Ã°£
+        yield return new WaitForSeconds(1.0f); // ì—°ì¶œ ëŒ€ê¸° ì‹œê°„
 
-        // --- µÎ ¹øÂ° °ø°İÀÚ Çàµ¿ ---
+        // --- ë‘ ë²ˆì§¸ ê³µê²©ì í–‰ë™ ---
         PerformAttack(secondAttacker, firstAttacker, secondSkill);
 
-        // 5. °ø°İ¹ŞÀº ´ë»óÀÇ HP È®ÀÎ
+        // 5. ê³µê²©ë°›ì€ ëŒ€ìƒì˜ HP í™•ì¸
         if (firstAttacker.currentHP <= 0)
         {
-            Debug.Log($"{firstAttacker.characterName} ¾²·¯Áü! ÅÏÀ» Á¾·áÇÕ´Ï´Ù.");
+            Debug.Log($"{firstAttacker.characterName} ì“°ëŸ¬ì§! í„´ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
             yield break;
         }
 
@@ -109,19 +109,19 @@ public class TurnManager : MonoBehaviour
 
         skill.currentCount--;
 
-        // µ¥¹ÌÁö °è»ê ¿¹½Ã (±âº» µ¥¹ÌÁö 10 * »ó¼º °è¼ö)
+        // ë°ë¯¸ì§€ ê³„ì‚° ì˜ˆì‹œ (ê¸°ë³¸ ë°ë¯¸ì§€ 10 * ìƒì„± ê³„ìˆ˜)
         float damageMultiplier = skill.typeData != null ? skill.typeData.damageMultiplier : 1.0f;
         int damage = Mathf.RoundToInt(10 * damageMultiplier);
 
         target.currentHP = Mathf.Max(0, target.currentHP - damage);
 
-        Debug.Log($"{attacker.characterName}ÀÇ {skill.attackName}! " +
-                  $"{target.characterName}¿¡°Ô {damage} µ¥¹ÌÁö (³²Àº HP: {target.currentHP})");
+        Debug.Log($"{attacker.characterName}ì˜ {skill.attackName}! " +
+                  $"{target.characterName}ì—ê²Œ {damage} ë°ë¯¸ì§€ (ë‚¨ì€ HP: {target.currentHP})");
     }
 
     private bool CheckBattleEnd()
     {
-        // µÑ Áß HP°¡ 0ÀÎ Ä³¸¯ÅÍ°¡ ÀÖ°Å³ª, ÇÃ·¹ÀÌ¾îÀÇ »ç¿ë °¡´ÉÇÑ °ø°İ È½¼ö°¡ ¾ø´Â °æ¿ì
+        // ë‘˜ ì¤‘ HPê°€ 0ì¸ ìºë¦­í„°ê°€ ìˆê±°ë‚˜, í”Œë ˆì´ì–´ì˜ ì‚¬ìš© ê°€ëŠ¥í•œ ê³µê²© íšŸìˆ˜ê°€ ì—†ëŠ” ê²½ìš°
         if (player.currentHP <= 0 || enemy.currentHP <= 0) return true;
         if (!player.HasRemainingAttacks()) return true;
 

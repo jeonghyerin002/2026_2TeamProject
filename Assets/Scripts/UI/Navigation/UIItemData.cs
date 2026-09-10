@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 /// <summary>UIGroupData 안에 직렬화되는 Item 정의. 별도 Asset은 필요하지 않다.</summary>

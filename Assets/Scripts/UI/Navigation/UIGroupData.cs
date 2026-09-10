@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 /// <summary>UI Group의 정적 설정. 선택 상태, 이미지 상태, 이동 기록은 저장하지 않는다.</summary>

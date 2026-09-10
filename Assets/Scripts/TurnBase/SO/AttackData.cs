@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "AttackData", menuName = "TurnBased/AttackData")]
 public class AttackData : ScriptableObject
