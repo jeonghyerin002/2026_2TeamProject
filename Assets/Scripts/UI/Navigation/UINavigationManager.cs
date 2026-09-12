@@ -11,7 +11,7 @@ using UnityEngine.Events;
 public class UINavigationManager : MonoBehaviour
 {
     [SerializeField] private UIGroupData initialGroup;
-    [SerializeField] private bool startOpen = true;
+    [SerializeField] private bool startOpen = false;
     [SerializeField] private UIGroupController[] groups = Array.Empty<UIGroupController>();
     [SerializeField] private UnityEvent<UIGroupData> onGroupChanged = new UnityEvent<UIGroupData>();
 
@@ -26,6 +26,7 @@ public class UINavigationManager : MonoBehaviour
     public int HistoryCount => history.Count;
     public bool CanGoBack => history.Count > 0;
     public bool IsTransitioning => isTransitioning;
+    public bool IsOpen => CurrentGroup != null;
 
     private void Awake()
     {
@@ -130,7 +131,7 @@ public class UINavigationManager : MonoBehaviour
         {
             OpenInitialGroup();
         }
-        else
+        else if (CurrentGroup == initialGroup)
         {
             Close();
         }
@@ -149,7 +150,11 @@ public class UINavigationManager : MonoBehaviour
             return false;
         }
 
-        if (CurrentGroup != null)
+        if (CurrentGroup == null || group == initialGroup)
+        {
+            history.Clear();
+        }
+        else
         {
             history.Push(CurrentGroup);
         }
@@ -179,6 +184,12 @@ public class UINavigationManager : MonoBehaviour
                 ChangeGroup(previous, next);
                 return true;
             }
+        }
+
+        if (CurrentGroup != null && CurrentGroup == initialGroup)
+        {
+            Close();
+            return true;
         }
 
         return false;

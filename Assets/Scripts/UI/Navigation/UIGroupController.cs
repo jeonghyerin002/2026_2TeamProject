@@ -1,9 +1,11 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
+using TMPro;
 
 /// <summary>
-/// Group 패널의 루트에 둔다. Update 없이 Manager와 InventoryInput의 요청을 처리한다.
+/// Group 패널의 루트에 둔다. Update 없이 Manager와 UI 입력의 요청을 처리한다.
 /// Item 순서와 Item Views 순서를 맞추며, 기존 InventorySlotView를 표시 용도로 재사용한다.
 /// </summary>
 [DisallowMultipleComponent]
@@ -13,6 +15,11 @@ public class UIGroupController : MonoBehaviour
     [Tooltip("연결하면 두 슬롯의 표시와 애니메이션을 캐러셀에 맡긴다.")]
     [SerializeField] private InventoryCarouselUI carouselUI;
     [SerializeField] private InventorySlotView[] itemViews = Array.Empty<InventorySlotView>();
+    [SerializeField] private Image selectedItemImage;
+    [SerializeField] private Image previousItemImage;
+    [SerializeField] private Image nextItemImage;
+    [SerializeField] private TMP_Text selectedItemName;
+    [SerializeField] private TMP_Text selectedItemDescription;
     [SerializeField, Min(0f)] private float selectedScale = 1.1f;
     [SerializeField, Min(0f)] private float normalScale = 1f;
     [Tooltip("이동 직후에도 소리가 재생되도록 항상 활성인 GameObject의 AudioSource를 연결한다.")]
@@ -168,6 +175,11 @@ public class UIGroupController : MonoBehaviour
 
         if (interaction.Action == UIActionType.Confirm)
         {
+            if (carouselUI != null && carouselUI.IsMoving)
+            {
+                return false;
+            }
+
             // Item 자체에 Confirm을 잘못 지정해도 무한 재귀하지 않는다.
             UIFeedbackData confirmFeedback = interaction.Feedback != null && interaction.Feedback.HasFeedback
                 ? interaction.Feedback : null;
@@ -253,6 +265,7 @@ public class UIGroupController : MonoBehaviour
                 try
                 {
                     selectedIndex = index;
+                    RefreshSelectedItem();
                     onSelectionChanged?.Invoke(selectedIndex);
                     PlayFeedback(feedback, data.GetItem(index)?.Feedback);
                 }
@@ -344,6 +357,7 @@ public class UIGroupController : MonoBehaviour
 
     private void RefreshViews()
     {
+        RefreshSelectedItem();
         if (carouselUI != null)
         {
             carouselUI.RefreshSelection();
@@ -366,6 +380,38 @@ public class UIGroupController : MonoBehaviour
             UIItemData item = data.GetItem(i);
             view.SetSprite(item?.GetSprite(GetImageStateIndex(i)));
             view.SetScale(i == selectedIndex ? selectedScale : normalScale);
+        }
+    }
+
+    private void RefreshSelectedItem()
+    {
+        UIItemData item = SelectedItem;
+        if (selectedItemImage != null)
+        {
+            selectedItemImage.sprite = item?.GetSprite(GetImageStateIndex(selectedIndex));
+            selectedItemImage.enabled = selectedItemImage.sprite != null;
+        }
+
+        if (selectedItemName != null)
+        {
+            selectedItemName.text = item?.DisplayName ?? string.Empty;
+        }
+
+        if (selectedItemDescription != null)
+        {
+            selectedItemDescription.text = item?.Description ?? string.Empty;
+        }
+
+        if (previousItemImage != null)
+        {
+            previousItemImage.sprite = data != null ? GetItemSprite(GetAdjacentIndex(selectedIndex, -1)) : null;
+            previousItemImage.enabled = previousItemImage.sprite != null;
+        }
+
+        if (nextItemImage != null)
+        {
+            nextItemImage.sprite = data != null ? GetItemSprite(GetAdjacentIndex(selectedIndex, 1)) : null;
+            nextItemImage.enabled = nextItemImage.sprite != null;
         }
     }
 

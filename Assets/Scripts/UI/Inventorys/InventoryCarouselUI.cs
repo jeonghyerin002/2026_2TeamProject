@@ -1,9 +1,10 @@
 ﻿using System.Collections;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 /// <summary>
-/// 두 슬롯을 재사용해 인벤토리 순환 이동과 중앙 확대를 관리함
+/// 슬롯을 재사용해 인벤토리 순환 이동과 중앙 확대를 관리함
 /// Group 연결 시 선택 상태는 Group이 관리하고 이 컴포넌트는 표시를 담당함
 /// </summary>
 public class InventoryCarouselUI : MonoBehaviour
@@ -11,6 +12,9 @@ public class InventoryCarouselUI : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject inventoryPanel;
     [SerializeField] private InventorySlotView[] slotViews;
+    [SerializeField] private Image selectedItemImage;
+    [SerializeField] private Image previousItemImage;
+    [SerializeField] private Image nextItemImage;
 
     [Header("아이템 이미지")]
     [SerializeField] private Sprite[] itemSprites;
@@ -42,6 +46,12 @@ public class InventoryCarouselUI : MonoBehaviour
     private bool isMoving;
     private UIGroupController groupController;
     private int presentationVersion;
+    private Image[] previewImages;
+    private Vector3[] previewPositions;
+    private Vector2[] previewSizes;
+    private Color[] previewColors;
+
+    private bool UsesPreviewImages => selectedItemImage != null && previousItemImage != null && nextItemImage != null;
 
     public bool IsOpen => inventoryPanel != null && inventoryPanel.activeSelf;
     internal bool IsMoving => isMoving;
@@ -67,6 +77,25 @@ public class InventoryCarouselUI : MonoBehaviour
 
     private bool EnsureReferences()
     {
+        if (UsesPreviewImages)
+        {
+            if (previewImages == null)
+            {
+                previewImages = new[] { previousItemImage, selectedItemImage, nextItemImage };
+                previewPositions = new Vector3[previewImages.Length];
+                previewSizes = new Vector2[previewImages.Length];
+                previewColors = new Color[previewImages.Length];
+                for (int i = 0; i < previewImages.Length; i++)
+                {
+                    previewPositions[i] = previewImages[i].rectTransform.localPosition;
+                    previewSizes[i] = previewImages[i].rectTransform.sizeDelta;
+                    previewColors[i] = previewImages[i].color;
+                }
+            }
+
+            return inventoryPanel != null;
+        }
+
         if (currentView != null && bufferView != null)
         {
             return true;
@@ -130,6 +159,7 @@ public class InventoryCarouselUI : MonoBehaviour
         isMoving = false;
         requestedDirection = 0;
         lastRequestFrame = -10;
+        RestorePreviewImages();
     }
 
     private void OnDisable()
@@ -152,7 +182,9 @@ public class InventoryCarouselUI : MonoBehaviour
         }
 
         StopAllCoroutines();
-        StartCoroutine(MoveRoutine(direction, itemIndex, onCompleted));
+        StartCoroutine(UsesPreviewImages
+            ? MovePreviewRoutine(direction, itemIndex, onCompleted)
+            : MoveRoutine(direction, itemIndex, onCompleted));
         return true;
     }
 
@@ -185,7 +217,10 @@ public class InventoryCarouselUI : MonoBehaviour
         // 대기 슬롯 페이드가 실행 중이면 종료함
         StopAllCoroutines();
 
-        StartCoroutine(MoveRoutine(direction, WrapIndex(selectedIndex + direction)));
+        int targetIndex = WrapIndex(selectedIndex + direction);
+        StartCoroutine(UsesPreviewImages
+            ? MovePreviewRoutine(direction, targetIndex, null)
+            : MoveRoutine(direction, targetIndex));
     }
 
 
@@ -307,6 +342,14 @@ public class InventoryCarouselUI : MonoBehaviour
     private void RefreshImmediate()
     {
         if (!EnsureReferences()) return;
+        if (UsesPreviewImages)
+        {
+            RestorePreviewImages();
+            SetPreviewSprite(previousItemImage, GetAdjacentIndex(selectedIndex, -1));
+            SetPreviewSprite(selectedItemImage, selectedIndex);
+            SetPreviewSprite(nextItemImage, GetAdjacentIndex(selectedIndex, 1));
+            return;
+        }
         
 
         currentView.SetSprite(GetSprite(selectedIndex));
@@ -357,5 +400,77 @@ public class InventoryCarouselUI : MonoBehaviour
         }
 
         return groupController != null ? groupController.GetItemSprite(index) : itemSprites[index];
+    }
+
+    private IEnumerator MovePreviewRoutine(int direction, int targetIndex, Action onCompleted)
+    {
+        RefreshImmediate();
+        isMoving = true;
+        int version = ++presentationVersion;
+        int incoming = direction > 0 ? 2 : 0;
+        int outgoing = direction > 0 ? 0 : 2;
+        SetPreviewSprite(previewImages[incoming], targetIndex);
+        float elapsed = 0f;
+
+        while (elapsed < moveDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            float progress = Mathf.Clamp01(elapsed / moveDuration);
+            float eased = Mathf.SmoothStep(0f, 1f, progress);
+            for (int i = 0; i < previewImages.Length; i++)
+            {
+                int destination = i - direction;
+                Vector3 position = destination < 0 ? previewPositions[0] + previewPositions[0] - previewPositions[1] :
+                    destination >= previewImages.Length ? previewPositions[2] + previewPositions[2] - previewPositions[1] :
+                    previewPositions[destination];
+                Vector2 size = previewSizes[Mathf.Clamp(destination, 0, previewImages.Length - 1)];
+                previewImages[i].rectTransform.localPosition = Vector3.Lerp(previewPositions[i], position, eased);
+                previewImages[i].rectTransform.sizeDelta = Vector2.Lerp(previewSizes[i], size, eased);
+            }
+
+            Color color = previewColors[outgoing];
+            color.a *= 1f - eased;
+            previewImages[outgoing].color = color;
+            yield return null;
+        }
+
+        selectedIndex = targetIndex;
+        RefreshImmediate();
+        isMoving = false;
+        onCompleted?.Invoke();
+        if (version != presentationVersion || !IsOpen || !isActiveAndEnabled)
+        {
+            yield break;
+        }
+
+        elapsed = 0f;
+        while (elapsed < restFadeDuration)
+        {
+            Color color = previewColors[incoming];
+            color.a *= elapsed / restFadeDuration;
+            previewImages[incoming].color = color;
+            elapsed += Time.unscaledDeltaTime;
+            yield return null;
+        }
+
+        previewImages[incoming].color = previewColors[incoming];
+    }
+
+    private void RestorePreviewImages()
+    {
+        if (previewImages == null) return;
+        for (int i = 0; i < previewImages.Length; i++)
+        {
+            if (previewImages[i] == null) continue;
+            previewImages[i].rectTransform.localPosition = previewPositions[i];
+            previewImages[i].rectTransform.sizeDelta = previewSizes[i];
+            previewImages[i].color = previewColors[i];
+        }
+    }
+
+    private void SetPreviewSprite(Image image, int index)
+    {
+        image.sprite = GetSprite(index);
+        image.enabled = image.sprite != null;
     }
 }

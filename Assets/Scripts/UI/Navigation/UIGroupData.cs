@@ -10,6 +10,7 @@ public class UIGroupData : ScriptableObject
     [SerializeField] private UIInputBinding[] inputBindings = Array.Empty<UIInputBinding>();
     [SerializeField, Min(0)] private int initialItemIndex;
     [SerializeField] private bool wrapSelection = true;
+    [SerializeField] private bool repeatSelectionWhileHeld;
     [SerializeField] private bool wrapImageStates = true;
     [Tooltip("상호작용과 Item에 피드백이 없을 때 사용할 기본 피드백.")]
     [SerializeField] private UIFeedbackData feedback = new UIFeedbackData();
@@ -19,6 +20,7 @@ public class UIGroupData : ScriptableObject
     public int InputBindingCount => inputBindings?.Length ?? 0;
     public int InitialItemIndex => initialItemIndex;
     public bool WrapSelection => wrapSelection;
+    public bool RepeatSelectionWhileHeld => repeatSelectionWhileHeld;
     public bool WrapImageStates => wrapImageStates;
     public UIFeedbackData Feedback => feedback;
 

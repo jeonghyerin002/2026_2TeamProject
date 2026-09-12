@@ -6,6 +6,8 @@ using UnityEngine;
 public class UIItemData
 {
     [SerializeField] private string id;
+    [SerializeField] private string displayName;
+    [SerializeField, TextArea] private string description;
     [SerializeField] private Sprite sprite;
     [Tooltip("기본 Sprite가 상태 0이며, 이 배열은 상태 1부터 순서대로 사용한다.")]
     [SerializeField] private Sprite[] additionalSprites = Array.Empty<Sprite>();
@@ -14,6 +16,8 @@ public class UIItemData
     [SerializeField] private UIFeedbackData feedback = new UIFeedbackData();
 
     public string Id => id;
+    public string DisplayName => string.IsNullOrEmpty(displayName) ? id : displayName;
+    public string Description => description;
     public Sprite Sprite => sprite;
     public UIInteractionData Interaction => interaction;
     public UIGroupData NextGroup => nextGroup;

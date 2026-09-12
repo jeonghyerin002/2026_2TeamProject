@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f0bd7e2e15adf48b4f81a61bf46aa9, type: 3}
+  m_Name: Category
+  m_EditorClassIdentifier: Assembly-CSharp::UIGroupData
+  id: Category
+  items:
+  - id: inventory
+    displayName: Inventory
+    description: Open your Bag and check the items inside.
+    sprite: {fileID: -7978442113108871747, guid: b7e044e1fb8bfd346b706142f07907f9, type: 2}
+    additionalSprites: []
+    interaction:
+      action: 4
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id: 
+        sound: {fileID: 0}
+        volume: 0
+    nextGroup: {fileID: 11400000, guid: 5c0158ecead1cf14fa4c28e4412890fc, type: 2}
+    feedback:
+      id: 
+      sound: {fileID: 0}
+      volume: 0
+  - id: party
+    displayName: Party
+    description: Take a look at the members of your party.
+    sprite: {fileID: 1482657471443917306, guid: b7e044e1fb8bfd346b706142f07907f9, type: 2}
+    additionalSprites: []
+    interaction:
+      action: 4
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id: 
+        sound: {fileID: 0}
+        volume: 0
+    nextGroup: {fileID: 11400000, guid: 2aa68dfd00a97b54a85a43c90d28cc68, type: 2}
+    feedback:
+      id: 
+      sound: {fileID: 0}
+      volume: 0
+  - id: Setting
+    displayName: Setting
+    description: Take a look at the members of your party.
+    sprite: {fileID: 6194237872147809408, guid: dcab639f22579ba4185c903f981c191f, type: 3}
+    additionalSprites: []
+    interaction:
+      action: 4
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id: 
+        sound: {fileID: 0}
+        volume: 0
+    nextGroup: {fileID: 11400000, guid: 2aa68dfd00a97b54a85a43c90d28cc68, type: 2}
+    feedback:
+      id: 
+      sound: {fileID: 0}
+      volume: 0
+  inputBindings: []
+  initialItemIndex: 0
+  wrapSelection: 1
+  repeatSelectionWhileHeld: 1
+  wrapImageStates: 1
+  feedback:
+    id: 
+    sound: {fileID: 0}
+    volume: 1

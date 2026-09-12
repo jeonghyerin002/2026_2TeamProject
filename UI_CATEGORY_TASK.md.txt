@@ -1,0 +1,588 @@
+# UI Category Navigation 작업 지시사항
+
+## 1. 작업 목적
+
+현재 프로젝트의 기존 `Navigation` UI 시스템을 사용하여 **Category UI Group의 입력 및 Navigation 동작을 구현한다.**
+
+Category UI는 플레이어가 UI 시스템에 처음 진입하는 **Root UI Group**이다.
+
+기존 `Inventorys` 폴더의 Inventory 전용 UI 입력 구조를 확장하는 방식이 아니라, 현재 구현된 공통 Navigation 시스템을 우선 사용한다.
+
+---
+
+# 2. 사용자 행동
+
+## Q
+
+UI가 닫혀 있을 때:
+
+```text
+Q
+→ Category UI Group 열기
+```
+
+Category UI Group이 현재 활성 상태일 때:
+
+```text
+Q
+→ Category UI Group 닫기
+```
+
+Category가 아닌 다른 UI Group이 활성 상태일 때:
+
+```text
+Q
+→ 아무 동작도 하지 않음
+```
+
+즉 `Q`는 오직 Category UI Group의 Open / Close에만 사용한다.
+
+---
+
+## A / D
+
+Category UI Group에서:
+
+```text
+A
+→ 이전 Category Item 선택
+
+D
+→ 다음 Category Item 선택
+```
+
+선택이 변경되면 현재 선택된 Item에 맞게:
+
+- 이미지
+- 표시 정보
+- 현재 선택 상태
+
+가 갱신되어야 한다.
+
+---
+
+## F
+
+`F`는 앞으로 UI 시스템에서 사용하는 **공통 Confirm / Button 실행 키**이다.
+
+Category UI에서는:
+
+```text
+F
+→ 현재 선택된 Category Item의 Action 실행
+```
+
+예:
+
+```text
+Inventory Item 선택
+→ F
+→ Inventory UI Group 열기
+```
+
+다른 UI Group에서도 가능한 한 같은 Confirm 규칙을 재사용할 수 있도록 한다.
+
+---
+
+## E
+
+`E`는 모든 UI Group에서 사용하는 **공통 Back 키**이다.
+
+예:
+
+```text
+Detail
+→ E
+→ Inventory
+
+Inventory
+→ E
+→ Category
+
+Category
+→ E
+→ UI 닫기
+```
+
+Category는 Root UI Group이므로 이전 Group이 없는 상태에서 `E`를 누르면 전체 UI를 닫는다.
+
+---
+
+# 3. 반드시 지켜야 할 규칙
+
+입력 규칙:
+
+```text
+Q = Category Open / Close 전용
+
+A = 이전 선택
+
+D = 다음 선택
+
+F = Confirm / Button 실행
+
+E = Back
+```
+
+다음 규칙을 반드시 지킨다.
+
+- Q 입력은 Category에만 영향을 준다
+- 다른 UI Group에서는 Q 입력을 무시한다
+- F는 공통 Confirm 입력으로 사용한다
+- E는 공통 Back 입력으로 사용한다
+- Category는 최초 진입하는 Root UI Group이다
+- Category Item 개수를 코드에 `2`로 고정하지 않는다
+- Category Item 추가 시 핵심 Controller 수정이 필요하지 않는 구조로 만든다
+- `if (index == 0)`, `if (index == 1)` 방식으로 Category별 기능을 하드코딩하지 않는다
+- 기존 Navigation 시스템과 같은 역할의 새로운 시스템을 중복 생성하지 않는다
+
+---
+
+# 4. 현재 구현 범위
+
+이번 작업에서는 Category UI의 다음 기능까지만 구현한다.
+
+```text
+Q로 Category 열기
+
+Q로 Category 닫기
+
+A / D로 Category Item 이동
+
+선택 변경 시 이미지 변경
+
+선택 변경 시 Item 정보 변경
+
+F로 현재 Item 실행
+
+E로 뒤로가기
+
+Category에서 E 입력 시 UI 닫기
+```
+
+현재 Category Item은 2개를 사용할 예정이지만 구조적으로 개수를 제한하지 않는다.
+
+현재 작업 범위를 넘어서는 다음 기능은 새로 구현하지 않는다.
+
+- Grid Navigation
+- Scroll List
+- Popup
+- Modal
+- Tab
+- Dialog
+- 실제 Inventory 아이템 데이터 관리
+- 캐릭터 시스템
+- Quest 시스템
+- Map 시스템
+
+이 기능들을 위해 미리 과도한 추상화를 추가하지 않는다.
+
+---
+
+# 5. 미래 확장 가능성
+
+Category Item은 현재 2개지만 앞으로 증가할 수 있다.
+
+예:
+
+```text
+Category
+├─ Inventory
+├─ Party
+├─ Quest
+├─ Map
+├─ Settings
+└─ Save
+```
+
+따라서 Category Item은 기존 `UIItemData` 목록 기반 구조를 사용한다.
+
+새 Item을 추가할 때:
+
+```text
+UIItemData 추가
+→ UIGroupData에 등록
+```
+
+정도로 대응할 수 있는 구조를 목표로 한다.
+
+Category Item 하나마다 전용 코드를 추가하는 방식은 사용하지 않는다.
+
+---
+
+# 6. 기존 시스템 우선 분석
+
+코드 수정 전 반드시 현재 프로젝트의 다음 스크립트를 먼저 확인한다.
+
+주요 대상:
+
+```text
+Navigation/
+├─ UIGroupData
+├─ UIItemData
+├─ UIInteractionData
+├─ UIGroupController
+└─ UINavigationManager
+```
+
+그리고 기존 `Inventorys` 폴더의 UI 입력 관련 스크립트도 확인한다.
+
+특히 다음을 먼저 판단한다.
+
+1. 현재 각 클래스의 책임
+2. 현재 Navigation 입력 처리 방식
+3. `UIInputBinding`이 실제로 어디에서 사용되는지
+4. `UIGroupController`가 현재 어떤 입력을 처리하는지
+5. `UINavigationManager`의 Open / Back / History 구조
+6. 기존 Inventory 입력 시스템과 역할이 중복되는 부분
+7. 기존 API를 유지할 필요가 있는 부분
+
+기존 구조를 사용할 수 있다면 반드시 재사용한다.
+
+기존 시스템과 동일한 역할의 Manager 또는 Controller를 새로 만들지 않는다.
+
+---
+
+# 7. 권장 책임 구조
+
+구조는 다음 책임 분리를 우선 검토한다.
+
+## UI 입력 담당
+
+키 입력을 읽는다.
+
+```text
+Q
+A
+D
+F
+E
+```
+
+입력 담당 클래스는 직접 Image나 UI Item 상태를 변경하지 않는다.
+
+---
+
+## UINavigationManager
+
+UI Group 간 이동 상태를 담당한다.
+
+예:
+
+```text
+None
+→ Category
+
+Category
+→ Inventory
+
+Inventory
+→ Category
+
+Category
+→ Close
+```
+
+또한 기존 History 구조가 있다면 그대로 재사용한다.
+
+---
+
+## UIGroupController
+
+현재 활성 UI Group 내부의 동작을 담당한다.
+
+예:
+
+```text
+현재 Item Index
+
+Previous
+
+Next
+
+Confirm
+
+현재 Item 표시 갱신
+```
+
+Category 전용 기능을 과도하게 추가하지 않고 다른 UI Group에서도 재사용할 수 있도록 유지한다.
+
+---
+
+## UIGroupData
+
+UI Group의 정적 설정만 가진다.
+
+Runtime 상태를 ScriptableObject에 저장하지 않는다.
+
+---
+
+## UIItemData
+
+각 Item이 어떤 UI 정보와 Action을 가지는지 정의한다.
+
+Item 번호를 기준으로 외부에서 기능을 하드코딩하지 않는다.
+
+---
+
+# 8. 상태 / 데이터
+
+Runtime에서 최소한 다음 상태를 관리해야 한다.
+
+## Navigation 상태
+
+```text
+현재 활성 UI Group
+
+UI가 열려 있는지 여부
+
+이전 UI Group / History
+```
+
+## Group 상태
+
+```text
+현재 선택된 Item Index
+```
+
+설정과 Runtime 상태를 분리한다.
+
+예:
+
+```text
+UIGroupData
+→ 설정 데이터
+
+UIGroupController
+→ 실행 중 선택 상태
+
+UINavigationManager
+→ 실행 중 Navigation 상태
+```
+
+---
+
+# 9. Q 입력 처리 규칙
+
+Q는 다른 일반 Group 입력과 다르게 취급한다.
+
+동작:
+
+```text
+현재 UI 없음
++ Q
+→ Category Open
+```
+
+```text
+현재 Group == Category
++ Q
+→ UI Close
+```
+
+```text
+현재 Group != Category
++ Q
+→ Ignore
+```
+
+Category가 아닌 다른 UI Group에서 Q를 눌렀다고 Category로 강제 이동하면 안 된다.
+
+---
+
+# 10. E 처리 규칙
+
+Back은 가능한 한 `UINavigationManager`의 공통 동작으로 만든다.
+
+```text
+History 존재
+→ 이전 Group 복귀
+```
+
+```text
+현재 Group이 Category이고
+이전 Group 없음
+→ UI Close
+```
+
+Group마다 별도의 E 처리 코드를 중복 작성하지 않는다.
+
+---
+
+# 11. F 처리 규칙
+
+F는 현재 선택된 Item의 Action 실행 요청만 담당한다.
+
+예:
+
+```text
+F
+↓
+UIGroupController
+↓
+현재 UIItemData 확인
+↓
+정의된 Action 실행
+```
+
+Category 종류에 따라 다음과 같은 하드코딩은 만들지 않는다.
+
+```text
+index 0이면 Inventory
+
+index 1이면 Party
+```
+
+Item 데이터에 정의된 Action을 사용한다.
+
+---
+
+# 12. 수정 원칙
+
+기존 코드가 이미 대부분의 기능을 지원한다면 최소 수정으로 구현한다.
+
+새 클래스가 필요하다면 추가하기 전에 반드시:
+
+```text
+왜 기존 클래스에서 처리하면 안 되는지
+
+새 클래스의 단일 책임이 무엇인지
+
+기존 시스템과 역할이 중복되지 않는지
+```
+
+를 판단한다.
+
+God Class는 만들지 않되 현재 규모에서 불필요하게 클래스를 잘게 나누지도 않는다.
+
+---
+
+# 13. 이번 작업 제한
+
+이번 작업에서는 **C# Script 코드만 수정한다.**
+
+하지 말 것:
+
+- Scene 직접 수정
+- Prefab 직접 수정
+- ScriptableObject Asset 생성
+- Inspector 데이터 직접 생성
+- 임의의 Package 설치
+- Git Commit
+- Git Push
+- Branch 변경
+
+Git 관련 권한이 있다고 가정하지 않는다.
+
+필요한 Inspector 설정이나 ScriptableObject 설정이 있다면 코드 작업 후 사용자에게 설정 방법만 보고한다.
+
+---
+
+# 14. 버그 검토
+
+구현 후 반드시 다음을 확인한다.
+
+- UI가 닫혀 있는데 A/D/F/E가 잘못 실행되지 않는지
+- 다른 UI Group에서 Q가 실행되지 않는지
+- Q 연속 입력으로 Open/Close 상태가 꼬이지 않는지
+- Category에서 E를 눌렀을 때 정상적으로 닫히는지
+- History가 중복으로 쌓이지 않는지
+- Category Open 때 History에 Category가 잘못 중복 등록되지 않는지
+- 선택 Index가 Item 개수를 벗어나지 않는지
+- Item이 0개인 경우 예외가 발생하지 않는지
+- Item이 1개인 경우 A/D 입력에서 문제가 없는지
+- Item 수가 2개 이상 증가해도 코드 수정 없이 동작하는지
+- null `UIGroupData` / `UIItemData` 참조에 대한 문제가 없는지
+- 입력 이벤트가 중복 등록되지 않는지
+- 비활성 UI Group이 입력을 받지 않는지
+
+---
+
+# 15. 완료 조건
+
+다음 조건을 모두 만족하면 작업 완료로 본다.
+
+1. UI가 닫힌 상태에서 Q를 누르면 Category가 열린다
+2. Category 상태에서 Q를 누르면 닫힌다
+3. Category가 아닌 다른 UI Group에서는 Q가 아무 동작도 하지 않는다
+4. Category에서 A/D로 Item을 변경할 수 있다
+5. 선택 변경 시 해당 Item의 이미지가 정상 갱신된다
+6. 선택 변경 시 해당 Item 정보가 정상 갱신된다
+7. F를 누르면 선택된 Item의 Action이 실행된다
+8. E를 누르면 이전 Group으로 돌아간다
+9. Category에서 E를 누르면 UI가 닫힌다
+10. Category Item 개수를 3개 이상으로 늘려도 핵심 Controller 코드 수정이 필요하지 않는다
+11. 기존 Navigation 시스템의 역할을 중복하는 새 시스템이 만들어지지 않는다
+
+---
+
+# 16. 작업 완료 후 보고
+
+작업이 끝나면 다음 형식으로 보고한다.
+
+## 변경한 파일
+
+각 파일별로:
+
+```text
+파일명
+- 무엇을 변경했는지
+- 왜 변경했는지
+```
+
+## 새로 만든 파일
+
+있다면:
+
+```text
+파일명
+- 책임
+- 기존 클래스와 분리한 이유
+```
+
+## 사용하지 않게 된 기존 코드
+
+Inventory 관련 기존 입력 코드 중 역할이 대체된 부분이 있다면:
+
+```text
+어떤 클래스인지
+왜 더 이상 필요하지 않은지
+삭제 가능한지 / 아직 유지해야 하는지
+```
+
+를 설명한다.
+
+단, 임의로 삭제하지 않는다.
+
+## Unity 설정 필요 사항
+
+사용자가 직접 해야 하는:
+
+- Inspector 연결
+- GameObject Component 설정
+- UIGroupData 설정
+- UIItemData 설정
+
+등을 단계별로 알려준다.
+
+## 테스트 결과
+
+완료 조건 각각을 기준으로 어떤 부분을 확인했는지 보고한다.
+
+---
+
+# 핵심 목표
+
+이번 작업의 핵심은 새로운 Category 전용 UI 시스템을 만드는 것이 아니다.
+
+```text
+기존 Navigation 시스템
++
+Category Root 규칙
++
+공통 UI 입력
+```
+
+으로 구현한다.
+
+구조는 가능한 단순하게 유지하되 Category Item 추가와 향후 다른 UI Group 확장이 가능하도록 한다.
