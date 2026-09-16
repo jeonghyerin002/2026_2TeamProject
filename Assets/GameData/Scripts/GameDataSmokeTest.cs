@@ -1,43 +1,47 @@
+using System;
 using UnityEngine;
 
-namespace Game.Data
+namespace UnityGameData
 {
     public sealed class GameDataSmokeTest : MonoBehaviour
     {
-        [SerializeField] private bool runOnStart = true;
-
-        private void Start()
+        private void Start() { RunSmokeTest(); }
+        [ContextMenu("Run Smoke Test")]
+        public void RunSmokeTest()
         {
-            if (runOnStart) Run();
+            try
+            {
+                var data=GameDataCatalog.Load(Read("ItemManager"),Read("SkillManager"),
+                    Read("SkillEffectManager"),Read("StatusEffectManager"));
+                foreach (string error in data.Errors) Debug.LogError(error);
+                foreach (string warning in data.Warnings) Debug.LogWarning(warning);
+                Require(data.Errors.Count==0,"CSV errors reported; valid rows remain accessible");
+                Require(data.Items.Count==9 && data.Skills.Count==3 && data.SkillEffects.Count==1 && data.StatusEffects.Count==1,"Expected baseline row counts");
+                var effect=data.SkillEffects.GetById(60001);
+                var status=data.StatusEffects.GetById(effect.StatusEffectId);
+                Require(effect.StatusEffectId==70001 && status.StatusEffectKey=="paralysis","Effect to status reference");
+                Require(effect.Duration==0 && effect.Chance==30,"Effect settings");
+                Require(data.Items.GetById(40001).SkillId1==50001 && data.Items.GetById(40002).SkillId1==50002 && data.Items.GetById(40003).SkillId1==50003,"Aether skill references");
+                foreach (int skillId in new [] {50001,50002,50003})
+                    Require(data.Skills.GetById(skillId).EffectId==0,"Original skill remains unlinked");
+                var states=new StatusEffectState(data.StatusEffects);
+                states.Apply(70001); states.OnBattleEnd();
+                Require(states.Contains(70001),"Paralysis remains after battle");
+                states.ApplyTreatment(70001);
+                Require(!states.Contains(70001),"Paralysis removed by treatment");
+                Debug.Log("GameData structural smoke test passed. Review warnings; combat behavior is not verified.");
+            }
+            catch (Exception ex) { Debug.LogError("GameData smoke test failed: " + ex); }
         }
-
-        [ContextMenu("Run Game Data Smoke Test")]
-        public void Run()
+        private static string Read(string name)
         {
-            var items = ItemManager.Instance;
-            var skills = SkillManager.Instance;
-            if (items == null || skills == null) { Debug.LogError("[GameDataTest] Managers are not initialized."); return; }
-            PrintItem(items.GetItemById(10001));
-            var sword = items.GetItemByKey("weapon_training_sword");
-            PrintItem(sword);
-            if (sword != null) Debug.Log("[GameDataTest] Training sword AttackMultiplier=" + sword.AttackMultiplier);
-            PrintAether(items.GetItemById(40001), skills);
-            PrintAether(items.GetItemById(40002), skills);
-            PrintAether(items.GetItemById(40003), skills);
+            var asset=Resources.Load<TextAsset>("GameData/" + name);
+            if (asset==null) throw new InvalidOperationException("Missing CSV: " + name);
+            return asset.text;
         }
-
-        private static void PrintItem(ItemData item)
+        private static void Require(bool condition, string message)
         {
-            if (item == null) { Debug.LogError("[GameDataTest] Item lookup failed."); return; }
-            Debug.Log("[GameDataTest] Item: " + item.Name + " / ID=" + item.ItemId + " / Key=" + item.ItemKey);
-        }
-
-        private static void PrintAether(ItemData item, SkillManager skills)
-        {
-            if (item == null) { Debug.LogError("[GameDataTest] Aether lookup failed."); return; }
-            var skill = skills.GetSkillById(item.SkillId1);
-            if (skill == null) { Debug.LogError("[GameDataTest] Missing linked skill for " + item.Name); return; }
-            Debug.Log("[GameDataTest] " + item.Name + " | ID: " + item.ItemId + " | Element: " + item.AetherType + " | Linked skill: " + skill.SkillName + " | Attack type: " + skill.AttackType + " | Damage: " + skill.Damage + " | PP: " + skill.PP + " | Accuracy: " + skill.Accuracy);
+            if (!condition) throw new InvalidOperationException(message);
         }
     }
 }

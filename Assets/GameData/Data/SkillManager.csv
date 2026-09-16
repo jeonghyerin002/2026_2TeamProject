@@ -1,4 +1,0 @@
-SkillId,SkillKey,SkillName,Description,Element,AttackType,Damage,PP,Accuracy,EffectId,Memo
-50001,ember,Ember,A small fire attack,Fire,Special,40,40,100,3001,Basic Fire Aether skill
-50002,water_gun,Water Gun,A basic water projectile attack,Water,Special,40,40,100,3002,Basic Water Aether skill
-50003,leaf,Leaf,A basic leaf attack,Grass,Physical,40,40,100,3003,Basic Grass Aether skill
