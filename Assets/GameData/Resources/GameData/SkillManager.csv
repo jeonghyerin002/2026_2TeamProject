@@ -1,4 +1,0 @@
-SkillId,SkillKey,SkillName,Description,Element,AttackType,Damage,PP,Accuracy,Priority,EffectId,Memo
-50001,ember,Ember,,Fire,Special,40,40,100,0,0,
-50002,water_gun,Water Gun,,Water,Special,40,40,100,0,0,
-50003,leaf,Leaf,,Grass,Physical,40,40,100,0,0,

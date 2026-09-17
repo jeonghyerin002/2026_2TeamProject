@@ -1,0 +1,4 @@
+SkillId,SkillKey,SkillName,Description,Element,AttackType,Damage,PP,Accuracy,Priority,EffectId,Memo
+50001,ember,Ember,Deals damage by scattering flames.,Fire,Special,40,40,100,0,0,
+50002,water_gun,Water Gun,Deals damage by firing a stream of water.,Water,Special,40,40,100,0,0,
+50003,leaf,Leaf,Deals damage with sharp leaves.,Grass,Physical,40,40,100,0,0,

@@ -1,0 +1,18 @@
+ItemId,ItemKey,Name,Description,UseDescription,ItemType,ImageKey,InitialAmount,StackLimit,Consumable,UseType,EffectId,UseValue,HealthMultiplier,AttackMultiplier,DefenseMultiplier,SpecialAttackMultiplier,SpecialDefenseMultiplier,SpeedMultiplier,AetherType,SkillId1,SkillId2,SkillId3,Memo
+10001,small_health_potion,Small Health Potion,,,Recovery,,0,1,true,Instant,0,20,1,1,1,1,1,1,None,0,0,0,
+10002,medium_health_potion,Good Health Potion,Restores HP.,"Restores 50 HP, up to maximum HP.",Recovery,,0,1,true,Instant,0,50,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+20001,training_sword,Training Sword,,,Weapon,,0,1,false,Equip,0,0,1,1,1,1,1,1,None,0,0,0,
+20999,temporary_test_sword,Temporary Test Sword,,,Weapon,,0,1,false,Equip,0,0,1,1,1,1,1,1,None,0,0,0,
+30001,weapon_enhancement_stone,Weapon Enhancement Stone,,,Enhancement,,0,1,true,Material,0,0,1,1,1,1,1,1,None,0,0,0,
+30002,aether_enhancement_stone,Aether Enhancement Stone,,,Enhancement,,0,1,true,Material,0,0,1,1,1,1,1,1,None,0,0,0,
+40001,basic_fire_aether,Basic Fire Aether,A basic Fire-type Aether.,,Aether,,0,1,false,None,0,0,1,1,1,1,1,1,Fire,50001,0,0,
+40002,basic_water_aether,Basic Water Aether,A basic Water-type Aether.,,Aether,,0,1,false,None,0,0,1,1,1,1,1,1,Water,50002,0,0,
+40003,basic_grass_aether,Basic Grass Aether,A basic Grass-type Aether.,,Aether,,0,1,false,None,0,0,1,1,1,1,1,1,Grass,50003,0,0,
+10003,advanced_health_potion,Advanced Health Potion,Restores HP.,"Restores 200 HP, up to maximum HP.",Recovery,,0,1,true,Instant,0,200,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10004,full_health_potion,Full Health Potion,Restores HP.,"Restores 9999 HP, up to maximum HP.",Recovery,,0,1,true,Instant,0,9999,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10005,paralysis_cure,Paralysis Cure,Treats status effects.,Cures Paralysis only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10006,burn_cure,Burn Cure,Treats status effects.,Cures Burn only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10007,frostbite_cure,Frostbite Cure,Treats status effects.,Cures Frostbite only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10008,sleep_cure,Sleep Cure,Treats status effects.,Cures Sleep only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10009,poison_cure,Poison Cure,Treats status effects.,Cures Poison and Toxic only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10010,panacea,Panacea,Treats status effects.,"Removes all current status effects, including future additions.",Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.

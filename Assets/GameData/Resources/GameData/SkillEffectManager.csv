@@ -1,2 +1,0 @@
-EffectId,EffectKey,EffectName,Description,EffectType,TargetType,StatusEffectId,Value,Duration,Chance,Memo
-60001,paralysis_status_effect,Paralysis Status Effect,Has a 30% chance to inflict Paralysis on the target.,ApplyStatusEffect,Enemy,70001,1,0,30,
