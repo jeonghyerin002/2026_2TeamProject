@@ -1,8 +1,0 @@
-StatusEffectId,StatusEffectKey,StatusEffectName,Description,Duration,Memo
-70001,paralysis,Paralysis,"Before its own action, has a 25% chance to be unable to act. Final Speed is multiplied by 0.5.",0,Persists after battle until treated.
-70002,poison,Poison,"At each turn end, takes damage equal to 1/8 of maximum HP.",0,Persists after battle until treated. Can be replaced by Toxic.
-70003,burn,Burn,"At each turn end, takes damage equal to 1/16 of maximum HP. Final Attack is multiplied by 0.5.",0,Persists after battle until treated.
-70004,frostbite,Frostbite,"At each turn end, takes damage equal to 1/16 of maximum HP. Final SpecialAttack is multiplied by 0.5.",0,Persists after battle until treated.
-70005,toxic,Toxic,"At turn end, takes 1/16, then 2/16, then 3/16, and so on of maximum HP as damage.",0,Persists after battle until treated. Damage stage across battles is undecided.
-70006,confusion,Confusion,"Before its own action, one roll: 30% recover and act; 30% cannot act and lose 1/8 of maximum HP; 40% act and remain confused.",0,Can coexist with another status. Ends at battle end.
-70007,sleep,Sleep,"Own action 1: cannot act. Own action 2: 50% wake and act, otherwise cannot act. Own action 3: wake and act.",0,"Ends at battle end. Track own action opportunities, not global turns."
