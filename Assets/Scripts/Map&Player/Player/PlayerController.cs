@@ -1,31 +1,37 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[RequireComponent(typeof(Rigidbody))]
-[RequireComponent(typeof(PlayerInput))]
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement Settings")]
     public float moveSpeed = 4.0f;
 
-    Rigidbody rb;
+    Rigidbody2D rb;
     Vector2 moveInput;
     bool isFacingRight = true;
     bool isFasted = false;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
 
-        rb.constraints = RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotation;
+
+
+        //Y축 정렬 모드 강제 적용 (Y값이 클수록 뒤로 가고, 작을수록 앞으로 나옴)
+        if (Camera.main != null)
+        {
+            Camera.main.transparencySortMode = TransparencySortMode.CustomAxis;
+            Camera.main.transparencySortAxis = new Vector3(0, 1, 0);
+        }
     }
+
     
     void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
     }
     
-    void OnFast(InputValue value)
+    void OnSprint(InputValue value)
     {
         isFasted = value.isPressed;
     }
@@ -36,8 +42,7 @@ public class PlayerController : MonoBehaviour
         float speedMultiplier = isFasted ? 1.5f : 1.0f;
         float currentSpeed = moveSpeed * speedMultiplier;
 
-        Vector3 targetVelocity = new Vector3(normalizedInput.x * currentSpeed, normalizedInput.y * currentSpeed, 0f);
-        rb.linearVelocity = targetVelocity;
+        rb.linearVelocity = normalizedInput * currentSpeed;
 
         HandleSpriteDirection();
     }
