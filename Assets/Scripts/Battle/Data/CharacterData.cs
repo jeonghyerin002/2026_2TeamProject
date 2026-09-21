@@ -5,7 +5,7 @@
 public class CharacterData : ScriptableObject
 {
     [SerializeField] private int id;                // 캐릭터 ID
-    [SerializeField] private string name;    // 캐릭터 이름
+    [SerializeField] private string CharacterName;  // 캐릭터 이름
     [SerializeField] private int maxHp;             // 체력
     [SerializeField] private int attack;            // 공격
     [SerializeField] private int defense;           // 방어
@@ -15,7 +15,7 @@ public class CharacterData : ScriptableObject
 
 
     public int Id => id;
-    public string Name => name;
+    public string Charactername => CharacterName;
     public int MaxHp => maxHp;
     public int Attack => attack;
     public int Defense => defense;

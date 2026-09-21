@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skill_50003
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
   id: 50003
-  name: Leaf
+  SkillName: Leaf
   power: 40
   accuracy: 100
   maxPP: 40

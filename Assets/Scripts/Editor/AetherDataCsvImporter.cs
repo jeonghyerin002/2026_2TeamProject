@@ -38,7 +38,7 @@ public static class AetherDataCsvImporter
         string[] required =
         {
             "id",
-            "name",
+            "AetherName",
             "type",
             "skillId1",
             "skillId2",
@@ -124,7 +124,7 @@ public static class AetherDataCsvImporter
             SerializedObject so = new(data);
 
             SerializedProperty idProperty = so.FindProperty("id");
-            SerializedProperty nameProperty = so.FindProperty("name");
+            SerializedProperty nameProperty = so.FindProperty("AetherName");
             SerializedProperty typeProperty = so.FindProperty("type");
             SerializedProperty skillsProperty = so.FindProperty("skills");
 
@@ -140,7 +140,7 @@ public static class AetherDataCsvImporter
 
             idProperty.intValue = id;
             nameProperty.stringValue =
-                cells[columns["name"]].Trim();
+                cells[columns["AetherName"]].Trim();
             typeProperty.enumValueIndex = (int)type;
 
             skillsProperty.arraySize = skills.Count;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skill_50001
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
   id: 50001
-  name: Ember
+  SkillName: Ember
   power: 40
   accuracy: 100
   maxPP: 40

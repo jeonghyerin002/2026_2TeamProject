@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Aether_40002
   m_EditorClassIdentifier: Assembly-CSharp::AetherData
   id: 40002
-  name: Basic Water Aether
+  AetherName: Basic Water Aether
   type: 2
   skills:
   - {fileID: 11400000, guid: 2b56b4d468278554a8709038d170b350, type: 2}

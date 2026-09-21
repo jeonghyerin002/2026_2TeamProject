@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Aether_40001
   m_EditorClassIdentifier: Assembly-CSharp::AetherData
   id: 40001
-  name: Basic Fire Aether
+  AetherName: Basic Fire Aether
   type: 1
   skills:
   - {fileID: 11400000, guid: 114ffdf80e5a1b7409af5577eba3ed69, type: 2}

@@ -49,7 +49,7 @@ public static class CharacterDataCsvImporter
         string[] required =
         {
                 "id",
-                "name",
+                "CharacterName",
                 "maxHp",
                 "attack",
                 "defense",
@@ -123,7 +123,7 @@ public static class CharacterDataCsvImporter
             // FindProperty()
             // 해당 Data (.cs)와 CSV Importer가 연결되는 핵심 부분
             SerializedProperty idProperty = so.FindProperty("id");
-            SerializedProperty nameProperty = so.FindProperty("name");
+            SerializedProperty nameProperty = so.FindProperty("CharacterName");
             SerializedProperty maxHpProperty = so.FindProperty("maxHp");
             SerializedProperty attackProperty = so.FindProperty("attack");
             SerializedProperty defenseProperty = so.FindProperty("defense");
@@ -149,7 +149,7 @@ public static class CharacterDataCsvImporter
 
             // CSV 값을 SO에 적용
             idProperty.intValue = id;
-            nameProperty.stringValue = cells[columns["name"]].Trim();
+            nameProperty.stringValue = cells[columns["CharacterName"]].Trim();
             maxHpProperty.intValue = maxHp;
             attackProperty.intValue = attack;
             defenseProperty.intValue = defense;

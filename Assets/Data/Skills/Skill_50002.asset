@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Skill_50002
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
   id: 50002
-  name: Water Gun
+  SkillName: Water Gun
   power: 40
   accuracy: 100
   maxPP: 40

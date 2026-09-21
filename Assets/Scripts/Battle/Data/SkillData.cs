@@ -51,7 +51,7 @@ public enum ElementType
 public class SkillData : ScriptableObject
 {
     [SerializeField] private int id;                      // 스킬 ID
-    [SerializeField] private string name;           // 스킬 이름
+    [SerializeField] private string SkillName;            // 스킬 이름
     [SerializeField] private int power;                   // 위력
     [SerializeField] private int accuracy;                // 정확도
     [SerializeField] private int maxPP;                   // 사용 횟수
@@ -62,7 +62,7 @@ public class SkillData : ScriptableObject
 
 
     public int Id => id;
-    public string Name => name;
+    public string Skillname => SkillName;
     public int Power => power;
     public int Accuracy => accuracy;
     public int MaxPP => maxPP;

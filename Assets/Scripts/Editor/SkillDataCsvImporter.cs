@@ -38,7 +38,7 @@ public static class SkillDataCsvImporter
         string[] required =
         {
             "id",
-            "name",
+            "SkillName",
             "power",
             "accuracy",
             "maxPP",
@@ -121,7 +121,7 @@ public static class SkillDataCsvImporter
             SerializedObject so = new(data);
 
             SerializedProperty idProperty = so.FindProperty("id");
-            SerializedProperty nameProperty = so.FindProperty("name");
+            SerializedProperty nameProperty = so.FindProperty("SkillName");
             SerializedProperty powerProperty = so.FindProperty("power");
             SerializedProperty accuracyProperty = so.FindProperty("accuracy");
             SerializedProperty maxPpProperty = so.FindProperty("maxPP");
@@ -146,7 +146,7 @@ public static class SkillDataCsvImporter
             }
 
             idProperty.intValue = id;
-            nameProperty.stringValue = cells[columns["name"]].Trim();
+            nameProperty.stringValue = cells[columns["SkillName"]].Trim();
             powerProperty.intValue = power;
             accuracyProperty.intValue = accuracy;
             maxPpProperty.intValue = maxPP;

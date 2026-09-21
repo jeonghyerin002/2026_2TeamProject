@@ -5,12 +5,12 @@
 public class AetherData : ScriptableObject
 {
     [SerializeField] private int id;                // 에테르 ID
-    [SerializeField] private string name;     // 에테르 이름
+    [SerializeField] private string AetherName;     // 에테르 이름
     [SerializeField] private ElementType type;       // 속성 타입
     [SerializeField] private SkillData[] skills;     // 에테르 스킬 목록
 
     public int Id => id;
-    public string Name => name;
+    public string Aetername => AetherName;
     public ElementType Type => type;
     public SkillData[] Skills => skills;
 }
