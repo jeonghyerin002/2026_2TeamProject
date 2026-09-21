@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character_2
   m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CharacterData
   id: 2
-  displayName: Enemy1
+  name: Enemy1
   maxHp: 70
   attack: 20
   defense: 25

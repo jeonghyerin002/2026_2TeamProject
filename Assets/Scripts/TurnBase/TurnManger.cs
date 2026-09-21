@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 // Kept so the existing scene does not lose its serialized component. The previous
 // prototype directly changed ScriptableObject HP and PP and must not run with the
@@ -6,8 +6,8 @@ using UnityEngine;
 public class TurnManager : MonoBehaviour
 {
     [Header("Characters")]
-    public CharacterData player;
-    public CharacterData enemy;
+    //public CharacterData player;
+    //public CharacterData enemy;
 
     [Header("Managers")]
     public BattleUIManager uiManager;
