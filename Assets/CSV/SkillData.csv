@@ -1,0 +1,4 @@
+﻿id,name,power,accuracy,maxPP,priority,type,category,effectType
+50001,Ember,40,100,40,0,Fire,Special,None
+50002,Water Gun,40,100,40,0,Water,Special,None
+50003,Leaf,40,100,40,0,Grass,Physical,None
