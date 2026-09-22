@@ -1,13 +1,8 @@
-ItemId,Name,UseDescription,ItemType,ImageKey,InitialAmount,StackLimit,Consumable,UseType,EffectId,UseValue,HealthMultiplier,AttackMultiplier,DefenseMultiplier,SpecialAttackMultiplier,SpecialDefenseMultiplier,SpeedMultiplier,AetherType,SkillId1,SkillId2,SkillId3,Memo
+itemId,name,useDescription,itemType,imageKey,initialAmount,stackLimit,consumable,useType,effectId,useValue,healthMultiplier,attackMultiplier,defenseMultiplier,specialAttackMultiplier,specialDefenseMultiplier,speedMultiplier,aetherType,skillId1,skillId2,skillId3,memo
 10001,Small Health Potion,,Recovery,,0,1,true,Instant,0,20,1,1,1,1,1,1,None,0,0,0,
 10002,Good Health Potion,"Restores 50 HP, up to maximum HP.",Recovery,,0,1,true,Instant,0,50,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
-20001,Training Sword,,Weapon,,0,1,false,Equip,0,0,1,1,1,1,1,1,None,0,0,0,
-20999,Temporary Test Sword,,Weapon,,0,1,false,Equip,0,0,1,1,1,1,1,1,None,0,0,0,
-30001,Weapon Enhancement Stone,,Enhancement,,0,1,true,Material,0,0,1,1,1,1,1,1,None,0,0,0,
-30002,Aether Enhancement Stone,,Enhancement,,0,1,true,Material,0,0,1,1,1,1,1,1,None,0,0,0,
-40001,Basic Fire Aether,,Aether,,0,1,false,None,0,0,1,1,1,1,1,1,Fire,50001,0,0,
-40002,Basic Water Aether,,Aether,,0,1,false,None,0,0,1,1,1,1,1,1,Water,50002,0,0,
-40003,Basic Grass Aether,,Aether,,0,1,false,None,0,0,1,1,1,1,1,1,Grass,50003,0,0,
+11001,Weapon Enhancement Stone,,Enhancement,,0,1,true,Material,0,0,1,1,1,1,1,1,None,0,0,0,
+11002,Aether Enhancement Stone,,Enhancement,,0,1,true,Material,0,0,1,1,1,1,1,1,None,0,0,0,
 10003,Advanced Health Potion,"Restores 200 HP, up to maximum HP.",Recovery,,0,1,true,Instant,0,200,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
 10004,Full Health Potion,"Restores 9999 HP, up to maximum HP.",Recovery,,0,1,true,Instant,0,9999,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
 10005,Paralysis Cure,Cures Paralysis only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.

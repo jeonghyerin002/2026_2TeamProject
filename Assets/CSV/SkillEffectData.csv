@@ -1,4 +1,4 @@
-EffectId,EffectName,EffectType,TargetType,StatusEffectId,Value,Duration,Chance,Memo,StatType
+effectId,effectName,effectType,targetType,statusEffectId,value,duration,chance,memo,statType
 60001,Weak Chance Paralysis,ApplyStatusEffect,Enemy,70001,1,0,30,,None
 60002,Weak Chance Poison,ApplyStatusEffect,Enemy,70002,1,0,30,,None
 60003,Weak Chance Burn,ApplyStatusEffect,Enemy,70003,1,0,30,,None

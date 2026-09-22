@@ -1,4 +1,4 @@
-skillId,skillName,type,attackType,damage,pp,accuracy,priority,effectId,Memo
+skillId,skillName,type,attackType,damage,pp,accuracy,priority,effectId,memo
 50001,Ember,Fire,Special,40,40,100,0,0,
 50002,Water Gun,Water,Special,40,40,100,0,0,
 50003,Leaf,Grass,Physical,40,40,100,0,0,
