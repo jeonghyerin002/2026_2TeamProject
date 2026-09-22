@@ -32,10 +32,10 @@ public sealed class BattleState
 
         foreach (SkillData skill in skills)
         {
-            if (skill == null || currentPp.ContainsKey(skill.Id))
+            if (skill == null || currentPp.ContainsKey(skill.SkillId))
                 continue;
 
-            currentPp.Add(skill.Id, skill.MaxPP);
+            currentPp.Add(skill.SkillId, skill.PP);
         }
     }
 
@@ -56,18 +56,18 @@ public sealed class BattleState
         if (skill == null)
             return 0;
 
-        return currentPp.TryGetValue(skill.Id, out int pp) ? pp : 0;
+        return currentPp.TryGetValue(skill.SkillId, out int pp) ? pp : 0;
     }
 
     // 사용 가능한 스킬이면 PP 1 감소
     public bool TryConsumePp(SkillData skill)
     {
         if (skill == null ||
-            !currentPp.TryGetValue(skill.Id, out int pp) ||
+            !currentPp.TryGetValue(skill.SkillId, out int pp) ||
             pp <= 0)
             return false;
 
-        currentPp[skill.Id] = pp - 1;
+        currentPp[skill.SkillId] = pp - 1;
         return true;
     }
 

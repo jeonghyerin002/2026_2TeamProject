@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4824db1e751bd8d4b919bc99b40f4dfc, type: 3}
   m_Name: Skill_50003
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
-  id: 50003
-  SkillName: Leaf
-  power: 40
-  accuracy: 100
-  maxPP: 40
-  priority: 0
+  skillId: 50003
+  skillName: Leaf
   type: 3
-  category: 0
-  effectType: 0
+  attackType: 0
+  damage: 40
+  pp: 40
+  accuracy: 100
+  priority: 0
+  effectId: 0

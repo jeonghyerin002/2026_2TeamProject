@@ -33,10 +33,6 @@ public static class BattleResolver
         if (!IsHit(skill))
             return new BattleResolveResult(true, false, 0, target.IsDead);
 
-        // Status 효과는 상태이상 시스템 구현 후 이 위치에서 처리
-        if (skill.Category == SkillCategory.Status)
-            return new BattleResolveResult(true, true, 0, target.IsDead);
-
         int damage = CalculateDamage(actor, target, skill);
 
         // 데미지 계산 후 HP 변경
@@ -55,19 +51,19 @@ public static class BattleResolver
     // Physical / Special에 맞는 능력치를 사용해 데미지 계산
     private static int CalculateDamage(BattleState actor, BattleState target, SkillData skill)
     {
-        if (skill.Power <= 0)
+        if (skill.Damage <= 0)
             return 0;
 
-        int attack = skill.Category == SkillCategory.Physical
+        int attack = skill.AttackType == SkillAttackType.Physical
             ? actor.Character.Attack
             : actor.Character.SpecialAttack;
 
-        int defense = skill.Category == SkillCategory.Physical
+        int defense = skill.AttackType == SkillAttackType.Physical
             ? target.Character.Defense
             : target.Character.SpecialDefense;
 
         // 임시 기본 공식. 최종 데미지 공식 확정 시 이 함수만 교체한다
-        return Mathf.Max(1, Mathf.RoundToInt(skill.Power * (float)attack / Mathf.Max(1, defense)));
+        return Mathf.Max(1, Mathf.RoundToInt(skill.Damage * (float)attack / Mathf.Max(1, defense)));
     }
 }
 

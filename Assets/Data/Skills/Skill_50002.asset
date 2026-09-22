@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4824db1e751bd8d4b919bc99b40f4dfc, type: 3}
   m_Name: Skill_50002
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
-  id: 50002
-  SkillName: Water Gun
-  power: 40
-  accuracy: 100
-  maxPP: 40
-  priority: 0
+  skillId: 50002
+  skillName: Water Gun
   type: 2
-  category: 1
-  effectType: 0
+  attackType: 1
+  damage: 40
+  pp: 40
+  accuracy: 100
+  priority: 0
+  effectId: 0
