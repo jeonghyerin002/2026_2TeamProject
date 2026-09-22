@@ -1,0 +1,18 @@
+ItemId,Name,UseDescription,ItemType,ImageKey,InitialAmount,StackLimit,Consumable,UseType,EffectId,UseValue,HealthMultiplier,AttackMultiplier,DefenseMultiplier,SpecialAttackMultiplier,SpecialDefenseMultiplier,SpeedMultiplier,AetherType,SkillId1,SkillId2,SkillId3,Memo
+10001,Small Health Potion,,Recovery,,0,1,true,Instant,0,20,1,1,1,1,1,1,None,0,0,0,
+10002,Good Health Potion,"Restores 50 HP, up to maximum HP.",Recovery,,0,1,true,Instant,0,50,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+20001,Training Sword,,Weapon,,0,1,false,Equip,0,0,1,1,1,1,1,1,None,0,0,0,
+20999,Temporary Test Sword,,Weapon,,0,1,false,Equip,0,0,1,1,1,1,1,1,None,0,0,0,
+30001,Weapon Enhancement Stone,,Enhancement,,0,1,true,Material,0,0,1,1,1,1,1,1,None,0,0,0,
+30002,Aether Enhancement Stone,,Enhancement,,0,1,true,Material,0,0,1,1,1,1,1,1,None,0,0,0,
+40001,Basic Fire Aether,,Aether,,0,1,false,None,0,0,1,1,1,1,1,1,Fire,50001,0,0,
+40002,Basic Water Aether,,Aether,,0,1,false,None,0,0,1,1,1,1,1,1,Water,50002,0,0,
+40003,Basic Grass Aether,,Aether,,0,1,false,None,0,0,1,1,1,1,1,1,Grass,50003,0,0,
+10003,Advanced Health Potion,"Restores 200 HP, up to maximum HP.",Recovery,,0,1,true,Instant,0,200,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10004,Full Health Potion,"Restores 9999 HP, up to maximum HP.",Recovery,,0,1,true,Instant,0,9999,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10005,Paralysis Cure,Cures Paralysis only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10006,Burn Cure,Cures Burn only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10007,Frostbite Cure,Cures Frostbite only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10008,Sleep Cure,Cures Sleep only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10009,Poison Cure,Cures Poison and Toxic only.,Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
+10010,Panacea,"Removes all current status effects, including future additions.",Recovery,,0,1,true,Instant,0,0,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.

@@ -1,4 +1,9 @@
-﻿id,SkillName,power,accuracy,maxPP,priority,type,category,effectType
-50001,Ember,40,100,40,0,Fire,Special,None
-50002,Water Gun,40,100,40,0,Water,Special,None
-50003,Leaf,40,100,40,0,Grass,Physical,None
+SkillId,SkillName,Type,AttackType,Damage,PP,Accuracy,Priority,EffectId,Memo
+50001,Ember,Fire,Special,40,40,100,0,0,
+50002,Water Gun,Water,Special,40,40,100,0,0,
+50003,Leaf,Grass,Physical,40,40,100,0,0,
+50004,Flamethrower,Fire,Special,80,15,100,0,60003,
+50005,Straight Punch,Fighting,Physical,60,20,100,0,0,
+50006,Mach Punch,Fighting,Physical,40,10,100,1,0,
+50007,Leaf Blade,Grass,Physical,80,15,100,0,60010,
+50008,Muddy Water,Water,Special,80,15,100,0,60012,

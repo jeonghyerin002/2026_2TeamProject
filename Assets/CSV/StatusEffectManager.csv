@@ -1,0 +1,8 @@
+StatusEffectId,StatusEffectName,Duration,Memo
+70001,Paralysis,0,Persists after battle until treated.
+70002,Poison,0,Persists after battle until treated. Can be replaced by Toxic.
+70003,Burn,0,Persists after battle until treated.
+70004,Frostbite,0,Persists after battle until treated.
+70005,Toxic,0,Persists after battle until treated. Damage stage across battles is undecided.
+70006,Confusion,0,Can coexist with another status. Ends at battle end.
+70007,Sleep,0,"Ends at battle end. Track own action opportunities, not global turns."

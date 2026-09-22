@@ -1,0 +1,16 @@
+EffectId,EffectName,EffectType,TargetType,StatusEffectId,Value,Duration,Chance,Memo,StatType
+60001,Weak Chance Paralysis,ApplyStatusEffect,Enemy,70001,1,0,30,,None
+60002,Weak Chance Poison,ApplyStatusEffect,Enemy,70002,1,0,30,,None
+60003,Weak Chance Burn,ApplyStatusEffect,Enemy,70003,1,0,30,,None
+60004,Weak Chance Frostbite,ApplyStatusEffect,Enemy,70004,1,0,30,,None
+60005,Weak Chance Toxic,ApplyStatusEffect,Enemy,70005,1,0,30,Can replace Poison with Toxic.,None
+60006,Weak Chance Confusion,ApplyStatusEffect,Enemy,70006,1,0,30,Confusion can coexist with another status effect.,None
+60007,Go to Sleep,ApplyStatusEffect,Self,70007,1,0,100,Exception: clear all statuses before applying Sleep.,None
+60008,Normal Chance Sleep,ApplyStatusEffect,Enemy,70007,1,0,60,Does not clear existing status effects.,None
+60009,Guaranteed Sleep,ApplyStatusEffect,Enemy,70007,1,0,100,Still subject to Accuracy and status eligibility.,None
+60010,Critical Attack,CriticalHit,Enemy,0,2,1,25,Applies only to the current attack.,None
+60012,Defense 1 Rank Up,ModifyStat,Self,0,1.5,0,100,,Defense
+60013,Attack 1 Rank Up,ModifyStat,Self,0,1.5,0,100,,Attack
+60014,Special Attack 1 Rank Up,ModifyStat,Self,0,1.5,0,100,,SpecialAttack
+60015,Special Defense 1 Rank Up,ModifyStat,Self,0,1.5,0,100,,SpecialDefense
+60016,Speed 1 Rank Up,ModifyStat,Self,0,1.5,0,100,,Speed
