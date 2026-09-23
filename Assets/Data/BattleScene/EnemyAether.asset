@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f425007a1e13744abbf148bbbbefa9, type: 3}
+  m_Name: EnemyAether
+  m_EditorClassIdentifier: Assembly-CSharp::AetherData
+  itemid: 40001
+  aetherName: Basic Fire Aether
+  aetherType: 1
+  skills:
+  - {fileID: 11400000, guid: 114ffdf80e5a1b7409af5577eba3ed69, type: 2}
+  - {fileID: 11400000, guid: 405de09db78bf6d46bbba0f2c867d244, type: 2}
+  - {fileID: 11400000, guid: 51b6eadb2119d9840bb42a17cdeb5a11, type: 2}
