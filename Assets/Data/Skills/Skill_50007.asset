@@ -21,3 +21,7 @@ MonoBehaviour:
   accuracy: 100
   priority: 0
   effectId: 60010
+  criticalChance: 0.04
+  healRatio: 0
+  drainRatio: 0
+  recoilRatio: 0

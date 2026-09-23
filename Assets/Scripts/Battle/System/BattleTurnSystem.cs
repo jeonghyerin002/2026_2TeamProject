@@ -12,15 +12,18 @@ public enum TurnPhase
     WaitingPlayer,
     WaitingEnemy,
     Resolving,
-    Ended
+    Ended,
+    WaitingReplacement
 }
 
+/// <summary>선택 시점의 우선도와 스피드를 저장한다</summary>
 public sealed class BattleTurnAction
 {
     public BattleSide Side { get; }
     public int Priority { get; }
     public int Speed { get; }
 
+    // 행동 순서 결정에 사용할 값을 저장한다
     public BattleTurnAction(BattleSide side, int priority, int speed)
     {
         Side = side;
@@ -29,9 +32,7 @@ public sealed class BattleTurnAction
     }
 }
 
-/// <summary>
-/// 플레이어와 적의 행동 순서를 결정하고 턴 진행 상태를 관리
-/// </summary>
+/// <summary>플레이어와 적의 행동 순서를 결정하고 턴 진행 상태를 관리한다</summary>
 public class BattleTurnSystem
 {
     private readonly Queue<BattleTurnAction> actionQueue = new();
@@ -41,29 +42,30 @@ public class BattleTurnSystem
     private bool actionInProgress;
 
     public int TurnNumber { get; private set; }
+    public bool IsLastAction => actionInProgress && actionQueue.Count == 0;
     public TurnPhase Phase { get; private set; } = TurnPhase.Ended;
 
-    // 전투를 시작하고 첫 번째 턴을 준비
+    // 전투를 시작하고 첫 번째 턴을 준비한다
     public void StartBattle()
     {
         TurnNumber = 1;
         StartTurn();
     }
 
-    // 플레이어가 선택한 행동 저장
+    // 플레이어가 선택한 행동을 저장한다
     public void SetPlayerAction(BattleTurnAction action)
     {
-        if (Phase != TurnPhase.WaitingPlayer || action.Side != BattleSide.Player)
+        if (Phase != TurnPhase.WaitingPlayer || action == null || action.Side != BattleSide.Player)
             return;
 
         playerAction = action;
         Phase = TurnPhase.WaitingEnemy;
     }
 
-    // 적 행동을 저장하고 행동 순서 결정
+    // 적 행동을 저장하고 행동 순서를 결정한다
     public void SetEnemyAction(BattleTurnAction action)
     {
-        if (Phase != TurnPhase.WaitingEnemy || action.Side != BattleSide.Enemy)
+        if (Phase != TurnPhase.WaitingEnemy || action == null || action.Side != BattleSide.Enemy)
             return;
 
         enemyAction = action;
@@ -71,7 +73,7 @@ public class BattleTurnSystem
         Phase = TurnPhase.Resolving;
     }
 
-    // 다음에 실행할 행동 반환
+    // 다음에 실행할 행동을 반환한다
     public bool TryGetNextAction(out BattleTurnAction action)
     {
         action = null;
@@ -87,7 +89,7 @@ public class BattleTurnSystem
         return true;
     }
 
-    // 현재 행동 종료 후 다음 행동 또는 다음 턴 진행
+    // 현재 행동 종료 후 다음 행동 또는 다음 턴을 진행한다
     public void CompleteAction(bool battleEnded)
     {
         if (!actionInProgress)
@@ -108,7 +110,7 @@ public class BattleTurnSystem
         }
     }
 
-    // Priority → Speed → 50% 순으로 선공 결정
+    // 우선도, 스피드, 50% 순으로 선공을 결정한다
     private void BuildActionOrder()
     {
         bool playerFirst;
@@ -132,7 +134,7 @@ public class BattleTurnSystem
         }
     }
 
-    // 새로운 턴 준비
+    // 새로운 턴을 준비한다
     private void StartTurn()
     {
         playerAction = null;
@@ -142,8 +144,8 @@ public class BattleTurnSystem
         Phase = TurnPhase.WaitingPlayer;
     }
 
-    // 전투 종료
-    private void EndBattle()
+    // 대기 행동을 비우고 전투를 종료한다
+    public void EndBattle()
     {
         actionQueue.Clear();
         playerAction = null;
