@@ -10,6 +10,6 @@ public static class CharacterDataCsvImporter
         CsvSoImporter.Import<CharacterData>(
             "Assets/Data/Characters",
             "Character",
-            "id");
+            "characterid");
     }
 }

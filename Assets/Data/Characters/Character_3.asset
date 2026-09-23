@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a87bc4cf336e64741bc09dfb755d76c6, type: 3}
   m_Name: Character_3
   m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CharacterData
-  id: 3
+  characterid: 3
   CharacterName: Enemy2
   maxHp: 130
   attack: 45

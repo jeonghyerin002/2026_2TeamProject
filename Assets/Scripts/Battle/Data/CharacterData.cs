@@ -4,7 +4,7 @@
 // 캐릭터의 기본 능력치 원본 데이터를 저장한다
 public class CharacterData : ScriptableObject
 {
-    [SerializeField] private int id;                // 캐릭터 ID
+    [SerializeField] private int characterid;                // 캐릭터 ID
     [SerializeField] private string CharacterName;  // 캐릭터 이름
     [SerializeField] private int maxHp;             // 체력
     [SerializeField] private int attack;            // 공격
@@ -14,7 +14,7 @@ public class CharacterData : ScriptableObject
     [SerializeField] private int speed;            // 스피드
 
 
-    public int Id => id;
+    public int CharacterId => characterid;
     public string Charactername => CharacterName;
     public int MaxHp => maxHp;
     public int Attack => attack;

@@ -12,15 +12,17 @@ public static class CsvSoImporter
         internal string Field { get; }
         internal string Header { get; }
         internal int Count { get; }
+        internal int StartIndex { get; }
         internal string Folder { get; }
         internal string Prefix { get; }
         internal Type Type { get; }
 
-        protected RefArrayBase(string field, string header, int count, string folder, string prefix, Type type)
+        protected RefArrayBase(string field, string header, int count, string folder, string prefix, Type type, int startIndex)
         {
             Field = field;
             Header = header;
             Count = count;
+            StartIndex = startIndex;
             Folder = folder;
             Prefix = prefix;
             Type = type;
@@ -29,8 +31,8 @@ public static class CsvSoImporter
 
     public sealed class RefArray<T> : RefArrayBase where T : ScriptableObject
     {
-        public RefArray(string field, string header, int count, string folder, string prefix)
-            : base(field, header, count, folder, prefix, typeof(T)) { }
+        public RefArray(string field, string header, int count, string folder, string prefix, int startIndex = 1)
+            : base(field, header, count, folder, prefix, typeof(T), startIndex) { }
     }
 
     // 선택한 CSV를 지정한 SO 타입으로 변환
@@ -267,9 +269,9 @@ public static class CsvSoImporter
                 return false;
             }
 
-            for (int i = 1; i <= refArray.Count; i++)
+            for (int i = 0; i < refArray.Count; i++)
             {
-                string header = $"{refArray.Header}{i}";
+                string header = $"{refArray.Header}{refArray.StartIndex + i}";
 
                 if (!columns.ContainsKey(header))
                 {
@@ -446,7 +448,7 @@ public static class CsvSoImporter
 
         for (int i = 0; i < refArray.Count; i++)
         {
-            string header = $"{refArray.Header}{i + 1}";
+            string header = $"{refArray.Header}{refArray.StartIndex + i}";
             string value = cells[columns[header]].Trim();
 
             TryGetReference(value, refArray, cache, out UnityEngine.Object reference);

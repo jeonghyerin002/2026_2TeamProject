@@ -10,8 +10,8 @@ public static class SkillDataCsvImporter
         CsvSoImporter.Import<SkillData>(
             "Assets/Data/Skills",
             "Skill",
-            "skillId",
-            ignoreHeaders: new[] { "Memo" });
+            "skillid",
+            ignoreHeaders: new[] { "memo" });
 
     }
 }

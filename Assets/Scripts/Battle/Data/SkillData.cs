@@ -21,7 +21,7 @@ public enum ElementType
 // 스킬의 원본 전투 데이터를 저장한다
 public class SkillData : ScriptableObject
 {
-    [SerializeField] private int skillId;                      // 스킬 ID
+    [SerializeField] private int skillid;                      // 스킬 ID
 
     [SerializeField] private string skillName;            // 스킬 이름
 
@@ -40,7 +40,7 @@ public class SkillData : ScriptableObject
     [SerializeField] private int effectId;         // 스킬 특징 -> 버프, 디버프, 상태이상
 
 
-    public int SkillId => skillId;
+    public int SkillId => skillid;
     public string Skillname => skillName;
     public ElementType Type => type;
     public SkillAttackType AttackType => attackType;

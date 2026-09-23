@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4824db1e751bd8d4b919bc99b40f4dfc, type: 3}
   m_Name: Skill_50005
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
-  skillId: 50005
+  skillid: 50005
   skillName: Straight Punch
   type: 5
   attackType: 0

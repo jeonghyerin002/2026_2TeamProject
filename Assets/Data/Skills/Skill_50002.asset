@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4824db1e751bd8d4b919bc99b40f4dfc, type: 3}
   m_Name: Skill_50002
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
-  skillId: 50002
+  skillid: 50002
   skillName: Water Gun
   type: 2
   attackType: 1

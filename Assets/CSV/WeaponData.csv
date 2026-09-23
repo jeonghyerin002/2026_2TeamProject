@@ -1,3 +1,3 @@
-itemId,name,healthMultiplier,attackMultiplier,defenseMultiplier,specialAttackMultiplier,specialDefenseMultiplier,speedMultiplier,skillId1
+itemid,weaponName,healthMultiplier,attackMultiplier,defenseMultiplier,specialAttackMultiplier,specialDefenseMultiplier,speedMultiplier,skillId1
 20001,Training Sword,1,1,1,1,1,1,0
 20999,Temporary Test Sword,1,1,1,1,1,1,0

@@ -8,14 +8,15 @@ public static class AetherDataCsvImporter
     private static void Import()
     {
         CsvSoImporter.Import<AetherData>(
-            "Assets/Data/Aethers",
+            "Assets/Data/Items",
             "Aether",
-            "skillId",
+            "itemid",
             refArray: new CsvSoImporter.RefArray<SkillData>(
                 "skills",
-                "skillId",
-                3,
+                "skillid",
+                 3,
                 "Assets/Data/Skills",
-                "Skill"));
+                "Skill",
+                 2));
     }
 }
