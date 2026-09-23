@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f425007a1e13744abbf148bbbbefa9, type: 3}
   m_Name: PlayerAether
   m_EditorClassIdentifier: Assembly-CSharp::AetherData
-  itemid: 40002
-  aetherName: Basic Water Aether
-  aetherType: 2
+  itemid: 40001
+  aetherName: Basic Fire Aether
+  aetherType: 1
   skills:
-  - {fileID: 11400000, guid: 2b56b4d468278554a8709038d170b350, type: 2}
-  - {fileID: 11400000, guid: 057ab90d5ec921a4c997f3826fa2ae4a, type: 2}
-  - {fileID: 11400000, guid: d7967dba7fd16d24ead1dc6785e62ead, type: 2}
+  - {fileID: 11400000, guid: 114ffdf80e5a1b7409af5577eba3ed69, type: 2}
+  - {fileID: 11400000, guid: 405de09db78bf6d46bbba0f2c867d244, type: 2}
+  - {fileID: 11400000, guid: 51b6eadb2119d9840bb42a17cdeb5a11, type: 2}

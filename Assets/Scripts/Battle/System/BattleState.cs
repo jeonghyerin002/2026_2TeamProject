@@ -9,14 +9,14 @@ public enum BattleStat { Attack, Defense, SpecialAttack, SpecialDefense, Speed }
 public sealed class BattleState
 {
     private readonly Dictionary<SkillData, int> currentPp = new();
-    private readonly SkillData[] skills;
+    private SkillData[] skills;
     private readonly int[] ranks = new int[5];
     private int sleepTurns;
     private int confusionTurns;
     private int toxicStage;
 
     public CharacterData Character { get; }
-    public AetherData Aether { get; }
+    public AetherData Aether { get; private set; }
     public WeaponData Weapon { get; }
     public int Level { get; }
     public int MaxHp { get; }
@@ -37,11 +37,27 @@ public sealed class BattleState
         Level = Mathf.Clamp(level, 1, 100);
         MaxHp = Scale(Character.MaxHp, Weapon != null ? Weapon.HealthMultiplier : 1f);
         CurrentHp = MaxHp;
+        RefreshSkills();
+    }
+
+    // 장착 슬롯을 갱신하고 이전에 사용한 기술의 PP를 보존한다
+    private void RefreshSkills()
+    {
         List<SkillData> list = new();
         AddSkills(list, Aether.Skills);
         if (Weapon != null)
             AddSkills(list, Weapon.Skills);
         skills = list.ToArray();
+    }
+
+    // 같은 전투 상태를 유지하며 에테르와 제공 기술만 교체한다
+    internal bool EquipAether(AetherData aether)
+    {
+        if (aether == null || aether.itemId == Aether.itemId || IsDead)
+            return false;
+        Aether = aether;
+        RefreshSkills();
+        return true;
     }
 
     // 슬롯을 복사하고 같은 SO의 PP를 공유한다
@@ -73,7 +89,7 @@ public sealed class BattleState
     public bool TryConsumePp(SkillData skill)
     {
         int pp = GetCurrentPp(skill);
-        if (pp <= 0 || IsDead)
+        if (pp <= 0 || IsDead || Array.IndexOf(skills, skill) < 0)
             return false;
         currentPp[skill] = pp - 1;
         return true;

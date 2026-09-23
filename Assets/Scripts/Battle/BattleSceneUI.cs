@@ -25,10 +25,11 @@ public sealed class BattleSceneUI : MonoBehaviour
     [SerializeField] private TMP_Text[] labels;
     [SerializeField] private Button back;
 
-    private enum Menu { Root, Skills, Party, Info, End }
+    private enum Menu { Root, Skills, Aethers, Party, Info, End }
     private Menu menu;
     private int selected;
     private int partyPage;
+    private int aetherPage;
     private Coroutine animationRoutine;
     private Vector2 playerOrigin;
     private Vector2 enemyOrigin;
@@ -146,7 +147,7 @@ public sealed class BattleSceneUI : MonoBehaviour
         {
             case Menu.Root:
                 SetChoice(0, "싸운다", true);
-                SetChoice(1, "파티", true);
+                SetChoice(1, "에테르", true);
                 SetChoice(2, "빌드 정보", true);
                 SetChoice(3, "도망", false);
                 message.text = $"{player.Character.Charactername}, 무엇을 할까?";
@@ -163,6 +164,9 @@ public sealed class BattleSceneUI : MonoBehaviour
                     SetChoice(0, "발버둥", true);
                 message.text = "사용할 기술을 선택하세요.";
                 detail.text = "에테르 기술 3개 + 무기 기술 1개";
+                break;
+            case Menu.Aethers:
+                ShowAethers();
                 break;
             case Menu.Party:
                 int start = partyPage * 3;
@@ -201,6 +205,24 @@ public sealed class BattleSceneUI : MonoBehaviour
         SelectCurrent();
     }
 
+    // 보유 에테르를 세 개씩 표시하고 현재 장착 항목을 구분한다
+    private void ShowAethers()
+    {
+        int count = battle.OwnedAethers.Count;
+        int pages = Mathf.Max(1, (count + 2) / 3);
+        aetherPage = Mathf.Clamp(aetherPage, 0, pages - 1);
+        int start = aetherPage * 3;
+        for (int i = 0; i < 3 && start + i < count; i++)
+        {
+            AetherData aether = battle.OwnedAethers[start + i];
+            bool equipped = aether.itemId == battle.PlayerState.Aether.itemId;
+            SetChoice(i, $"<size=70%>{aether.AetherName}</size>\n<size=65%>{aether.AetherType}{(equipped ? "  장착 중" : "  교체")}</size>", !equipped);
+        }
+        SetChoice(3, $"다음 페이지\n<size=65%>{aetherPage + 1} / {pages}</size>", pages > 1);
+        message.text = $"<size=80%>현재: {battle.PlayerState.Aether.AetherName}</size>\n교체할 에테르를 선택하세요.";
+        detail.text = count > 1 ? "교체하면 내 턴을 소비하고 적이 행동합니다" : "교체 가능한 다른 에테르가 없습니다";
+    }
+
     // 슬롯 문구와 입력 가능 상태를 설정한다
     private void SetChoice(int index, string text, bool enabled)
     {
@@ -216,6 +238,24 @@ public sealed class BattleSceneUI : MonoBehaviour
         SkillData skill = menu == Menu.Skills ? battle.PlayerState.GetSkill(selected) : null;
         if (skill != null)
             detail.text = $"{skill.Type} / {skill.AttackType}   위력 {skill.Damage}\n명중 {skill.Accuracy}%   우선도 {skill.Priority}";
+        if (menu == Menu.Aethers && selected < 3)
+        {
+            int index = aetherPage * 3 + selected;
+            if (index < battle.OwnedAethers.Count)
+            {
+                AetherData aether = battle.OwnedAethers[index];
+                string skills = "";
+                if (aether.Skills != null)
+                {
+                    foreach (SkillData item in aether.Skills)
+                    {
+                        if (item != null)
+                            skills += (skills.Length > 0 ? " / " : "") + item.Skillname;
+                    }
+                }
+                detail.text = $"교체 시 내 턴 소비 · {aether.AetherType}\n{(skills.Length > 0 ? skills : "에테르 기술 없음")}";
+            }
+        }
     }
 
     // 비활성 슬롯을 건너뛰며 선택한다
@@ -241,11 +281,21 @@ public sealed class BattleSceneUI : MonoBehaviour
         switch (menu)
         {
             case Menu.Root:
-                menu = index == 0 ? Menu.Skills : index == 1 ? Menu.Party : Menu.Info;
+                menu = index == 0 ? Menu.Skills : index == 1 ? Menu.Aethers : Menu.Info;
                 break;
             case Menu.Skills:
                 menu = Menu.Root;
                 flow.SelectPlayerSkill(battle.PlayerState.GetAvailableSkill() < 0 ? -1 : index);
+                break;
+            case Menu.Aethers:
+                if (index == 3)
+                    aetherPage = (aetherPage + 1) % Mathf.Max(1, (battle.OwnedAethers.Count + 2) / 3);
+                else
+                {
+                    menu = Menu.Root;
+                    if (!flow.SelectPlayerAether(aetherPage * 3 + index))
+                        menu = Menu.Aethers;
+                }
                 break;
             case Menu.Party:
                 if (index == 3)
@@ -262,6 +312,7 @@ public sealed class BattleSceneUI : MonoBehaviour
             case Menu.End:
                 menu = Menu.Root;
                 partyPage = 0;
+                aetherPage = 0;
                 flow.StartBattle();
                 break;
         }

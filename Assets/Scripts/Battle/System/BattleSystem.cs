@@ -9,6 +9,8 @@ public class BattleSystem : MonoBehaviour
     [Header("Player")]
     [SerializeField] private CharacterData playerCharacter;
     [SerializeField] private AetherData playerAether;
+    [Tooltip("전투에서 교체할 수 있는 보유 에테르 목록. 시작 장착 에테르는 자동으로 포함한다.")]
+    [SerializeField] private AetherData[] ownedAethers = Array.Empty<AetherData>();
     [SerializeField] private WeaponData playerWeapon;
     [SerializeField, Range(1, 100)] private int playerLevel = 1;
     [SerializeField] private BattleMember[] playerReserves = Array.Empty<BattleMember>();
@@ -25,6 +27,8 @@ public class BattleSystem : MonoBehaviour
     private readonly List<BattleState> playerParty = new();
     private readonly List<BattleState> enemyParty = new();
     private readonly HashSet<BattleState> fainted = new();
+    private readonly List<AetherData> availableAethers = new();
+    private IReadOnlyList<AetherData> aetherView;
     private IReadOnlyList<BattleState> playerView;
     private BattleState playerState;
     private BattleState enemyState;
@@ -41,6 +45,7 @@ public class BattleSystem : MonoBehaviour
     public BattleState PlayerState => playerState;
     public BattleState EnemyState => enemyState;
     public IReadOnlyList<BattleState> PlayerParty => playerView ??= playerParty.AsReadOnly();
+    public IReadOnlyList<AetherData> OwnedAethers => aetherView ??= availableAethers.AsReadOnly();
     public TurnPhase Phase => waitingReplacement ? TurnPhase.WaitingReplacement : turnSystem.Phase;
     public int TurnNumber => turnSystem.TurnNumber;
     public BattleSide? Winner { get; private set; }
@@ -58,6 +63,7 @@ public class BattleSystem : MonoBehaviour
         enemyState = new BattleState(enemyCharacter, enemyAether, enemyWeapon, enemyLevel);
         BuildParty(playerParty, playerState, playerReserves);
         BuildParty(enemyParty, enemyState, enemyReserves);
+        BuildAethers();
         fainted.Clear();
         playerSkill = null;
         enemySkill = null;
@@ -90,6 +96,47 @@ public class BattleSystem : MonoBehaviour
             if (member != null && member.Character != null && member.Aether != null)
                 party.Add(new BattleState(member.Character, member.Aether, member.Weapon, member.Level));
         }
+    }
+
+    // 시작 장비와 명시적으로 보유한 에테르만 중복 없이 준비한다
+    private void BuildAethers()
+    {
+        availableAethers.Clear();
+        foreach (BattleState member in playerParty)
+            AddAether(member.Aether);
+        if (ownedAethers == null)
+            return;
+        foreach (AetherData aether in ownedAethers)
+            AddAether(aether);
+    }
+
+    // 같은 ID는 처음 등록된 에테르만 보유 목록에 포함한다
+    private void AddAether(AetherData aether)
+    {
+        if (aether == null)
+            return;
+        foreach (AetherData owned in availableAethers)
+        {
+            if (owned.itemId == aether.itemId)
+                return;
+        }
+        availableAethers.Add(aether);
+    }
+
+    // 보유 에테르를 교체하고 자신의 공격 대신 적의 행동을 진행한다
+    public bool SelectPlayerAether(int index)
+    {
+        if (Phase != TurnPhase.WaitingPlayer || playerState == null || enemyState == null || enemyState.IsDead ||
+            index < 0 || index >= availableAethers.Count || !playerState.EquipAether(availableAethers[index]))
+            return false;
+        playerActor = null;
+        playerSkill = null;
+        enemyActor = enemyState;
+        enemySkill = enemyState.GetSkill(enemyState.GetAvailableSkill());
+        turnSystem.SetEnemyResponse(new BattleTurnAction(BattleSide.Enemy, enemySkill != null ? enemySkill.Priority : 0, enemyState.Speed));
+        Publish($"{playerState.Aether.AetherName}을(를) 장착했다!");
+        NotifyState();
+        return true;
     }
 
     // 플레이어 선택을 등록하며 PP는 실행 시까지 보존한다

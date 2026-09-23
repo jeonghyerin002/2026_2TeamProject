@@ -173,6 +173,8 @@ Scene, Prefab, ProjectSettings, Packages는 작업에 반드시 필요한 경우
 
 # 작업 검증
 
+* 사용자 지침: 앞으로 `Verification` 스크립트는 생성하지 않는다
+
 구현 후 수정한 코드만 중심으로 확인한다.
 
 반드시 확인:

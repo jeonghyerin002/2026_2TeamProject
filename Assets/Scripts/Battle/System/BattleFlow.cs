@@ -84,6 +84,15 @@ public class BattleFlow : MonoBehaviour
         BeginResolution();
     }
 
+    // 에테르 교체 문구와 적 행동을 한 턴으로 연출한다
+    public bool SelectPlayerAether(int index)
+    {
+        if (running || battleSystem == null || !battleSystem.SelectPlayerAether(index))
+            return false;
+        BeginResolution();
+        return true;
+    }
+
     // 전체 PP 소진 상태에서 발버둥을 선택한다
     public void SelectStruggle()
     {
@@ -102,6 +111,7 @@ public class BattleFlow : MonoBehaviour
     private void BeginResolution()
     {
         running = true;
+        RefreshState();
         turnRoutine = StartCoroutine(ResolveTurn());
     }
 

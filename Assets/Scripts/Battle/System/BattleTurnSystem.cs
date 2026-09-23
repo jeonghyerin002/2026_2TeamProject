@@ -73,6 +73,15 @@ public class BattleTurnSystem
         Phase = TurnPhase.Resolving;
     }
 
+    // 에테르 교체로 아군 행동을 소비하고 적 행동만 대기열에 등록한다
+    public void SetEnemyResponse(BattleTurnAction action)
+    {
+        if (Phase != TurnPhase.WaitingPlayer || action == null || action.Side != BattleSide.Enemy)
+            return;
+        actionQueue.Enqueue(action);
+        Phase = TurnPhase.Resolving;
+    }
+
     // 다음에 실행할 행동을 반환한다
     public bool TryGetNextAction(out BattleTurnAction action)
     {

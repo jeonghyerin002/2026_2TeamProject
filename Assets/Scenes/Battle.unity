@@ -605,12 +605,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleSystem
   playerCharacter: {fileID: 11400000, guid: 2c15917d7f5e5584fb2af2fa2d4b5ec4, type: 2}
-  playerAether: {fileID: 11400000, guid: 40de25634f7c84049a8a4da5b52867dc, type: 2}
+  playerAether: {fileID: 11400000, guid: 4cee224af815cd646976f71f7107a738, type: 2}
+  ownedAethers:
+  - {fileID: 11400000, guid: 40de25634f7c84049a8a4da5b52867dc, type: 2}
+  - {fileID: 11400000, guid: 5ea6179a256c2d848afd672a38ec9ba6, type: 2}
+  - {fileID: 11400000, guid: b768a016adff57145b2ae239b132d954, type: 2}
   playerWeapon: {fileID: 11400000, guid: 10cc799ed68a6e347b19a300131f6b2b, type: 2}
   playerLevel: 20
   playerReserves: []
   enemyCharacter: {fileID: 11400000, guid: 2560af1f1e69d5744b2d207239007ef5, type: 2}
-  enemyAether: {fileID: 11400000, guid: 4cee224af815cd646976f71f7107a738, type: 2}
+  enemyAether: {fileID: 11400000, guid: 40de25634f7c84049a8a4da5b52867dc, type: 2}
   enemyWeapon: {fileID: 11400000, guid: 10cc799ed68a6e347b19a300131f6b2b, type: 2}
   enemyLevel: 20
   enemyReserves: []
@@ -5481,7 +5485,7 @@ GameObject:
   - component: {fileID: 1439971093}
   - component: {fileID: 1439971095}
   m_Layer: 0
-  m_Name: "\uD30C\uD2F0"
+  m_Name: "\uC5D0\uD14C\uB974"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7952,7 +7956,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uD30C\uD2F0"
+  m_text: "\uC5D0\uD14C\uB974"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
