@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-        //YÃà Á¤·Ä ¸ğµå °­Á¦ Àû¿ë (Y°ªÀÌ Å¬¼ö·Ï µÚ·Î °¡°í, ÀÛÀ»¼ö·Ï ¾ÕÀ¸·Î ³ª¿È)
+        //Yì¶• ì •ë ¬ ëª¨ë“œ ê°•ì œ ì ìš© (Yê°’ì´ í´ìˆ˜ë¡ ë’¤ë¡œ ê°€ê³ , ì‘ì„ìˆ˜ë¡ ì•ìœ¼ë¡œ ë‚˜ì˜´)
         if (Camera.main != null)
         {
             Camera.main.transparencySortMode = TransparencySortMode.CustomAxis;

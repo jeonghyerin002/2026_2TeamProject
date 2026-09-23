@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 /// <summary>행동 가능 여부와 명중을 판정하고 데미지와 부가효과를 적용한다</summary>
