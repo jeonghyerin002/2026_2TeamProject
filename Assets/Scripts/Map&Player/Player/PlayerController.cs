@@ -3,6 +3,19 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance {  get; private set; }
+    void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+
+        DontDestroyOnLoad(gameObject);
+    }
     [Header("Movement Settings")]
     public float moveSpeed = 4.0f;
 
@@ -11,11 +24,9 @@ public class PlayerController : MonoBehaviour
     bool isFacingRight = true;
     bool isFasted = false;
 
-    void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-
 
         //Y축 정렬 모드 강제 적용 (Y값이 클수록 뒤로 가고, 작을수록 앞으로 나옴)
         if (Camera.main != null)
