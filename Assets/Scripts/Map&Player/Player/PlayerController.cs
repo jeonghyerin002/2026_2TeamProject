@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
     [Header("Movement Settings")]
-    public float moveSpeed = 4.0f;
+    public float moveSpeed = 2.0f;
 
     Rigidbody2D rb;
     Vector2 moveInput;
