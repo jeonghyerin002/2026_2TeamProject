@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95abccb495c15c74bb3dcbbecb1fa39d, type: 3}
+  m_Name: DialogDatabaseSO
+  m_EditorClassIdentifier: Assembly-CSharp::DialogDatabaseSO
+  dialogs:
+  - {fileID: 11400000, guid: 2bc5ab2cbc27c8145b2ac1810a4277cb, type: 2}
+  - {fileID: 11400000, guid: e64c292c9b28ba5449c9e28faf1406c1, type: 2}
+  - {fileID: 11400000, guid: 96d583978848de3448230d9facf9d0c9, type: 2}
+  - {fileID: 11400000, guid: a37d3126609439a4d8dd1c57dbaee8b6, type: 2}
