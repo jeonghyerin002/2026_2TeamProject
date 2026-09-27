@@ -1805,7 +1805,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
   startingDialogueId: 1
-  battleSceneName: 
+  battleSceneName: Battle
 --- !u!114 &1461460265
 MonoBehaviour:
   m_ObjectHideFlags: 0
