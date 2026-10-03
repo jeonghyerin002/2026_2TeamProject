@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db2ba367e85e76c40aa583d9b962cb33, type: 3}
+  m_Name: NPC_001
+  m_EditorClassIdentifier: Assembly-CSharp::NpcBattleData
+  character: {fileID: 11400000, guid: 2560af1f1e69d5744b2d207239007ef5, type: 2}
+  aether: {fileID: 11400000, guid: 5ea6179a256c2d848afd672a38ec9ba6, type: 2}
+  weapon: {fileID: 11400000, guid: c7588b7a97cf1f34bb907e86b81a6d3a, type: 2}
+  level: 1
+  experienceReward: 50

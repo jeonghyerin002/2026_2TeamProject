@@ -925,6 +925,7 @@ GameObject:
   - component: {fileID: 850467161}
   - component: {fileID: 850467159}
   - component: {fileID: 850467158}
+  - component: {fileID: 850467165}
   - component: {fileID: 850467163}
   - component: {fileID: 850467164}
   m_Layer: 0
@@ -1116,6 +1117,26 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.08}
   m_Size: {x: 0.5, y: 0.5}
   m_Direction: 0
+--- !u!114 &850467165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850467157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0efc698ffed09f4c92969e78dc6ec36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerBattleData
+  character: {fileID: 11400000, guid: 2c15917d7f5e5584fb2af2fa2d4b5ec4, type: 2}
+  equippedAether: {fileID: 11400000, guid: 841db7e59df6b904d9ee96723a3ac834, type: 2}
+  ownedAethers:
+  - {fileID: 11400000, guid: 5ea6179a256c2d848afd672a38ec9ba6, type: 2}
+  - {fileID: 11400000, guid: b768a016adff57145b2ae239b132d954, type: 2}
+  weapon: {fileID: 11400000, guid: 9e347140140491d41bedb384b1608143, type: 2}
+  level: 1
+  experience: 0
 --- !u!1 &920045840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,7 +1933,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76f0f49fe9d8bea45ae89c333dcec9eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
-  startingDialogueId: 1
+  npcId: npc_001
+  battleData: {fileID: 11400000, guid: c5c0455aa5f843844ac81cfa0cddfc26, type: 2}
+  beforeBattleDialogueId: 1
+  afterVictoryDialogueId: 0
   battleSceneName: Battle
 --- !u!114 &1461460265
 MonoBehaviour:
