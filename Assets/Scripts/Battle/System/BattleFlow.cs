@@ -99,14 +99,6 @@ public class BattleFlow : MonoBehaviour
         SelectPlayerSkill(-1);
     }
 
-    // 선택한 예비 멤버로 교체한 후 남아 있는 행동을 진행한다
-    public void SelectReplacement(int partyIndex)
-    {
-        if (running || battleSystem == null || !battleSystem.SelectReplacement(partyIndex))
-            return;
-        BeginResolution();
-    }
-
     // 중복 실행을 차단하고 연출을 시작한다
     private void BeginResolution()
     {
@@ -115,7 +107,7 @@ public class BattleFlow : MonoBehaviour
         turnRoutine = StartCoroutine(ResolveTurn());
     }
 
-    // 문구와 행동을 차례로 진행하고 교체 입력 또는 다음 턴을 기다린다
+    // 문구와 행동을 차례로 진행하고 다음 턴을 기다린다
     private IEnumerator ResolveTurn()
     {
         yield return ShowMessages();
@@ -177,7 +169,7 @@ public class BattleFlow : MonoBehaviour
             yield return ShowText(effect);
     }
 
-    // 기절, 보상, 교체 문구를 순서대로 표시한다
+    // 기절과 보상 문구를 순서대로 표시한다
     private IEnumerator ShowMessages()
     {
         while (messages.Count > 0)

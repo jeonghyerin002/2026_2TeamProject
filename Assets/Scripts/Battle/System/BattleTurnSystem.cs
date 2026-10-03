@@ -13,7 +13,6 @@ public enum TurnPhase
     WaitingEnemy,
     Resolving,
     Ended,
-    WaitingReplacement
 }
 
 /// <summary>선택 시점의 우선도와 스피드를 저장한다</summary>

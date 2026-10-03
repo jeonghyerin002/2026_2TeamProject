@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-/// <summary>기존 선발 SO 연결과 예비 멤버, 턴 진행 및 전투 종료를 관리한다</summary>
+/// <summary>플레이어와 적의 전투 상태, 턴 진행 및 전투 종료를 관리한다</summary>
 [DisallowMultipleComponent]
 public class BattleSystem : MonoBehaviour
 {
@@ -13,30 +13,24 @@ public class BattleSystem : MonoBehaviour
     [SerializeField] private AetherData[] ownedAethers = Array.Empty<AetherData>();
     [SerializeField] private WeaponData playerWeapon;
     [SerializeField, Range(1, 100)] private int playerLevel = 1;
-    [SerializeField] private BattleMember[] playerReserves = Array.Empty<BattleMember>();
 
     [Header("Enemy")]
     [SerializeField] private CharacterData enemyCharacter;
     [SerializeField] private AetherData enemyAether;
     [SerializeField] private WeaponData enemyWeapon;
     [SerializeField, Range(1, 100)] private int enemyLevel = 1;
-    [SerializeField] private BattleMember[] enemyReserves = Array.Empty<BattleMember>();
     [SerializeField, Min(0)] private int experienceReward = 50;
 
     private readonly BattleTurnSystem turnSystem = new();
-    private readonly List<BattleState> playerParty = new();
-    private readonly List<BattleState> enemyParty = new();
     private readonly HashSet<BattleState> fainted = new();
     private readonly List<AetherData> availableAethers = new();
     private IReadOnlyList<AetherData> aetherView;
-    private IReadOnlyList<BattleState> playerView;
     private BattleState playerState;
     private BattleState enemyState;
     private BattleState playerActor;
     private BattleState enemyActor;
     private SkillData playerSkill;
     private SkillData enemySkill;
-    private bool waitingReplacement;
     private bool actionPending;
 
     public event Action<string> Message;
@@ -44,13 +38,12 @@ public class BattleSystem : MonoBehaviour
     public event Action<BattleSide?> BattleEnded;
     public BattleState PlayerState => playerState;
     public BattleState EnemyState => enemyState;
-    public IReadOnlyList<BattleState> PlayerParty => playerView ??= playerParty.AsReadOnly();
     public IReadOnlyList<AetherData> OwnedAethers => aetherView ??= availableAethers.AsReadOnly();
-    public TurnPhase Phase => waitingReplacement ? TurnPhase.WaitingReplacement : turnSystem.Phase;
+    public TurnPhase Phase => turnSystem.Phase;
     public int TurnNumber => turnSystem.TurnNumber;
     public BattleSide? Winner { get; private set; }
 
-    // 기존 선발 참조와 예비 멤버로 새 전투를 시작한다
+    // 플레이어와 적의 전투 상태를 생성하고 전투를 시작한다
     public void StartBattle()
     {
         StopBattle();
@@ -61,17 +54,16 @@ public class BattleSystem : MonoBehaviour
         }
         playerState = new BattleState(playerCharacter, playerAether, playerWeapon, playerLevel);
         enemyState = new BattleState(enemyCharacter, enemyAether, enemyWeapon, enemyLevel);
-        BuildParty(playerParty, playerState, playerReserves);
-        BuildParty(enemyParty, enemyState, enemyReserves);
         BuildAethers();
         fainted.Clear();
+
         playerSkill = null;
         enemySkill = null;
         playerActor = null;
         enemyActor = null;
-        waitingReplacement = false;
         actionPending = false;
         Winner = null;
+
         turnSystem.StartBattle();
         NotifyState();
     }
@@ -80,32 +72,18 @@ public class BattleSystem : MonoBehaviour
     public void StopBattle()
     {
         turnSystem.EndBattle();
-        waitingReplacement = false;
         actionPending = false;
-    }
-
-    // 선발과 유효한 예비 멤버의 전투 상태를 생성한다
-    private static void BuildParty(List<BattleState> party, BattleState first, BattleMember[] reserves)
-    {
-        party.Clear();
-        party.Add(first);
-        if (reserves == null)
-            return;
-        foreach (BattleMember member in reserves)
-        {
-            if (member != null && member.Character != null && member.Aether != null)
-                party.Add(new BattleState(member.Character, member.Aether, member.Weapon, member.Level));
-        }
     }
 
     // 시작 장비와 명시적으로 보유한 에테르만 중복 없이 준비한다
     private void BuildAethers()
     {
         availableAethers.Clear();
-        foreach (BattleState member in playerParty)
-            AddAether(member.Aether);
+        AddAether(playerState.Aether);
+
         if (ownedAethers == null)
             return;
+
         foreach (AetherData aether in ownedAethers)
             AddAether(aether);
     }
@@ -185,7 +163,7 @@ public class BattleSystem : MonoBehaviour
         return true;
     }
 
-    // 기절 및 턴 종료 피해를 처리하고 교체나 다음 턴으로 진행한다
+    // 기절 및 턴 종료 피해를 처리하고 전투 종료 여부를 판단한다
     public void CompleteAction()
     {
         if (!actionPending || playerState == null || enemyState == null)
@@ -193,30 +171,21 @@ public class BattleSystem : MonoBehaviour
         actionPending = false;
         ReportFaint(playerState, enemyState, false);
         ReportFaint(enemyState, playerState, true);
-        bool ended = !HasLiving(playerParty) || !HasLiving(enemyParty);
+        bool ended = playerState.IsDead || enemyState.IsDead;
         if (!ended && turnSystem.IsLastAction)
         {
             ApplyResidual(playerState);
             ApplyResidual(enemyState);
             ReportFaint(playerState, enemyState, false);
             ReportFaint(enemyState, playerState, true);
-            ended = !HasLiving(playerParty) || !HasLiving(enemyParty);
+            ended = playerState.IsDead || enemyState.IsDead;
         }
         turnSystem.CompleteAction(ended);
         if (ended)
         {
             FinishBattle();
             return;
-        }
-        if (enemyState.IsDead)
-        {
-            enemyState.ResetVolatileState();
-            enemyState = enemyParty.Find(unit => !unit.IsDead);
-            Publish($"{enemyState.Character.Charactername}이(가) 전투에 나왔다!");
-        }
-        waitingReplacement = playerState.IsDead;
-        if (waitingReplacement)
-            Publish("다음에 나올 아군을 선택하세요.");
+        }         
         NotifyState();
     }
 
@@ -240,37 +209,19 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    // 살아 있는 멤버가 남았는지 확인한다
-    private static bool HasLiving(List<BattleState> party)
-    {
-        return party.Exists(unit => !unit.IsDead);
-    }
-
-    // 기절한 플레이어 멤버를 선택한 파티 슬롯으로 교체한다
-    public bool SelectReplacement(int partyIndex)
-    {
-        if (!waitingReplacement || partyIndex < 0 || partyIndex >= playerParty.Count || playerParty[partyIndex].IsDead)
-            return false;
-        playerState.ResetVolatileState();
-        playerState = playerParty[partyIndex];
-        waitingReplacement = false;
-        Publish($"{playerState.Character.Charactername}이(가) 전투에 나왔다!");
-        NotifyState();
-        return true;
-    }
-
     // 승패와 일시 상태 정리를 완료한다
     private void FinishBattle()
     {
-        bool playerAlive = HasLiving(playerParty);
-        bool enemyAlive = HasLiving(enemyParty);
-        Winner = playerAlive ? BattleSide.Player : enemyAlive ? BattleSide.Enemy : (BattleSide?)null;
-        foreach (BattleState state in playerParty)
-            state.FinishBattle();
-        foreach (BattleState state in enemyParty)
-            state.FinishBattle();
-        waitingReplacement = false;
-        Publish(Winner == BattleSide.Player ? "전투에서 승리했다!" : Winner == BattleSide.Enemy ? "전투에서 패배했다!" : "전투가 무승부로 끝났다!");
+        Winner = playerState.IsDead && enemyState.IsDead ? null :
+       enemyState.IsDead ? BattleSide.Player : BattleSide.Enemy;
+
+        playerState.FinishBattle();
+        enemyState.FinishBattle();
+
+        Publish(Winner == BattleSide.Player ? "전투에서 승리했다!" :
+            Winner == BattleSide.Enemy ? "전투에서 패배했다!" :
+            "전투가 무승부로 끝났다!");
+
         NotifyState();
         BattleEnded?.Invoke(Winner);
     }
@@ -282,24 +233,9 @@ public class BattleSystem : MonoBehaviour
             Message?.Invoke(message);
     }
 
-    // HP, PP 및 교체 상태 변경을 표시 계층에 전달한다
+    // HP, PP 및 전투 상태 변경을 표시 계층에 전달한다
     public void NotifyState()
     {
         StateChanged?.Invoke();
     }
-}
-
-/// <summary>Inspector에서 예비 멤버의 원본 데이터와 레벨을 지정한다</summary>
-[Serializable]
-public sealed class BattleMember
-{
-    [SerializeField] private CharacterData character;
-    [SerializeField] private AetherData aether;
-    [SerializeField] private WeaponData weapon;
-    [SerializeField, Range(1, 100)] private int level = 1;
-
-    public CharacterData Character => character;
-    public AetherData Aether => aether;
-    public WeaponData Weapon => weapon;
-    public int Level => level;
 }

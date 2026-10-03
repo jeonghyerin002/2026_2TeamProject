@@ -218,7 +218,7 @@ public sealed class BattleState
         return before - CurrentHp;
     }
 
-    // 교체 시 일시적인 상태와 랭크를 해제한다
+    // 전투 중 일시적인 상태와 랭크를 해제한다
     public void ResetVolatileState()
     {
         Array.Clear(ranks, 0, ranks.Length);

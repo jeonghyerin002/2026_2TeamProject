@@ -25,10 +25,9 @@ public sealed class BattleSceneUI : MonoBehaviour
     [SerializeField] private TMP_Text[] labels;
     [SerializeField] private Button back;
 
-    private enum Menu { Root, Skills, Aethers, Party, Info, End }
+    private enum Menu { Root, Skills, Aethers, Info, End }
     private Menu menu;
     private int selected;
-    private int partyPage;
     private int aetherPage;
     private Coroutine animationRoutine;
     private Vector2 playerOrigin;
@@ -108,8 +107,6 @@ public sealed class BattleSceneUI : MonoBehaviour
         {
             if (battle.Phase == TurnPhase.Ended)
                 menu = Menu.End;
-            else if (battle.Phase == TurnPhase.WaitingReplacement)
-                menu = Menu.Party;
             else if (menu == Menu.End)
                 menu = Menu.Root;
         }
@@ -136,8 +133,7 @@ public sealed class BattleSceneUI : MonoBehaviour
             labels[i].text = "—";
             choices[i].interactable = false;
         }
-        back.interactable = !flow.IsBusy && menu != Menu.Root && menu != Menu.End && battle.Phase != TurnPhase.WaitingReplacement;
-        if (flow.IsBusy)
+        back.interactable = !flow.IsBusy && menu != Menu.Root && menu != Menu.End;
         {
             detail.text = "전투 진행 중…";
             return;
@@ -167,18 +163,6 @@ public sealed class BattleSceneUI : MonoBehaviour
                 break;
             case Menu.Aethers:
                 ShowAethers();
-                break;
-            case Menu.Party:
-                int start = partyPage * 3;
-                for (int i = 0; i < 3 && start + i < battle.PlayerParty.Count; i++)
-                {
-                    BattleState member = battle.PlayerParty[start + i];
-                    SetChoice(i, $"{member.Character.Charactername}\n<size=65%>HP {member.CurrentHp}/{member.MaxHp}{(member == player ? "  출전 중" : "")}</size>",
-                        battle.Phase == TurnPhase.WaitingReplacement && !member.IsDead && member != player);
-                }
-                SetChoice(3, "다음 페이지", battle.PlayerParty.Count > 3);
-                message.text = battle.Phase == TurnPhase.WaitingReplacement ? "다음에 나올 아군을 선택하세요." : "현재 파티를 확인합니다.";
-                detail.text = battle.Phase == TurnPhase.WaitingReplacement ? "살아 있는 예비 멤버를 선택하세요" : "기절했을 때 예비 멤버로 교체할 수 있습니다";
                 break;
             case Menu.Info:
                 message.text = $"에테르: {player.Aether.AetherName}\n무기: {(player.Weapon != null ? player.Weapon.WeaponName : "없음")}";
@@ -297,21 +281,11 @@ public sealed class BattleSceneUI : MonoBehaviour
                         menu = Menu.Aethers;
                 }
                 break;
-            case Menu.Party:
-                if (index == 3)
-                    partyPage = (partyPage + 1) % ((battle.PlayerParty.Count + 2) / 3);
-                else
-                {
-                    menu = Menu.Root;
-                    flow.SelectReplacement(partyPage * 3 + index);
-                }
-                break;
             case Menu.Info:
                 menu = Menu.Root;
                 break;
             case Menu.End:
                 menu = Menu.Root;
-                partyPage = 0;
                 aetherPage = 0;
                 flow.StartBattle();
                 break;
@@ -322,7 +296,7 @@ public sealed class BattleSceneUI : MonoBehaviour
     // 강제 교체를 제외한 하위 메뉴를 닫는다
     private void Back()
     {
-        if (flow.IsBusy || battle.Phase == TurnPhase.WaitingReplacement || menu == Menu.End)
+        if (flow.IsBusy || menu == Menu.End)
             return;
         menu = Menu.Root;
         Refresh();
