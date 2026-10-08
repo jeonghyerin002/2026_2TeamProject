@@ -1,4 +1,4 @@
-statusEffectId,statusEffectName,duration,memo
+﻿statuseffectid,statuseffectname,duration,memo
 70001,Paralysis,0,Persists after battle until treated.
 70002,Poison,0,Persists after battle until treated. Can be replaced by Toxic.
 70003,Burn,0,Persists after battle until treated.

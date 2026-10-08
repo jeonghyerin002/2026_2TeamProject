@@ -1,4 +1,4 @@
-effectId,effectName,effectType,targetType,statusEffectId,value,duration,chance,memo,statType
+﻿effectid,effectname,effecttype,targettype,statuseffectid,value,duration,chance,memo,stattype
 60001,Weak Chance Paralysis,ApplyStatusEffect,Enemy,70001,1,0,30,,None
 60002,Weak Chance Poison,ApplyStatusEffect,Enemy,70002,1,0,30,,None
 60003,Weak Chance Burn,ApplyStatusEffect,Enemy,70003,1,0,30,,None
@@ -14,3 +14,4 @@ effectId,effectName,effectType,targetType,statusEffectId,value,duration,chance,m
 60014,Special Attack 1 Rank Up,ModifyStat,Self,0,1.5,0,100,,SpecialAttack
 60015,Special Defense 1 Rank Up,ModifyStat,Self,0,1.5,0,100,,SpecialDefense
 60016,Speed 1 Rank Up,ModifyStat,Self,0,1.5,0,100,,Speed
+60017,Attack 2 Rank Up,ModifyStat,Self,0,,0,100,Attack +2 ranks; cap 6. Rank storage pending; value unset.,Attack
