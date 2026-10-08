@@ -80,7 +80,7 @@ public sealed class BattleSceneController : MonoBehaviour
         NpcBattleData enemy = BattleSession.Enemy;
 
         // 양측 원본 데이터를 전투 시스템에 전달한다
-        battleSystem.SetPlayer(playerData.Character, playerData.EquippedAether, playerData.OwnedAethers, playerData.Weapon, playerData.Level);
+        battleSystem.SetPlayer(playerData.Character, playerData.EquippedAether, playerData.GetBattleAethers(), playerData.Weapon, playerData.Level);
         battleSystem.SetEnemy(enemy.Character, enemy.Aether, enemy.Weapon, enemy.Level, enemy.ExperienceReward);
 
         // Battle Scene에서 맵 이동 입력이 실행되지 않도록 잠근다

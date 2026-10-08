@@ -15,6 +15,7 @@ MonoBehaviour:
   itemid: 40003
   aetherName: Basic Grass Aether
   aetherType: 3
+  icon: {fileID: 7482667652216324306, guid: 03c14d4762287a74ea10584385f7adbf, type: 3}
   skills:
   - {fileID: 11400000, guid: 7af605c8e13dc0d439e042f79a5cb8a2, type: 2}
   - {fileID: 0}

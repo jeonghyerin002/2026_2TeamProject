@@ -15,6 +15,7 @@ MonoBehaviour:
   itemid: 40002
   aetherName: Basic Water Aether
   aetherType: 2
+  icon: {fileID: 7482667652216324306, guid: 03c14d4762287a74ea10584385f7adbf, type: 3}
   skills:
   - {fileID: 11400000, guid: 2b56b4d468278554a8709038d170b350, type: 2}
   - {fileID: 0}

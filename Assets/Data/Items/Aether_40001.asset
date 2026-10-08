@@ -15,6 +15,7 @@ MonoBehaviour:
   itemid: 40001
   aetherName: Basic Fire Aether
   aetherType: 1
+  icon: {fileID: 7482667652216324306, guid: 03c14d4762287a74ea10584385f7adbf, type: 3}
   skills:
   - {fileID: 11400000, guid: 114ffdf80e5a1b7409af5577eba3ed69, type: 2}
   - {fileID: 0}

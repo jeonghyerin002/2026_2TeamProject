@@ -18,6 +18,7 @@ public class NPCInteraction : MonoBehaviour
 
     [Header("Battle")]
     [SerializeField] private string battleSceneName = "Battle";
+    [SerializeField] private AetherEquipmentUI equipmentUI;
 
     private DialogManager dialogManager;
     private bool isPlayerNearby;
@@ -46,7 +47,7 @@ public class NPCInteraction : MonoBehaviour
     // 플레이어가 가까이 있을 때 상호작용 입력을 확인한다
     private void Update()
     {
-        if (isInteracting || !isPlayerNearby || Keyboard.current == null)
+        if (isInteracting || dialogManager.IsOpen || !isPlayerNearby || Keyboard.current == null || (equipmentUI != null && equipmentUI.BlocksWorldInput))
             return;
 
         if (Keyboard.current.eKey.wasPressedThisFrame)
@@ -96,6 +97,19 @@ public class NPCInteraction : MonoBehaviour
         if (player == null)
         {
             Debug.LogError("NPCInteraction: PlayerController가 없습니다.");
+            CancelInteraction();
+            return;
+        }
+
+        PlayerBattleData playerData = player.GetComponent<PlayerBattleData>();
+        if (playerData == null || !playerData.IsValid)
+        {
+            Debug.LogWarning("전투를 시작하려면 에테르를 하나 이상 장착하세요.");
+            if (equipmentUI != null)
+            {
+                equipmentUI.SetOpen(true);
+                equipmentUI.ShowMessage("전투를 시작하려면 에테르를 하나 이상 장착하세요.");
+            }
             CancelInteraction();
             return;
         }

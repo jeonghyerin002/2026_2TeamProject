@@ -9,7 +9,7 @@ public class BattleSystem : MonoBehaviour
     [Header("Player")]
     [SerializeField] private CharacterData playerCharacter;
     [SerializeField] private AetherData playerAether;
-    [Tooltip("전투에서 교체할 수 있는 보유 에테르 목록. 시작 장착 에테르는 자동으로 포함한다.")]
+    [Tooltip("전투에 가져온 장착 에테르 목록. 시작 에테르도 이 목록에 포함해야 한다.")]
     [SerializeField] private AetherData[] ownedAethers = Array.Empty<AetherData>();
     [SerializeField] private WeaponData playerWeapon;
     [SerializeField, Range(1, 100)] private int playerLevel = 1;
@@ -49,7 +49,7 @@ public class BattleSystem : MonoBehaviour
     {
         playerCharacter = character;
         playerAether = aether;
-        ownedAethers = aethers ?? Array.Empty<AetherData>();
+        ownedAethers = aethers != null ? (AetherData[])aethers.Clone() : Array.Empty<AetherData>();
         playerWeapon = weapon;
         playerLevel = Mathf.Clamp(level, 1, 100);
     }
@@ -68,6 +68,9 @@ public class BattleSystem : MonoBehaviour
     public void StartBattle()
     {
         StopBattle();
+        playerState = null;
+        enemyState = null;
+        BuildAethers();
 
         if (playerCharacter == null || playerAether == null || enemyCharacter == null || enemyAether == null)
         {
@@ -75,10 +78,16 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        playerState = new BattleState(playerCharacter, playerAether, playerWeapon, playerLevel);
+        AetherData startAether = availableAethers.Find(aether => aether.itemId == playerAether.itemId);
+        if (startAether == null)
+        {
+            Debug.LogError("BattleSystem: 시작 에테르가 장착 목록에 없습니다.");
+            return;
+        }
+
+        playerState = new BattleState(playerCharacter, startAether, playerWeapon, playerLevel);
         enemyState = new BattleState(enemyCharacter, enemyAether, enemyWeapon, enemyLevel);
 
-        BuildAethers();
         fainted.Clear();
 
         playerSkill = null;
@@ -99,11 +108,10 @@ public class BattleSystem : MonoBehaviour
         actionPending = false;
     }
 
-    // 시작 장비와 보유한 에테르를 중복 없이 준비한다
+    // 전투에 가져온 장착 에테르만 중복 없이 준비함
     private void BuildAethers()
     {
         availableAethers.Clear();
-        AddAether(playerState.Aether);
 
         if (ownedAethers == null)
             return;

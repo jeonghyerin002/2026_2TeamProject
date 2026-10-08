@@ -605,9 +605,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleSystem
   playerCharacter: {fileID: 11400000, guid: 2c15917d7f5e5584fb2af2fa2d4b5ec4, type: 2}
-  playerAether: {fileID: 11400000, guid: 4cee224af815cd646976f71f7107a738, type: 2}
+  playerAether: {fileID: 11400000, guid: 841db7e59df6b904d9ee96723a3ac834, type: 2}
   ownedAethers:
-  - {fileID: 11400000, guid: 40de25634f7c84049a8a4da5b52867dc, type: 2}
+  - {fileID: 11400000, guid: 841db7e59df6b904d9ee96723a3ac834, type: 2}
   - {fileID: 11400000, guid: 5ea6179a256c2d848afd672a38ec9ba6, type: 2}
   - {fileID: 11400000, guid: b768a016adff57145b2ae239b132d954, type: 2}
   playerWeapon: {fileID: 11400000, guid: 10cc799ed68a6e347b19a300131f6b2b, type: 2}

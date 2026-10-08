@@ -22,7 +22,23 @@ public class DialogManager : MonoBehaviour
     bool isAction = false;
     bool isTyping = false;
     DialogSO currentDialog;
+    string currentMessage;
     Coroutine typingCoroutine;
+
+    public bool IsOpen => isAction;
+    public bool CanShowMessage => isActiveAndEnabled && !isAction && dialogPanel != null && dialogText != null;
+
+    // SO 없이 획득 안내 등 한 문장의 대화를 표시함
+    public bool TryShowMessage(string text)
+    {
+        if (!CanShowMessage || string.IsNullOrEmpty(text))
+            return false;
+        currentDialog = null;
+        isAction = true;
+        dialogPanel.SetActive(true);
+        StartTypingEffect(text);
+        return true;
+    }
 
     private void Awake()
     {
@@ -81,12 +97,12 @@ public class DialogManager : MonoBehaviour
         if(isTyping)
         {
             StopTypingEffect();
-            dialogText.text = currentDialog.text;
+            dialogText.text = currentMessage;
             isTyping = false;
         }
         else
         {
-            if (currentDialog.nextId > 0)
+            if (currentDialog != null && currentDialog.nextId > 0)
             {
                 DialogSO nextDialog = dialogDatabase.GetDialogById(currentDialog.nextId);
                 if (nextDialog != null)
@@ -114,6 +130,7 @@ public class DialogManager : MonoBehaviour
     }
     void StartTypingEffect(string text)
     {
+        currentMessage = text;
         isTyping = true;
         if (typingCoroutine != null)
         {

@@ -23,6 +23,13 @@ public static class BattleSession
         return true;
     }
 
+    // Domain Reload가 꺼져 있어도 새 실행의 전투 정보를 초기화함
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+    private static void Reset()
+    {
+        Clear();
+    }
+
     // 현재 전투의 임시 정보를 초기화한다
     public static void Clear()
     {

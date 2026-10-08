@@ -266,7 +266,7 @@ public sealed class BattleSceneUI : MonoBehaviour
 
             SetChoice(
                 i,
-                $"<size=70%>{aether.AetherName}</size>\n<size=65%>{aether.AetherType}{(equipped ? "  장착 중" : "  교체")}</size>",
+                $"<size=70%>{aether.AetherName}</size>\n<size=65%>{aether.AetherType}{(equipped ? "  현재 사용" : "  교체")}</size>",
                 !equipped);
         }
 
