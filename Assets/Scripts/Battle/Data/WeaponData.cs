@@ -4,6 +4,7 @@ public class WeaponData : ScriptableObject
 {
     [SerializeField] private int itemid;
     [SerializeField] private string weaponname;
+    [SerializeField] private Sprite icon;
     [SerializeField] private float healthmultiplier;
     [SerializeField] private float attackmultiplier;
     [SerializeField] private float defensemultiplier;
@@ -14,6 +15,7 @@ public class WeaponData : ScriptableObject
 
     public int ItemId => itemid;
     public string WeaponName => weaponname;
+    public Sprite Icon => icon;
     public float HealthMultiplier => healthmultiplier;
     public float AttackMultiplier => attackmultiplier;
     public float DefenseMultiplier => defensemultiplier;

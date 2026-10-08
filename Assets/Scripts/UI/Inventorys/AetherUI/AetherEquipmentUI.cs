@@ -19,6 +19,7 @@ public sealed class AetherEquipmentUI : MonoBehaviour
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject storagePanel;
     [SerializeField] private TMP_Text storageTitle;
+    [SerializeField] private Image weaponImage;
 
     private PlayerController player;
     private PlayerBattleData playerData;
@@ -35,7 +36,8 @@ public sealed class AetherEquipmentUI : MonoBehaviour
     private readonly List<AetherDragSource> ownedViews = new();
 
     public bool IsOpen => equipmentPanel != null && equipmentPanel.activeInHierarchy;
-    public bool BlocksWorldInput => IsOpen || closedFrame == Time.frameCount;
+    public bool BlocksWorldInput => IsOpen || closedFrame == Time.frameCount ||
+        (WeaponInventoryUI.Instance != null && WeaponInventoryUI.Instance.BlocksWorldInput);
     internal bool CanEdit => storageMode && IsOpen && isActiveAndEnabled && playerData != null && playerData.CanEditEquipment && (dialogPanel == null || !dialogPanel.activeInHierarchy);
     internal bool HasDrag => dragSource != null;
 
@@ -170,6 +172,7 @@ public sealed class AetherEquipmentUI : MonoBehaviour
         opened = open;
         if (open)
         {
+            if (WeaponInventoryUI.Instance != null) WeaponInventoryUI.Instance.SetOpen(false);
             openedFrame = Time.frameCount;
             player.SetMovementEnabled(false);
             Refresh();
@@ -184,6 +187,12 @@ public sealed class AetherEquipmentUI : MonoBehaviour
 
     private void Refresh()
     {
+        if (weaponImage != null)
+        {
+            weaponImage.sprite = playerData.Weapon != null ? playerData.Weapon.Icon : null;
+            weaponImage.preserveAspect = true;
+            weaponImage.enabled = weaponImage.sprite != null;
+        }
         MarkOwnedDirty();
         foreach (AetherEquipSlot slot in slots)
         {

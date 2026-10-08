@@ -16,6 +16,7 @@ public sealed class PlayerBattleData : MonoBehaviour
     [SerializeField] private AetherData[] ownedAethers = Array.Empty<AetherData>();
     [SerializeField] private AetherData[] equippedAethers = new AetherData[5];
     [SerializeField] private WeaponData weapon;
+    [SerializeField] private WeaponData[] ownedWeapons = Array.Empty<WeaponData>();
     [SerializeField, Range(1, 100)] private int level = 1;
     [SerializeField, Min(0)] private int experience;
 
@@ -48,12 +49,51 @@ public sealed class PlayerBattleData : MonoBehaviour
     public int StorageCount => StoredAethers.Length;
     public bool CanEditEquipment => !BattleSession.IsActive;
     public WeaponData Weapon => weapon;
+    public WeaponData[] OwnedWeapons => (WeaponData[])ownedWeapons.Clone();
     public int Level => level;
     public int Experience => experience;
     public bool IsValid => character != null && equippedAether != null && FindEquipped(equippedAether.itemId) != null && FindOwned(equippedAether.itemId) != null;
 
     public event Action EquipmentChanged;
     public event Action OwnedAethersChanged;
+    public event Action OwnedWeaponsChanged;
+
+    public bool OwnsWeapon(WeaponData item) => item != null && FindOwnedWeapon(item.ItemId) != null;
+
+    private WeaponData FindOwnedWeapon(int id)
+    {
+        foreach (WeaponData item in ownedWeapons)
+            if (item != null && item.ItemId == id) return item;
+        return null;
+    }
+
+    public bool TryAddWeapon(WeaponData item)
+    {
+        if (!CanEditEquipment || item == null || OwnsWeapon(item)) return false;
+        int count = ownedWeapons.Length;
+        Array.Resize(ref ownedWeapons, count + 1);
+        ownedWeapons[count] = item;
+        OwnedWeaponsChanged?.Invoke();
+        return true;
+    }
+
+    public bool TryEquipWeapon(WeaponData item)
+    {
+        if (!CanEditEquipment || item == null) return false;
+        WeaponData owned = FindOwnedWeapon(item.ItemId);
+        if (owned == null) return false;
+        weapon = owned;
+        EquipmentChanged?.Invoke();
+        return true;
+    }
+
+    public bool TryUnequipWeapon()
+    {
+        if (!CanEditEquipment || weapon == null) return false;
+        weapon = null;
+        EquipmentChanged?.Invoke();
+        return true;
+    }
 
     public bool OwnsAether(AetherData aether)
     {
@@ -80,6 +120,12 @@ public sealed class PlayerBattleData : MonoBehaviour
 
     private void Awake()
     {
+        List<WeaponData> uniqueWeapons = new();
+        HashSet<int> weaponIds = new();
+        foreach (WeaponData item in ownedWeapons ?? Array.Empty<WeaponData>())
+            if (item != null && weaponIds.Add(item.ItemId)) uniqueWeapons.Add(item);
+        ownedWeapons = uniqueWeapons.ToArray();
+        weapon = weapon != null ? FindOwnedWeapon(weapon.ItemId) : null;
         ownedAethers ??= Array.Empty<AetherData>();
         // 기존 씬의 설정을 정규화한다. 초기 보유 순서를 자동 장착 순서로 사용한다.
         List<AetherData> unique = new();
