@@ -17,6 +17,12 @@ public sealed class AetherDragSource : MonoBehaviour, IBeginDragHandler, IDragHa
 
     internal AetherData DraggedAether => draggedAether;
 
+    internal void Configure(Image icon, TMP_Text text)
+    {
+        iconImage = icon;
+        label = text;
+    }
+
     internal void Bind(AetherEquipmentUI ui, AetherData data)
     {
         equipmentUI = ui;

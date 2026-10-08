@@ -13,17 +13,30 @@ public sealed class AetherEquipSlot : MonoBehaviour, IDropHandler, IPointerClick
 
     private AetherEquipmentUI equipmentUI;
     private PlayerBattleData playerData;
+    private AetherDragSource dragSource;
 
     internal void Bind(AetherEquipmentUI ui, PlayerBattleData data)
     {
         equipmentUI = ui;
         playerData = data;
+        dragSource = GetComponent<AetherDragSource>();
+        if (dragSource == null) dragSource = gameObject.AddComponent<AetherDragSource>();
+        dragSource.Configure(iconImage, label);
+        if (label != null)
+        {
+            label.rectTransform.sizeDelta = new Vector2(140f, 70f);
+            label.enableAutoSizing = true;
+            label.fontSizeMin = 12;
+            label.fontSizeMax = 19;
+            label.overflowMode = TextOverflowModes.Ellipsis;
+        }
         Refresh();
     }
 
     internal void Refresh()
     {
         AetherData aether = playerData != null ? playerData.GetEquippedAether(slotIndex) : null;
+        if (dragSource != null) dragSource.Bind(equipmentUI, aether);
         if (iconImage != null)
         {
             iconImage.sprite = aether != null ? aether.Icon : null;
@@ -31,11 +44,7 @@ public sealed class AetherEquipSlot : MonoBehaviour, IDropHandler, IPointerClick
             iconImage.enabled = iconImage.sprite != null;
         }
         if (label != null)
-        {
-            bool active = aether != null && playerData.EquippedAether != null && aether.itemId == playerData.EquippedAether.itemId;
-            label.text = aether == null ? $"슬롯 {slotIndex + 1}\n비어 있음" :
-                $"{aether.AetherName}\n<size=80%>{(active ? "현재 사용" : "장착됨")}</size>";
-        }
+            label.text = aether != null ? aether.AetherName : string.Empty;
     }
 
     public void OnDrop(PointerEventData eventData)
@@ -45,14 +54,15 @@ public sealed class AetherEquipSlot : MonoBehaviour, IDropHandler, IPointerClick
         AetherDragSource source = eventData.pointerDrag.GetComponent<AetherDragSource>();
         if (!equipmentUI.IsDragging(source) || source.DraggedAether == null)
             return;
-        if (!playerData.TryEquipAether(slotIndex, source.DraggedAether))
+        AetherData dropped = source.DraggedAether;
+        if (!playerData.TryMoveAetherToSlot(dropped, slotIndex))
         {
             source.AcceptDrop();
             equipmentUI.ShowMessage("장착할 수 없습니다. 보유 여부와 중복 장착을 확인하세요.");
             return;
         }
         source.AcceptDrop();
-        equipmentUI.ShowMessage($"슬롯 {slotIndex + 1}에 {source.DraggedAether.AetherName} 장착");
+        equipmentUI.ShowMessage($"슬롯 {slotIndex + 1}에 {dropped.AetherName} 장착");
     }
 
     public void OnPointerClick(PointerEventData eventData)
@@ -61,5 +71,7 @@ public sealed class AetherEquipSlot : MonoBehaviour, IDropHandler, IPointerClick
             return;
         if (playerData.TryUnequipAether(slotIndex))
             equipmentUI.ShowMessage($"슬롯 {slotIndex + 1} 장착 해제");
+        else
+            equipmentUI.ShowMessage("보관함이 가득 찼거나 빈 슬롯입니다.");
     }
 }

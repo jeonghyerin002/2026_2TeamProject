@@ -47,10 +47,20 @@ public sealed class AetherPickup : MonoBehaviour
         if (keyboard == null || !keyboard.fKey.wasPressedThisFrame || player == null || playerData == null ||
             !playerData.CanEditEquipment || !dialogManager.CanShowMessage || (equipmentUI != null && equipmentUI.BlocksWorldInput))
             return;
-        Vector2 distance = player.transform.position - transform.position;
-        if (distance.sqrMagnitude > pickupRange * pickupRange || !playerData.TryAddAether(aether))
+        // 기기와 획득물이 가까울 때 F 입력은 보관함 기기가 먼저 사용한다.
+        if (AetherStorageTerminal.IsPlayerInRange)
             return;
-        dialogManager.TryShowMessage($"{aether.AetherName}을/를 획득했습니다");
+        Vector2 distance = player.transform.position - transform.position;
+        if (distance.sqrMagnitude > pickupRange * pickupRange)
+            return;
+        if (!playerData.TryAddAether(aether))
+        {
+            dialogManager.TryShowMessage(playerData.OwnsAether(aether) ?
+                "이미 보유한 종류의 Aether입니다." : "보관함이 가득 찼습니다. Aether를 획득할 수 없습니다.");
+            return;
+        }
+        string destination = playerData.GetEquippedSlot(aether) >= 0 ? "장착 슬롯에 자동 배치되었습니다." : "보관함에 저장되었습니다.";
+        dialogManager.TryShowMessage($"{aether.AetherName}을/를 획득했습니다.\n{destination}");
         gameObject.SetActive(false);
     }
 }

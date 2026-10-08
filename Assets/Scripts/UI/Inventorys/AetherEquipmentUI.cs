@@ -17,6 +17,8 @@ public sealed class AetherEquipmentUI : MonoBehaviour
     [SerializeField] private TMP_Text message;
     [SerializeField] private GameObject dialogPanel;
     [SerializeField] private Canvas canvas;
+    [SerializeField] private GameObject storagePanel;
+    [SerializeField] private TMP_Text storageTitle;
 
     private PlayerController player;
     private PlayerBattleData playerData;
@@ -25,12 +27,16 @@ public sealed class AetherEquipmentUI : MonoBehaviour
     private bool initialized;
     private bool subscribed;
     private bool opened;
+    private bool storageMode;
+    private bool ownedDirty;
+    private GameObject storageHeading;
     private int closedFrame = -1;
+    private int openedFrame = -1;
     private readonly List<AetherDragSource> ownedViews = new();
 
     public bool IsOpen => equipmentPanel != null && equipmentPanel.activeInHierarchy;
     public bool BlocksWorldInput => IsOpen || closedFrame == Time.frameCount;
-    internal bool CanEdit => IsOpen && isActiveAndEnabled && playerData != null && playerData.CanEditEquipment && (dialogPanel == null || !dialogPanel.activeInHierarchy);
+    internal bool CanEdit => storageMode && IsOpen && isActiveAndEnabled && playerData != null && playerData.CanEditEquipment && (dialogPanel == null || !dialogPanel.activeInHierarchy);
     internal bool HasDrag => dragSource != null;
 
     private void Start()
@@ -47,6 +53,7 @@ public sealed class AetherEquipmentUI : MonoBehaviour
         }
 
         itemTemplate.gameObject.SetActive(false);
+        ConfigureStorage();
         RefreshOwnedAethers();
         foreach (AetherEquipSlot slot in slots)
         {
@@ -62,25 +69,18 @@ public sealed class AetherEquipmentUI : MonoBehaviour
     private void RefreshOwnedAethers()
     {
         ClearDrag();
-        foreach (AetherDragSource view in ownedViews)
+        AetherData[] stored = playerData.StoredAethers;
+        for (int i = 0; i < stored.Length; i++)
         {
-            if (view == null)
-                continue;
-            view.gameObject.SetActive(false);
-            Destroy(view.gameObject);
-        }
-        ownedViews.Clear();
-        HashSet<int> ids = new();
-        foreach (AetherData aether in playerData.OwnedAethers)
-        {
-            if (aether == null || !ids.Add(aether.itemId))
-                continue;
-            AetherDragSource source = Instantiate(itemTemplate, ownedRoot);
-            source.name = $"Aether_{aether.itemId}";
-            source.Bind(this, aether);
+            if (i >= ownedViews.Count)
+                ownedViews.Add(Instantiate(itemTemplate, ownedRoot));
+            AetherDragSource source = ownedViews[i];
+            source.name = $"Aether_{stored[i].itemId}";
+            source.Bind(this, stored[i]);
             source.gameObject.SetActive(true);
-            ownedViews.Add(source);
         }
+        for (int i = stored.Length; i < ownedViews.Count; i++)
+            ownedViews[i].gameObject.SetActive(false);
     }
 
     private void OnEnable()
@@ -97,7 +97,7 @@ public sealed class AetherEquipmentUI : MonoBehaviour
         if (subscribed || playerData == null)
             return;
         playerData.EquipmentChanged += Refresh;
-        playerData.OwnedAethersChanged += RefreshOwnedAethers;
+        playerData.OwnedAethersChanged += MarkOwnedDirty;
         subscribed = true;
     }
 
@@ -106,7 +106,7 @@ public sealed class AetherEquipmentUI : MonoBehaviour
         if (subscribed && playerData != null)
         {
             playerData.EquipmentChanged -= Refresh;
-            playerData.OwnedAethersChanged -= RefreshOwnedAethers;
+            playerData.OwnedAethersChanged -= MarkOwnedDirty;
         }
         subscribed = false;
         SetOpen(false);
@@ -117,6 +117,8 @@ public sealed class AetherEquipmentUI : MonoBehaviour
         Keyboard keyboard = Keyboard.current;
         if (!initialized || keyboard == null)
             return;
+        if (openedFrame == Time.frameCount)
+            return;
         if (IsOpen && (!playerData.CanEditEquipment || (dialogPanel != null && dialogPanel.activeInHierarchy)))
         {
             SetOpen(false);
@@ -124,8 +126,28 @@ public sealed class AetherEquipmentUI : MonoBehaviour
         }
         if (keyboard.qKey.wasPressedThisFrame)
             SetOpen(!IsOpen);
-        else if (IsOpen && (keyboard.eKey.wasPressedThisFrame || keyboard.escapeKey.wasPressedThisFrame))
+        else if (IsOpen && (keyboard.eKey.wasPressedThisFrame || keyboard.escapeKey.wasPressedThisFrame || (storageMode && keyboard.fKey.wasPressedThisFrame)))
             SetOpen(false);
+    }
+
+    private void MarkOwnedDirty() => ownedDirty = true;
+
+    private void LateUpdate()
+    {
+        // 드롭 콜백이 끝난 후 목록을 갱신해 드래그 원본의 항목이 도중에 바뀌지 않게 한다.
+        if (!initialized || !ownedDirty || HasDrag)
+            return;
+        ownedDirty = false;
+        RefreshOwnedAethers();
+    }
+
+    public void OpenStorage()
+    {
+        if (!initialized || playerData == null || !playerData.CanEditEquipment ||
+            (dialogPanel != null && dialogPanel.activeInHierarchy) || BlocksWorldInput)
+            return;
+        storageMode = true;
+        SetOpen(true);
     }
 
     public void SetOpen(bool open)
@@ -136,11 +158,19 @@ public sealed class AetherEquipmentUI : MonoBehaviour
             return;
         bool wasOpen = opened;
         if (!open)
+        {
             ClearDrag();
+            storageMode = false;
+        }
+        if (storagePanel != null)
+            storagePanel.SetActive(open && storageMode);
+        if (storageHeading != null)
+            storageHeading.SetActive(open && storageMode);
         equipmentPanel.SetActive(open);
         opened = open;
         if (open)
         {
+            openedFrame = Time.frameCount;
             player.SetMovementEnabled(false);
             Refresh();
         }
@@ -154,20 +184,67 @@ public sealed class AetherEquipmentUI : MonoBehaviour
 
     private void Refresh()
     {
+        MarkOwnedDirty();
         foreach (AetherEquipSlot slot in slots)
         {
             if (slot != null)
                 slot.Refresh();
         }
-        ShowMessage(playerData != null && playerData.IsValid ?
-            "보유 이미지를 슬롯에 드래그하세요. 우클릭: 장착 해제\nQ: 열기/닫기 · E: 닫기" :
-            "에테르를 하나 이상 장착해야 전투에 참가할 수 있습니다.\nQ: 열기/닫기 · E: 닫기");
+        if (storageTitle != null)
+            storageTitle.text = $"Aether 보관함 {playerData.StorageCount}/{PlayerBattleData.StorageCapacity}";
+        ShowMessage(string.Empty);
+    }
+
+    private void ConfigureStorage()
+    {
+        if (storagePanel == null)
+            storagePanel = ownedRoot.parent.gameObject;
+        storageHeading = storageTitle != null ? storageTitle.gameObject : null;
+        foreach (TMP_Text text in equipmentPanel.GetComponentsInChildren<TMP_Text>(true))
+            text.margin = Vector4.zero;
+        if (message != null) message.color = new Color32(235, 242, 250, 255);
+        AetherStorageDropTarget target = storagePanel.GetComponent<AetherStorageDropTarget>();
+        if (target == null) target = storagePanel.AddComponent<AetherStorageDropTarget>();
+        target.Bind(this, playerData);
+
+        RectTransform panel = (RectTransform)storagePanel.transform;
+        GameObject viewportObject = new GameObject("StorageViewport", typeof(RectTransform), typeof(Image), typeof(RectMask2D));
+        RectTransform viewport = viewportObject.GetComponent<RectTransform>();
+        viewport.SetParent(panel, false);
+        viewport.anchorMin = Vector2.zero;
+        viewport.anchorMax = Vector2.one;
+        viewport.offsetMin = new Vector2(10, 10);
+        viewport.offsetMax = new Vector2(-10, -10);
+        viewportObject.GetComponent<Image>().color = new Color(0, 0, 0, 0);
+        ownedRoot.SetParent(viewport, false);
+        RectMask2D oldMask = ownedRoot.GetComponent<RectMask2D>();
+        if (oldMask != null) oldMask.enabled = false;
+        ownedRoot.anchorMin = new Vector2(0, 1);
+        ownedRoot.anchorMax = Vector2.one;
+        ownedRoot.pivot = new Vector2(0.5f, 1);
+        ownedRoot.anchoredPosition = Vector2.zero;
+        ownedRoot.sizeDelta = Vector2.zero;
+        ContentSizeFitter fitter = ownedRoot.GetComponent<ContentSizeFitter>();
+        if (fitter == null) fitter = ownedRoot.gameObject.AddComponent<ContentSizeFitter>();
+        fitter.verticalFit = ContentSizeFitter.FitMode.PreferredSize;
+        ScrollRect scroll = storagePanel.GetComponent<ScrollRect>();
+        if (scroll == null) scroll = storagePanel.AddComponent<ScrollRect>();
+        scroll.viewport = viewport;
+        scroll.content = ownedRoot;
+        scroll.horizontal = false;
+        scroll.movementType = ScrollRect.MovementType.Clamped;
+        scroll.scrollSensitivity = 40;
+        if (message != null) message.margin = Vector4.zero;
     }
 
     public void ShowMessage(string text)
     {
+        // 기존 상호작용의 호출은 유지하되 하단 부가 설명은 표시하지 않는다.
         if (message != null)
-            message.text = text;
+        {
+            message.text = string.Empty;
+            message.gameObject.SetActive(false);
+        }
     }
 
     internal bool BeginDrag(AetherDragSource source, AetherData aether, PointerEventData eventData)

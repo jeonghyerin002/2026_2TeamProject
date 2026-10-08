@@ -9,6 +9,8 @@ using System.Collections.Generic;
 [DisallowMultipleComponent]
 public sealed class PlayerBattleData : MonoBehaviour
 {
+    public const int EquipmentCapacity = 5;
+    public const int StorageCapacity = 1000;
     [SerializeField] private CharacterData character;
     [SerializeField] private AetherData equippedAether;
     [SerializeField] private AetherData[] ownedAethers = Array.Empty<AetherData>();
@@ -21,6 +23,18 @@ public sealed class PlayerBattleData : MonoBehaviour
     public AetherData EquippedAether => equippedAether;
     public AetherData[] OwnedAethers => ownedAethers != null ? (AetherData[])ownedAethers.Clone() : Array.Empty<AetherData>();
     public int AetherSlotCount => equippedAethers?.Length ?? 0;
+    public AetherData[] StoredAethers
+    {
+        get
+        {
+            List<AetherData> stored = new();
+            foreach (AetherData aether in ownedAethers)
+                if (aether != null && FindEquipped(aether.itemId) == null)
+                    stored.Add(aether);
+            return stored.ToArray();
+        }
+    }
+    public int StorageCount => StoredAethers.Length;
     public bool CanEditEquipment => !BattleSession.IsActive;
     public WeaponData Weapon => weapon;
     public int Level => level;
@@ -39,15 +53,32 @@ public sealed class PlayerBattleData : MonoBehaviour
     {
         if (!CanEditEquipment || aether == null || OwnsAether(aether))
             return false;
+        int emptySlot = Array.FindIndex(equippedAethers, item => item == null);
+        if (emptySlot < 0 && StorageCount >= StorageCapacity)
+            return false;
         int count = ownedAethers?.Length ?? 0;
         Array.Resize(ref ownedAethers, count + 1);
         ownedAethers[count] = aether;
+        if (emptySlot >= 0)
+            equippedAethers[emptySlot] = aether;
+        RefreshActiveAether();
+        EquipmentChanged?.Invoke();
         OwnedAethersChanged?.Invoke();
         return true;
     }
 
     private void Awake()
     {
+        ownedAethers ??= Array.Empty<AetherData>();
+        // 기존 씬의 설정을 정규화한다. 초기 보유 순서를 자동 장착 순서로 사용한다.
+        List<AetherData> unique = new();
+        HashSet<int> ids = new();
+        foreach (AetherData aether in ownedAethers)
+            if (aether != null && ids.Add(aether.itemId))
+                unique.Add(aether);
+        ownedAethers = unique.ToArray();
+        equippedAethers ??= new AetherData[EquipmentCapacity];
+        Array.Resize(ref equippedAethers, EquipmentCapacity);
         for (int i = 0; i < AetherSlotCount; i++)
         {
             AetherData aether = equippedAethers[i];
@@ -57,6 +88,15 @@ public sealed class PlayerBattleData : MonoBehaviour
                 if (equippedAethers[j] != null && equippedAethers[j].itemId == equippedAethers[i].itemId)
                     equippedAethers[i] = null;
             }
+        }
+        foreach (AetherData aether in ownedAethers)
+        {
+            if (FindEquipped(aether.itemId) != null)
+                continue;
+            int emptySlot = Array.FindIndex(equippedAethers, item => item == null);
+            if (emptySlot < 0)
+                break;
+            equippedAethers[emptySlot] = aether;
         }
         RefreshActiveAether();
     }
@@ -87,9 +127,38 @@ public sealed class PlayerBattleData : MonoBehaviour
         return true;
     }
 
+    public int GetEquippedSlot(AetherData aether)
+    {
+        if (aether == null)
+            return -1;
+        for (int i = 0; i < AetherSlotCount; i++)
+            if (equippedAethers[i] != null && equippedAethers[i].itemId == aether.itemId)
+                return i;
+        return -1;
+    }
+
+    // 보관 항목은 대상 슬롯과 교환하고, 장착 항목은 원래 슬롯과 대상 슬롯을 교환한다.
+    public bool TryMoveAetherToSlot(AetherData aether, int targetSlot)
+    {
+        if (!CanEditEquipment || aether == null || targetSlot < 0 || targetSlot >= AetherSlotCount)
+            return false;
+        AetherData owned = FindOwned(aether.itemId);
+        if (owned == null)
+            return false;
+        int sourceSlot = GetEquippedSlot(owned);
+        if (sourceSlot == targetSlot)
+            return true;
+        if (sourceSlot >= 0)
+            equippedAethers[sourceSlot] = equippedAethers[targetSlot];
+        equippedAethers[targetSlot] = owned;
+        RefreshActiveAether();
+        EquipmentChanged?.Invoke();
+        return true;
+    }
+
     public bool TryUnequipAether(int slotIndex)
     {
-        if (!CanEditEquipment || slotIndex < 0 || slotIndex >= AetherSlotCount || equippedAethers[slotIndex] == null)
+        if (!CanEditEquipment || slotIndex < 0 || slotIndex >= AetherSlotCount || equippedAethers[slotIndex] == null || StorageCount >= StorageCapacity)
             return false;
         equippedAethers[slotIndex] = null;
         RefreshActiveAether();
