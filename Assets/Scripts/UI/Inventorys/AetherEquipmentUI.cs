@@ -249,7 +249,7 @@ public sealed class AetherEquipmentUI : MonoBehaviour
 
     internal bool BeginDrag(AetherDragSource source, AetherData aether, PointerEventData eventData)
     {
-        if (!CanEdit || HasDrag || source == null || aether == null)
+        if (!CanEdit || HasDrag || source == null || aether == null || !playerData.CanDragAether(aether))
             return false;
         if (dragImage == null)
         {
@@ -271,7 +271,7 @@ public sealed class AetherEquipmentUI : MonoBehaviour
 
     internal bool IsDragging(AetherDragSource source)
     {
-        return CanEdit && source != null && dragSource == source;
+        return CanEdit && source != null && dragSource == source && playerData.CanDragAether(source.DraggedAether);
     }
 
     internal void MoveDrag(AetherDragSource source, PointerEventData eventData)

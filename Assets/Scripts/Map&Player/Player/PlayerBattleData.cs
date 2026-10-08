@@ -23,6 +23,17 @@ public sealed class PlayerBattleData : MonoBehaviour
     public AetherData EquippedAether => equippedAether;
     public AetherData[] OwnedAethers => ownedAethers != null ? (AetherData[])ownedAethers.Clone() : Array.Empty<AetherData>();
     public int AetherSlotCount => equippedAethers?.Length ?? 0;
+    public int EquippedAetherCount
+    {
+        get
+        {
+            int count = 0;
+            for (int i = 0; i < AetherSlotCount; i++)
+                if (equippedAethers[i] != null)
+                    count++;
+            return count;
+        }
+    }
     public AetherData[] StoredAethers
     {
         get
@@ -137,6 +148,12 @@ public sealed class PlayerBattleData : MonoBehaviour
         return -1;
     }
 
+    // 마지막 장착 항목도 다른 슬롯으로 이동할 수 있다. 보관함 이동 제한은 장착 해제 시 검사한다.
+    public bool CanDragAether(AetherData aether)
+    {
+        return CanEditEquipment && OwnsAether(aether);
+    }
+
     // 보관 항목은 대상 슬롯과 교환하고, 장착 항목은 원래 슬롯과 대상 슬롯을 교환한다.
     public bool TryMoveAetherToSlot(AetherData aether, int targetSlot)
     {
@@ -158,7 +175,8 @@ public sealed class PlayerBattleData : MonoBehaviour
 
     public bool TryUnequipAether(int slotIndex)
     {
-        if (!CanEditEquipment || slotIndex < 0 || slotIndex >= AetherSlotCount || equippedAethers[slotIndex] == null || StorageCount >= StorageCapacity)
+        if (!CanEditEquipment || slotIndex < 0 || slotIndex >= AetherSlotCount ||
+            equippedAethers[slotIndex] == null || EquippedAetherCount <= 1 || StorageCount >= StorageCapacity)
             return false;
         equippedAethers[slotIndex] = null;
         RefreshActiveAether();
