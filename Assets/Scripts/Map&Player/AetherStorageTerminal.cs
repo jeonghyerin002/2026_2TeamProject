@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
 /// <summary>필드 보관함 기기의 F 입력과 상호작용 범위를 관리한다.</summary>
@@ -27,13 +27,5 @@ public sealed class AetherStorageTerminal : MonoBehaviour
             return;
         if (Keyboard.current != null && Keyboard.current.fKey.wasPressedThisFrame)
             equipmentUI.OpenStorage();
-    }
-
-    private void OnGUI()
-    {
-        if (!InRange || equipmentUI == null || equipmentUI.BlocksWorldInput ||
-            BattleSession.IsActive || (dialogManager != null && !dialogManager.CanShowMessage))
-            return;
-        GUI.Box(new Rect(Screen.width * 0.5f - 120, Screen.height - 70, 240, 35), "F : Aether Storage");
     }
 }
