@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Skill_50006
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
   skillid: 50006
-  skillName: Mach Punch
+  skillname: "\uB9C8\uD558\uD380\uCE58"
   type: 5
-  attackType: 0
+  attacktype: 0
   damage: 40
   pp: 10
   accuracy: 100
   priority: 1
-  effectId: 0
+  effectid: 0
   criticalChance: 0.04
   healRatio: 0
   drainRatio: 0

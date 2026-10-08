@@ -13,7 +13,7 @@ public class WeaponDataCsvImporter : MonoBehaviour
             "itemid",
             refArray: new CsvSoImporter.RefArray<SkillData>(
                 "skills",
-                "skillId",
+                "skillid",
                 1,
                 "Assets/Data/Skills",
                 "Skill",

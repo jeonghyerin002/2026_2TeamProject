@@ -5,6 +5,7 @@ public enum SkillAttackType
 {
     Physical,   // 물리 ( 공격 )
     Special,    // 특수 ( 특수공격 )
+    Status
 }
 
 public enum ElementType
@@ -23,11 +24,11 @@ public class SkillData : ScriptableObject
 {
     [SerializeField] private int skillid;                      // 스킬 ID
 
-    [SerializeField] private string skillName;            // 스킬 이름
+    [SerializeField] private string skillname;            // 스킬 이름
 
     [SerializeField] private ElementType type;             // 속성 타입
 
-    [SerializeField] private SkillAttackType attackType;   // 공격 타입
+    [SerializeField] private SkillAttackType attacktype;   // 공격 타입
 
     [SerializeField] private int damage;                // 위력
 
@@ -37,7 +38,7 @@ public class SkillData : ScriptableObject
     
     [SerializeField] private int priority;                // 우선도
 
-    [SerializeField] private int effectId;         // 스킬 특징 -> 버프, 디버프, 상태이상
+    [SerializeField] private int effectid;         // 스킬 특징 -> 버프, 디버프, 상태이상
     [SerializeField, Range(0f, 1f)] private float criticalChance = 0.04f;
     [SerializeField, Range(0f, 1f)] private float healRatio;
     [SerializeField, Range(0f, 1f)] private float drainRatio;
@@ -45,15 +46,15 @@ public class SkillData : ScriptableObject
 
 
     public int SkillId => skillid;
-    public string Skillname => skillName;
+    public string Skillname => skillname;
     public ElementType Type => type;
-    public SkillAttackType AttackType => attackType;
+    public SkillAttackType AttackType => attacktype;
     public int Damage => damage;
     public int PP => pp;
     public int Accuracy => accuracy;
     public int Priority => priority;
-    public int EffectId => effectId;
-    public float CriticalChance => effectId == 60010 ? 0.25f : Mathf.Clamp01(criticalChance);
+    public int EffectId => effectid;
+    public float CriticalChance => effectid == 60010 ? 0.25f : Mathf.Clamp01(criticalChance);
     public float HealRatio => Mathf.Clamp01(healRatio);
     public float DrainRatio => Mathf.Clamp01(drainRatio);
     public float RecoilRatio => Mathf.Clamp01(recoilRatio);

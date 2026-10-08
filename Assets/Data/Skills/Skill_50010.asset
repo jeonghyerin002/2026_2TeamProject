@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4824db1e751bd8d4b919bc99b40f4dfc, type: 3}
-  m_Name: Skill_50002
+  m_Name: Skill_50010
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
-  skillid: 50002
-  skillname: "\uBB3C\uB300\uD3EC"
-  type: 2
-  attacktype: 1
-  damage: 40
-  pp: 40
+  skillid: 50010
+  skillname: "\uBB34\uB839\uC9C8\uC8FC"
+  type: 5
+  attacktype: 0
+  damage: 60
+  pp: 5
   accuracy: 100
-  priority: 0
+  priority: 2
   effectid: 0
   criticalChance: 0.04
   healRatio: 0

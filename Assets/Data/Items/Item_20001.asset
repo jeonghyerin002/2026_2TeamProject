@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Item_20001
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   itemid: 20001
-  weaponName: Training Sword
-  healthMultiplier: 1
-  attackMultiplier: 1
-  defenseMultiplier: 1
-  specialAttackMultiplier: 1
-  specialDefenseMultiplier: 1
-  speedMultiplier: 1
+  weaponname: Training Sword
+  healthmultiplier: 1
+  attackmultiplier: 1
+  defensemultiplier: 1
+  specialattackmultiplier: 1
+  specialdefensemultiplier: 1
+  speedmultiplier: 1
   skills:
   - {fileID: 0}

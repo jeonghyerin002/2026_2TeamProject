@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26f425007a1e13744abbf148bbbbefa9, type: 3}
-  m_Name: Aether_40001
+  m_Name: Aether_40005
   m_EditorClassIdentifier: Assembly-CSharp::AetherData
-  itemid: 40001
-  aethername: "\uBD88\uB625 \uC5D0\uD14C\uB974"
-  aethertype: 1
-  icon: {fileID: 7482667652216324306, guid: 03c14d4762287a74ea10584385f7adbf, type: 3}
+  itemid: 40005
+  aethername: "\uC9C4\uBB34\uAD8C \uC81C1\uC2DD"
+  aethertype: 5
+  icon: {fileID: 0}
   skills:
-  - {fileID: 11400000, guid: 114ffdf80e5a1b7409af5577eba3ed69, type: 2}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d7967dba7fd16d24ead1dc6785e62ead, type: 2}
+  - {fileID: 11400000, guid: 51b6eadb2119d9840bb42a17cdeb5a11, type: 2}
   - {fileID: 0}

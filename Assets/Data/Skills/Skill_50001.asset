@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Skill_50001
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
   skillid: 50001
-  skillName: Ember
+  skillname: "\uBD88\uAF43"
   type: 1
-  attackType: 1
+  attacktype: 1
   damage: 40
   pp: 40
   accuracy: 100
   priority: 0
-  effectId: 0
+  effectid: 0
   criticalChance: 0.04
   healRatio: 0
   drainRatio: 0

@@ -3,23 +3,23 @@
 public class WeaponData : ScriptableObject
 {
     [SerializeField] private int itemid;
-    [SerializeField] private string weaponName;
-    [SerializeField] private float healthMultiplier;
-    [SerializeField] private float attackMultiplier;
-    [SerializeField] private float defenseMultiplier;
-    [SerializeField] private float specialAttackMultiplier;
-    [SerializeField] private float specialDefenseMultiplier;
-    [SerializeField] private float speedMultiplier;
+    [SerializeField] private string weaponname;
+    [SerializeField] private float healthmultiplier;
+    [SerializeField] private float attackmultiplier;
+    [SerializeField] private float defensemultiplier;
+    [SerializeField] private float specialattackmultiplier;
+    [SerializeField] private float specialdefensemultiplier;
+    [SerializeField] private float speedmultiplier;
     [SerializeField] private SkillData[] skills = new SkillData[1];
 
     public int ItemId => itemid;
-    public string WeaponName => weaponName;
-    public float HealthMultiplier => healthMultiplier;
-    public float AttackMultiplier => attackMultiplier;
-    public float DefenseMultiplier => defenseMultiplier;
-    public float SpecialAttackMultiplier => specialAttackMultiplier;
-    public float SpecialDefenseMultiplier => specialDefenseMultiplier;
-    public float SpeedMultiplier => speedMultiplier;
+    public string WeaponName => weaponname;
+    public float HealthMultiplier => healthmultiplier;
+    public float AttackMultiplier => attackmultiplier;
+    public float DefenseMultiplier => defensemultiplier;
+    public float SpecialAttackMultiplier => specialattackmultiplier;
+    public float SpecialDefenseMultiplier => specialdefensemultiplier;
+    public float SpeedMultiplier => speedmultiplier;
     public SkillData[] Skills => skills;
 
 }

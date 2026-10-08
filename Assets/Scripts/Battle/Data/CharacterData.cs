@@ -5,21 +5,21 @@
 public class CharacterData : ScriptableObject
 {
     [SerializeField] private int characterid;                // 캐릭터 ID
-    [SerializeField] private string CharacterName;  // 캐릭터 이름
-    [SerializeField] private int maxHp;             // 체력
+    [SerializeField] private string charactername;  // 캐릭터 이름
+    [SerializeField] private int maxhp;             // 체력
     [SerializeField] private int attack;            // 공격
     [SerializeField] private int defense;           // 방어
-    [SerializeField] private int specialAttack;     // 특수공격
-    [SerializeField] private int specialDefense;    // 특수방어
+    [SerializeField] private int specialattack;     // 특수공격
+    [SerializeField] private int specialdefense;    // 특수방어
     [SerializeField] private int speed;            // 스피드
 
 
     public int CharacterId => characterid;
-    public string Charactername => CharacterName;
-    public int MaxHp => maxHp;
+    public string Charactername => charactername;
+    public int MaxHp => maxhp;
     public int Attack => attack;
     public int Defense => defense;
-    public int SpecialAttack => specialAttack;
-    public int SpecialDefense => specialDefense;
+    public int SpecialAttack => specialattack;
+    public int SpecialDefense => specialdefense;
     public int Speed => speed;
 }

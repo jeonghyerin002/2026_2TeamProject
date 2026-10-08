@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Skill_50008
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
   skillid: 50008
-  skillName: Muddy Water
+  skillname: "\uD0C1\uB958"
   type: 2
-  attackType: 1
+  attacktype: 1
   damage: 80
   pp: 15
   accuracy: 100
   priority: 0
-  effectId: 60012
+  effectid: 60012
   criticalChance: 0.04
   healRatio: 0
   drainRatio: 0

@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Skill_50004
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
   skillid: 50004
-  skillName: Flamethrower
+  skillname: "\uD654\uC5FC\uBC29\uC0AC"
   type: 1
-  attackType: 1
+  attacktype: 1
   damage: 80
   pp: 15
   accuracy: 100
   priority: 0
-  effectId: 60003
+  effectid: 60003
   criticalChance: 0.04
   healRatio: 0
   drainRatio: 0

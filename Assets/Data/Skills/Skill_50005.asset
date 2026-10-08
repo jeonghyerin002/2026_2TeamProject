@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Skill_50005
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
   skillid: 50005
-  skillName: Straight Punch
+  skillname: "\uC815\uAD8C\uC9C0\uB974\uAE30"
   type: 5
-  attackType: 0
+  attacktype: 0
   damage: 60
   pp: 20
   accuracy: 100
   priority: 0
-  effectId: 0
+  effectid: 0
   criticalChance: 0.04
   healRatio: 0
   drainRatio: 0

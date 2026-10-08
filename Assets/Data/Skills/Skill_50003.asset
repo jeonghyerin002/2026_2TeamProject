@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Skill_50003
   m_EditorClassIdentifier: Assembly-CSharp::SkillData
   skillid: 50003
-  skillName: Leaf
+  skillname: "\uB098\uBB47\uC78E"
   type: 3
-  attackType: 0
+  attacktype: 0
   damage: 40
   pp: 40
   accuracy: 100
   priority: 0
-  effectId: 0
+  effectid: 0
   criticalChance: 0.04
   healRatio: 0
   drainRatio: 0
