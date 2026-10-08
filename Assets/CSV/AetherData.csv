@@ -1,4 +1,4 @@
-﻿itemid,name,aethertype,skillid1,skillid2,skillid3
+﻿itemid,aethername,aethertype,skillid1,skillid2,skillid3
 40001,불똥 에테르,Fire,50001,0,0
 40002,물방울 에테르,Water,50002,0,0
 40003,나뭇잎 에테르,Grass,50003,0,0
