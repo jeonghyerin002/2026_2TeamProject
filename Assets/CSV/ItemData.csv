@@ -1,4 +1,4 @@
-itemId,name,useDescription,itemType,imageKey,initialAmount,stackLimit,consumable,useType,effectId,useValue,healthMultiplier,attackMultiplier,defenseMultiplier,specialAttackMultiplier,specialDefenseMultiplier,speedMultiplier,aetherType,skillId1,skillId2,skillId3,memo
+﻿itemid,name,usedescription,itemtype,imagekey,initialamount,stacklimit,consumable,usetype,effectid,usevalue,healthmultiplier,attackmultiplier,defensemultiplier,specialattackmultiplier,specialdefensemultiplier,speedmultiplier,aethertype,skillid1,skillid2,skillid3,memo
 10001,Small Health Potion,,Recovery,,0,1,true,Instant,0,20,1,1,1,1,1,1,None,0,0,0,
 10002,Good Health Potion,"Restores 50 HP, up to maximum HP.",Recovery,,0,1,true,Instant,0,50,1,1,1,1,1,1,None,0,0,0,Runtime implementation required; do not infer behavior from item names.
 11001,Weapon Enhancement Stone,,Enhancement,,0,1,true,Material,0,0,1,1,1,1,1,1,None,0,0,0,
