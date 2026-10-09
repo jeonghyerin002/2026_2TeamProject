@@ -16,7 +16,8 @@ public enum ElementType
     Grass,      // 풀
     Electric,   // 전기
     Fighting,   // 격투
-    Rock        // 바위
+    Rock,       // 바위
+    Earth       // 땅
 }
 
 
