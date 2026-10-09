@@ -61,7 +61,9 @@ public static class CsvSoImporter
         string[] ignoreHeaders = null,
         RefArrayBase refArray = null,
         string[] emptyIntegerHeaders = null,
-        IReadOnlyList<RefFieldBase> refFields = null)
+        IReadOnlyList<RefFieldBase> refFields = null,
+        int warnEmptyFromRow = 0,
+        bool allowEmptyKeys = false)
         where T : ScriptableObject
     {
         if (Selection.activeObject is not TextAsset csv ||
@@ -71,7 +73,7 @@ public static class CsvSoImporter
             return;
         }
 
-        string[] lines = csv.text.Split(new[] { '\r', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+        string[] lines = csv.text.Replace("\r\n", "\n").Replace('\r', '\n').Split('\n');
 
         if (lines.Length <= 1)
         {
@@ -122,7 +124,7 @@ public static class CsvSoImporter
             }
         }
 
-        List<string[]> rows = new(lines.Length - 1);
+        List<(string Key, string[] Cells)> rows = new(lines.Length - 1);
         HashSet<string> keys = new(StringComparer.Ordinal);
         Dictionary<string, UnityEngine.Object> refCache = new();
 
@@ -141,6 +143,9 @@ public static class CsvSoImporter
         // SO를 수정하기 전에 CSV 전체 검증
         for (int i = 1; i < lines.Length; i++)
         {
+            if (string.IsNullOrWhiteSpace(lines[i]))
+                continue;
+
             string[] cells = lines[i].Split(',');
 
             if (cells.Length != headers.Length)
@@ -151,6 +156,20 @@ public static class CsvSoImporter
             }
 
             string key = cells[keyCol].Trim();
+
+            if (warnEmptyFromRow > 0 && i + 1 >= warnEmptyFromRow)
+            {
+                for (int j = 0; j < headers.Length; j++)
+                {
+                    if (!ignored.Contains(headers[j]) && string.IsNullOrWhiteSpace(cells[j]))
+                    {
+                        Debug.LogWarning($"{typeof(T).Name} CSV {i + 1}행 '{headers[j]}'이 비어 있습니다.", csv);
+                    }
+                }
+            }
+
+            if (string.IsNullOrEmpty(key) && allowEmptyKeys)
+                key = $"Row_{i + 1}";
 
             if (string.IsNullOrEmpty(key) || !keys.Add(key))
             {
@@ -207,15 +226,15 @@ public static class CsvSoImporter
                 }
             }
 
-            rows.Add(cells);
+            rows.Add((key, cells));
         }
 
         UnityEngine.Object.DestroyImmediate(sample);
 
         // 같은 위치에 다른 타입의 Asset이 있는지 검사
-        foreach (string[] cells in rows)
+        foreach ((string key, string[] cells) in rows)
         {
-            string path = GetPath(outputFolder, filePrefix, cells[keyCol].Trim());
+            string path = GetPath(outputFolder, filePrefix, key);
             UnityEngine.Object asset = AssetDatabase.LoadMainAssetAtPath(path);
 
             if (asset != null && asset is not T)
@@ -232,9 +251,9 @@ public static class CsvSoImporter
         int skipped = 0;
 
         // 검증된 CSV만 SO에 적용
-        foreach (string[] cells in rows)
+        foreach ((string key, string[] cells) in rows)
         {
-            string path = GetPath(outputFolder, filePrefix, cells[keyCol].Trim());
+            string path = GetPath(outputFolder, filePrefix, key);
             T data = AssetDatabase.LoadAssetAtPath<T>(path);
             bool isNew = data == null;
 

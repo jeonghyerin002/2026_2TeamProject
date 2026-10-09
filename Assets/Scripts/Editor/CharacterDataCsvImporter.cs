@@ -12,7 +12,13 @@ public static class CharacterDataCsvImporter
             "Character",
             "characterid",
             ignoreHeaders: new[] { "memo" },
-            emptyIntegerHeaders: new[] { "weaponid", "aetherid", "rewardexp" },
+            emptyIntegerHeaders: new[]
+            {
+                "characterid", "maxhp", "attack", "defense", "specialattack", "specialdefense",
+                "speed", "level", "weaponid", "aetherid", "rewardexp"
+            },
+            warnEmptyFromRow: 3,
+            allowEmptyKeys: true,
             refFields: new CsvSoImporter.RefFieldBase[]
             {
                 new CsvSoImporter.RefField<WeaponData>("weapon", "weaponid", "Assets/Data/Items", "Item", "itemid"),
