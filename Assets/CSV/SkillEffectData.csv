@@ -15,3 +15,8 @@
 60015,Special Defense 1 Rank Up,ModifyStat,Self,0,1.5,0,100,,SpecialDefense
 60016,Speed 1 Rank Up,ModifyStat,Self,0,1.5,0,100,,Speed
 60017,Attack 2 Rank Up,ModifyStat,Self,0,,0,100,Attack +2 ranks; cap 6. Rank storage pending; value unset.,Attack
+60018,공격 1랭크 하락,ModifyStat,Enemy,0,,0,100,-1 rank; storage and negative-rank formula pending.,Attack
+60019,방어 1랭크 하락,ModifyStat,Enemy,0,,0,100,-1 rank; storage and negative-rank formula pending.,Defense
+60020,특수공격 1랭크 하락,ModifyStat,Enemy,0,,0,100,-1 rank; storage and negative-rank formula pending.,SpecialAttack
+60021,특수방어 1랭크 하락,ModifyStat,Enemy,0,,0,100,-1 rank; storage and negative-rank formula pending.,SpecialDefense
+60022,스피드 1랭크 하락,ModifyStat,Enemy,0,,0,100,-1 rank; storage and negative-rank formula pending.,Speed

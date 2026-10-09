@@ -10,3 +10,5 @@
 50009,투신 각성,Fighting,Status,0,10,100,0,60017,
 50010,무령질주,Fighting,Physical,60,5,100,2,0,
 50011,패왕진각,Fighting,Physical,100,10,100,0,0,
+50012,휘두르기,Normal,Physical,40,40,100,0,0,
+50013,지맥붕괴,Earth,Physical,65,15,100,0,60020,
