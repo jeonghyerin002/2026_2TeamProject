@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   itemid: 20999
   weaponname: Temporary Test Sword
-  icon: {fileID: -7279454538075808437, guid: b7e044e1fb8bfd346b706142f07907f9, type: 2}
+  icon: {fileID: 0}
   healthmultiplier: 1
   attackmultiplier: 1
   defensemultiplier: 1

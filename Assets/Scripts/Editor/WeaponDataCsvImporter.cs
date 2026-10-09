@@ -8,7 +8,7 @@ public class WeaponDataCsvImporter : MonoBehaviour
     private static void Import()
     {
         CsvSoImporter.Import<WeaponData>(
-            "Assets/Data/Items",
+            "Assets/Data/Items/Weapon",
             "Item",
             "itemid",
             refArray: new CsvSoImporter.RefArray<SkillData>(

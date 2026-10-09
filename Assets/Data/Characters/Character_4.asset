@@ -25,4 +25,4 @@ MonoBehaviour:
   aetherid: 40005
   rewardexp: 30
   weapon: {fileID: 0}
-  aether: {fileID: 11400000, guid: dc91fb3e18b415643b423fdc2c0e4ab8, type: 2}
+  aether: {fileID: 11400000, guid: cb2f5112a07ef5c4eae4252ac4786bc6, type: 2}

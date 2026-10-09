@@ -8,7 +8,7 @@ public static class AetherDataCsvImporter
     private static void Import()
     {
         CsvSoImporter.Import<AetherData>(
-            "Assets/Data/Items",
+            "Assets/Data/Items/Aether",
             "Aether",
             "itemid",
             refArray: new CsvSoImporter.RefArray<SkillData>(
