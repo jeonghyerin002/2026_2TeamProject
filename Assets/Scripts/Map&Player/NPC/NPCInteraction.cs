@@ -9,7 +9,7 @@ public class NPCInteraction : MonoBehaviour
 {
     [Header("NPC")]
     [SerializeField] private string npcId;
-    [SerializeField] private NpcBattleData battleData;
+    [SerializeField] private CharacterData battleData;
 
     [Header("Dialogue")]
     [FormerlySerializedAs("startingDialogueId")]

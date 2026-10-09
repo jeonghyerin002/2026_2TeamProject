@@ -2624,7 +2624,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCInteraction
   npcId: npc_001
-  battleData: {fileID: 11400000, guid: c5c0455aa5f843844ac81cfa0cddfc26, type: 2}
+  battleData: {fileID: 11400000, guid: 2560af1f1e69d5744b2d207239007ef5, type: 2}
   beforeBattleDialogueId: 1
   afterVictoryDialogueId: 0
   battleSceneName: Battle

@@ -17,6 +17,6 @@ MonoBehaviour:
   aethertype: 5
   icon: {fileID: 0}
   skills:
-  - {fileID: 11400000, guid: 3c6dbc6611f9dd645931a025f1933952, type: 2}
+  - {fileID: 11400000, guid: 872a74f1ab9a9a24c817f074503d7fe2, type: 2}
   - {fileID: 11400000, guid: 205b98b94979c804aaf8bb903128a4ad, type: 2}
   - {fileID: 11400000, guid: b4345762784f3144f95c81669372759d, type: 2}

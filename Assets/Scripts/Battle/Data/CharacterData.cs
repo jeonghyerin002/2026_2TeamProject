@@ -12,6 +12,12 @@ public class CharacterData : ScriptableObject
     [SerializeField] private int specialattack;     // 특수공격
     [SerializeField] private int specialdefense;    // 특수방어
     [SerializeField] private int speed;            // 스피드
+    [SerializeField, Range(1, 100)] private int level = 1;
+    [SerializeField] private int weaponid;
+    [SerializeField] private int aetherid;
+    [SerializeField, Min(0)] private int rewardexp;
+    [SerializeField] private WeaponData weapon;
+    [SerializeField] private AetherData aether;
 
 
     public int CharacterId => characterid;
@@ -22,4 +28,12 @@ public class CharacterData : ScriptableObject
     public int SpecialAttack => specialattack;
     public int SpecialDefense => specialdefense;
     public int Speed => speed;
+    public int Level => level;
+    public int WeaponId => weaponid;
+    public int AetherId => aetherid;
+    public int RewardExp => rewardexp;
+    public WeaponData Weapon => weapon;
+    public AetherData Aether => aether;
+    public bool IsValid => aether != null && aether.itemId == aetherid &&
+        (weaponid == 0 ? weapon == null : weapon != null && weapon.ItemId == weaponid);
 }

@@ -77,11 +77,16 @@ public sealed class BattleSceneController : MonoBehaviour
             return false;
         }
 
-        NpcBattleData enemy = BattleSession.Enemy;
+        CharacterData enemy = BattleSession.Enemy;
+        if (!enemy.IsValid)
+        {
+            Debug.LogError("BattleSceneController: NPC CharacterData의 장비 ID와 SO 참조를 확인하세요.");
+            return false;
+        }
 
         // 양측 원본 데이터를 전투 시스템에 전달한다
         battleSystem.SetPlayer(playerData.Character, playerData.EquippedAether, playerData.GetBattleAethers(), playerData.Weapon, playerData.Level);
-        battleSystem.SetEnemy(enemy.Character, enemy.Aether, enemy.Weapon, enemy.Level, enemy.ExperienceReward);
+        battleSystem.SetEnemy(enemy, enemy.Aether, enemy.Weapon, enemy.Level, enemy.RewardExp);
 
         // Battle Scene에서 맵 이동 입력이 실행되지 않도록 잠근다
         player.SetMovementEnabled(false);

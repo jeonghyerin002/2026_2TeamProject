@@ -13,10 +13,16 @@ MonoBehaviour:
   m_Name: Character_3
   m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CharacterData
   characterid: 3
-  charactername: Enemy2
-  maxhp: 130
-  attack: 45
-  defense: 70
-  specialattack: 15
-  specialdefense: 55
-  speed: 20
+  charactername: "\uC0B0\uCC45\uC18C\uB140 \uC18C\uB77C"
+  maxhp: 3
+  attack: 3
+  defense: 3
+  specialattack: 3
+  specialdefense: 3
+  speed: 3
+  level: 1
+  weaponid: 20002
+  aetherid: 40002
+  rewardexp: 15
+  weapon: {fileID: 11400000, guid: bb4254025b4f2ad4b9a8eb0140451e91, type: 2}
+  aether: {fileID: 11400000, guid: 5ea6179a256c2d848afd672a38ec9ba6, type: 2}

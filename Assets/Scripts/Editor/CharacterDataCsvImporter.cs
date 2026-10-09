@@ -10,6 +10,13 @@ public static class CharacterDataCsvImporter
         CsvSoImporter.Import<CharacterData>(
             "Assets/Data/Characters",
             "Character",
-            "characterid");
+            "characterid",
+            ignoreHeaders: new[] { "memo" },
+            emptyIntegerHeaders: new[] { "weaponid", "aetherid", "rewardexp" },
+            refFields: new CsvSoImporter.RefFieldBase[]
+            {
+                new CsvSoImporter.RefField<WeaponData>("weapon", "weaponid", "Assets/Data/Items", "Item", "itemid"),
+                new CsvSoImporter.RefField<AetherData>("aether", "aetherid", "Assets/Data/Items", "Aether", "itemid")
+            });
     }
 }

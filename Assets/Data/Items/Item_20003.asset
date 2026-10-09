@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9b9b3656d66fc34d9f2ffb219cecf1b, type: 3}
-  m_Name: Item_20001
+  m_Name: Item_20003
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
-  itemid: 20001
-  weaponname: "\uB179\uC2A8\uAC80"
+  itemid: 20003
+  weaponname: "\uB179\uC2A8 \uD30C\uC774\uD504"
   icon: {fileID: 0}
   healthmultiplier: 1
-  attackmultiplier: 1.05
-  defensemultiplier: 0.97
+  attackmultiplier: 1.01
+  defensemultiplier: 1
   specialattackmultiplier: 1
   specialdefensemultiplier: 1
   speedmultiplier: 1

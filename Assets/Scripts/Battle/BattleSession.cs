@@ -4,13 +4,13 @@
 public static class BattleSession
 {
     public static string NpcId { get; private set; }
-    public static NpcBattleData Enemy { get; private set; }
+    public static CharacterData Enemy { get; private set; }
     public static string ReturnScene { get; private set; }
     public static Vector3 ReturnPosition { get; private set; }
     public static bool IsActive { get; private set; }
 
     // NPC 전투와 복귀 정보를 등록한다
-    public static bool Begin(string npcId, NpcBattleData enemy, string returnScene, Vector3 returnPosition)
+    public static bool Begin(string npcId, CharacterData enemy, string returnScene, Vector3 returnPosition)
     {
         if (string.IsNullOrEmpty(npcId) || enemy == null || !enemy.IsValid || string.IsNullOrEmpty(returnScene))
             return false;

@@ -7,25 +7,42 @@ using UnityEngine;
 /// <summary>CSV를 검증해 ScriptableObject를 생성하거나 변경된 값만 갱신한다.</summary>
 public static class CsvSoImporter
 {
-    public abstract class RefArrayBase
+    public abstract class RefFieldBase
     {
         internal string Field { get; }
         internal string Header { get; }
-        internal int Count { get; }
-        internal int StartIndex { get; }
         internal string Folder { get; }
         internal string Prefix { get; }
         internal Type Type { get; }
+        internal string IdField { get; }
 
-        protected RefArrayBase(string field, string header, int count, string folder, string prefix, Type type, int startIndex)
+        protected RefFieldBase(string field, string header, string folder, string prefix, Type type, string idField = null)
         {
             Field = field;
             Header = header;
-            Count = count;
-            StartIndex = startIndex;
             Folder = folder;
             Prefix = prefix;
             Type = type;
+            IdField = idField;
+        }
+    }
+
+    public sealed class RefField<T> : RefFieldBase where T : ScriptableObject
+    {
+        public RefField(string field, string header, string folder, string prefix, string idField = null)
+            : base(field, header, folder, prefix, typeof(T), idField) { }
+    }
+
+    public abstract class RefArrayBase : RefFieldBase
+    {
+        internal int Count { get; }
+        internal int StartIndex { get; }
+
+        protected RefArrayBase(string field, string header, int count, string folder, string prefix, Type type, int startIndex)
+            : base(field, header, folder, prefix, type)
+        {
+            Count = count;
+            StartIndex = startIndex;
         }
     }
 
@@ -42,7 +59,9 @@ public static class CsvSoImporter
         string keyHeader,
         IReadOnlyDictionary<string, string> fieldMap = null,
         string[] ignoreHeaders = null,
-        RefArrayBase refArray = null)
+        RefArrayBase refArray = null,
+        string[] emptyIntegerHeaders = null,
+        IReadOnlyList<RefFieldBase> refFields = null)
         where T : ScriptableObject
     {
         if (Selection.activeObject is not TextAsset csv ||
@@ -64,6 +83,7 @@ public static class CsvSoImporter
             return;
 
         HashSet<string> ignored = new(ignoreHeaders ?? Array.Empty<string>(), StringComparer.Ordinal);
+        HashSet<string> emptyIntegers = new(emptyIntegerHeaders ?? Array.Empty<string>(), StringComparer.Ordinal);
 
         if (!columns.TryGetValue(keyHeader, out int keyCol))
         {
@@ -87,9 +107,36 @@ public static class CsvSoImporter
             return;
         }
 
+        if (refFields != null)
+        {
+            foreach (RefFieldBase reference in refFields)
+            {
+                SerializedProperty property = sampleSo.FindProperty(reference.Field);
+                if (!columns.ContainsKey(reference.Header) || property == null ||
+                    property.propertyType != SerializedPropertyType.ObjectReference)
+                {
+                    UnityEngine.Object.DestroyImmediate(sample);
+                    Debug.LogError($"{typeof(T).Name} 참조 필드 또는 CSV Header가 없습니다: {reference.Field} / {reference.Header}");
+                    return;
+                }
+            }
+        }
+
         List<string[]> rows = new(lines.Length - 1);
         HashSet<string> keys = new(StringComparer.Ordinal);
         Dictionary<string, UnityEngine.Object> refCache = new();
+
+        if (refFields != null)
+        {
+            foreach (RefFieldBase reference in refFields)
+            {
+                if (!CacheIdReferences(reference, refCache))
+                {
+                    UnityEngine.Object.DestroyImmediate(sample);
+                    return;
+                }
+            }
+        }
 
         // SO를 수정하기 전에 CSV 전체 검증
         for (int i = 1; i < lines.Length; i++)
@@ -133,12 +180,31 @@ public static class CsvSoImporter
 
                 SerializedProperty property = sampleSo.FindProperty(GetField(header, fieldMap));
 
+                if (string.IsNullOrEmpty(value) && emptyIntegers.Contains(header) &&
+                    property.propertyType == SerializedPropertyType.Integer)
+                {
+                    cells[j] = "0";
+                    value = "0";
+                }
+
                 if (CanConvert(property, value))
                     continue;
 
                 UnityEngine.Object.DestroyImmediate(sample);
                 Debug.LogError($"CSV {i + 1}번째 줄 '{header}' 값이 올바르지 않습니다: {value}");
                 return;
+            }
+
+            if (refFields != null)
+            {
+                foreach (RefFieldBase reference in refFields)
+                {
+                    string value = cells[columns[reference.Header]].Trim();
+                    if (!TryGetReference(value, reference, refCache, out _))
+                    {
+                        Debug.LogWarning($"CSV {i + 1}번째 줄 '{reference.Header}' SO가 없습니다: {value}. ID는 유지하며 SO 생성 후 CharacterData를 다시 Import하세요.");
+                    }
+                }
             }
 
             rows.Add(cells);
@@ -196,6 +262,20 @@ public static class CsvSoImporter
 
             if (refArray != null && SetRefArray(so, cells, columns, refArray, refCache))
                 changed = true;
+
+            if (refFields != null)
+            {
+                foreach (RefFieldBase reference in refFields)
+                {
+                    TryGetReference(cells[columns[reference.Header]], reference, refCache, out UnityEngine.Object value);
+                    SerializedProperty property = so.FindProperty(reference.Field);
+                    if (property.objectReferenceValue == value)
+                        continue;
+
+                    property.objectReferenceValue = value;
+                    changed = true;
+                }
+            }
 
             if (!isNew && !changed)
             {
@@ -408,10 +488,51 @@ public static class CsvSoImporter
         return -1;
     }
 
+    private static string GetReferenceKey(RefFieldBase reference, int id)
+    {
+        return $"{reference.Type.FullName}:{reference.Folder}:{reference.IdField}:{id}";
+    }
+
+    private static bool CacheIdReferences(RefFieldBase reference, Dictionary<string, UnityEngine.Object> cache)
+    {
+        if (string.IsNullOrEmpty(reference.IdField))
+            return true;
+
+        foreach (string guid in AssetDatabase.FindAssets($"t:{reference.Type.Name}", new[] { reference.Folder }))
+        {
+            string path = AssetDatabase.GUIDToAssetPath(guid);
+            UnityEngine.Object asset = AssetDatabase.LoadAssetAtPath(path, reference.Type);
+            if (asset == null)
+                continue;
+
+            SerializedObject so = new(asset);
+            SerializedProperty id = so.FindProperty(reference.IdField);
+            if (id == null || id.propertyType != SerializedPropertyType.Integer)
+            {
+                Debug.LogError($"{path}에 정수 ID 필드가 없습니다: {reference.IdField}", asset);
+                return false;
+            }
+
+            if (id.intValue == 0)
+                continue;
+
+            string key = GetReferenceKey(reference, id.intValue);
+            if (cache.TryGetValue(key, out UnityEngine.Object existing) && existing != asset)
+            {
+                Debug.LogError($"{reference.Type.Name}의 {reference.IdField}가 중복되었습니다: {id.intValue} ({AssetDatabase.GetAssetPath(existing)}, {path})", asset);
+                return false;
+            }
+
+            cache[key] = asset;
+        }
+
+        return true;
+    }
+
     // CSV ID에 해당하는 SO 참조 검색
     private static bool TryGetReference(
         string value,
-        RefArrayBase refArray,
+        RefFieldBase refArray,
         Dictionary<string, UnityEngine.Object> cache,
         out UnityEngine.Object reference)
     {
@@ -421,6 +542,13 @@ public static class CsvSoImporter
         {
             reference = null;
             return true;
+        }
+
+        if (!string.IsNullOrEmpty(refArray.IdField))
+        {
+            reference = null;
+            return int.TryParse(value, out int id) &&
+                cache.TryGetValue(GetReferenceKey(refArray, id), out reference) && reference != null;
         }
 
         string path = $"{refArray.Folder}/{refArray.Prefix}_{value}.asset";
