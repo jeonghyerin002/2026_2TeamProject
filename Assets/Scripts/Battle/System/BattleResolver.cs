@@ -83,29 +83,72 @@ public static class BattleResolver
         return (int)Math.Min(damage, int.MaxValue / 4);
     }
 
-    // 현재 프로젝트의 여섯 속성 사이 상성을 반환한다
+    // 현재 프로젝트의 일곱 속성 사이 포켓몬 상성 배율을 반환한다
     public static float GetEffectiveness(ElementType attack, ElementType defense)
     {
         switch (attack)
         {
-            case ElementType.Fire:
-                if (defense == ElementType.Grass) return 2f;
-                if (defense == ElementType.Fire || defense == ElementType.Water) return 0.5f;
+            case ElementType.Normal:    // 노말은 바위에 약하다
+                if (defense == ElementType.Rock)    
+                {
+                    return 0.5f;
+                }
                 break;
-            case ElementType.Water:
-                if (defense == ElementType.Fire) return 2f;
-                if (defense == ElementType.Water || defense == ElementType.Grass) return 0.5f;
+            case ElementType.Fire:      // 불은 풀에 강하고 / 같은 불 / 물 / 바위에 약하다
+                if (defense == ElementType.Grass)
+                {
+                    return 2f;
+                }
+                if (defense == ElementType.Fire || defense == ElementType.Water || defense == ElementType.Rock)
+                {
+                    return 0.5f;
+                }
                 break;
-            case ElementType.Grass:
-                if (defense == ElementType.Water) return 2f;
-                if (defense == ElementType.Fire || defense == ElementType.Grass) return 0.5f;
+            case ElementType.Water:     // 물은 불과 바위에 강하고 / 같은 물과 풀에 약하다
+                if (defense == ElementType.Fire || defense == ElementType.Rock)
+                {
+                    return 2f;
+                }
+                if (defense == ElementType.Water || defense == ElementType.Grass)
+                {
+                    return 0.5f;
+                }
                 break;
-            case ElementType.Electric:
-                if (defense == ElementType.Water) return 2f;
-                if (defense == ElementType.Electric || defense == ElementType.Grass) return 0.5f;
+            case ElementType.Grass:     // 풀은 물과 바위에 강하고 / 같은 풀과 불에 약하다
+                if (defense == ElementType.Water || defense == ElementType.Rock)
+                {
+                    return 2f;
+                }
+                if (defense == ElementType.Fire || defense == ElementType.Grass)
+                {
+                    return 0.5f;
+                }
                 break;
-            case ElementType.Fighting:
-                if (defense == ElementType.Normal) return 2f;
+            case ElementType.Electric:      // 전기는 물에 강하고 / 같은 전기와 풀에 약하다
+                if (defense == ElementType.Water)
+                {
+                    return 2f;
+                }
+                if (defense == ElementType.Electric || defense == ElementType.Grass)
+                {
+                    return 0.5f;
+                }
+                break;
+            case ElementType.Fighting:      // 격투는 노말과 바위에 강하다
+                if (defense == ElementType.Normal || defense == ElementType.Rock)
+                {
+                    return 2f;
+                }
+                break;
+            case ElementType.Rock:      // 바위는 불에 강하고 / 격투에 약하다
+                if (defense == ElementType.Fire)
+                {
+                    return 2f;
+                }
+                if (defense == ElementType.Fighting)
+                {
+                    return 0.5f;
+                }
                 break;
         }
         return 1f;

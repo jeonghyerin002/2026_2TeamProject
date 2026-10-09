@@ -15,7 +15,8 @@ public enum ElementType
     Water,      // 물
     Grass,      // 풀
     Electric,   // 전기
-    Fighting    // 격투
+    Fighting,   // 격투
+    Rock        // 바위
 }
 
 
