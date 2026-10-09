@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     private bool isFasted;
     private bool movementEnabled = true;
 
+    public bool IsMovementEnabled => movementEnabled;
+
     // 싱글톤과 물리 참조를 준비하고 Scene 이동 후에도 유지한다
     private void Awake()
     {
