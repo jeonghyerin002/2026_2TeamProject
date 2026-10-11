@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
   itemid: 20001
   weaponname: "\uB179\uC2A8\uAC80"
-  icon: {fileID: 0}
+  icon: {fileID: -2486521743634864436, guid: 0d9b4dd1c254988469027d2e0155a017, type: 3}
   healthmultiplier: 1
   attackmultiplier: 1.05
   defensemultiplier: 0.97

@@ -15,7 +15,7 @@ MonoBehaviour:
   itemid: 40001
   aethername: "\uBD88\uB625 \uC5D0\uD14C\uB974"
   aethertype: 1
-  icon: {fileID: 0}
+  icon: {fileID: -2486323349656505009, guid: bbccc0101d60d57439d8bceda529e376, type: 3}
   skills:
   - {fileID: 11400000, guid: 114ffdf80e5a1b7409af5577eba3ed69, type: 2}
   - {fileID: 0}
