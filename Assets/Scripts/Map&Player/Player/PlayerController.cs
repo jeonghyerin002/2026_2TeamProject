@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 /// <summary>플레이어 이동과 Scene 간 이동 가능 상태를 관리한다</summary>
 [RequireComponent(typeof(Rigidbody2D))]
 [DisallowMultipleComponent]
+[DefaultExecutionOrder(-1000)]
 public class PlayerController : MonoBehaviour
 {
     public static PlayerController Instance { get; private set; }
@@ -19,6 +20,9 @@ public class PlayerController : MonoBehaviour
 
     public bool IsMovementEnabled => movementEnabled;
 
+    // 저장 및 복원에서 사용하는 현재 좌우 방향.
+    public bool IsFacingRight => isFacingRight;
+
     // 싱글톤과 물리 참조를 준비하고 Scene 이동 후에도 유지한다
     private void Awake()
     {
@@ -26,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
         if (Instance != null && Instance != this)
         {
+            // 지연 파괴되는 동안 자식 카메라와 입력이 중복 실행되지 않게 한다.
+            gameObject.SetActive(false);
             Destroy(gameObject);
             return;
         }
@@ -65,7 +71,7 @@ public class PlayerController : MonoBehaviour
     // 물리 프레임마다 플레이어 이동 속도를 적용한다
     private void FixedUpdate()
     {
-        if (!movementEnabled)
+        if (!movementEnabled || GameSaveSystem.IsBusy)
         {
             rb.linearVelocity = Vector2.zero;
             return;
@@ -92,6 +98,24 @@ public class PlayerController : MonoBehaviour
 
         if (rb != null)
             rb.linearVelocity = Vector2.zero;
+    }
+
+    // 불러오기 시 좌표와 방향을 복원하고 이전 이동 입력을 지운다.
+    public void RestoreSaveTransform(Vector3 position, bool facingRight)
+    {
+        SetMovementEnabled(false);
+        transform.position = position;
+        rb.position = position;
+        if (isFacingRight != facingRight)
+        {
+            Flip();
+        }
+        SetMovementEnabled(true);
+        // 메뉴 복귀 시 꺼졌을 수 있는 플레이어 카메라의 리스너를 복구한다.
+        foreach (var listener in GetComponentsInChildren<AudioListener>(true))
+        {
+            listener.enabled = true;
+        }
     }
 
     // 좌우 입력 방향에 맞게 캐릭터 이미지를 뒤집는다

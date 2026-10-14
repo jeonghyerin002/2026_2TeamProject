@@ -278,6 +278,22 @@ public sealed class PlayerBattleData : MonoBehaviour
         }
     }
 
+    // 검증된 세이브를 원본 에셋 참조로 복원한다. 빈 슬롯을 자동 장착으로 채우지 않는다.
+    public void RestoreSave(GameSaveData save, GameSaveCatalog catalog)
+    {
+        character = catalog.Character(save.characterId);
+        level = save.level;
+        experience = save.experience;
+        ownedAethers = Array.ConvertAll(save.ownedAetherIds, catalog.Aether);
+        equippedAethers = Array.ConvertAll(save.equippedAetherIds, catalog.Aether);
+        equippedAether = catalog.Aether(save.activeAetherId);
+        ownedWeapons = Array.ConvertAll(save.ownedWeaponIds, catalog.Weapon);
+        weapon = catalog.Weapon(save.equippedWeaponId);
+        OwnedAethersChanged?.Invoke();
+        OwnedWeaponsChanged?.Invoke();
+        EquipmentChanged?.Invoke();
+    }
+
     // 전투에서 획득한 경험치와 최종 장착 에테르를 반영한다
     public void ApplyBattleResult(BattleState state)
     {

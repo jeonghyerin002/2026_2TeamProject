@@ -49,6 +49,11 @@ public sealed class TriggerCutscene : MonoBehaviour
     [SerializeField] private LayerMask triggeringLayers = ~0;
     [SerializeField] private bool playOnce = true;
 
+    // 일회성 컷신의 완료 상태를 저장할 때 사용하는 자동 생성 고유 ID.
+    [SerializeField] private string persistentId;
+    // 복제한 컷신에 원본의 저장 ID가 남지 않도록 소유 오브젝트를 추적한다.
+    [SerializeField, HideInInspector] private string saveIdentityOwner;
+
     [Header("Dialogue UI")]
     [SerializeField] private DialogManager dialogManager;
 
@@ -69,8 +74,21 @@ public sealed class TriggerCutscene : MonoBehaviour
 
     public bool IsPlaying => isPlaying;
 
+#if UNITY_EDITOR
+    // OnValidate에서는 Unity 오브젝트를 변경하지 않고 자체 ID 값만 초기화한다.
+    private void OnValidate()
+    {
+        if (string.IsNullOrWhiteSpace(persistentId))
+        {
+            persistentId = Guid.NewGuid().ToString("N");
+        }
+    }
+#endif
+
     private void OnEnable()
     {
+        // 저장 상태는 Scene 로딩 전에 준비되므로 재생 여부를 먼저 복원한다.
+        hasPlayed = WorldSaveProgress.IsCompleted(persistentId);
         Collider2D trigger = GetComponent<Collider2D>();
         if (trigger == null || !trigger.isTrigger || dialogManager == null || steps == null || steps.Count == 0)
         {
@@ -450,6 +468,19 @@ public sealed class TriggerCutscene : MonoBehaviour
         if (isPlaying)
         {
             hasPlayed = true;
+            // 완료 플래그와 플레이어 이외 이동 대상의 최종 좌표를 함께 보존한다.
+            if (playOnce)
+            {
+                WorldSaveProgress.Complete(persistentId);
+            }
+            foreach (var actor in actors)
+            {
+                if (actor.player == null && actor.target != null &&
+                    actor.target.TryGetComponent<PersistentWorldActor>(out var persistentActor))
+                {
+                    persistentActor.RecordPosition();
+                }
+            }
             StopCutscene();
         }
     }

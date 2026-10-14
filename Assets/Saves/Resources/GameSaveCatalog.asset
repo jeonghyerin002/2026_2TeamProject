@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfc902013e2d33746bda87d6c38548bf, type: 3}
+  m_Name: GameSaveCatalog
+  m_EditorClassIdentifier: Assembly-CSharp::GameSaveCatalog
+  characters:
+  - {fileID: 11400000, guid: 2c15917d7f5e5584fb2af2fa2d4b5ec4, type: 2}
+  - {fileID: 11400000, guid: 2560af1f1e69d5744b2d207239007ef5, type: 2}
+  - {fileID: 11400000, guid: 923cc3abfd41c0e4f9aa213e733d091f, type: 2}
+  - {fileID: 11400000, guid: 38f9c03382cc01842bb5f39791b0c9a2, type: 2}
+  aethers:
+  - {fileID: 11400000, guid: 0a7db67a2fb1a0b45af62da78adbb354, type: 2}
+  - {fileID: 11400000, guid: bf55df5b6609cd2449665ff6d6dbbd37, type: 2}
+  - {fileID: 11400000, guid: 400714b112bb2c14c867dcdc898c1245, type: 2}
+  - {fileID: 11400000, guid: 0bdb70fb24342fe4d80a8b463a6df441, type: 2}
+  - {fileID: 11400000, guid: cb2f5112a07ef5c4eae4252ac4786bc6, type: 2}
+  weapons:
+  - {fileID: 11400000, guid: 11c1c7e2d7e406645b690d8eb5360b65, type: 2}
+  - {fileID: 11400000, guid: aca0c30c65442bc468d737903670393a, type: 2}
+  - {fileID: 11400000, guid: 2d309f171c0bb4f4ea7cdaf30caee2b8, type: 2}
+  - {fileID: 11400000, guid: f89f5420c038b254aa237bb58e4789c9, type: 2}
+  - {fileID: 11400000, guid: 15a695d9d7aafcf4bb91a1e0a62b01a2, type: 2}
+  mapScenes:
+  - PalletTown
+  - Shrine
+  npcIds:
+  - npc_001
+  cutsceneIds:
+  - 97936ff9f3cf4aae82a71a50d4f9070d
+  actorDefinitions:
+  - id: 2c380a3e506b461f8d4e1b96cfd9c312
+    sceneName: PalletTown
+    position: {x: 10, y: 0, z: 0}
+  playerPrefab: {fileID: 3376243757928980639, guid: 64f3e68f8cff9c440a7a0dfafd10e3e3, type: 3}

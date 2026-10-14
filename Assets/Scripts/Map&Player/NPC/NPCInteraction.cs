@@ -9,6 +9,8 @@ public class NPCInteraction : MonoBehaviour
 {
     [Header("NPC")]
     [SerializeField] private string npcId;
+    // 오브젝트 복제 시 원본과 사본의 저장 ID를 구분하는 에디터용 소유 정보.
+    [SerializeField, HideInInspector] private string saveIdentityOwner;
     [SerializeField] private CharacterData battleData;
 
     [Header("Dialogue")]
@@ -24,6 +26,17 @@ public class NPCInteraction : MonoBehaviour
     private bool isPlayerNearby;
     private bool isInteracting;
     private bool battlePending;
+
+#if UNITY_EDITOR
+    // 신규 NPC는 별도 ID 입력 없이 시작하며 기존 NPC의 ID는 보존한다.
+    private void OnValidate()
+    {
+        if (string.IsNullOrWhiteSpace(npcId))
+        {
+            npcId = System.Guid.NewGuid().ToString("N");
+        }
+    }
+#endif
 
     // 필요한 컴포넌트를 캐시한다
     private void Awake()

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 /// <summary>현재 실행 중 승리한 NPC의 고유 ID를 관리한다</summary>
 public static class NpcBattleProgress
@@ -17,6 +18,19 @@ public static class NpcBattleProgress
     public static bool IsDefeated(string npcId)
     {
         return !string.IsNullOrEmpty(npcId) && defeatedNpcIds.Contains(npcId);
+    }
+
+    // 세이브에 현재 승리 기록을 독립 배열로 내보낸다.
+    public static string[] CaptureSave() => defeatedNpcIds.OrderBy(id => id).ToArray();
+
+    // 새 게임 및 검증된 불러오기에서 이전 실행의 승리 기록을 교체한다.
+    public static void RestoreSave(string[] ids)
+    {
+        defeatedNpcIds.Clear();
+        foreach (var id in ids)
+        {
+            defeatedNpcIds.Add(id);
+        }
     }
 
     // 승리한 NPC를 중복 없이 등록한다
