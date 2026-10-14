@@ -426,8 +426,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd305a6ebeda6544b0acbec64d37320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  sceneName: Map_baseScene
-  targetSpawnID: Map_baseScene
+  sceneName: PalletTown
+  targetSpawnID: PalletTown
 --- !u!212 &846016101
 SpriteRenderer:
   serializedVersion: 2

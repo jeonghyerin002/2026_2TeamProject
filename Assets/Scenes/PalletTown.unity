@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnManager
   spawnPoints:
-  - spawnID: Map_baseScene
+  - spawnID: PalletTown
     spawnTransform: {fileID: 580783694}
 --- !u!212 &580783697
 SpriteRenderer:
