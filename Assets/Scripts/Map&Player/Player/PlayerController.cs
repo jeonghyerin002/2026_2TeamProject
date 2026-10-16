@@ -17,6 +17,17 @@ public class PlayerController : MonoBehaviour
     private bool isFacingRight = true;
     private bool isFasted;
     private bool movementEnabled = true;
+    private Animator animator;
+    private bool hasDirectionalAnimation;
+    private bool isWalking;
+    private Vector2 animationDirection = Vector2.down;
+
+    private static readonly int MoveXId = Animator.StringToHash("MoveX");
+    private static readonly int MoveYId = Animator.StringToHash("MoveY");
+    private static readonly int IsMovingId = Animator.StringToHash("IsMoving");
+    private static readonly int WalkSpeedId = Animator.StringToHash("WalkSpeed");
+    private static readonly int IdleStateId = Animator.StringToHash("Base Layer.Idle");
+    private static readonly int WalkStateId = Animator.StringToHash("Base Layer.Walk");
 
     public bool IsMovementEnabled => movementEnabled;
 
@@ -40,6 +51,125 @@ public class PlayerController : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    private void OnEnable()
+    {
+        hasDirectionalAnimation = false;
+        if (!TryGetComponent(out animator) || animator.runtimeAnimatorController == null)
+        {
+            return;
+        }
+
+        var hasMoveX = false;
+        var hasMoveY = false;
+        var hasIsMoving = false;
+        var hasWalkSpeed = false;
+        foreach (var parameter in animator.parameters)
+        {
+            if (parameter.type == AnimatorControllerParameterType.Float)
+            {
+                hasMoveX |= parameter.nameHash == MoveXId;
+                hasMoveY |= parameter.nameHash == MoveYId;
+                hasWalkSpeed |= parameter.nameHash == WalkSpeedId;
+            }
+            else if (parameter.type == AnimatorControllerParameterType.Bool)
+            {
+                hasIsMoving |= parameter.nameHash == IsMovingId;
+            }
+        }
+
+        hasDirectionalAnimation = hasMoveX && hasMoveY && hasIsMoving && hasWalkSpeed &&
+            animator.HasState(0, IdleStateId) && animator.HasState(0, WalkStateId);
+
+        if (!hasDirectionalAnimation)
+        {
+            Debug.LogWarning("PlayerController: Animator에 MoveX/MoveY/WalkSpeed 실수, IsMoving bool과 Idle/Walk Blend Tree 상태가 필요합니다.", this);
+            return;
+        }
+
+        // 방향별 그림을 사용하므로 캐릭터와 자식 카메라의 스케일을 반전하지 않는다.
+        var scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x);
+        transform.localScale = scale;
+        animator.speed = 1f;
+        ShowStandingPose();
+    }
+
+    private void OnDisable()
+    {
+        moveInput = Vector2.zero;
+        isFasted = false;
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+        // 종료 중인 Animator에는 Play/Update를 호출하지 않는다.
+        isWalking = false;
+        if (hasDirectionalAnimation && animator != null && animator.isActiveAndEnabled && gameObject.activeInHierarchy)
+        {
+            animator.SetBool(IsMovingId, false);
+        }
+    }
+
+    private void Update()
+    {
+        if (!hasDirectionalAnimation || animator == null || !animator.isActiveAndEnabled)
+        {
+            return;
+        }
+
+        if (!movementEnabled || GameSaveSystem.IsBusy || Time.timeScale == 0f || moveInput.sqrMagnitude == 0f)
+        {
+            if (GameSaveSystem.IsBusy || Time.timeScale == 0f)
+            {
+                moveInput = Vector2.zero;
+                isFasted = false;
+            }
+            if (isWalking)
+            {
+                ShowStandingPose();
+            }
+            return;
+        }
+
+        animationDirection = GetCardinalInput();
+        animator.SetFloat(MoveXId, animationDirection.x);
+        animator.SetFloat(MoveYId, animationDirection.y);
+        animator.SetFloat(WalkSpeedId, isFasted ? 1.5f : 1f);
+        animator.SetBool(IsMovingId, true);
+        if (animationDirection.x != 0f)
+        {
+            isFacingRight = animationDirection.x > 0f;
+        }
+        isWalking = true;
+    }
+
+    // 멈추면 마지막 방향의 첫 그림을 유지한다.
+    private void ShowStandingPose()
+    {
+        isWalking = false;
+        if (!hasDirectionalAnimation || animator == null || !animator.isActiveAndEnabled)
+        {
+            return;
+        }
+        animator.SetFloat(MoveXId, animationDirection.x);
+        animator.SetFloat(MoveYId, animationDirection.y);
+        animator.SetBool(IsMovingId, false);
+    }
+
+    // 크기가 같은 동시 입력은 수평 축을 우선하여 대각선 이동을 막는다.
+    private Vector2 GetCardinalInput()
+    {
+        if (moveInput == Vector2.zero)
+        {
+            return Vector2.zero;
+        }
+        if (Mathf.Abs(moveInput.x) >= Mathf.Abs(moveInput.y))
+        {
+            return moveInput.x < 0f ? Vector2.left : Vector2.right;
+        }
+        return moveInput.y < 0f ? Vector2.down : Vector2.up;
+    }
+
     // 현재 Scene 카메라의 Y축 정렬 방식을 설정한다
     private void Start()
     {
@@ -53,7 +183,7 @@ public class PlayerController : MonoBehaviour
     // 이동 가능 상태에 따라 방향 입력을 저장한다
     private void OnMove(InputValue value)
     {
-        if (!movementEnabled)
+        if (!isActiveAndEnabled || !movementEnabled || GameSaveSystem.IsBusy || Time.timeScale == 0f)
         {
             moveInput = Vector2.zero;
             return;
@@ -65,7 +195,7 @@ public class PlayerController : MonoBehaviour
     // 이동 가능 상태에서만 달리기 입력을 저장한다
     private void OnSprint(InputValue value)
     {
-        isFasted = movementEnabled && value.isPressed;
+        isFasted = isActiveAndEnabled && movementEnabled && !GameSaveSystem.IsBusy && Time.timeScale != 0f && value.isPressed;
     }
 
     // 물리 프레임마다 플레이어 이동 속도를 적용한다
@@ -77,12 +207,15 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        Vector2 normalizedInput = moveInput.normalized;
+        Vector2 normalizedInput = GetCardinalInput();
         float speedMultiplier = isFasted ? 1.5f : 1f;
 
         rb.linearVelocity = normalizedInput * moveSpeed * speedMultiplier;
 
-        HandleSpriteDirection();
+        if (!hasDirectionalAnimation)
+        {
+            HandleSpriteDirection();
+        }
     }
 
     // Battle과 Map 사이에서 플레이어 이동 가능 상태를 변경한다
@@ -95,6 +228,7 @@ public class PlayerController : MonoBehaviour
 
         moveInput = Vector2.zero;
         isFasted = false;
+        ShowStandingPose();
 
         if (rb != null)
             rb.linearVelocity = Vector2.zero;
@@ -131,6 +265,13 @@ public class PlayerController : MonoBehaviour
     private void Flip()
     {
         isFacingRight = !isFacingRight;
+
+        if (hasDirectionalAnimation)
+        {
+            animationDirection = isFacingRight ? Vector2.right : Vector2.left;
+            ShowStandingPose();
+            return;
+        }
 
         Vector3 scale = transform.localScale;
         scale.x *= -1f;
