@@ -39,5 +39,5 @@ MonoBehaviour:
   actorDefinitions:
   - id: 2c380a3e506b461f8d4e1b96cfd9c312
     sceneName: PalletTown
-    position: {x: 10, y: 0, z: 0}
+    position: {x: 2.5, y: 1.19, z: 0}
   playerPrefab: {fileID: 3376243757928980639, guid: 64f3e68f8cff9c440a7a0dfafd10e3e3, type: 3}
