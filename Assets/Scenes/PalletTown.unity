@@ -15533,8 +15533,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd305a6ebeda6544b0acbec64d37320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  sceneName: Raute1
-  targetSpawnID: Raute1
+  sceneName: Raute_1
+  targetSpawnID: Raute_1
 --- !u!61 &1664456984
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18826,7 +18826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 978516485016564843, guid: 48c6521a53aa920488cdad3e25dd7fad, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 6.84
       objectReference: {fileID: 0}
     - target: {fileID: 978516485016564843, guid: 48c6521a53aa920488cdad3e25dd7fad, type: 3}
       propertyPath: m_LocalPosition.z

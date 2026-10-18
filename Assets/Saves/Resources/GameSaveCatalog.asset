@@ -32,6 +32,7 @@ MonoBehaviour:
   mapScenes:
   - PalletTown
   - Shrine
+  - Raute_1
   npcIds:
   - npc_001
   cutsceneIds:
