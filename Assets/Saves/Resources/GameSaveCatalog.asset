@@ -35,6 +35,7 @@ MonoBehaviour:
   - Raute_1
   npcIds:
   - npc_001
+  - npc_002
   cutsceneIds:
   - 97936ff9f3cf4aae82a71a50d4f9070d
   actorDefinitions: []

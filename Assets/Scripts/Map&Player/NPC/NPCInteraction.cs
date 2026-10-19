@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 /// <summary>NPC 대화와 전투 진입을 연결한다</summary>
-[RequireComponent(typeof(DialogManager))]
 public class NPCInteraction : MonoBehaviour
 {
     [Header("NPC")]
@@ -14,6 +13,8 @@ public class NPCInteraction : MonoBehaviour
     [SerializeField] private CharacterData battleData;
 
     [Header("Dialogue")]
+    // 씬의 공용 대화 UI 서비스
+    [SerializeField] private DialogManager dialogManager;
     [FormerlySerializedAs("startingDialogueId")]
     [SerializeField] private int beforeBattleDialogueId = 1;
     [SerializeField] private int afterVictoryDialogueId;
@@ -22,7 +23,8 @@ public class NPCInteraction : MonoBehaviour
     [SerializeField] private string battleSceneName = "Battle";
     [SerializeField] private AetherEquipmentUI equipmentUI;
 
-    private DialogManager dialogManager;
+    // 현재 요청을 수락한 매니저로 취소 대상을 고정
+    private DialogManager activeDialogManager;
     private bool isPlayerNearby;
     private bool isInteracting;
     private bool battlePending;
@@ -38,29 +40,31 @@ public class NPCInteraction : MonoBehaviour
     }
 #endif
 
-    // 필요한 컴포넌트를 캐시한다
-    private void Awake()
-    {
-        dialogManager = GetComponent<DialogManager>();
-    }
-
-    // 대화 종료 이벤트를 구독한다
+    // 활성화마다 Inspector에 연결된 공용 매니저 검증
     private void OnEnable()
     {
-        dialogManager.OnDialogFinshed += OnDialogCompleted;
+        if (dialogManager == null)
+        {
+            Debug.LogError("NPCInteraction: 씬의 공용 DialogManager를 연결하세요.", this);
+            enabled = false;
+        }
     }
 
-    // 대화 종료 이벤트 구독을 해제한다
+    // 활성 수명이 끝나면 자신이 시작한 대화만 취소
     private void OnDisable()
     {
-        if (dialogManager != null)
-            dialogManager.OnDialogFinshed -= OnDialogCompleted;
+        if (activeDialogManager != null)
+        {
+            activeDialogManager.CancelDialog(this);
+        }
+        activeDialogManager = null;
+        CancelInteraction();
     }
 
     // 플레이어가 가까이 있을 때 상호작용 입력을 확인한다
     private void Update()
     {
-        if (isInteracting || dialogManager.IsOpen || !isPlayerNearby || Keyboard.current == null || (equipmentUI != null && equipmentUI.BlocksWorldInput))
+        if (isInteracting || dialogManager == null || !dialogManager.CanShowMessage || !isPlayerNearby || Keyboard.current == null || (equipmentUI != null && equipmentUI.BlocksWorldInput))
             return;
 
         if (Keyboard.current.eKey.wasPressedThisFrame)
@@ -70,6 +74,11 @@ public class NPCInteraction : MonoBehaviour
     // 승리 여부에 따라 전투 전 또는 승리 후 대화를 시작한다
     private void StartInteraction()
     {
+        if (!isActiveAndEnabled || dialogManager == null || !dialogManager.CanShowMessage)
+        {
+            return;
+        }
+
         isInteracting = true;
         battlePending = !NpcBattleProgress.IsDefeated(npcId);
 
@@ -77,7 +86,13 @@ public class NPCInteraction : MonoBehaviour
 
         if (dialogId > 0)
         {
-            dialogManager.StartDialog(dialogId);
+            activeDialogManager = dialogManager;
+            if (!activeDialogManager.TryStartDialog(dialogId, this, OnDialogCompleted))
+            {
+                activeDialogManager = null;
+                CancelInteraction();
+                Debug.LogWarning($"NPCInteraction: 대화 {dialogId}을 시작하지 못했습니다. 공용 매니저의 DB와 대화 ID를 확인하세요.", this);
+            }
             return;
         }
 
@@ -87,11 +102,15 @@ public class NPCInteraction : MonoBehaviour
             isInteracting = false;
     }
 
-    // 대화 종료 후 필요한 경우 전투를 시작한다
-    private void OnDialogCompleted()
+    // 자신의 대화가 정상 완료된 경우에만 전투 진입, 취소 시 상태 초기화
+    private void OnDialogCompleted(bool completed)
     {
-        if (!isInteracting)
+        activeDialogManager = null;
+        if (!completed || !isActiveAndEnabled || !isInteracting)
+        {
+            CancelInteraction();
             return;
+        }
 
         if (battlePending)
         {

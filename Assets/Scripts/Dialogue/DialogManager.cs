@@ -28,6 +28,9 @@ public class DialogManager : MonoBehaviour
     private bool hasCutsceneMessage;
     private int messageShownFrame;
     private int lastInputFrame = -1;
+    // 현재 대화를 예약한 소유자와 해당 요청에만 전달할 종료 콜백
+    private UnityEngine.Object dialogOwner;
+    private Action<bool> dialogCompletion;
 
     public bool IsOpen => isAction;
     public bool CanShowMessage => isActiveAndEnabled && !isAction && dialogPanel != null && dialogText != null;
@@ -116,6 +119,16 @@ public class DialogManager : MonoBehaviour
         }
     }
 
+    // 활성화마다 공용 UI의 필수 참조 검증
+    private void OnEnable()
+    {
+        if (dialogPanel == null || dialogText == null)
+        {
+            Debug.LogError("DialogManager: 공용 Dialog Panel과 Dialog Text를 연결하세요.", this);
+            enabled = false;
+        }
+    }
+
     void Start()
     {
         if (dialogPanel != null && !isAction)
@@ -127,6 +140,13 @@ public class DialogManager : MonoBehaviour
 
     void Update()
     {
+        // 소유자나 필수 UI가 파괴되면 취소로 처리하여 예약 해제
+        if (dialogCompletion != null && (dialogOwner == null || dialogPanel == null || dialogText == null))
+        {
+            ClearDialog();
+            return;
+        }
+
         if (!isAction) return;
 
         if ((Keyboard.current != null &&
@@ -139,32 +159,52 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog (int dialogID)
     {
-        if (!isActiveAndEnabled || cutsceneOwner != null)
+        // 기존 UnityEvent 진입점을 유지하며 진행 중인 대화 덮어쓰기 방지
+        if (!TryStartDialogInternal(dialogID, null, null))
         {
-            return;
+            Debug.LogWarning($"DialogManager: 대화 {dialogID}을 시작할 수 없습니다. UI 사용 상태, DB와 대화 ID를 확인하세요.", this);
+        }
+    }
+
+    // 성공한 요청만 소유권 획득, 완료 true 또는 취소 false를 한 번 통지
+    public bool TryStartDialog(int dialogID, UnityEngine.Object owner, Action<bool> onEnded)
+    {
+        if (owner == null || onEnded == null)
+        {
+            return false;
+        }
+        return TryStartDialogInternal(dialogID, owner, onEnded);
+    }
+
+    // 일치하는 소유자의 요청만 취소하며 다른 NPC와 컷신은 보존
+    public void CancelDialog(UnityEngine.Object owner)
+    {
+        if (owner != null && dialogOwner == owner)
+        {
+            ClearDialog();
+        }
+    }
+
+    // 사용 가능한 UI와 유효한 양수 대화 ID 확인 후 요청 상태 등록
+    private bool TryStartDialogInternal(int dialogID, UnityEngine.Object owner, Action<bool> onEnded)
+    {
+        if (!CanShowMessage || dialogDatabase == null || dialogID <= 0)
+        {
+            return false;
+        }
+        // UI를 예약하기 전에 시작 대화 확인
+        var dialog = dialogDatabase.GetDialogById(dialogID);
+        if (dialog == null)
+        {
+            return false;
         }
 
-        if (dialogDatabase == null)
-        {
-            OnDialogFinshed?.Invoke();
-            return;
-        }
-
-        DialogSO dialog = dialogDatabase.GetDialogById(dialogID);
-
-        if (dialog != null)
-        {
-            if (dialogPanel == null || dialogText == null)
-            {
-                Debug.LogError("DialogManager: Dialog Panel과 Dialog Text를 연결하세요.", this);
-                enabled = false;
-                return;
-            }
-
-            isAction = true;
-            dialogPanel.SetActive(true);
-            PlayDialog(dialog);
-        }
+        dialogOwner = owner;
+        dialogCompletion = onEnded;
+        isAction = true;
+        dialogPanel.SetActive(true);
+        PlayDialog(dialog);
+        return true;
     }
 
     void PlayDialog(DialogSO dialog)
@@ -212,10 +252,7 @@ public class DialogManager : MonoBehaviour
             return;
         }
 
-        isAction = false;
-        dialogPanel.SetActive(false);
-        currentDialog = null;
-
+        ClearDialog(true);
         OnDialogFinshed?.Invoke();
     }
     void StartTypingEffect(string text)
@@ -262,8 +299,13 @@ public class DialogManager : MonoBehaviour
         ClearDialog();
     }
 
-    private void ClearDialog()
+    // UI와 요청을 먼저 해제한 후 종료 결과 전달, 기본값은 취소
+    private void ClearDialog(bool completed = false)
     {
+        // 재진입 시 중복 호출과 새 대화의 상태 손상 방지
+        var completion = dialogCompletion;
+        dialogCompletion = null;
+        dialogOwner = null;
         StopTypingEffect();
         isTyping = false;
         isAction = false;
@@ -274,5 +316,6 @@ public class DialogManager : MonoBehaviour
         {
             dialogPanel.SetActive(false);
         }
+        completion?.Invoke(completed);
     }
 }
