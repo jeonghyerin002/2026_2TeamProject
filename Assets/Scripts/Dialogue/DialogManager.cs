@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -31,6 +32,8 @@ public class DialogManager : MonoBehaviour
     // 현재 대화를 예약한 소유자와 해당 요청에만 전달할 종료 콜백
     private UnityEngine.Object dialogOwner;
     private Action<bool> dialogCompletion;
+    // 한 번의 UI 예약 동안 순서대로 표시할 후속 안내 문장
+    private readonly Queue<string> pendingMessages = new Queue<string>();
 
     public bool IsOpen => isAction;
     public bool CanShowMessage => isActiveAndEnabled && !isAction && dialogPanel != null && dialogText != null;
@@ -108,6 +111,33 @@ public class DialogManager : MonoBehaviour
         isAction = true;
         dialogPanel.SetActive(true);
         StartTypingEffect(text);
+        return true;
+    }
+
+    // 모든 문장을 검증한 뒤 독립 복사하여 입력 순서대로 표시, 마지막 문장까지 UI 예약 유지
+    public bool TryShowMessages(IReadOnlyList<string> messages)
+    {
+        if (!CanShowMessage || messages == null || messages.Count == 0)
+        {
+            return false;
+        }
+        for (var i = 0; i < messages.Count; i++)
+        {
+            if (string.IsNullOrEmpty(messages[i]))
+            {
+                return false;
+            }
+        }
+
+        pendingMessages.Clear();
+        for (var i = 1; i < messages.Count; i++)
+        {
+            pendingMessages.Enqueue(messages[i]);
+        }
+        currentDialog = null;
+        isAction = true;
+        dialogPanel.SetActive(true);
+        StartTypingEffect(messages[0]);
         return true;
     }
 
@@ -235,6 +265,11 @@ public class DialogManager : MonoBehaviour
                     EndDialog();
                 }
             }
+            else if (currentDialog == null && pendingMessages.Count > 0)
+            {
+                // 현재 문장을 모두 읽은 다음 입력에서만 다음 안내로 진행
+                StartTypingEffect(pendingMessages.Dequeue());
+            }
             else
             {
                 EndDialog();
@@ -312,6 +347,7 @@ public class DialogManager : MonoBehaviour
         hasCutsceneMessage = false;
         cutsceneOwner = null;
         currentDialog = null;
+        pendingMessages.Clear();
         if (dialogPanel != null)
         {
             dialogPanel.SetActive(false);

@@ -38,7 +38,7 @@ public sealed class WeaponPickup : MonoBehaviour
             dialogManager.TryShowMessage("이미 보유한 종류의 무기입니다.");
             return;
         }
-        dialogManager.TryShowMessage($"{weapon.WeaponName}을/를 획득했습니다.");
+        dialogManager.TryShowMessage($"{weapon.WeaponName} (을/를) 획득했습니다.");
         gameObject.SetActive(false);
     }
 }

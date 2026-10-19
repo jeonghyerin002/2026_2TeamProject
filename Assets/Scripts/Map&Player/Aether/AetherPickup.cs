@@ -59,7 +59,7 @@ public sealed class AetherPickup : MonoBehaviour
                 "이미 보유한 종류의 Aether입니다." : "보관함이 가득 찼습니다. Aether를 획득할 수 없습니다.");
             return;
         }
-        dialogManager.TryShowMessage($"{aether.AetherName}을/를 획득했습니다.");
+        dialogManager.TryShowMessage($"{aether.AetherName} (을/를) 획득했습니다.");
         gameObject.SetActive(false);
     }
 }
