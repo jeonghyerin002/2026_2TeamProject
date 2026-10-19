@@ -1,0 +1,7202 @@
+fileFormatVersion: 2
+guid: cf19a25d2da16fb4b9f695fbbeb806a2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8439096843509937258
+    second: water_gun_sheet_0
+  - first:
+      213: -7708467188943417860
+    second: water_gun_sheet_1
+  - first:
+      213: -286676884064485198
+    second: water_gun_sheet_2
+  - first:
+      213: -9185157879363868813
+    second: water_gun_sheet_3
+  - first:
+      213: -852825558963824873
+    second: water_gun_sheet_4
+  - first:
+      213: 1718415848015478139
+    second: water_gun_sheet_5
+  - first:
+      213: -3414977581782197962
+    second: water_gun_sheet_6
+  - first:
+      213: 3044305982752209514
+    second: water_gun_sheet_7
+  - first:
+      213: -8280366200987055932
+    second: water_gun_sheet_8
+  - first:
+      213: 5518325645041691880
+    second: water_gun_sheet_9
+  - first:
+      213: 1241846575865742830
+    second: water_gun_sheet_10
+  - first:
+      213: -3882969442270081600
+    second: water_gun_sheet_11
+  - first:
+      213: -406536588795712123
+    second: water_gun_sheet_12
+  - first:
+      213: 8185304801866183234
+    second: water_gun_sheet_13
+  - first:
+      213: 4735122603368938887
+    second: water_gun_sheet_14
+  - first:
+      213: -6776783605498098999
+    second: water_gun_sheet_15
+  - first:
+      213: 4857326557604924703
+    second: water_gun_sheet_16
+  - first:
+      213: 1195860038805156688
+    second: water_gun_sheet_17
+  - first:
+      213: -990031885072096166
+    second: water_gun_sheet_18
+  - first:
+      213: 4646535824867036290
+    second: water_gun_sheet_19
+  - first:
+      213: 1800278363192707743
+    second: water_gun_sheet_20
+  - first:
+      213: 3025656607926989382
+    second: water_gun_sheet_21
+  - first:
+      213: 2824570405988177708
+    second: water_gun_sheet_22
+  - first:
+      213: 2119901190887106297
+    second: water_gun_sheet_23
+  - first:
+      213: -3421296893798986426
+    second: water_gun_sheet_24
+  - first:
+      213: -6586018549780480457
+    second: water_gun_sheet_25
+  - first:
+      213: -7144403432111025002
+    second: water_gun_sheet_26
+  - first:
+      213: 3085851944839406425
+    second: water_gun_sheet_27
+  - first:
+      213: 4177831911596271896
+    second: water_gun_sheet_28
+  - first:
+      213: -4465835350325040547
+    second: water_gun_sheet_29
+  - first:
+      213: 2386097049179949199
+    second: water_gun_sheet_30
+  - first:
+      213: -2379143465203096720
+    second: water_gun_sheet_31
+  - first:
+      213: -95297453714581281
+    second: water_gun_sheet_32
+  - first:
+      213: 8963670387601834196
+    second: water_gun_sheet_33
+  - first:
+      213: -2392303708983361876
+    second: water_gun_sheet_34
+  - first:
+      213: 136720424233899088
+    second: water_gun_sheet_35
+  - first:
+      213: 854751294266484993
+    second: water_gun_sheet_36
+  - first:
+      213: 1108288262631273651
+    second: water_gun_sheet_37
+  - first:
+      213: -4204342631509237762
+    second: water_gun_sheet_38
+  - first:
+      213: 4862345845485964341
+    second: water_gun_sheet_39
+  - first:
+      213: 8790367642533807613
+    second: water_gun_sheet_40
+  - first:
+      213: -8891303309553475275
+    second: water_gun_sheet_41
+  - first:
+      213: -5647178045217303553
+    second: water_gun_sheet_42
+  - first:
+      213: -3057191938897867694
+    second: water_gun_sheet_43
+  - first:
+      213: -6459101483449464638
+    second: water_gun_sheet_44
+  - first:
+      213: 5538110565028886209
+    second: water_gun_sheet_45
+  - first:
+      213: -443570138761788551
+    second: water_gun_sheet_46
+  - first:
+      213: 4969727945674472009
+    second: water_gun_sheet_47
+  - first:
+      213: -9003141118067107917
+    second: water_gun_sheet_48
+  - first:
+      213: -1836781863724627701
+    second: water_gun_sheet_49
+  - first:
+      213: 7148027363107392468
+    second: water_gun_sheet_50
+  - first:
+      213: 5488035779825409804
+    second: water_gun_sheet_51
+  - first:
+      213: 3014619983692548302
+    second: water_gun_sheet_52
+  - first:
+      213: 9026521176698935196
+    second: water_gun_sheet_53
+  - first:
+      213: -2454911298602636819
+    second: water_gun_sheet_54
+  - first:
+      213: 7396383640855847397
+    second: water_gun_sheet_55
+  - first:
+      213: -8813429141424243227
+    second: water_gun_sheet_56
+  - first:
+      213: 998468905667175667
+    second: water_gun_sheet_57
+  - first:
+      213: 1899489678348909432
+    second: water_gun_sheet_58
+  - first:
+      213: -2640666700795652383
+    second: water_gun_sheet_59
+  - first:
+      213: 1927558944619061041
+    second: water_gun_sheet_60
+  - first:
+      213: -6363698938652369234
+    second: water_gun_sheet_61
+  - first:
+      213: 1511938631808555099
+    second: water_gun_sheet_62
+  - first:
+      213: -1770706795264547676
+    second: water_gun_sheet_63
+  - first:
+      213: 7845338375122272664
+    second: water_gun_sheet_64
+  - first:
+      213: 5176098803271560151
+    second: water_gun_sheet_65
+  - first:
+      213: -3765533852938561564
+    second: water_gun_sheet_66
+  - first:
+      213: 4408144896511572564
+    second: water_gun_sheet_67
+  - first:
+      213: -6949796738726406881
+    second: water_gun_sheet_68
+  - first:
+      213: 1264729305036725288
+    second: water_gun_sheet_69
+  - first:
+      213: -2642074892454068918
+    second: water_gun_sheet_70
+  - first:
+      213: -7409172937229168532
+    second: water_gun_sheet_71
+  - first:
+      213: 5953354140860909233
+    second: water_gun_sheet_72
+  - first:
+      213: -2538859338195825094
+    second: water_gun_sheet_73
+  - first:
+      213: 8803390391229783383
+    second: water_gun_sheet_74
+  - first:
+      213: -6983189321816557604
+    second: water_gun_sheet_75
+  - first:
+      213: 3144351601455330370
+    second: water_gun_sheet_76
+  - first:
+      213: -4370680196180873822
+    second: water_gun_sheet_77
+  - first:
+      213: -1103483228561613933
+    second: water_gun_sheet_78
+  - first:
+      213: -7811141302542402886
+    second: water_gun_sheet_79
+  - first:
+      213: -4213424697928560608
+    second: water_gun_sheet_80
+  - first:
+      213: -3899372002371766747
+    second: water_gun_sheet_81
+  - first:
+      213: -5396670984414814592
+    second: water_gun_sheet_82
+  - first:
+      213: 6056563497801279033
+    second: water_gun_sheet_83
+  - first:
+      213: -7002320805002140320
+    second: water_gun_sheet_84
+  - first:
+      213: 5936320279528930145
+    second: water_gun_sheet_85
+  - first:
+      213: 2575656060946707716
+    second: water_gun_sheet_86
+  - first:
+      213: 2322114740014401509
+    second: water_gun_sheet_87
+  - first:
+      213: 2726888872482834071
+    second: water_gun_sheet_88
+  - first:
+      213: -1560289418057795892
+    second: water_gun_sheet_89
+  - first:
+      213: -8950906169817077140
+    second: water_gun_sheet_90
+  - first:
+      213: -695437493144021756
+    second: water_gun_sheet_91
+  - first:
+      213: 8590668742147693895
+    second: water_gun_sheet_92
+  - first:
+      213: 4974948060233444878
+    second: water_gun_sheet_93
+  - first:
+      213: -9166557813799672296
+    second: water_gun_sheet_94
+  - first:
+      213: -9196347138645778681
+    second: water_gun_sheet_95
+  - first:
+      213: 7693388173053753338
+    second: water_gun_sheet_96
+  - first:
+      213: 7982201441294268709
+    second: water_gun_sheet_97
+  - first:
+      213: -2968282439493611018
+    second: water_gun_sheet_98
+  - first:
+      213: 6482539821194889627
+    second: water_gun_sheet_99
+  - first:
+      213: -1594827852311903830
+    second: water_gun_sheet_100
+  - first:
+      213: 4357014004082929245
+    second: water_gun_sheet_101
+  - first:
+      213: -625698443616775486
+    second: water_gun_sheet_102
+  - first:
+      213: -3701463922683794299
+    second: water_gun_sheet_103
+  - first:
+      213: -7741084847735412254
+    second: water_gun_sheet_104
+  - first:
+      213: 8290363340968093797
+    second: water_gun_sheet_105
+  - first:
+      213: -6963709813568133217
+    second: water_gun_sheet_106
+  - first:
+      213: -712793001426714410
+    second: water_gun_sheet_107
+  - first:
+      213: 8294382104319051947
+    second: water_gun_sheet_108
+  - first:
+      213: -4130754428852251685
+    second: water_gun_sheet_109
+  - first:
+      213: 5671973838974271413
+    second: water_gun_sheet_110
+  - first:
+      213: -8237959234223418030
+    second: water_gun_sheet_111
+  - first:
+      213: -8760316494216623134
+    second: water_gun_sheet_112
+  - first:
+      213: 5659055810046628141
+    second: water_gun_sheet_113
+  - first:
+      213: 4011339017538867497
+    second: water_gun_sheet_114
+  - first:
+      213: -5403330798087000891
+    second: water_gun_sheet_115
+  - first:
+      213: -2727455847502393205
+    second: water_gun_sheet_116
+  - first:
+      213: 3420648958792448352
+    second: water_gun_sheet_117
+  - first:
+      213: 5834088879444935358
+    second: water_gun_sheet_118
+  - first:
+      213: 7075049553627689443
+    second: water_gun_sheet_119
+  - first:
+      213: -2151840320233388307
+    second: water_gun_sheet_120
+  - first:
+      213: 7285870355926570015
+    second: water_gun_sheet_121
+  - first:
+      213: -4360868115821780540
+    second: water_gun_sheet_122
+  - first:
+      213: 3567598594879904545
+    second: water_gun_sheet_123
+  - first:
+      213: 3467484136776576818
+    second: water_gun_sheet_124
+  - first:
+      213: 1713393686818274383
+    second: water_gun_sheet_125
+  - first:
+      213: -7862751925745921361
+    second: water_gun_sheet_126
+  - first:
+      213: 6300520036503015764
+    second: water_gun_sheet_127
+  - first:
+      213: -1592700260163948880
+    second: water_gun_sheet_128
+  - first:
+      213: 6809545004975260124
+    second: water_gun_sheet_129
+  - first:
+      213: -1729677807755196936
+    second: water_gun_sheet_130
+  - first:
+      213: 3873896431595614410
+    second: water_gun_sheet_131
+  - first:
+      213: 5185616839216514085
+    second: water_gun_sheet_132
+  - first:
+      213: 2436325760971917811
+    second: water_gun_sheet_133
+  - first:
+      213: -709942937880998275
+    second: water_gun_sheet_134
+  - first:
+      213: -5586766589824925937
+    second: water_gun_sheet_135
+  - first:
+      213: 4839849924214672823
+    second: water_gun_sheet_136
+  - first:
+      213: -171209681481242747
+    second: water_gun_sheet_137
+  - first:
+      213: -814606071445128196
+    second: water_gun_sheet_138
+  - first:
+      213: 7734124344386940763
+    second: water_gun_sheet_139
+  - first:
+      213: 3333480437339486930
+    second: water_gun_sheet_140
+  - first:
+      213: 649690655735276280
+    second: water_gun_sheet_141
+  - first:
+      213: -1004980582389856087
+    second: water_gun_sheet_142
+  - first:
+      213: -2242894570137565776
+    second: water_gun_sheet_143
+  - first:
+      213: 7391891476253617162
+    second: water_gun_sheet_144
+  - first:
+      213: 16703173297713564
+    second: water_gun_sheet_145
+  - first:
+      213: 6196636139899632905
+    second: water_gun_sheet_146
+  - first:
+      213: -1707584478304026435
+    second: water_gun_sheet_147
+  - first:
+      213: -1740611749023248779
+    second: water_gun_sheet_148
+  - first:
+      213: -4111953037339293352
+    second: water_gun_sheet_149
+  - first:
+      213: -6249844719216005694
+    second: water_gun_sheet_150
+  - first:
+      213: 3219909078727996443
+    second: water_gun_sheet_151
+  - first:
+      213: -5640449159037178047
+    second: water_gun_sheet_152
+  - first:
+      213: 1786352000457112326
+    second: water_gun_sheet_153
+  - first:
+      213: -3486539827892819808
+    second: water_gun_sheet_154
+  - first:
+      213: 3920735345192067079
+    second: water_gun_sheet_155
+  - first:
+      213: -1012633165947414298
+    second: water_gun_sheet_156
+  - first:
+      213: -5991330072304704792
+    second: water_gun_sheet_157
+  - first:
+      213: 1321407212930055776
+    second: water_gun_sheet_158
+  - first:
+      213: -5848950458743056424
+    second: water_gun_sheet_159
+  - first:
+      213: 1335342823932116751
+    second: water_gun_sheet_160
+  - first:
+      213: -7928010832706726370
+    second: water_gun_sheet_161
+  - first:
+      213: -7352381201338959428
+    second: water_gun_sheet_162
+  - first:
+      213: 2420886454747800521
+    second: water_gun_sheet_163
+  - first:
+      213: -1000172631039169721
+    second: water_gun_sheet_164
+  - first:
+      213: 3102428974424964277
+    second: water_gun_sheet_165
+  - first:
+      213: -1932637509242658329
+    second: water_gun_sheet_166
+  - first:
+      213: 6509639309401135406
+    second: water_gun_sheet_167
+  - first:
+      213: -665704758260403673
+    second: water_gun_sheet_168
+  - first:
+      213: 2463810912965207695
+    second: water_gun_sheet_169
+  - first:
+      213: -1856480171969995013
+    second: water_gun_sheet_170
+  - first:
+      213: 5195480239287965183
+    second: water_gun_sheet_171
+  - first:
+      213: 1024929224455739463
+    second: water_gun_sheet_172
+  - first:
+      213: 838491235463521211
+    second: water_gun_sheet_173
+  - first:
+      213: 3312996971268300201
+    second: water_gun_sheet_174
+  - first:
+      213: 7819845995100918883
+    second: water_gun_sheet_175
+  - first:
+      213: -8202374748031949484
+    second: water_gun_sheet_176
+  - first:
+      213: 8359916408537797491
+    second: water_gun_sheet_177
+  - first:
+      213: 6858973656184527138
+    second: water_gun_sheet_178
+  - first:
+      213: 8443698667752766161
+    second: water_gun_sheet_179
+  - first:
+      213: 5318874741972301313
+    second: water_gun_sheet_180
+  - first:
+      213: 6466345810716312559
+    second: water_gun_sheet_181
+  - first:
+      213: 1492123070053358105
+    second: water_gun_sheet_182
+  - first:
+      213: 6104012367396308856
+    second: water_gun_sheet_183
+  - first:
+      213: 753946212049052934
+    second: water_gun_sheet_184
+  - first:
+      213: -6858410376474767793
+    second: water_gun_sheet_185
+  - first:
+      213: 6153471474476710848
+    second: water_gun_sheet_186
+  - first:
+      213: 958421199429015202
+    second: water_gun_sheet_187
+  - first:
+      213: -7882187101934248723
+    second: water_gun_sheet_188
+  - first:
+      213: 1133038452926481301
+    second: water_gun_sheet_189
+  - first:
+      213: 7482504182830720872
+    second: water_gun_sheet_190
+  - first:
+      213: -4967774086970536640
+    second: water_gun_sheet_191
+  - first:
+      213: -5985591778267394957
+    second: water_gun_sheet_192
+  - first:
+      213: 2133394010820956648
+    second: water_gun_sheet_193
+  - first:
+      213: -3794515034590415066
+    second: water_gun_sheet_194
+  - first:
+      213: -4172551597403533848
+    second: water_gun_sheet_195
+  - first:
+      213: 6339203830645834283
+    second: water_gun_sheet_196
+  - first:
+      213: 2690761977687106690
+    second: water_gun_sheet_197
+  - first:
+      213: -3820080419074404101
+    second: water_gun_sheet_198
+  - first:
+      213: 68231369887268011
+    second: water_gun_sheet_199
+  - first:
+      213: 789995959352961865
+    second: water_gun_sheet_200
+  - first:
+      213: -866669803307243573
+    second: water_gun_sheet_201
+  - first:
+      213: -4477865122289957454
+    second: water_gun_sheet_202
+  - first:
+      213: 5001413809797023682
+    second: water_gun_sheet_203
+  - first:
+      213: -5627439659420906159
+    second: water_gun_sheet_204
+  - first:
+      213: 2735613182912260435
+    second: water_gun_sheet_205
+  - first:
+      213: 482341868521191158
+    second: water_gun_sheet_206
+  - first:
+      213: 377736177613222785
+    second: water_gun_sheet_207
+  - first:
+      213: -190289100349931717
+    second: water_gun_sheet_208
+  - first:
+      213: -222094781978899899
+    second: water_gun_sheet_209
+  - first:
+      213: 7916023518522798940
+    second: water_gun_sheet_210
+  - first:
+      213: -3873227503989061952
+    second: water_gun_sheet_211
+  - first:
+      213: -692159973983830280
+    second: water_gun_sheet_212
+  - first:
+      213: 7034026958843221808
+    second: water_gun_sheet_213
+  - first:
+      213: 8614295741350050409
+    second: water_gun_sheet_214
+  - first:
+      213: -4627307521780392742
+    second: water_gun_sheet_215
+  - first:
+      213: -4476085394341363976
+    second: water_gun_sheet_216
+  - first:
+      213: 6751900767147923496
+    second: water_gun_sheet_217
+  - first:
+      213: 5358183981612369840
+    second: water_gun_sheet_218
+  - first:
+      213: -1301553189107489643
+    second: water_gun_sheet_219
+  - first:
+      213: -5786330724793146474
+    second: water_gun_sheet_220
+  - first:
+      213: -3907394144983439436
+    second: water_gun_sheet_221
+  - first:
+      213: -2713611047474760103
+    second: water_gun_sheet_222
+  - first:
+      213: -4625946516740470096
+    second: water_gun_sheet_223
+  - first:
+      213: -6009833208636459478
+    second: water_gun_sheet_224
+  - first:
+      213: -2679484524102913863
+    second: water_gun_sheet_225
+  - first:
+      213: -4146844414540520701
+    second: water_gun_sheet_226
+  - first:
+      213: -9186878222358558962
+    second: water_gun_sheet_227
+  - first:
+      213: 8319489627379592511
+    second: water_gun_sheet_228
+  - first:
+      213: -3755193377611019947
+    second: water_gun_sheet_229
+  - first:
+      213: -2627342872934679468
+    second: water_gun_sheet_230
+  - first:
+      213: -3803765535797198408
+    second: water_gun_sheet_231
+  - first:
+      213: -6686871102141413869
+    second: water_gun_sheet_232
+  - first:
+      213: -2459839550272145707
+    second: water_gun_sheet_233
+  - first:
+      213: 6357064614482772188
+    second: water_gun_sheet_234
+  - first:
+      213: 4297583564536151663
+    second: water_gun_sheet_235
+  - first:
+      213: -5219121666753227507
+    second: water_gun_sheet_236
+  - first:
+      213: 8150214307350422983
+    second: water_gun_sheet_237
+  - first:
+      213: 6726132282578251252
+    second: water_gun_sheet_238
+  - first:
+      213: -4764647350233029010
+    second: water_gun_sheet_239
+  - first:
+      213: -238033733003531919
+    second: water_gun_sheet_240
+  - first:
+      213: -3363374443555492537
+    second: water_gun_sheet_241
+  - first:
+      213: -4121593759382233384
+    second: water_gun_sheet_242
+  - first:
+      213: 174238161369181205
+    second: water_gun_sheet_243
+  - first:
+      213: 1864065217211046889
+    second: water_gun_sheet_244
+  - first:
+      213: -6432290881658400770
+    second: water_gun_sheet_245
+  - first:
+      213: -6070627995725266122
+    second: water_gun_sheet_246
+  - first:
+      213: 8372905980774290778
+    second: water_gun_sheet_247
+  - first:
+      213: -8819062163596670619
+    second: water_gun_sheet_248
+  - first:
+      213: -7859187642412601846
+    second: water_gun_sheet_249
+  - first:
+      213: -7495818557089509641
+    second: water_gun_sheet_250
+  - first:
+      213: 6686216867699213918
+    second: water_gun_sheet_251
+  - first:
+      213: -667992626671263347
+    second: water_gun_sheet_252
+  - first:
+      213: -6779960150414242317
+    second: water_gun_sheet_253
+  - first:
+      213: 8835720157595616794
+    second: water_gun_sheet_254
+  - first:
+      213: 3835223088414885738
+    second: water_gun_sheet_255
+  - first:
+      213: 7368903908899804816
+    second: water_gun_sheet_256
+  - first:
+      213: 7106411802956440256
+    second: water_gun_sheet_257
+  - first:
+      213: -864150800937148013
+    second: water_gun_sheet_258
+  - first:
+      213: -1516489146552560669
+    second: water_gun_sheet_259
+  - first:
+      213: -2585548510997115600
+    second: water_gun_sheet_260
+  - first:
+      213: 7393232320228628524
+    second: water_gun_sheet_261
+  - first:
+      213: -8156362275468310131
+    second: water_gun_sheet_262
+  - first:
+      213: -5185329978505016812
+    second: water_gun_sheet_263
+  - first:
+      213: 8270599870304865237
+    second: water_gun_sheet_264
+  - first:
+      213: 993158383914533390
+    second: water_gun_sheet_265
+  - first:
+      213: -8793784184057259843
+    second: water_gun_sheet_266
+  - first:
+      213: 8650787191057577870
+    second: water_gun_sheet_267
+  - first:
+      213: 4748774198088871251
+    second: water_gun_sheet_268
+  - first:
+      213: 3148895529258454667
+    second: water_gun_sheet_269
+  - first:
+      213: -3019976277635537075
+    second: water_gun_sheet_270
+  - first:
+      213: -2517851983065708236
+    second: water_gun_sheet_271
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: water_gun_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 883
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69b4871122e42ea80800000000000000
+      internalID: -8439096843509937258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 695
+        width: 104
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfd0640dee5060590800000000000000
+      internalID: -7708467188943417860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 790
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b0450094e4850cf0800000000000000
+      internalID: -286676884064485198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 744
+        width: 56
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377e2a2e293c78080800000000000000
+      internalID: -9185157879363868813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 774
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 717569e2ca72a24f0800000000000000
+      internalID: -852825558963824873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 808
+        width: 23
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7d3d55fb1a09d710800000000000000
+      internalID: 1718415848015478139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 791
+        width: 36
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63913f19bff8b90d0800000000000000
+      internalID: -3414977581782197962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 718
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6aba81792c8f3a20800000000000000
+      internalID: 3044305982752209514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 774
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c8040cbfca361d80800000000000000
+      internalID: -8280366200987055932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 720
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ec63a3dfe7059c40800000000000000
+      internalID: 5518325645041691880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 695
+        width: 264
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee5430491eceb3110800000000000000
+      internalID: 1241846575865742830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 708
+        width: 17
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd8bc77ddbec1ac0800000000000000
+      internalID: -3882969442270081600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 742
+        width: 70
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58de1ac5021bb5af0800000000000000
+      internalID: -406536588795712123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 701
+        width: 146
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2427885895b089170800000000000000
+      internalID: 8185304801866183234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 734
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78d7ab58be886b140800000000000000
+      internalID: 4735122603368938887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 686
+        y: 780
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca489a373704f1a0800000000000000
+      internalID: -6776783605498098999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 718
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1dcc18d4c0b86340800000000000000
+      internalID: 4857326557604924703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 712
+        width: 74
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053f01e8e5c889010800000000000000
+      internalID: 1195860038805156688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 710
+        width: 24
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54a7f5fe33b242f0800000000000000
+      internalID: -990031885072096166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 730
+        width: 35
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c835dd6bfcb7040800000000000000
+      internalID: 4646535824867036290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 482
+        width: 28
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9a4cee02afdbf810800000000000000
+      internalID: 1800278363192707743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 726
+        width: 108
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6423dcf77aa4df920800000000000000
+      internalID: 3025656607926989382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 726
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27910ca1d3e23720800000000000000
+      internalID: 2824570405988177708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 693
+        width: 61
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6e0c1c6e66b6d10800000000000000
+      internalID: 2119901190887106297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 758
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64dc6f51a9c1580d0800000000000000
+      internalID: -3421296893798986426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 770
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73e7330f503c994a0800000000000000
+      internalID: -6586018549780480457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 744
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 694d0f06eeaf9dc90800000000000000
+      internalID: -7144403432111025002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1057
+        y: 790
+        width: 30
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 953e9998ef523da20800000000000000
+      internalID: 3085851944839406425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1081
+        y: 730
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819acfd0df3aaf930800000000000000
+      internalID: 4177831911596271896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 724
+        width: 112
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a6e7ee86a2602c0800000000000000
+      internalID: -4465835350325040547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 773
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f888af7cf9e1d1120800000000000000
+      internalID: 2386097049179949199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 773
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 073a0e6af959bfed0800000000000000
+      internalID: -2379143465203096720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 741
+        width: 22
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd8d753887f6daef0800000000000000
+      internalID: -95297453714581281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 728
+        width: 121
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d002b8d9ba556c70800000000000000
+      internalID: 8963670387601834196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 691
+        width: 49
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae723f9374dcced0800000000000000
+      internalID: -2392303708983361876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 786
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0549000608ab5e100800000000000000
+      internalID: 136720424233899088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 812
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1092f0206cfacdb00800000000000000
+      internalID: 854751294266484993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 696
+        width: 158
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b43fda8d4e616f00800000000000000
+      internalID: 1108288262631273651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 788
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff5cd6f6ac27a5c0800000000000000
+      internalID: -4204342631509237762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 822
+        width: 55
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53c894fd8c58a7340800000000000000
+      internalID: 4862345845485964341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 1548
+        y: 764
+        width: 44
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df5c05a2cc8adf970800000000000000
+      internalID: 8790367642533807613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 1558
+        y: 718
+        width: 74
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5316fc38fbebb9480800000000000000
+      internalID: -8891303309553475275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 812
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff31077ec7131a1b0800000000000000
+      internalID: -5647178045217303553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 821
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c0ec7112ca295d0800000000000000
+      internalID: -3057191938897867694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 806
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8cbce2c69ac56a0800000000000000
+      internalID: -6459101483449464638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1597
+        y: 790
+        width: 77
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c6726b77325bdc40800000000000000
+      internalID: 5538110565028886209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 1685
+        y: 714
+        width: 60
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97302261f4f18d9f0800000000000000
+      internalID: -443570138761788551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 450
+        width: 51
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a32406c3508f440800000000000000
+      internalID: 4969727945674472009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 701
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b795e29ada6e0380800000000000000
+      internalID: -9003141118067107917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 235
+        width: 422
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0940da60a07286e0800000000000000
+      internalID: -1836781863724627701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 249
+        width: 406
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dbc9cec305e23360800000000000000
+      internalID: 7148027363107392468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 233
+        width: 441
+        height: 447
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f9023077b692c40800000000000000
+      internalID: 5488035779825409804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 585
+        width: 36
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec8c9cc27e416d920800000000000000
+      internalID: 3014619983692548302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 610
+        width: 9
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c975ea68f25a44d70800000000000000
+      internalID: 9026521176698935196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 21
+        width: 447
+        height: 661
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de962bb3e276eedd0800000000000000
+      internalID: -2454911298602636819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 598
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e129bfcbbb35a660800000000000000
+      internalID: 7396383640855847397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 545
+        width: 16
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5edf45434e860b580800000000000000
+      internalID: -8813429141424243227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 1744
+        y: 585
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f4a099fd264bdd00800000000000000
+      internalID: 998468905667175667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 558
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87bf18c6cc75c5a10800000000000000
+      internalID: 1899489678348909432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 1768
+        y: 559
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e65fd060a77a5bd0800000000000000
+      internalID: -2640666700795652383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 535
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13f55a1c5a010ca10800000000000000
+      internalID: 1927558944619061041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 894
+        y: 532
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae581818899fa7a0800000000000000
+      internalID: -6363698938652369234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 1319
+        y: 499
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b58932fcc2c7bf410800000000000000
+      internalID: 1511938631808555099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 516
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4e2e22d8f2d67e0800000000000000
+      internalID: -1770706795264547676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 518
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89147ef8fad30ec60800000000000000
+      internalID: 7845338375122272664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 506
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7db635bff6235d740800000000000000
+      internalID: 5176098803271560151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 516
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e793e159e22ebbc0800000000000000
+      internalID: -3765533852938561564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 516
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45af5039d60ec2d30800000000000000
+      internalID: 4408144896511572564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 1532
+        y: 502
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f155b0f00bc5d8f90800000000000000
+      internalID: -6949796738726406881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 505
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c9db32a983d8110800000000000000
+      internalID: 1264729305036725288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 508
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4dfb4532e6755bd0800000000000000
+      internalID: -2642074892454068918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 500
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c60940518745d2990800000000000000
+      internalID: -7409172937229168532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 488
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b68d148c009e9250800000000000000
+      internalID: 5953354140860909233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 1031
+        y: 486
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3e872422e824ccd0800000000000000
+      internalID: -2538859338195825094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 492
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75d96502beceb2a70800000000000000
+      internalID: 8803390391229783383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 1075
+        y: 487
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd7b2d17f4ab61f90800000000000000
+      internalID: -6983189321816557604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 488
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244fcad3f1bf2ab20800000000000000
+      internalID: 3144351601455330370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 444
+        width: 15
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2adedc7b4893853c0800000000000000
+      internalID: -4370680196180873822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 470
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39bdbf1a9d3afa0f0800000000000000
+      internalID: -1103483228561613933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 478
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abaf39bde50499390800000000000000
+      internalID: -7811141302542402886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 440
+        width: 12
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0205c189f88e685c0800000000000000
+      internalID: -4213424697928560608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 472
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 526f687d2d5a2e9c0800000000000000
+      internalID: -3899372002371766747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_82
+      rect:
+        serializedVersion: 2
+        x: 1055
+        y: 444
+        width: 40
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e1c4c155c2b15b0800000000000000
+      internalID: -5396670984414814592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_83
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 470
+        width: 21
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 936ea06896c3d0450800000000000000
+      internalID: 6056563497801279033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_84
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 466
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0652586e352c2de90800000000000000
+      internalID: -7002320805002140320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_85
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 473
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16bf44e97db026250800000000000000
+      internalID: 5936320279528930145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_86
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 460
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4057f408a819eb320800000000000000
+      internalID: 2575656060946707716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 460
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e7c14e8d0fc93020800000000000000
+      internalID: 2322114740014401509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_88
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 458
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7960e4a5bfad7d520800000000000000
+      internalID: 2726888872482834071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_89
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 449
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc63dd18a0db85ae0800000000000000
+      internalID: -1560289418057795892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_90
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 468
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6a6332334ef7c380800000000000000
+      internalID: -8950906169817077140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_91
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 450
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40599a9d84f4956f0800000000000000
+      internalID: -695437493144021756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_92
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 451
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74dd3c6a4bf283770800000000000000
+      internalID: 8590668742147693895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_93
+      rect:
+        serializedVersion: 2
+        x: 805
+        y: 451
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0eab3207e09a0540800000000000000
+      internalID: 4974948060233444878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_94
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 444
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 816a36f1c38d9c080800000000000000
+      internalID: -9166557813799672296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_95
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 454
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f96d17003006080800000000000000
+      internalID: -9196347138645778681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_96
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 444
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af77f0638c764ca60800000000000000
+      internalID: 7693388173053753338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_97
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 454
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529b4f95be976ce60800000000000000
+      internalID: 7982201441294268709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_98
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 444
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f114f019da8ec6d0800000000000000
+      internalID: -2968282439493611018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_99
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 444
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9945a41f9b96f950800000000000000
+      internalID: 6482539821194889627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_100
+      rect:
+        serializedVersion: 2
+        x: 1484
+        y: 449
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1cc01a4880ed9e0800000000000000
+      internalID: -1594827852311903830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_101
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 451
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5ee3caf629377c30800000000000000
+      internalID: 4357014004082929245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_102
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 438
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c215b3a4921157f0800000000000000
+      internalID: -625698443616775486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_103
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 408
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c228b6c22c1acc0800000000000000
+      internalID: -3701463922683794299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_104
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 444
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e962925854229490800000000000000
+      internalID: -7741084847735412254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_105
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 438
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568e25dc8894d0370800000000000000
+      internalID: 8290363340968093797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_106
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 432
+        width: 35
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f97ae53e1deeb5f90800000000000000
+      internalID: -6963709813568133217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_107
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 436
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d0839faa86ab16f0800000000000000
+      internalID: -712793001426714410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_108
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 438
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba84b4f04909b1370800000000000000
+      internalID: 8294382104319051947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_109
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 439
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3d3ed8bbc9ca6c0800000000000000
+      internalID: -4130754428852251685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_110
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 434
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bfbe57b726e6be40800000000000000
+      internalID: 5671973838974271413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_111
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 438
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 255d6f919b3ecad80800000000000000
+      internalID: -8237959234223418030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_112
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 434
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb093a009a1d6680800000000000000
+      internalID: -8760316494216623134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_113
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 434
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2190f9b641098e40800000000000000
+      internalID: 5659055810046628141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_114
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 385
+        width: 17
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 921911e55932ba730800000000000000
+      internalID: 4011339017538867497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_115
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 434
+        width: 25
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cca81864438305b0800000000000000
+      internalID: -5403330798087000891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_116
+      rect:
+        serializedVersion: 2
+        x: 1063
+        y: 437
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80de0d7b51262ad0800000000000000
+      internalID: -2727455847502393205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_117
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 436
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 069322aca16987f20800000000000000
+      internalID: 3420648958792448352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_118
+      rect:
+        serializedVersion: 2
+        x: 1094
+        y: 438
+        width: 15
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb24f5fece8d6f050800000000000000
+      internalID: 5834088879444935358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_119
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 435
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1b3447510af2260800000000000000
+      internalID: 7075049553627689443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_120
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 433
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de6402331a02322e0800000000000000
+      internalID: -2151840320233388307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_121
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 434
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f145d8c8c7c9c1560800000000000000
+      internalID: 7285870355926570015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_122
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 432
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c1ad14bd851b73c0800000000000000
+      internalID: -4360868115821780540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_123
+      rect:
+        serializedVersion: 2
+        x: 1235
+        y: 434
+        width: 39
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12bdff42508a28130800000000000000
+      internalID: 3567598594879904545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_124
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 438
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23faedc637afe1030800000000000000
+      internalID: 3467484136776576818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_125
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 433
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c333fea7237c710800000000000000
+      internalID: 1713393686818274383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_126
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 432
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa255ec38c4e1e290800000000000000
+      internalID: -7862751925745921361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_127
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 429
+        width: 22
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4515ef37791ff6750800000000000000
+      internalID: 6300520036503015764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_128
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 436
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be61474d8795e9e0800000000000000
+      internalID: -1592700260163948880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_129
+      rect:
+        serializedVersion: 2
+        x: 1470
+        y: 436
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd1069f7a1d508e50800000000000000
+      internalID: 6809545004975260124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_130
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 436
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f500e4b233fef7e0800000000000000
+      internalID: -1729677807755196936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_131
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 414
+        width: 29
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0f8ed9748d2c530800000000000000
+      internalID: 3873896431595614410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_132
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 436
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524c8ca6a0307f740800000000000000
+      internalID: 5185616839216514085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_133
+      rect:
+        serializedVersion: 2
+        x: 1582
+        y: 436
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f94dd31f519fc120800000000000000
+      internalID: 2436325760971917811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_134
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 430
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7e4ec0d8a6c526f0800000000000000
+      internalID: -709942937880998275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_135
+      rect:
+        serializedVersion: 2
+        x: 1639
+        y: 438
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ff672f261d772b0800000000000000
+      internalID: -5586766589824925937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_136
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 436
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd440b0dd99a2340800000000000000
+      internalID: 4839849924214672823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_137
+      rect:
+        serializedVersion: 2
+        x: 1701
+        y: 434
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587e339a3bdbf9df0800000000000000
+      internalID: -171209681481242747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_138
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 434
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfbf2af0810f1b4f0800000000000000
+      internalID: -814606071445128196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_139
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 436
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f62e33d11255b60800000000000000
+      internalID: 7734124344386940763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_140
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 366
+        width: 17
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da7555dbc6e24e20800000000000000
+      internalID: 3333480437339486930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_141
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 350
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2edfc853a240900800000000000000
+      internalID: 649690655735276280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_142
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 386
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8cc742c779d02f0800000000000000
+      internalID: -1004980582389856087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_143
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 361
+        width: 11
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b54c469543afd0e0800000000000000
+      internalID: -2242894570137565776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_144
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 384
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0ca55c3226459660800000000000000
+      internalID: 7391891476253617162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_145
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 368
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c91380792775b3000800000000000000
+      internalID: 16703173297713564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_146
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 356
+        width: 8
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90db011fcbfdef550800000000000000
+      internalID: 6196636139899632905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_147
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 356
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db0c7b2d6f07d48e0800000000000000
+      internalID: -1707584478304026435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_148
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 370
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57e099f16da18d7e0800000000000000
+      internalID: -1740611749023248779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_149
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 352
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8598d44af786fe6c0800000000000000
+      internalID: -4111953037339293352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_150
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 356
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cd67c947571449a0800000000000000
+      internalID: -6249844719216005694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_151
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 352
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1433ae4f3a6fac20800000000000000
+      internalID: 3219909078727996443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_152
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 354
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14f20fdcf5919b1b0800000000000000
+      internalID: -5640449159037178047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_153
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 317
+        width: 13
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60bfd0f0ea56ac810800000000000000
+      internalID: 1786352000457112326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_154
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 354
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a8623fbf725d9fc0800000000000000
+      internalID: -3486539827892819808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_155
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 319
+        width: 45
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700ed740600496630800000000000000
+      internalID: 3920735345192067079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_156
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 354
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e8dcef208762f1f0800000000000000
+      internalID: -1012633165947414298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_157
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 338
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2a92cea058adca0800000000000000
+      internalID: -5991330072304704792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_158
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 0
+        width: 366
+        height: 343
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06eb55aebd4965210800000000000000
+      internalID: 1321407212930055776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_159
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 307
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d713cdfb8a54dea0800000000000000
+      internalID: -5848950458743056424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_160
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 336
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f37d13937188210800000000000000
+      internalID: 1335342823932116751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_161
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 326
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16111de62c0af190800000000000000
+      internalID: -7928010832706726370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_162
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 313
+        width: 13
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb97ee0804817f990800000000000000
+      internalID: -7352381201338959428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_163
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 336
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c32cc87767b89120800000000000000
+      internalID: 2420886454747800521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_164
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 324
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ba7dc8a4cae12f0800000000000000
+      internalID: -1000172631039169721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_165
+      rect:
+        serializedVersion: 2
+        x: 1321
+        y: 330
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bcba7107ba0e0b20800000000000000
+      internalID: 3102428974424964277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_166
+      rect:
+        serializedVersion: 2
+        x: 1325
+        y: 336
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1eef5cc64ed25e0800000000000000
+      internalID: -1932637509242658329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_167
+      rect:
+        serializedVersion: 2
+        x: 1596
+        y: 330
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2916cc5672e65a50800000000000000
+      internalID: 6509639309401135406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_168
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 164
+        width: 82
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722f996ac01f2c6f0800000000000000
+      internalID: -665704758260403673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_169
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 300
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86a505b8f6313220800000000000000
+      internalID: 2463810912965207695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_170
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 325
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfe1c21ae157c36e0800000000000000
+      internalID: -1856480171969995013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_171
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 303
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff5125430cd0a1840800000000000000
+      internalID: 5195480239287965183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_172
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 317
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 748d99703b7493e00800000000000000
+      internalID: 1024929224455739463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_173
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 311
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb3e41d065be2ab00800000000000000
+      internalID: 838491235463521211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_174
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 303
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad546e31312afd20800000000000000
+      internalID: 3312996971268300201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_175
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 305
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3645040508ca58c60800000000000000
+      internalID: 7819845995100918883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_176
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 305
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455ebecef9f4b2e80800000000000000
+      internalID: -8202374748031949484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_177
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 305
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 373dada4ea3640470800000000000000
+      internalID: 8359916408537797491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_178
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 247
+        width: 13
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22914ac2338ff2f50800000000000000
+      internalID: 6858973656184527138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_179
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 23
+        width: 329
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dab7d1a33b0e2570800000000000000
+      internalID: 8443698667752766161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_180
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 283
+        width: 24
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1067e00b56070d940800000000000000
+      internalID: 5318874741972301313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_181
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 272
+        width: 15
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe3c49231431db950800000000000000
+      internalID: 6466345810716312559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_182
+      rect:
+        serializedVersion: 2
+        x: 1635
+        y: 293
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91a12bfc60615b410800000000000000
+      internalID: 1492123070053358105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_183
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 279
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8778f3f58eec5b450800000000000000
+      internalID: 6104012367396308856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_184
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 273
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6056fe4d51e867a00800000000000000
+      internalID: 753946212049052934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_185
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 265
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e4e5a991802d0a0800000000000000
+      internalID: -6858410376474767793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_186
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 267
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cbfeab14b5856550800000000000000
+      internalID: 6153471474476710848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_187
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 257
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a69b21c00ffc4d00800000000000000
+      internalID: 958421199429015202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_188
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 273
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dec1b08a798dc9290800000000000000
+      internalID: -7882187101934248723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_189
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 221
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5938a87487c59bf00800000000000000
+      internalID: 1133038452926481301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_190
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 279
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867eff709e137d760800000000000000
+      internalID: 7482504182830720872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_191
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 267
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04d0bbdc9cbee0bb0800000000000000
+      internalID: -4967774086970536640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_192
+      rect:
+        serializedVersion: 2
+        x: 1629
+        y: 276
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c8fdd9df7eeeca0800000000000000
+      internalID: -5985591778267394957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_193
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 263
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1dde4bc865b9d10800000000000000
+      internalID: 2133394010820956648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_194
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 257
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627fb542eac275bc0800000000000000
+      internalID: -3794515034590415066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_195
+      rect:
+        serializedVersion: 2
+        x: 1231
+        y: 261
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ed06c5ed6e1816c0800000000000000
+      internalID: -4172551597403533848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_196
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 245
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b22c0742c4069f750800000000000000
+      internalID: 6339203830645834283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_197
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 257
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284ea2f23c1875520800000000000000
+      internalID: 2690761977687106690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_198
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 261
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf015a739195cfac0800000000000000
+      internalID: -3820080419074404101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_199
+      rect:
+        serializedVersion: 2
+        x: 1593
+        y: 269
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac3ba4c11862f000800000000000000
+      internalID: 68231369887268011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_200
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 257
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b2a33b321a6fa00800000000000000
+      internalID: 789995959352961865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_201
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 140
+        width: 59
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7605cd768f8f3f0800000000000000
+      internalID: -866669803307243573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_202
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 264
+        height: 245
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5cbc1656d6bd1c0800000000000000
+      internalID: -4477865122289957454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_203
+      rect:
+        serializedVersion: 2
+        x: 1496
+        y: 194
+        width: 47
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c74fa38c57986540800000000000000
+      internalID: 5001413809797023682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_204
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 217
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d8549f17157e1b0800000000000000
+      internalID: -5627439659420906159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_205
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 243
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3596c5a22b9d6f520800000000000000
+      internalID: 2735613182912260435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_206
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 228
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f6f085bf5f91b600800000000000000
+      internalID: 482341868521191158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_207
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 218
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183337d5d0dfd3500800000000000000
+      internalID: 377736177613222785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_208
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 217
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f73094215fb5df0800000000000000
+      internalID: -190289100349931717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_209
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 176
+        width: 54
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54a0ea5f8f5faecf0800000000000000
+      internalID: -222094781978899899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_210
+      rect:
+        serializedVersion: 2
+        x: 1576
+        y: 173
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c53703ff27d5bdd60800000000000000
+      internalID: 7916023518522798940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_211
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 207
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6857a3b188f3ac0800000000000000
+      internalID: -3873227503989061952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_212
+      rect:
+        serializedVersion: 2
+        x: 1703
+        y: 209
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe33febb24f466f0800000000000000
+      internalID: -692159973983830280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_213
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 88
+        width: 27
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0371f5e4042ed9160800000000000000
+      internalID: 7034026958843221808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_214
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 112
+        width: 45
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96a745516502c8770800000000000000
+      internalID: 8614295741350050409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_215
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 174
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc59c1535088cfb0800000000000000
+      internalID: -4627307521780392742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_216
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 128
+        width: 59
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fef7f59c00c1e1c0800000000000000
+      internalID: -4476085394341363976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_217
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 43
+        width: 132
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8281a8089f193bd50800000000000000
+      internalID: 6751900767147923496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_218
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 122
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7813141f71c5a40800000000000000
+      internalID: 5358183981612369840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_219
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 147
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594a8fa3544ffede0800000000000000
+      internalID: -1301553189107489643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_220
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 113
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 693a6c3fcd2d2bfa0800000000000000
+      internalID: -5786330724793146474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_221
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 144
+        width: 18
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b722d63ab526c9c0800000000000000
+      internalID: -3907394144983439436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_222
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 118
+        width: 29
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 956f0b03121575ad0800000000000000
+      internalID: -2713611047474760103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_223
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 66
+        width: 15
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba8abff6265dcfb0800000000000000
+      internalID: -4625946516740470096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_224
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 136
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a26b0e7c988c89ca0800000000000000
+      internalID: -6009833208636459478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_225
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 134
+        width: 44
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b070b7950f80dad0800000000000000
+      internalID: -2679484524102913863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_226
+      rect:
+        serializedVersion: 2
+        x: 1204
+        y: 96
+        width: 50
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 303ef74d9f27376c0800000000000000
+      internalID: -4146844414540520701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_227
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 118
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07cb815ee6a18080800000000000000
+      internalID: -9186878222358558962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_228
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 144
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3de180dcb3c47370800000000000000
+      internalID: 8319489627379592511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_229
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 150
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5598898d48fd2ebc0800000000000000
+      internalID: -3755193377611019947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_230
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 143
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45cf29bc39dc98bd0800000000000000
+      internalID: -2627342872934679468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_231
+      rect:
+        serializedVersion: 2
+        x: 1586
+        y: 130
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b14fedf56f463bc0800000000000000
+      internalID: -3803765535797198408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_232
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 66
+        width: 25
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 316490249267333a0800000000000000
+      internalID: -6686871102141413869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_233
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 61
+        width: 40
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d6729936f4ecddd0800000000000000
+      internalID: -2459839550272145707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_234
+      rect:
+        serializedVersion: 2
+        x: 821
+        y: 95
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd08370f594d83850800000000000000
+      internalID: 6357064614482772188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_235
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 88
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6efbbc7b7514ab30800000000000000
+      internalID: 4297583564536151663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_236
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 96
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0511a50f74f197b0800000000000000
+      internalID: -5219121666753227507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_237
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 94
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c5ade81bb06b1170800000000000000
+      internalID: 8150214307350422983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_238
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 94
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fd2d57aca5085d50800000000000000
+      internalID: 6726132282578251252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_239
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 69
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e66aa59aa7290edb0800000000000000
+      internalID: -4764647350233029010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_240
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 71
+        width: 21
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 179a3cbb49552bcf0800000000000000
+      internalID: -238033733003531919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_241
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 63
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d6f3573c4e251d0800000000000000
+      internalID: -3363374443555492537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_242
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 69
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8de1e8f10582dc6c0800000000000000
+      internalID: -4121593759382233384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_243
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 23
+        width: 29
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51c2ab24fa40b6200800000000000000
+      internalID: 174238161369181205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_244
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 67
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb9606507d7ed910800000000000000
+      internalID: 1864065217211046889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_245
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 61
+        width: 9
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eff44cad589ebb6a0800000000000000
+      internalID: -6432290881658400770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_246
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 62
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633014f500cc0cba0800000000000000
+      internalID: -6070627995725266122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_247
+      rect:
+        serializedVersion: 2
+        x: 1465
+        y: 70
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a559bc1c0a9823470800000000000000
+      internalID: 8372905980774290778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_248
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 50
+        width: 25
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5698bb600b56c9580800000000000000
+      internalID: -8819062163596670619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_249
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 47
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e6bde9a7e8ee290800000000000000
+      internalID: -7859187642412601846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_250
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 49
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fe06e3acb089f790800000000000000
+      internalID: -7495818557089509641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_251
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 55
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e56cf6ae0d63acc50800000000000000
+      internalID: 6686216867699213918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_252
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 39
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81eda6ce30dab6f0800000000000000
+      internalID: -667992626671263347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_253
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 55
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fd414b3a2eb8e1a0800000000000000
+      internalID: -6779960150414242317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_254
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 46
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16ce307ba8ce9a70800000000000000
+      internalID: 8835720157595616794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_255
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 49
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a67885b3413793530800000000000000
+      internalID: 3835223088414885738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_256
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 47
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096d5f1201b934660800000000000000
+      internalID: 7368903908899804816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_257
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 57
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c2acd622eb0f9260800000000000000
+      internalID: 7106411802956440256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_258
+      rect:
+        serializedVersion: 2
+        x: 1492
+        y: 51
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 391a5cdcc6be104f0800000000000000
+      internalID: -864150800937148013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_259
+      rect:
+        serializedVersion: 2
+        x: 1560
+        y: 53
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e3dff9e72954fae0800000000000000
+      internalID: -1516489146552560669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_260
+      rect:
+        serializedVersion: 2
+        x: 1580
+        y: 55
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d0a7cf3594e1cd0800000000000000
+      internalID: -2585548510997115600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_261
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 39
+        width: 11
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c281a2dcf990a9660800000000000000
+      internalID: 7393232320228628524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_262
+      rect:
+        serializedVersion: 2
+        x: 1623
+        y: 50
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d89805789b7cece80800000000000000
+      internalID: -8156362275468310131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_263
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 41
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a460c8bd10a08b0800000000000000
+      internalID: -5185329978505016812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_264
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 31
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dbc9e433c217c270800000000000000
+      internalID: 8270599870304865237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_265
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 33
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e024de6c94868cd00800000000000000
+      internalID: 993158383914533390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_266
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 23
+        width: 31
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db891d540e336f580800000000000000
+      internalID: -8793784184057259843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_267
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 33
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e877c7ecd15cd0870800000000000000
+      internalID: 8650787191057577870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_268
+      rect:
+        serializedVersion: 2
+        x: 1534
+        y: 33
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35da0ab19f807e140800000000000000
+      internalID: 4748774198088871251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_269
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 21
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e0440eccf13bb20800000000000000
+      internalID: 3148895529258454667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_270
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 31
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d476d657393e616d0800000000000000
+      internalID: -3019976277635537075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: water_gun_sheet_271
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 30
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4390b5826face0dd0800000000000000
+      internalID: -2517851983065708236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      water_gun_sheet_0: -8439096843509937258
+      water_gun_sheet_1: -7708467188943417860
+      water_gun_sheet_10: 1241846575865742830
+      water_gun_sheet_100: -1594827852311903830
+      water_gun_sheet_101: 4357014004082929245
+      water_gun_sheet_102: -625698443616775486
+      water_gun_sheet_103: -3701463922683794299
+      water_gun_sheet_104: -7741084847735412254
+      water_gun_sheet_105: 8290363340968093797
+      water_gun_sheet_106: -6963709813568133217
+      water_gun_sheet_107: -712793001426714410
+      water_gun_sheet_108: 8294382104319051947
+      water_gun_sheet_109: -4130754428852251685
+      water_gun_sheet_11: -3882969442270081600
+      water_gun_sheet_110: 5671973838974271413
+      water_gun_sheet_111: -8237959234223418030
+      water_gun_sheet_112: -8760316494216623134
+      water_gun_sheet_113: 5659055810046628141
+      water_gun_sheet_114: 4011339017538867497
+      water_gun_sheet_115: -5403330798087000891
+      water_gun_sheet_116: -2727455847502393205
+      water_gun_sheet_117: 3420648958792448352
+      water_gun_sheet_118: 5834088879444935358
+      water_gun_sheet_119: 7075049553627689443
+      water_gun_sheet_12: -406536588795712123
+      water_gun_sheet_120: -2151840320233388307
+      water_gun_sheet_121: 7285870355926570015
+      water_gun_sheet_122: -4360868115821780540
+      water_gun_sheet_123: 3567598594879904545
+      water_gun_sheet_124: 3467484136776576818
+      water_gun_sheet_125: 1713393686818274383
+      water_gun_sheet_126: -7862751925745921361
+      water_gun_sheet_127: 6300520036503015764
+      water_gun_sheet_128: -1592700260163948880
+      water_gun_sheet_129: 6809545004975260124
+      water_gun_sheet_13: 8185304801866183234
+      water_gun_sheet_130: -1729677807755196936
+      water_gun_sheet_131: 3873896431595614410
+      water_gun_sheet_132: 5185616839216514085
+      water_gun_sheet_133: 2436325760971917811
+      water_gun_sheet_134: -709942937880998275
+      water_gun_sheet_135: -5586766589824925937
+      water_gun_sheet_136: 4839849924214672823
+      water_gun_sheet_137: -171209681481242747
+      water_gun_sheet_138: -814606071445128196
+      water_gun_sheet_139: 7734124344386940763
+      water_gun_sheet_14: 4735122603368938887
+      water_gun_sheet_140: 3333480437339486930
+      water_gun_sheet_141: 649690655735276280
+      water_gun_sheet_142: -1004980582389856087
+      water_gun_sheet_143: -2242894570137565776
+      water_gun_sheet_144: 7391891476253617162
+      water_gun_sheet_145: 16703173297713564
+      water_gun_sheet_146: 6196636139899632905
+      water_gun_sheet_147: -1707584478304026435
+      water_gun_sheet_148: -1740611749023248779
+      water_gun_sheet_149: -4111953037339293352
+      water_gun_sheet_15: -6776783605498098999
+      water_gun_sheet_150: -6249844719216005694
+      water_gun_sheet_151: 3219909078727996443
+      water_gun_sheet_152: -5640449159037178047
+      water_gun_sheet_153: 1786352000457112326
+      water_gun_sheet_154: -3486539827892819808
+      water_gun_sheet_155: 3920735345192067079
+      water_gun_sheet_156: -1012633165947414298
+      water_gun_sheet_157: -5991330072304704792
+      water_gun_sheet_158: 1321407212930055776
+      water_gun_sheet_159: -5848950458743056424
+      water_gun_sheet_16: 4857326557604924703
+      water_gun_sheet_160: 1335342823932116751
+      water_gun_sheet_161: -7928010832706726370
+      water_gun_sheet_162: -7352381201338959428
+      water_gun_sheet_163: 2420886454747800521
+      water_gun_sheet_164: -1000172631039169721
+      water_gun_sheet_165: 3102428974424964277
+      water_gun_sheet_166: -1932637509242658329
+      water_gun_sheet_167: 6509639309401135406
+      water_gun_sheet_168: -665704758260403673
+      water_gun_sheet_169: 2463810912965207695
+      water_gun_sheet_17: 1195860038805156688
+      water_gun_sheet_170: -1856480171969995013
+      water_gun_sheet_171: 5195480239287965183
+      water_gun_sheet_172: 1024929224455739463
+      water_gun_sheet_173: 838491235463521211
+      water_gun_sheet_174: 3312996971268300201
+      water_gun_sheet_175: 7819845995100918883
+      water_gun_sheet_176: -8202374748031949484
+      water_gun_sheet_177: 8359916408537797491
+      water_gun_sheet_178: 6858973656184527138
+      water_gun_sheet_179: 8443698667752766161
+      water_gun_sheet_18: -990031885072096166
+      water_gun_sheet_180: 5318874741972301313
+      water_gun_sheet_181: 6466345810716312559
+      water_gun_sheet_182: 1492123070053358105
+      water_gun_sheet_183: 6104012367396308856
+      water_gun_sheet_184: 753946212049052934
+      water_gun_sheet_185: -6858410376474767793
+      water_gun_sheet_186: 6153471474476710848
+      water_gun_sheet_187: 958421199429015202
+      water_gun_sheet_188: -7882187101934248723
+      water_gun_sheet_189: 1133038452926481301
+      water_gun_sheet_19: 4646535824867036290
+      water_gun_sheet_190: 7482504182830720872
+      water_gun_sheet_191: -4967774086970536640
+      water_gun_sheet_192: -5985591778267394957
+      water_gun_sheet_193: 2133394010820956648
+      water_gun_sheet_194: -3794515034590415066
+      water_gun_sheet_195: -4172551597403533848
+      water_gun_sheet_196: 6339203830645834283
+      water_gun_sheet_197: 2690761977687106690
+      water_gun_sheet_198: -3820080419074404101
+      water_gun_sheet_199: 68231369887268011
+      water_gun_sheet_2: -286676884064485198
+      water_gun_sheet_20: 1800278363192707743
+      water_gun_sheet_200: 789995959352961865
+      water_gun_sheet_201: -866669803307243573
+      water_gun_sheet_202: -4477865122289957454
+      water_gun_sheet_203: 5001413809797023682
+      water_gun_sheet_204: -5627439659420906159
+      water_gun_sheet_205: 2735613182912260435
+      water_gun_sheet_206: 482341868521191158
+      water_gun_sheet_207: 377736177613222785
+      water_gun_sheet_208: -190289100349931717
+      water_gun_sheet_209: -222094781978899899
+      water_gun_sheet_21: 3025656607926989382
+      water_gun_sheet_210: 7916023518522798940
+      water_gun_sheet_211: -3873227503989061952
+      water_gun_sheet_212: -692159973983830280
+      water_gun_sheet_213: 7034026958843221808
+      water_gun_sheet_214: 8614295741350050409
+      water_gun_sheet_215: -4627307521780392742
+      water_gun_sheet_216: -4476085394341363976
+      water_gun_sheet_217: 6751900767147923496
+      water_gun_sheet_218: 5358183981612369840
+      water_gun_sheet_219: -1301553189107489643
+      water_gun_sheet_22: 2824570405988177708
+      water_gun_sheet_220: -5786330724793146474
+      water_gun_sheet_221: -3907394144983439436
+      water_gun_sheet_222: -2713611047474760103
+      water_gun_sheet_223: -4625946516740470096
+      water_gun_sheet_224: -6009833208636459478
+      water_gun_sheet_225: -2679484524102913863
+      water_gun_sheet_226: -4146844414540520701
+      water_gun_sheet_227: -9186878222358558962
+      water_gun_sheet_228: 8319489627379592511
+      water_gun_sheet_229: -3755193377611019947
+      water_gun_sheet_23: 2119901190887106297
+      water_gun_sheet_230: -2627342872934679468
+      water_gun_sheet_231: -3803765535797198408
+      water_gun_sheet_232: -6686871102141413869
+      water_gun_sheet_233: -2459839550272145707
+      water_gun_sheet_234: 6357064614482772188
+      water_gun_sheet_235: 4297583564536151663
+      water_gun_sheet_236: -5219121666753227507
+      water_gun_sheet_237: 8150214307350422983
+      water_gun_sheet_238: 6726132282578251252
+      water_gun_sheet_239: -4764647350233029010
+      water_gun_sheet_24: -3421296893798986426
+      water_gun_sheet_240: -238033733003531919
+      water_gun_sheet_241: -3363374443555492537
+      water_gun_sheet_242: -4121593759382233384
+      water_gun_sheet_243: 174238161369181205
+      water_gun_sheet_244: 1864065217211046889
+      water_gun_sheet_245: -6432290881658400770
+      water_gun_sheet_246: -6070627995725266122
+      water_gun_sheet_247: 8372905980774290778
+      water_gun_sheet_248: -8819062163596670619
+      water_gun_sheet_249: -7859187642412601846
+      water_gun_sheet_25: -6586018549780480457
+      water_gun_sheet_250: -7495818557089509641
+      water_gun_sheet_251: 6686216867699213918
+      water_gun_sheet_252: -667992626671263347
+      water_gun_sheet_253: -6779960150414242317
+      water_gun_sheet_254: 8835720157595616794
+      water_gun_sheet_255: 3835223088414885738
+      water_gun_sheet_256: 7368903908899804816
+      water_gun_sheet_257: 7106411802956440256
+      water_gun_sheet_258: -864150800937148013
+      water_gun_sheet_259: -1516489146552560669
+      water_gun_sheet_26: -7144403432111025002
+      water_gun_sheet_260: -2585548510997115600
+      water_gun_sheet_261: 7393232320228628524
+      water_gun_sheet_262: -8156362275468310131
+      water_gun_sheet_263: -5185329978505016812
+      water_gun_sheet_264: 8270599870304865237
+      water_gun_sheet_265: 993158383914533390
+      water_gun_sheet_266: -8793784184057259843
+      water_gun_sheet_267: 8650787191057577870
+      water_gun_sheet_268: 4748774198088871251
+      water_gun_sheet_269: 3148895529258454667
+      water_gun_sheet_27: 3085851944839406425
+      water_gun_sheet_270: -3019976277635537075
+      water_gun_sheet_271: -2517851983065708236
+      water_gun_sheet_28: 4177831911596271896
+      water_gun_sheet_29: -4465835350325040547
+      water_gun_sheet_3: -9185157879363868813
+      water_gun_sheet_30: 2386097049179949199
+      water_gun_sheet_31: -2379143465203096720
+      water_gun_sheet_32: -95297453714581281
+      water_gun_sheet_33: 8963670387601834196
+      water_gun_sheet_34: -2392303708983361876
+      water_gun_sheet_35: 136720424233899088
+      water_gun_sheet_36: 854751294266484993
+      water_gun_sheet_37: 1108288262631273651
+      water_gun_sheet_38: -4204342631509237762
+      water_gun_sheet_39: 4862345845485964341
+      water_gun_sheet_4: -852825558963824873
+      water_gun_sheet_40: 8790367642533807613
+      water_gun_sheet_41: -8891303309553475275
+      water_gun_sheet_42: -5647178045217303553
+      water_gun_sheet_43: -3057191938897867694
+      water_gun_sheet_44: -6459101483449464638
+      water_gun_sheet_45: 5538110565028886209
+      water_gun_sheet_46: -443570138761788551
+      water_gun_sheet_47: 4969727945674472009
+      water_gun_sheet_48: -9003141118067107917
+      water_gun_sheet_49: -1836781863724627701
+      water_gun_sheet_5: 1718415848015478139
+      water_gun_sheet_50: 7148027363107392468
+      water_gun_sheet_51: 5488035779825409804
+      water_gun_sheet_52: 3014619983692548302
+      water_gun_sheet_53: 9026521176698935196
+      water_gun_sheet_54: -2454911298602636819
+      water_gun_sheet_55: 7396383640855847397
+      water_gun_sheet_56: -8813429141424243227
+      water_gun_sheet_57: 998468905667175667
+      water_gun_sheet_58: 1899489678348909432
+      water_gun_sheet_59: -2640666700795652383
+      water_gun_sheet_6: -3414977581782197962
+      water_gun_sheet_60: 1927558944619061041
+      water_gun_sheet_61: -6363698938652369234
+      water_gun_sheet_62: 1511938631808555099
+      water_gun_sheet_63: -1770706795264547676
+      water_gun_sheet_64: 7845338375122272664
+      water_gun_sheet_65: 5176098803271560151
+      water_gun_sheet_66: -3765533852938561564
+      water_gun_sheet_67: 4408144896511572564
+      water_gun_sheet_68: -6949796738726406881
+      water_gun_sheet_69: 1264729305036725288
+      water_gun_sheet_7: 3044305982752209514
+      water_gun_sheet_70: -2642074892454068918
+      water_gun_sheet_71: -7409172937229168532
+      water_gun_sheet_72: 5953354140860909233
+      water_gun_sheet_73: -2538859338195825094
+      water_gun_sheet_74: 8803390391229783383
+      water_gun_sheet_75: -6983189321816557604
+      water_gun_sheet_76: 3144351601455330370
+      water_gun_sheet_77: -4370680196180873822
+      water_gun_sheet_78: -1103483228561613933
+      water_gun_sheet_79: -7811141302542402886
+      water_gun_sheet_8: -8280366200987055932
+      water_gun_sheet_80: -4213424697928560608
+      water_gun_sheet_81: -3899372002371766747
+      water_gun_sheet_82: -5396670984414814592
+      water_gun_sheet_83: 6056563497801279033
+      water_gun_sheet_84: -7002320805002140320
+      water_gun_sheet_85: 5936320279528930145
+      water_gun_sheet_86: 2575656060946707716
+      water_gun_sheet_87: 2322114740014401509
+      water_gun_sheet_88: 2726888872482834071
+      water_gun_sheet_89: -1560289418057795892
+      water_gun_sheet_9: 5518325645041691880
+      water_gun_sheet_90: -8950906169817077140
+      water_gun_sheet_91: -695437493144021756
+      water_gun_sheet_92: 8590668742147693895
+      water_gun_sheet_93: 4974948060233444878
+      water_gun_sheet_94: -9166557813799672296
+      water_gun_sheet_95: -9196347138645778681
+      water_gun_sheet_96: 7693388173053753338
+      water_gun_sheet_97: 7982201441294268709
+      water_gun_sheet_98: -2968282439493611018
+      water_gun_sheet_99: 6482539821194889627
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

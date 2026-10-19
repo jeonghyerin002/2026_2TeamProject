@@ -1,0 +1,7670 @@
+fileFormatVersion: 2
+guid: 649ae4c506da457448958a471fcf8436
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8076440910946311051
+    second: leaf_sheet_0
+  - first:
+      213: 5836507581930453176
+    second: leaf_sheet_1
+  - first:
+      213: -6730860228432053071
+    second: leaf_sheet_2
+  - first:
+      213: -5110419390617560356
+    second: leaf_sheet_3
+  - first:
+      213: -8071504493653247982
+    second: leaf_sheet_4
+  - first:
+      213: -8621985303652766648
+    second: leaf_sheet_5
+  - first:
+      213: 1713185772525087366
+    second: leaf_sheet_6
+  - first:
+      213: -5864923017806591971
+    second: leaf_sheet_7
+  - first:
+      213: -8552931581802855212
+    second: leaf_sheet_8
+  - first:
+      213: -8356872091499615931
+    second: leaf_sheet_9
+  - first:
+      213: 1334316822088205373
+    second: leaf_sheet_10
+  - first:
+      213: -1450314591545107978
+    second: leaf_sheet_11
+  - first:
+      213: -1243359060504501960
+    second: leaf_sheet_12
+  - first:
+      213: -2089470109095999194
+    second: leaf_sheet_13
+  - first:
+      213: -4648764045908693741
+    second: leaf_sheet_14
+  - first:
+      213: 631222922956196565
+    second: leaf_sheet_15
+  - first:
+      213: -2239607503470049730
+    second: leaf_sheet_16
+  - first:
+      213: -3265866711649260472
+    second: leaf_sheet_17
+  - first:
+      213: -7598927830571214469
+    second: leaf_sheet_18
+  - first:
+      213: -7266330833143237398
+    second: leaf_sheet_19
+  - first:
+      213: -1885698338186599640
+    second: leaf_sheet_20
+  - first:
+      213: -2715806982670306995
+    second: leaf_sheet_21
+  - first:
+      213: 6337870368389109137
+    second: leaf_sheet_22
+  - first:
+      213: 1529145202271977232
+    second: leaf_sheet_23
+  - first:
+      213: -9026603059716641882
+    second: leaf_sheet_24
+  - first:
+      213: -2389624781896735033
+    second: leaf_sheet_25
+  - first:
+      213: 7261160793434267876
+    second: leaf_sheet_26
+  - first:
+      213: 746602197650231843
+    second: leaf_sheet_27
+  - first:
+      213: -7538972167952310879
+    second: leaf_sheet_28
+  - first:
+      213: -9098529734571615772
+    second: leaf_sheet_29
+  - first:
+      213: -6100503267027276508
+    second: leaf_sheet_30
+  - first:
+      213: 8557229970049537376
+    second: leaf_sheet_31
+  - first:
+      213: -4911221198283787499
+    second: leaf_sheet_32
+  - first:
+      213: 3599011332138615093
+    second: leaf_sheet_33
+  - first:
+      213: -6421233863699672185
+    second: leaf_sheet_34
+  - first:
+      213: 6392957845256028334
+    second: leaf_sheet_35
+  - first:
+      213: 7899995930549747851
+    second: leaf_sheet_36
+  - first:
+      213: -8917381361491179146
+    second: leaf_sheet_37
+  - first:
+      213: 6466645282973877732
+    second: leaf_sheet_38
+  - first:
+      213: 1082855192531625770
+    second: leaf_sheet_39
+  - first:
+      213: -497346626516685170
+    second: leaf_sheet_40
+  - first:
+      213: -1154324370488208174
+    second: leaf_sheet_41
+  - first:
+      213: -9159167720732346826
+    second: leaf_sheet_42
+  - first:
+      213: 5510777684288266650
+    second: leaf_sheet_43
+  - first:
+      213: -280186938979045609
+    second: leaf_sheet_44
+  - first:
+      213: -944477762525687097
+    second: leaf_sheet_45
+  - first:
+      213: -4840833631074626107
+    second: leaf_sheet_46
+  - first:
+      213: -7232018903204587278
+    second: leaf_sheet_47
+  - first:
+      213: 7022608837227452708
+    second: leaf_sheet_48
+  - first:
+      213: -3727990981127300141
+    second: leaf_sheet_49
+  - first:
+      213: -3454397390916262210
+    second: leaf_sheet_50
+  - first:
+      213: -2715220333449411863
+    second: leaf_sheet_51
+  - first:
+      213: -8293211215798143426
+    second: leaf_sheet_52
+  - first:
+      213: 8896159682423780421
+    second: leaf_sheet_53
+  - first:
+      213: -1781676690960601350
+    second: leaf_sheet_54
+  - first:
+      213: 2523764711931044688
+    second: leaf_sheet_55
+  - first:
+      213: -6150136608587847218
+    second: leaf_sheet_56
+  - first:
+      213: -2836202536259035509
+    second: leaf_sheet_57
+  - first:
+      213: 5396453960065293220
+    second: leaf_sheet_58
+  - first:
+      213: 784093749805430927
+    second: leaf_sheet_59
+  - first:
+      213: -4517519960716764422
+    second: leaf_sheet_60
+  - first:
+      213: -3448111885079941984
+    second: leaf_sheet_61
+  - first:
+      213: 726969574574692522
+    second: leaf_sheet_62
+  - first:
+      213: -7840249481292978753
+    second: leaf_sheet_63
+  - first:
+      213: -4382911884393453450
+    second: leaf_sheet_64
+  - first:
+      213: -6857994422116791430
+    second: leaf_sheet_65
+  - first:
+      213: -4836378974069692662
+    second: leaf_sheet_66
+  - first:
+      213: -1047736976135382515
+    second: leaf_sheet_67
+  - first:
+      213: -3443257137113826292
+    second: leaf_sheet_68
+  - first:
+      213: 8430126714584661793
+    second: leaf_sheet_69
+  - first:
+      213: 5231732995859243904
+    second: leaf_sheet_70
+  - first:
+      213: -5902459140028262868
+    second: leaf_sheet_71
+  - first:
+      213: -2942803419444515710
+    second: leaf_sheet_72
+  - first:
+      213: -8301754789791470209
+    second: leaf_sheet_73
+  - first:
+      213: 1506266788956813650
+    second: leaf_sheet_74
+  - first:
+      213: 4846076827326112422
+    second: leaf_sheet_75
+  - first:
+      213: -5966866204049742794
+    second: leaf_sheet_76
+  - first:
+      213: -6558285443775307488
+    second: leaf_sheet_77
+  - first:
+      213: -6763693077430523936
+    second: leaf_sheet_78
+  - first:
+      213: 7417388410114193575
+    second: leaf_sheet_79
+  - first:
+      213: 790799492053616660
+    second: leaf_sheet_80
+  - first:
+      213: 933072238508471687
+    second: leaf_sheet_81
+  - first:
+      213: 3098743553174256943
+    second: leaf_sheet_82
+  - first:
+      213: 2696281095455256638
+    second: leaf_sheet_83
+  - first:
+      213: 4576397292972819319
+    second: leaf_sheet_84
+  - first:
+      213: 8778252765207409195
+    second: leaf_sheet_85
+  - first:
+      213: -8807950797723495360
+    second: leaf_sheet_86
+  - first:
+      213: -1994396914963856950
+    second: leaf_sheet_87
+  - first:
+      213: 8138284661059603138
+    second: leaf_sheet_88
+  - first:
+      213: 3471367895065491573
+    second: leaf_sheet_89
+  - first:
+      213: 5879700588290432012
+    second: leaf_sheet_90
+  - first:
+      213: -2712533677998813744
+    second: leaf_sheet_91
+  - first:
+      213: -6258756469746867064
+    second: leaf_sheet_92
+  - first:
+      213: -1678393838298422072
+    second: leaf_sheet_93
+  - first:
+      213: -5548960429939747409
+    second: leaf_sheet_94
+  - first:
+      213: -6010876498031256312
+    second: leaf_sheet_95
+  - first:
+      213: 5931173860030535546
+    second: leaf_sheet_96
+  - first:
+      213: 3480271986907120551
+    second: leaf_sheet_97
+  - first:
+      213: -5002704284209835985
+    second: leaf_sheet_98
+  - first:
+      213: -233542353505859093
+    second: leaf_sheet_99
+  - first:
+      213: 4310222501487432599
+    second: leaf_sheet_100
+  - first:
+      213: 7887979387850568015
+    second: leaf_sheet_101
+  - first:
+      213: -3832960690436626031
+    second: leaf_sheet_102
+  - first:
+      213: 5970993231249237227
+    second: leaf_sheet_103
+  - first:
+      213: -7903567724684536905
+    second: leaf_sheet_104
+  - first:
+      213: 7127661138116625524
+    second: leaf_sheet_105
+  - first:
+      213: -5998280941096502965
+    second: leaf_sheet_106
+  - first:
+      213: -2912999737604142488
+    second: leaf_sheet_107
+  - first:
+      213: 6083952661221152485
+    second: leaf_sheet_108
+  - first:
+      213: 3631628350372018822
+    second: leaf_sheet_109
+  - first:
+      213: -5091339301407140775
+    second: leaf_sheet_110
+  - first:
+      213: 8389750783746520490
+    second: leaf_sheet_111
+  - first:
+      213: 8320805874457634476
+    second: leaf_sheet_112
+  - first:
+      213: -8535188215496235274
+    second: leaf_sheet_113
+  - first:
+      213: 3730294149359558283
+    second: leaf_sheet_114
+  - first:
+      213: -65702974840416613
+    second: leaf_sheet_115
+  - first:
+      213: -2726180614594583588
+    second: leaf_sheet_116
+  - first:
+      213: 6156658285642657351
+    second: leaf_sheet_117
+  - first:
+      213: -6480369129329071002
+    second: leaf_sheet_118
+  - first:
+      213: 952118587616879412
+    second: leaf_sheet_119
+  - first:
+      213: -4298440689751631655
+    second: leaf_sheet_120
+  - first:
+      213: -4190247783016289130
+    second: leaf_sheet_121
+  - first:
+      213: 7228174179800140507
+    second: leaf_sheet_122
+  - first:
+      213: -642435965580654373
+    second: leaf_sheet_123
+  - first:
+      213: 6845483262089444466
+    second: leaf_sheet_124
+  - first:
+      213: -7870859399458222759
+    second: leaf_sheet_125
+  - first:
+      213: -3860163932116023748
+    second: leaf_sheet_126
+  - first:
+      213: -3435203007177214635
+    second: leaf_sheet_127
+  - first:
+      213: -3064990069220787660
+    second: leaf_sheet_128
+  - first:
+      213: 1515241070345034256
+    second: leaf_sheet_129
+  - first:
+      213: 933112558907196008
+    second: leaf_sheet_130
+  - first:
+      213: 2326590525880284829
+    second: leaf_sheet_131
+  - first:
+      213: -1190847539024396429
+    second: leaf_sheet_132
+  - first:
+      213: -383407855132184493
+    second: leaf_sheet_133
+  - first:
+      213: 1807091192790506260
+    second: leaf_sheet_134
+  - first:
+      213: -585347533296511951
+    second: leaf_sheet_135
+  - first:
+      213: -1924198515913561359
+    second: leaf_sheet_136
+  - first:
+      213: -8963480854954377621
+    second: leaf_sheet_137
+  - first:
+      213: -6114927590656401813
+    second: leaf_sheet_138
+  - first:
+      213: -345796168659907810
+    second: leaf_sheet_139
+  - first:
+      213: 5417519662965533065
+    second: leaf_sheet_140
+  - first:
+      213: 8552939329768803469
+    second: leaf_sheet_141
+  - first:
+      213: 3425283236631426497
+    second: leaf_sheet_142
+  - first:
+      213: 5516521567281173276
+    second: leaf_sheet_143
+  - first:
+      213: -1772433383142578623
+    second: leaf_sheet_144
+  - first:
+      213: 7762416118001822246
+    second: leaf_sheet_145
+  - first:
+      213: -4353449517547285345
+    second: leaf_sheet_146
+  - first:
+      213: -6141607393360824678
+    second: leaf_sheet_147
+  - first:
+      213: 8209903330571749560
+    second: leaf_sheet_148
+  - first:
+      213: 4486758410509050013
+    second: leaf_sheet_149
+  - first:
+      213: 7377224817515012145
+    second: leaf_sheet_150
+  - first:
+      213: -7867503997324183314
+    second: leaf_sheet_151
+  - first:
+      213: -2316093213433050081
+    second: leaf_sheet_152
+  - first:
+      213: 1259308778826092487
+    second: leaf_sheet_153
+  - first:
+      213: 4718591521792903246
+    second: leaf_sheet_154
+  - first:
+      213: 4360560466731274204
+    second: leaf_sheet_155
+  - first:
+      213: -2735048429770073026
+    second: leaf_sheet_156
+  - first:
+      213: -6969447816198510225
+    second: leaf_sheet_157
+  - first:
+      213: 4105665094829274984
+    second: leaf_sheet_158
+  - first:
+      213: 1188906910199069385
+    second: leaf_sheet_159
+  - first:
+      213: -6679729952632551908
+    second: leaf_sheet_160
+  - first:
+      213: 5820797146526630841
+    second: leaf_sheet_161
+  - first:
+      213: -4279963341453232198
+    second: leaf_sheet_162
+  - first:
+      213: -91531685997336195
+    second: leaf_sheet_163
+  - first:
+      213: 2816075309452713090
+    second: leaf_sheet_164
+  - first:
+      213: 2919995202957165064
+    second: leaf_sheet_165
+  - first:
+      213: -3353477716230434463
+    second: leaf_sheet_166
+  - first:
+      213: 3155368096418992481
+    second: leaf_sheet_167
+  - first:
+      213: -565693713443216676
+    second: leaf_sheet_168
+  - first:
+      213: -9178505777260775926
+    second: leaf_sheet_169
+  - first:
+      213: -6260213729615262893
+    second: leaf_sheet_170
+  - first:
+      213: -249828821547370242
+    second: leaf_sheet_171
+  - first:
+      213: -6222452827683416081
+    second: leaf_sheet_172
+  - first:
+      213: 7729760351041616098
+    second: leaf_sheet_173
+  - first:
+      213: -2218432787314718329
+    second: leaf_sheet_174
+  - first:
+      213: -1375537229117609581
+    second: leaf_sheet_175
+  - first:
+      213: 4026796342525731101
+    second: leaf_sheet_176
+  - first:
+      213: 6324989226933483962
+    second: leaf_sheet_177
+  - first:
+      213: -8801118768196094471
+    second: leaf_sheet_178
+  - first:
+      213: 8483133567032443804
+    second: leaf_sheet_179
+  - first:
+      213: -3553267310967089874
+    second: leaf_sheet_180
+  - first:
+      213: -7042419195858283642
+    second: leaf_sheet_181
+  - first:
+      213: 4908914222619145374
+    second: leaf_sheet_182
+  - first:
+      213: -7281699248386214354
+    second: leaf_sheet_183
+  - first:
+      213: -54730991283257235
+    second: leaf_sheet_184
+  - first:
+      213: 8479665529900658362
+    second: leaf_sheet_185
+  - first:
+      213: -5896401509456235742
+    second: leaf_sheet_186
+  - first:
+      213: -4617541143696055038
+    second: leaf_sheet_187
+  - first:
+      213: -454763914752342821
+    second: leaf_sheet_188
+  - first:
+      213: 1684668419116523752
+    second: leaf_sheet_189
+  - first:
+      213: 6894533676181110971
+    second: leaf_sheet_190
+  - first:
+      213: -8713840404308400885
+    second: leaf_sheet_191
+  - first:
+      213: 2180630429713837419
+    second: leaf_sheet_192
+  - first:
+      213: 6121914587939210244
+    second: leaf_sheet_193
+  - first:
+      213: -2429520162338638798
+    second: leaf_sheet_194
+  - first:
+      213: 5236570971570528959
+    second: leaf_sheet_195
+  - first:
+      213: -8338927727594154865
+    second: leaf_sheet_196
+  - first:
+      213: -1241161393380444368
+    second: leaf_sheet_197
+  - first:
+      213: 2864470283498425628
+    second: leaf_sheet_198
+  - first:
+      213: -3720000104657426530
+    second: leaf_sheet_199
+  - first:
+      213: 3573036387286505390
+    second: leaf_sheet_200
+  - first:
+      213: -8230138069266944060
+    second: leaf_sheet_201
+  - first:
+      213: 6285604622173363308
+    second: leaf_sheet_202
+  - first:
+      213: 8966457846030735323
+    second: leaf_sheet_203
+  - first:
+      213: 7073678703254793411
+    second: leaf_sheet_204
+  - first:
+      213: -6452406449527834015
+    second: leaf_sheet_205
+  - first:
+      213: 2274910527549983275
+    second: leaf_sheet_206
+  - first:
+      213: 875538698806794825
+    second: leaf_sheet_207
+  - first:
+      213: 2783713843733342392
+    second: leaf_sheet_208
+  - first:
+      213: 3876990673672896481
+    second: leaf_sheet_209
+  - first:
+      213: -8456019007107071494
+    second: leaf_sheet_210
+  - first:
+      213: -1710322416266877249
+    second: leaf_sheet_211
+  - first:
+      213: -6164284662307344594
+    second: leaf_sheet_212
+  - first:
+      213: 4638707582116235486
+    second: leaf_sheet_213
+  - first:
+      213: 2999993555827289690
+    second: leaf_sheet_214
+  - first:
+      213: 4337193137940830042
+    second: leaf_sheet_215
+  - first:
+      213: -3929818181343338340
+    second: leaf_sheet_216
+  - first:
+      213: -159456527533716957
+    second: leaf_sheet_217
+  - first:
+      213: -281049108871496578
+    second: leaf_sheet_218
+  - first:
+      213: -684855984983892758
+    second: leaf_sheet_219
+  - first:
+      213: -7471820599019709792
+    second: leaf_sheet_220
+  - first:
+      213: -3045875054660852280
+    second: leaf_sheet_221
+  - first:
+      213: -4786445743677766317
+    second: leaf_sheet_222
+  - first:
+      213: 1041093608995041828
+    second: leaf_sheet_223
+  - first:
+      213: 1823347281847518772
+    second: leaf_sheet_224
+  - first:
+      213: 3046743948728395608
+    second: leaf_sheet_225
+  - first:
+      213: 8874973543545498420
+    second: leaf_sheet_226
+  - first:
+      213: 8552801443515010137
+    second: leaf_sheet_227
+  - first:
+      213: 1058615775799214242
+    second: leaf_sheet_228
+  - first:
+      213: 5455280985638886160
+    second: leaf_sheet_229
+  - first:
+      213: -7116545420665414465
+    second: leaf_sheet_230
+  - first:
+      213: 4311623776206253345
+    second: leaf_sheet_231
+  - first:
+      213: 973201499549731164
+    second: leaf_sheet_232
+  - first:
+      213: 106838704804653950
+    second: leaf_sheet_233
+  - first:
+      213: 3150824562614149101
+    second: leaf_sheet_234
+  - first:
+      213: -1564026102715698691
+    second: leaf_sheet_235
+  - first:
+      213: -8439494918134616303
+    second: leaf_sheet_236
+  - first:
+      213: -220754274874590592
+    second: leaf_sheet_237
+  - first:
+      213: -7481279449839356472
+    second: leaf_sheet_238
+  - first:
+      213: 8674187463953623533
+    second: leaf_sheet_239
+  - first:
+      213: -6786573586169338468
+    second: leaf_sheet_240
+  - first:
+      213: -7897709025844312282
+    second: leaf_sheet_241
+  - first:
+      213: -1368668385922242382
+    second: leaf_sheet_242
+  - first:
+      213: -8312639669848128071
+    second: leaf_sheet_243
+  - first:
+      213: 6200452088072826718
+    second: leaf_sheet_244
+  - first:
+      213: 7796293945365546684
+    second: leaf_sheet_245
+  - first:
+      213: -2023013892212031015
+    second: leaf_sheet_246
+  - first:
+      213: 7646038778010929679
+    second: leaf_sheet_247
+  - first:
+      213: -6686068794168268526
+    second: leaf_sheet_248
+  - first:
+      213: -6944589998624299904
+    second: leaf_sheet_249
+  - first:
+      213: -7448726403392863481
+    second: leaf_sheet_250
+  - first:
+      213: 6283234219366878365
+    second: leaf_sheet_251
+  - first:
+      213: -8869499182324467197
+    second: leaf_sheet_252
+  - first:
+      213: 294026105491461856
+    second: leaf_sheet_253
+  - first:
+      213: 5650298141084752725
+    second: leaf_sheet_254
+  - first:
+      213: 524314346436620644
+    second: leaf_sheet_255
+  - first:
+      213: 1165232251269285321
+    second: leaf_sheet_256
+  - first:
+      213: -618833044684856054
+    second: leaf_sheet_257
+  - first:
+      213: 5994927519183474004
+    second: leaf_sheet_258
+  - first:
+      213: 4920025091201581934
+    second: leaf_sheet_259
+  - first:
+      213: -1951833341703205806
+    second: leaf_sheet_260
+  - first:
+      213: 162449555697040922
+    second: leaf_sheet_261
+  - first:
+      213: 5241486808833496390
+    second: leaf_sheet_262
+  - first:
+      213: 4552493996857445983
+    second: leaf_sheet_263
+  - first:
+      213: -289057096417391398
+    second: leaf_sheet_264
+  - first:
+      213: 8815500734435218353
+    second: leaf_sheet_265
+  - first:
+      213: 4914845612904694350
+    second: leaf_sheet_266
+  - first:
+      213: 7936355622780227678
+    second: leaf_sheet_267
+  - first:
+      213: 882507536961048403
+    second: leaf_sheet_268
+  - first:
+      213: -3494935672179479930
+    second: leaf_sheet_269
+  - first:
+      213: -3810159095181520845
+    second: leaf_sheet_270
+  - first:
+      213: -2026466391826263534
+    second: leaf_sheet_271
+  - first:
+      213: -7588006580756662413
+    second: leaf_sheet_272
+  - first:
+      213: -7363279300492388577
+    second: leaf_sheet_273
+  - first:
+      213: 8671142395687526137
+    second: leaf_sheet_274
+  - first:
+      213: -5561682798719496350
+    second: leaf_sheet_275
+  - first:
+      213: 4934009273207777462
+    second: leaf_sheet_276
+  - first:
+      213: -5348018960596870112
+    second: leaf_sheet_277
+  - first:
+      213: 8887396720219503992
+    second: leaf_sheet_278
+  - first:
+      213: 3935605008865529377
+    second: leaf_sheet_279
+  - first:
+      213: -1629424429388282463
+    second: leaf_sheet_280
+  - first:
+      213: -7532663245288163692
+    second: leaf_sheet_281
+  - first:
+      213: 4800293346448907121
+    second: leaf_sheet_282
+  - first:
+      213: 6941393444763513289
+    second: leaf_sheet_283
+  - first:
+      213: -5242644250427274087
+    second: leaf_sheet_284
+  - first:
+      213: -4214230127876250676
+    second: leaf_sheet_285
+  - first:
+      213: -2944852455067306550
+    second: leaf_sheet_286
+  - first:
+      213: 209830765014541735
+    second: leaf_sheet_287
+  - first:
+      213: -6361508203958324413
+    second: leaf_sheet_288
+  - first:
+      213: 146856952383032828
+    second: leaf_sheet_289
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: leaf_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 1004
+        width: 51
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b136ab738451070800000000000000
+      internalID: 8076440910946311051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 1067
+        width: 35
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8b6ddf8b07ff050800000000000000
+      internalID: 5836507581930453176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 1052
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bcb08ba84e2792a0800000000000000
+      internalID: -6730860228432053071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 890
+        width: 164
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdad8f0f3a42419b0800000000000000
+      internalID: -5110419390617560356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 1059
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21834dc7d614cff80800000000000000
+      internalID: -8071504493653247982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1050
+        width: 91
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c632d2c0e885880800000000000000
+      internalID: -8621985303652766648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 957
+        width: 166
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68a6c9d126576c710800000000000000
+      internalID: 1713185772525087366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 905
+        width: 156
+        height: 162
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1840a8c69b9b9ea0800000000000000
+      internalID: -5864923017806591971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 750
+        y: 1034
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4cb6eaa02ed4980800000000000000
+      internalID: -8552931581802855212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1040
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5492ac00c1d660c80800000000000000
+      internalID: -8356872091499615931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 915
+        y: 1012
+        width: 72
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3445668412748210800000000000000
+      internalID: 1334316822088205373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 970
+        width: 68
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9536620927fdbe0800000000000000
+      internalID: -1450314591545107978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1261
+        y: 980
+        width: 152
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 831ad56a583bebee0800000000000000
+      internalID: -1243359060504501960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 1036
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 629498a9106b003e0800000000000000
+      internalID: -2089470109095999194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 975
+        width: 107
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d210ffab54c7fb0800000000000000
+      internalID: -4648764045908693741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 1036
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5da43e077ed82c800800000000000000
+      internalID: 631222922956196565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1052
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e364e5f67d05be0e0800000000000000
+      internalID: -2239607503470049730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 1048
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84c6f50778f4da2d0800000000000000
+      internalID: -3265866711649260472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 1034
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7919f0266f2b8690800000000000000
+      internalID: -7598927830571214469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1043
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae4770e1b9ec82b90800000000000000
+      internalID: -7266330833143237398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 1036
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 823e7de2a57a4d5e0800000000000000
+      internalID: -1885698338186599640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 1051
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d41396f20f38f4ad0800000000000000
+      internalID: -2715806982670306995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1026
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1959e444583a4f750800000000000000
+      internalID: 6337870368389109137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 1012
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ff96fa57d983510800000000000000
+      internalID: 1529145202271977232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 1026
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aba22997501bb280800000000000000
+      internalID: -9026603059716641882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 961
+        width: 60
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c62390fbe856ded0800000000000000
+      internalID: -2389624781896735033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 1038
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e0a4a53543d4c460800000000000000
+      internalID: 7261160793434267876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1020
+        width: 23
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 322d77b3eb67c5a00800000000000000
+      internalID: 746602197650231843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1002
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad55a5a1c0306790800000000000000
+      internalID: -7538972167952310879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 764
+        width: 162
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e9978899678bb180800000000000000
+      internalID: -9098529734571615772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 1000
+        width: 41
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42daab9b998a65ba0800000000000000
+      internalID: -6100503267027276508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 1034
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0651122d15361c670800000000000000
+      internalID: 8557229970049537376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 1020
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5133de64756d7dbb0800000000000000
+      internalID: -4911221198283787499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 971
+        width: 44
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5314abafcb142f130800000000000000
+      internalID: 3599011332138615093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1020
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783d87672d133e6a0800000000000000
+      internalID: -6421233863699672185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 1022
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea04886f94958b850800000000000000
+      internalID: 6392957845256028334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 954
+        width: 71
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b80037f517c62ad60800000000000000
+      internalID: 7899995930549747851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 1000
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67901a5e5e81f3480800000000000000
+      internalID: -8917381361491179146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1003
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e50d148f932eb950800000000000000
+      internalID: 6466645282973877732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 765
+        width: 249
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a27e8067f03170f00800000000000000
+      internalID: 1082855192531625770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 1006
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8eeb34d0e11919f0800000000000000
+      internalID: -497346626516685170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 990
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d45975d9140bffe0800000000000000
+      internalID: -1154324370488208174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 674
+        width: 180
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 636368f3c7914e080800000000000000
+      internalID: -9159167720732346826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 1005
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a91e6244b173a7c40800000000000000
+      internalID: 5510777684288266650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1000
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f2377a6739c1cf0800000000000000
+      internalID: -280186938979045609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 986
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c29662aa7a84e2f0800000000000000
+      internalID: -944477762525687097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 987
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c5580bd577e1dcb0800000000000000
+      internalID: -4840833631074626107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 967
+        width: 17
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f89499df15b2ab90800000000000000
+      internalID: -7232018903204587278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 986
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4291673b781557160800000000000000
+      internalID: 7022608837227452708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 1134
+        y: 745
+        width: 227
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3db1c0454f3834cc0800000000000000
+      internalID: -3727990981127300141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 921
+        width: 51
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6666900e38f00d0800000000000000
+      internalID: -3454397390916262210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 914
+        width: 41
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e284d91e79915ad0800000000000000
+      internalID: -2715220333449411863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 971
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e36f01ba65898ec80800000000000000
+      internalID: -8293211215798143426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 971
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5447508e812857b70800000000000000
+      internalID: 8896159682423780421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 743
+        width: 301
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afe23b24d763647e0800000000000000
+      internalID: -1781676690960601350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 937
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053e05f42a6360320800000000000000
+      internalID: 2523764711931044688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 961
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec9eefcd65356aaa0800000000000000
+      internalID: -6150136608587847218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 907
+        width: 48
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8ed733f1d8c3a8d0800000000000000
+      internalID: -2836202536259035509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 937
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab1178f84e04ea40800000000000000
+      internalID: 5396453960065293220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 951
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f88b1c37c19a1ea00800000000000000
+      internalID: 784093749805430927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 942
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afa9db3d78b8e41c0800000000000000
+      internalID: -4517519960716764422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 947
+        width: 21
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ace1086288d520d0800000000000000
+      internalID: -3448111885079941984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 951
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa89a07f9f6b61a00800000000000000
+      internalID: 726969574574692522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 941
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb5671dd2a6d13390800000000000000
+      internalID: -7840249481292978753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 937
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 678e3e0ecd4cc23c0800000000000000
+      internalID: -4382911884393453450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 939
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7b4e16886283d0a0800000000000000
+      internalID: -6857994422116791430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 951
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07686382fab1ecb0800000000000000
+      internalID: -4836378974069692662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 929
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0a986775c0b571f0800000000000000
+      internalID: -1047736976135382515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 923
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c700080e71730d0800000000000000
+      internalID: -3443257137113826292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 925
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f795a0593ddf470800000000000000
+      internalID: 8430126714584661793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 905
+        width: 13
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08361e9d079da9840800000000000000
+      internalID: 5231732995859243904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 906
+        width: 45
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c269b594fa0461ea0800000000000000
+      internalID: -5902459140028262868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 931
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c6434b1ef0927d0800000000000000
+      internalID: -2942803419444515710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 907
+        width: 19
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7de416d00e3acc80800000000000000
+      internalID: -8301754789791470209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 929
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2593dbcf9a557e410800000000000000
+      internalID: 1506266788956813650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 899
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a26607e239b04340800000000000000
+      internalID: 4846076827326112422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 1430
+        y: 910
+        width: 18
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 634e45d1dce613da0800000000000000
+      internalID: -5966866204049742794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 864
+        width: 15
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021682cd22a4cf4a0800000000000000
+      internalID: -6558285443775307488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 885
+        width: 72
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e72cfd4bf88222a0800000000000000
+      internalID: -6763693077430523936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 728
+        width: 128
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a8b4f1c57bdfe660800000000000000
+      internalID: 7417388410114193575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 911
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4184a6cb2fb79fa00800000000000000
+      internalID: 790799492053616660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 907
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785731ed140f2fc00800000000000000
+      internalID: 933072238508471687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_82
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 902
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2dbbf008d2f00b20800000000000000
+      internalID: 3098743553174256943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_83
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 910
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30363dee5d1b6520800000000000000
+      internalID: 2696281095455256638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_84
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 908
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77344b65711a28f30800000000000000
+      internalID: 4576397292972819319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_85
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 892
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2237ca716e92d970800000000000000
+      internalID: 8778252765207409195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_86
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 805
+        width: 41
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 044929e7a6fd3c580800000000000000
+      internalID: -8807950797723495360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 788
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac1c176929a7254e0800000000000000
+      internalID: -1994396914963856950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_88
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 809
+        width: 61
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cac77fd7cef0f070800000000000000
+      internalID: 8138284661059603138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_89
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 749
+        width: 67
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578f21e55b6cc2030800000000000000
+      internalID: 3471367895065491573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_90
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 850
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0cd4b67884e89150800000000000000
+      internalID: 5879700588290432012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_91
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 864
+        width: 51
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ddc891ddf42b5ad0800000000000000
+      internalID: -2712533677998813744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_92
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 828
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8846f0da62e6429a0800000000000000
+      internalID: -6258756469746867064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_93
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 736
+        width: 80
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c4a40352b525b8e0800000000000000
+      internalID: -1678393838298422072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_94
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 854
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa51ebc73e12ef2b0800000000000000
+      internalID: -5548960429939747409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_95
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 858
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80d5a1a0ca3159ca0800000000000000
+      internalID: -6010876498031256312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_96
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 813
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a77d3347333cf4250800000000000000
+      internalID: 5931173860030535546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_97
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 858
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3875dcee86c4030800000000000000
+      internalID: 3480271986907120551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_98
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 811
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f20195f75f2d29ab0800000000000000
+      internalID: -5002704284209835985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_99
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 779
+        width: 17
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be94643877a42ccf0800000000000000
+      internalID: -233542353505859093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_100
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 793
+        width: 54
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 793dd00578cf0db30800000000000000
+      internalID: 4310222501487432599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_101
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 747
+        width: 97
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41bf60067bb77d60800000000000000
+      internalID: 7887979387850568015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_102
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 826
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1992d785f869ecac0800000000000000
+      internalID: -3832960690436626031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_103
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 858
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be46fd845ba3dd250800000000000000
+      internalID: 5970993231249237227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_104
+      rect:
+        serializedVersion: 2
+        x: 1118
+        y: 872
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b39fef7703e05290800000000000000
+      internalID: -7903567724684536905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_105
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 817
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4744cc88a0a8ae260800000000000000
+      internalID: 7127661138116625524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_106
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 809
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4972faa343d1cca0800000000000000
+      internalID: -5998280941096502965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_107
+      rect:
+        serializedVersion: 2
+        x: 1358
+        y: 820
+        width: 90
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86a8c412c22f297d0800000000000000
+      internalID: -2912999737604142488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_108
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 744
+        width: 68
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e6116216ba8e6450800000000000000
+      internalID: 6083952661221152485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_109
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 815
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68a79245eb2266230800000000000000
+      internalID: 3631628350372018822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_110
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 789
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95454a461ede759b0800000000000000
+      internalID: -5091339301407140775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_111
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 784
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa5344313e16e6470800000000000000
+      internalID: 8389750783746520490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_112
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 795
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6e7087bd0797370800000000000000
+      internalID: 8320805874457634476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_113
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 777
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f62f341a8bec8980800000000000000
+      internalID: -8535188215496235274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_114
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 777
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e5b40d3caa4c330800000000000000
+      internalID: 3730294149359558283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_115
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 666
+        width: 99
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9653f31e73961ff0800000000000000
+      internalID: -65702974840416613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_116
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 761
+        width: 37
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd3a889cc29aa2ad0800000000000000
+      internalID: -2726180614594583588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_117
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 779
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e22376718d07550800000000000000
+      internalID: 6156658285642657351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_118
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 730
+        width: 27
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66ceee08c9a1116a0800000000000000
+      internalID: -6480369129329071002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_119
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 777
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43363f69fca963d00800000000000000
+      internalID: 952118587616879412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_120
+      rect:
+        serializedVersion: 2
+        x: 1018
+        y: 757
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d8d44f77fed854c0800000000000000
+      internalID: -4298440689751631655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_121
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 763
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69c227c97df39d5c0800000000000000
+      internalID: -4190247783016289130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_122
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 772
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda43a9be12af4460800000000000000
+      internalID: 7228174179800140507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_123
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 631
+        width: 124
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd841a0a4eb9517f0800000000000000
+      internalID: -642435965580654373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_124
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 783
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c39b802ca000f50800000000000000
+      internalID: 6845483262089444466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_125
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 763
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95d8f3ae31715c290800000000000000
+      internalID: -7870859399458222759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_126
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 761
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3603731b51fd6ac0800000000000000
+      internalID: -3860163932116023748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_127
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 759
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55539d1c015b350d0800000000000000
+      internalID: -3435203007177214635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_128
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 773
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43abef365c7f675d0800000000000000
+      internalID: -3064990069220787660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_129
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 763
+        width: 22
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a9ff2b9b7370510800000000000000
+      internalID: 1515241070345034256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_130
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 726
+        width: 30
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8628e11bde413fc00800000000000000
+      internalID: 933112558907196008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_131
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 513
+        width: 174
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9632e8a1c5b94020800000000000000
+      internalID: 2326590525880284829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_132
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 763
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f7dcef872497fe0800000000000000
+      internalID: -1190847539024396429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_133
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 766
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35070ce469cddaaf0800000000000000
+      internalID: -383407855132184493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_134
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 755
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41bd30f8dd3141910800000000000000
+      internalID: 1807091192790506260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_135
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 745
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 134d5bf058d60e7f0800000000000000
+      internalID: -585347533296511951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_136
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 745
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fa63a505afdb45e0800000000000000
+      internalID: -1924198515913561359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_137
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 753
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6efd6927a15b9380800000000000000
+      internalID: -8963480854954377621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_138
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 534
+        width: 237
+        height: 222
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6e90bb21c9632ba0800000000000000
+      internalID: -6114927590656401813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_139
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 645
+        width: 222
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1bc55a773c733bf0800000000000000
+      internalID: -345796168659907810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_140
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 747
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98921c22e65ee2b40800000000000000
+      internalID: 5417519662965533065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_141
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 752
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c4658410522b670800000000000000
+      internalID: 8552939329768803469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_142
+      rect:
+        serializedVersion: 2
+        x: 1197
+        y: 680
+        width: 77
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c5348ea4fc098f20800000000000000
+      internalID: 3425283236631426497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_143
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 738
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13539d332f9e8c40800000000000000
+      internalID: 5516521567281173276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_144
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 728
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1462eb19a3d0767e0800000000000000
+      internalID: -1772433383142578623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_145
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 712
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ae3401554a9bb60800000000000000
+      internalID: 7762416118001822246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_146
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 686
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f949ff6bab07593c0800000000000000
+      internalID: -4353449517547285345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_147
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 720
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96b0d88d90a4caa0800000000000000
+      internalID: -6141607393360824678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_148
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 718
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8860bc49f6fe170800000000000000
+      internalID: 8209903330571749560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_149
+      rect:
+        serializedVersion: 2
+        x: 455
+        y: 728
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d906363a00b244e30800000000000000
+      internalID: 4486758410509050013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_150
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 723
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 130ad24a2ea216660800000000000000
+      internalID: 7377224817515012145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_151
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 708
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee8b68a5cc201d290800000000000000
+      internalID: -7867503997324183314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_152
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 724
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c41aa5e759bdfd0800000000000000
+      internalID: -2316093213433050081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_153
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 704
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cfc57889a6f97110800000000000000
+      internalID: 1259308778826092487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_154
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 708
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e48c2a82dfdcb7140800000000000000
+      internalID: 4718591521792903246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_155
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 716
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf012924a2d38c30800000000000000
+      internalID: 4360560466731274204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_156
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 726
+        width: 12
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3c901ca1f72b0ad0800000000000000
+      internalID: -2735048429770073026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_157
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 726
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f69adda032c874f90800000000000000
+      internalID: -6969447816198510225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_158
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 714
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867f408a6a04af830800000000000000
+      internalID: 4105665094829274984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_159
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 714
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ca3c652988df7010800000000000000
+      internalID: 1188906910199069385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_160
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 649
+        width: 49
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16ccc1bff4dc43a0800000000000000
+      internalID: -6679729952632551908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_161
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 708
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b3c3543a20a7c050800000000000000
+      internalID: 5820797146526630841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_162
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 649
+        width: 46
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab77cf464048a94c0800000000000000
+      internalID: -4279963341453232198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_163
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 663
+        width: 17
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79af62aa60dabef0800000000000000
+      internalID: -91531685997336195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_164
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 688
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c5da0e295b41720800000000000000
+      internalID: 2816075309452713090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_165
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 662
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8024b129a28e58820800000000000000
+      internalID: 2919995202957165064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_166
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 619
+        width: 116
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16195e9d8cd0671d0800000000000000
+      internalID: -3353477716230434463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_167
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 664
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16197aad09e1acb20800000000000000
+      internalID: 3155368096418992481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_168
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 680
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd2ab8690904628f0800000000000000
+      internalID: -565693713443216676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_169
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 698
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a06308910a56f9080800000000000000
+      internalID: -9178505777260775926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_170
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 686
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b424ce7c04f19a0800000000000000
+      internalID: -6260213729615262893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_171
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 686
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef8b30da20e688cf0800000000000000
+      internalID: -249828821547370242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_172
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 672
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe71e460f1865a9a0800000000000000
+      internalID: -6222452827683416081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_173
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 680
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e8fbb2d510a54b60800000000000000
+      internalID: 7729760351041616098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_174
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 672
+        width: 14
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 789c60a322b8631e0800000000000000
+      internalID: -2218432787314718329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_175
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 173
+        width: 518
+        height: 523
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 399ae139d2c19ece0800000000000000
+      internalID: -1375537229117609581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_176
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 606
+        width: 70
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11a61b40fd02e730800000000000000
+      internalID: 4026796342525731101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_177
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 649
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab9fa8fc030e6c750800000000000000
+      internalID: 6324989226933483962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_178
+      rect:
+        serializedVersion: 2
+        x: 1180
+        y: 666
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5f5a35c152cd580800000000000000
+      internalID: -8801118768196094471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_179
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 647
+        width: 24
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c93492d98052ab570800000000000000
+      internalID: 8483133567032443804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_180
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 697
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e259cc9e43240bec0800000000000000
+      internalID: -3553267310967089874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_181
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 680
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 683997fbd0d444e90800000000000000
+      internalID: -7042419195858283642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_182
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 695
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e94b3181a77ff1440800000000000000
+      internalID: 4908914222619145374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_183
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 583
+        width: 51
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26f5ba1d1532fa90800000000000000
+      internalID: -7281699248386214354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_184
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 647
+        width: 19
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d604b52147e8d3ff0800000000000000
+      internalID: -54730991283257235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_185
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 645
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe6adb4fd2dda570800000000000000
+      internalID: 8479665529900658362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_186
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 641
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223b8cf4116cb2ea0800000000000000
+      internalID: -5896401509456235742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_187
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 655
+        width: 21
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 205ee3a6bc23befb0800000000000000
+      internalID: -4617541143696055038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_188
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 623
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd4458401aa50b9f0800000000000000
+      internalID: -454763914752342821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_189
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 630
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e062cd5005216710800000000000000
+      internalID: 1684668419116523752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_190
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 633
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb04eb489dd4eaf50800000000000000
+      internalID: 6894533676181110971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_191
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 412
+        width: 229
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0560c7f158321780800000000000000
+      internalID: -8713840404308400885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_192
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 416
+        width: 211
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d208582d7234e10800000000000000
+      internalID: 2180630429713837419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_193
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 623
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4040667e1e865f450800000000000000
+      internalID: 6121914587939210244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_194
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 475
+        width: 69
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 234f725d84c984ed0800000000000000
+      internalID: -2429520162338638798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_195
+      rect:
+        serializedVersion: 2
+        x: 1158
+        y: 621
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb26599dd890ca840800000000000000
+      internalID: 5236570971570528959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_196
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 443
+        width: 269
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f84581dc96d264c80800000000000000
+      internalID: -8338927727594154865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_197
+      rect:
+        serializedVersion: 2
+        x: 1130
+        y: 579
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03731a6e94286cee0800000000000000
+      internalID: -1241161393380444368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_198
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 595
+        width: 40
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d0695db84a0c720800000000000000
+      internalID: 2864470283498425628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_199
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 562
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e976a7d3d97ef5cc0800000000000000
+      internalID: -3720000104657426530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_200
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 563
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea7d1c9d9a9f59130800000000000000
+      internalID: 3573036387286505390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_201
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 416
+        width: 156
+        height: 151
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cface8f70da8cd80800000000000000
+      internalID: -8230138069266944060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_202
+      rect:
+        serializedVersion: 2
+        x: 1329
+        y: 394
+        width: 106
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c523fe914fa3750800000000000000
+      internalID: 6285604622173363308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_203
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 566
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd71d2697e14f6c70800000000000000
+      internalID: 8966457846030735323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_204
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 572
+        width: 13
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cc6fba7d41ca2260800000000000000
+      internalID: 7073678703254793411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_205
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 564
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16a347d35827476a0800000000000000
+      internalID: -6452406449527834015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_206
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 406
+        width: 127
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2ac962621b129f10800000000000000
+      internalID: 2274910527549983275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_207
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 473
+        width: 13
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a9c79cec9862c00800000000000000
+      internalID: 875538698806794825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_208
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 482
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8201cfdfcb1a620800000000000000
+      internalID: 2783713843733342392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_209
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 417
+        width: 37
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef76cdf976ddc530800000000000000
+      internalID: 3876990673672896481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_210
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 471
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af18e63d38f26aa80800000000000000
+      internalID: -8456019007107071494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_211
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 333
+        width: 114
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb66607f2d6b348e0800000000000000
+      internalID: -1710322416266877249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_212
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 323
+        width: 112
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2f28c862cf047aa0800000000000000
+      internalID: -6164284662307344594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_213
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 407
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed803f018ffff5040800000000000000
+      internalID: 4638707582116235486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_214
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 404
+        width: 13
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5eeb8f8e3e12a920800000000000000
+      internalID: 2999993555827289690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_215
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 384
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a579935fd2ec03c30800000000000000
+      internalID: 4337193137940830042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_216
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 426
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90a8256f2b7679c0800000000000000
+      internalID: -3929818181343338340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_217
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 372
+        width: 62
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a4c3f022f79cdf0800000000000000
+      internalID: -159456527533716957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_218
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 422
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c36451353891cf0800000000000000
+      internalID: -281049108871496578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_219
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 370
+        width: 100
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aec1cb43c17ee76f0800000000000000
+      internalID: -684855984983892758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_220
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 398
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aadbf9a0c2ce4890800000000000000
+      internalID: -7471820599019709792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_221
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 341
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c567b886c0eab5d0800000000000000
+      internalID: -3045875054660852280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_222
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 364
+        width: 29
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 355086fa4f0239db0800000000000000
+      internalID: -4786445743677766317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_223
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 406
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42234161f15b27e00800000000000000
+      internalID: 1041093608995041828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_224
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 396
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43602bc31b4dd4910800000000000000
+      internalID: 1823347281847518772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_225
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 339
+        width: 112
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 857e681aa75384a20800000000000000
+      internalID: 3046743948728395608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_226
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 190
+        width: 150
+        height: 228
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43be40e8a6d3a2b70800000000000000
+      internalID: 8874973543545498420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_227
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 406
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95c09232997a1b670800000000000000
+      internalID: 8552801443515010137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_228
+      rect:
+        serializedVersion: 2
+        x: 1156
+        y: 404
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a003267075f0be00800000000000000
+      internalID: 1058615775799214242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_229
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 371
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01bd2f2372d05bb40800000000000000
+      internalID: 5455280985638886160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_230
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 386
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc1e4d15a3fc3d90800000000000000
+      internalID: -7116545420665414465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_231
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 244
+        width: 140
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12de6e10bf6f5db30800000000000000
+      internalID: 4311623776206253345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_232
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 364
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c590a8b8b91818d00800000000000000
+      internalID: 973201499549731164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_233
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 333
+        width: 39
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7be4286c319b7100800000000000000
+      internalID: 106838704804653950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_234
+      rect:
+        serializedVersion: 2
+        x: 1245
+        y: 368
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: def1134fe3af9bb20800000000000000
+      internalID: 3150824562614149101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_235
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 362
+        width: 36
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df13130db867b4ae0800000000000000
+      internalID: -1564026102715698691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_236
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 376
+        width: 17
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f2fd81614e0ea80800000000000000
+      internalID: -8439494918134616303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_237
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 369
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a73771829bfecf0800000000000000
+      internalID: -220754274874590592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_238
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 353
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c535e65af72d2890800000000000000
+      internalID: -7481279449839356472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_239
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 167
+        width: 195
+        height: 218
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de92a186a87e06870800000000000000
+      internalID: 8674187463953623533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_240
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 362
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95e35ab74f31d1a0800000000000000
+      internalID: -6786573586169338468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_241
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 228
+        width: 57
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627472f1c73b56290800000000000000
+      internalID: -7897709025844312282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_242
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 331
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b82cc1ca53810de0800000000000000
+      internalID: -1368668385922242382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_243
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 0
+        width: 396
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b5c1e4334293ac80800000000000000
+      internalID: -8312639669848128071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_244
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 341
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5fe86c925e6c0650800000000000000
+      internalID: 6200452088072826718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_245
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 321
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6ca0a6900023c60800000000000000
+      internalID: 7796293945365546684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_246
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 341
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d1850b559fcce3e0800000000000000
+      internalID: -2023013892212031015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_247
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 335
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a043612cf2c1a60800000000000000
+      internalID: 7646038778010929679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_248
+      rect:
+        serializedVersion: 2
+        x: 597
+        y: 339
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 219a6c32bdf4633a0800000000000000
+      internalID: -6686068794168268526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_249
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 323
+        width: 17
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 084a445b03cdf9f90800000000000000
+      internalID: -6944589998624299904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_250
+      rect:
+        serializedVersion: 2
+        x: 1266
+        y: 337
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70302b81dcec0a890800000000000000
+      internalID: -7448726403392863481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_251
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 62
+        width: 240
+        height: 274
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9c01f58b38823750800000000000000
+      internalID: 6283234219366878365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_252
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 325
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30abeed7c7539e480800000000000000
+      internalID: -8869499182324467197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_253
+      rect:
+        serializedVersion: 2
+        x: 1269
+        y: 296
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e692846f27941400800000000000000
+      internalID: 294026105491461856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_254
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 191
+        width: 78
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55b18660934e96e40800000000000000
+      internalID: 5650298141084752725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_255
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 230
+        width: 40
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 461fef1ce1db64700800000000000000
+      internalID: 524314346436620644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_256
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 262
+        width: 19
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c50cb11f8cbb2010800000000000000
+      internalID: 1165232251269285321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_257
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 176
+        width: 35
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a052944ef967967f0800000000000000
+      internalID: -618833044684856054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_258
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 177
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45d0523f0d2423350800000000000000
+      internalID: 5994927519183474004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_259
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 185
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e634417c0c0774440800000000000000
+      internalID: 4920025091201581934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_260
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 106
+        width: 80
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25c440fbae1b9e4e0800000000000000
+      internalID: -1951833341703205806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_261
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 169
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1efd3d9203214200800000000000000
+      internalID: 162449555697040922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_262
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 169
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6459a676b708db840800000000000000
+      internalID: 5241486808833496390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_263
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 88
+        width: 80
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e49c48b25bd2f30800000000000000
+      internalID: 4552493996857445983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_264
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 94
+        width: 111
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc4c303a101dfbf0800000000000000
+      internalID: -289057096417391398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_265
+      rect:
+        serializedVersion: 2
+        x: 957
+        y: 0
+        width: 430
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3d4312633f65a70800000000000000
+      internalID: 8815500734435218353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_266
+      rect:
+        serializedVersion: 2
+        x: 1076
+        y: 183
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4242138b0a053440800000000000000
+      internalID: 4914845612904694350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_267
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 167
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e505dfae369932e60800000000000000
+      internalID: 7936355622780227678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_268
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 68
+        width: 55
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35f0b2cddeb4f3c00800000000000000
+      internalID: 882507536961048403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_269
+      rect:
+        serializedVersion: 2
+        x: 676
+        y: 15
+        width: 134
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68aa6eae58e7f7fc0800000000000000
+      internalID: -3494935672179479930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_270
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 151
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3305bf17d789f1bc0800000000000000
+      internalID: -3810159095181520845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_271
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 143
+        width: 19
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2129de5ad8b80e3e0800000000000000
+      internalID: -2026466391826263534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_272
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 125
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3773ca0c73cf1b690800000000000000
+      internalID: -7588006580756662413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_273
+      rect:
+        serializedVersion: 2
+        x: 1384
+        y: 18
+        width: 55
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f171a201d7060d990800000000000000
+      internalID: -7363279300492388577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_274
+      rect:
+        serializedVersion: 2
+        x: 1398
+        y: 137
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fed8c33116165870800000000000000
+      internalID: 8671142395687526137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_275
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 125
+        width: 13
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26f8cec26fee0d2b0800000000000000
+      internalID: -5561682798719496350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_276
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 116
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b86800ea4f197440800000000000000
+      internalID: 4934009273207777462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_277
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 37
+        width: 72
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02cd191271508c5b0800000000000000
+      internalID: -5348018960596870112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_278
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 98
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87db7a6ca30665b70800000000000000
+      internalID: 8887396720219503992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_279
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 77
+        width: 40
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12e8da167e31e9630800000000000000
+      internalID: 3935605008865529377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_280
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 70
+        width: 17
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5c7f15d1f1369e0800000000000000
+      internalID: -1629424429388282463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_281
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 0
+        width: 114
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49635fb20ba967790800000000000000
+      internalID: -7532663245288163692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_282
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 0
+        width: 167
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b12c49d511e9240800000000000000
+      internalID: 4800293346448907121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_283
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 0
+        width: 212
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c1ba599f88c45060800000000000000
+      internalID: 6941393444763513289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_284
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 13
+        width: 57
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99cc989b4d26e37b0800000000000000
+      internalID: -5242644250427274087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_285
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 15
+        width: 57
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3ef22d60c0485c0800000000000000
+      internalID: -4214230127876250676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_286
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 29
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac5b6cb6b48c127d0800000000000000
+      internalID: -2944852455067306550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_287
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 26
+        width: 37
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5e3a318f779e200800000000000000
+      internalID: 209830765014541735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_288
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 23
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 343b4534ef167b7a0800000000000000
+      internalID: -6361508203958324413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: leaf_sheet_289
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 7
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfd469fbe9db90200800000000000000
+      internalID: 146856952383032828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      leaf_sheet_0: 8076440910946311051
+      leaf_sheet_1: 5836507581930453176
+      leaf_sheet_10: 1334316822088205373
+      leaf_sheet_100: 4310222501487432599
+      leaf_sheet_101: 7887979387850568015
+      leaf_sheet_102: -3832960690436626031
+      leaf_sheet_103: 5970993231249237227
+      leaf_sheet_104: -7903567724684536905
+      leaf_sheet_105: 7127661138116625524
+      leaf_sheet_106: -5998280941096502965
+      leaf_sheet_107: -2912999737604142488
+      leaf_sheet_108: 6083952661221152485
+      leaf_sheet_109: 3631628350372018822
+      leaf_sheet_11: -1450314591545107978
+      leaf_sheet_110: -5091339301407140775
+      leaf_sheet_111: 8389750783746520490
+      leaf_sheet_112: 8320805874457634476
+      leaf_sheet_113: -8535188215496235274
+      leaf_sheet_114: 3730294149359558283
+      leaf_sheet_115: -65702974840416613
+      leaf_sheet_116: -2726180614594583588
+      leaf_sheet_117: 6156658285642657351
+      leaf_sheet_118: -6480369129329071002
+      leaf_sheet_119: 952118587616879412
+      leaf_sheet_12: -1243359060504501960
+      leaf_sheet_120: -4298440689751631655
+      leaf_sheet_121: -4190247783016289130
+      leaf_sheet_122: 7228174179800140507
+      leaf_sheet_123: -642435965580654373
+      leaf_sheet_124: 6845483262089444466
+      leaf_sheet_125: -7870859399458222759
+      leaf_sheet_126: -3860163932116023748
+      leaf_sheet_127: -3435203007177214635
+      leaf_sheet_128: -3064990069220787660
+      leaf_sheet_129: 1515241070345034256
+      leaf_sheet_13: -2089470109095999194
+      leaf_sheet_130: 933112558907196008
+      leaf_sheet_131: 2326590525880284829
+      leaf_sheet_132: -1190847539024396429
+      leaf_sheet_133: -383407855132184493
+      leaf_sheet_134: 1807091192790506260
+      leaf_sheet_135: -585347533296511951
+      leaf_sheet_136: -1924198515913561359
+      leaf_sheet_137: -8963480854954377621
+      leaf_sheet_138: -6114927590656401813
+      leaf_sheet_139: -345796168659907810
+      leaf_sheet_14: -4648764045908693741
+      leaf_sheet_140: 5417519662965533065
+      leaf_sheet_141: 8552939329768803469
+      leaf_sheet_142: 3425283236631426497
+      leaf_sheet_143: 5516521567281173276
+      leaf_sheet_144: -1772433383142578623
+      leaf_sheet_145: 7762416118001822246
+      leaf_sheet_146: -4353449517547285345
+      leaf_sheet_147: -6141607393360824678
+      leaf_sheet_148: 8209903330571749560
+      leaf_sheet_149: 4486758410509050013
+      leaf_sheet_15: 631222922956196565
+      leaf_sheet_150: 7377224817515012145
+      leaf_sheet_151: -7867503997324183314
+      leaf_sheet_152: -2316093213433050081
+      leaf_sheet_153: 1259308778826092487
+      leaf_sheet_154: 4718591521792903246
+      leaf_sheet_155: 4360560466731274204
+      leaf_sheet_156: -2735048429770073026
+      leaf_sheet_157: -6969447816198510225
+      leaf_sheet_158: 4105665094829274984
+      leaf_sheet_159: 1188906910199069385
+      leaf_sheet_16: -2239607503470049730
+      leaf_sheet_160: -6679729952632551908
+      leaf_sheet_161: 5820797146526630841
+      leaf_sheet_162: -4279963341453232198
+      leaf_sheet_163: -91531685997336195
+      leaf_sheet_164: 2816075309452713090
+      leaf_sheet_165: 2919995202957165064
+      leaf_sheet_166: -3353477716230434463
+      leaf_sheet_167: 3155368096418992481
+      leaf_sheet_168: -565693713443216676
+      leaf_sheet_169: -9178505777260775926
+      leaf_sheet_17: -3265866711649260472
+      leaf_sheet_170: -6260213729615262893
+      leaf_sheet_171: -249828821547370242
+      leaf_sheet_172: -6222452827683416081
+      leaf_sheet_173: 7729760351041616098
+      leaf_sheet_174: -2218432787314718329
+      leaf_sheet_175: -1375537229117609581
+      leaf_sheet_176: 4026796342525731101
+      leaf_sheet_177: 6324989226933483962
+      leaf_sheet_178: -8801118768196094471
+      leaf_sheet_179: 8483133567032443804
+      leaf_sheet_18: -7598927830571214469
+      leaf_sheet_180: -3553267310967089874
+      leaf_sheet_181: -7042419195858283642
+      leaf_sheet_182: 4908914222619145374
+      leaf_sheet_183: -7281699248386214354
+      leaf_sheet_184: -54730991283257235
+      leaf_sheet_185: 8479665529900658362
+      leaf_sheet_186: -5896401509456235742
+      leaf_sheet_187: -4617541143696055038
+      leaf_sheet_188: -454763914752342821
+      leaf_sheet_189: 1684668419116523752
+      leaf_sheet_19: -7266330833143237398
+      leaf_sheet_190: 6894533676181110971
+      leaf_sheet_191: -8713840404308400885
+      leaf_sheet_192: 2180630429713837419
+      leaf_sheet_193: 6121914587939210244
+      leaf_sheet_194: -2429520162338638798
+      leaf_sheet_195: 5236570971570528959
+      leaf_sheet_196: -8338927727594154865
+      leaf_sheet_197: -1241161393380444368
+      leaf_sheet_198: 2864470283498425628
+      leaf_sheet_199: -3720000104657426530
+      leaf_sheet_2: -6730860228432053071
+      leaf_sheet_20: -1885698338186599640
+      leaf_sheet_200: 3573036387286505390
+      leaf_sheet_201: -8230138069266944060
+      leaf_sheet_202: 6285604622173363308
+      leaf_sheet_203: 8966457846030735323
+      leaf_sheet_204: 7073678703254793411
+      leaf_sheet_205: -6452406449527834015
+      leaf_sheet_206: 2274910527549983275
+      leaf_sheet_207: 875538698806794825
+      leaf_sheet_208: 2783713843733342392
+      leaf_sheet_209: 3876990673672896481
+      leaf_sheet_21: -2715806982670306995
+      leaf_sheet_210: -8456019007107071494
+      leaf_sheet_211: -1710322416266877249
+      leaf_sheet_212: -6164284662307344594
+      leaf_sheet_213: 4638707582116235486
+      leaf_sheet_214: 2999993555827289690
+      leaf_sheet_215: 4337193137940830042
+      leaf_sheet_216: -3929818181343338340
+      leaf_sheet_217: -159456527533716957
+      leaf_sheet_218: -281049108871496578
+      leaf_sheet_219: -684855984983892758
+      leaf_sheet_22: 6337870368389109137
+      leaf_sheet_220: -7471820599019709792
+      leaf_sheet_221: -3045875054660852280
+      leaf_sheet_222: -4786445743677766317
+      leaf_sheet_223: 1041093608995041828
+      leaf_sheet_224: 1823347281847518772
+      leaf_sheet_225: 3046743948728395608
+      leaf_sheet_226: 8874973543545498420
+      leaf_sheet_227: 8552801443515010137
+      leaf_sheet_228: 1058615775799214242
+      leaf_sheet_229: 5455280985638886160
+      leaf_sheet_23: 1529145202271977232
+      leaf_sheet_230: -7116545420665414465
+      leaf_sheet_231: 4311623776206253345
+      leaf_sheet_232: 973201499549731164
+      leaf_sheet_233: 106838704804653950
+      leaf_sheet_234: 3150824562614149101
+      leaf_sheet_235: -1564026102715698691
+      leaf_sheet_236: -8439494918134616303
+      leaf_sheet_237: -220754274874590592
+      leaf_sheet_238: -7481279449839356472
+      leaf_sheet_239: 8674187463953623533
+      leaf_sheet_24: -9026603059716641882
+      leaf_sheet_240: -6786573586169338468
+      leaf_sheet_241: -7897709025844312282
+      leaf_sheet_242: -1368668385922242382
+      leaf_sheet_243: -8312639669848128071
+      leaf_sheet_244: 6200452088072826718
+      leaf_sheet_245: 7796293945365546684
+      leaf_sheet_246: -2023013892212031015
+      leaf_sheet_247: 7646038778010929679
+      leaf_sheet_248: -6686068794168268526
+      leaf_sheet_249: -6944589998624299904
+      leaf_sheet_25: -2389624781896735033
+      leaf_sheet_250: -7448726403392863481
+      leaf_sheet_251: 6283234219366878365
+      leaf_sheet_252: -8869499182324467197
+      leaf_sheet_253: 294026105491461856
+      leaf_sheet_254: 5650298141084752725
+      leaf_sheet_255: 524314346436620644
+      leaf_sheet_256: 1165232251269285321
+      leaf_sheet_257: -618833044684856054
+      leaf_sheet_258: 5994927519183474004
+      leaf_sheet_259: 4920025091201581934
+      leaf_sheet_26: 7261160793434267876
+      leaf_sheet_260: -1951833341703205806
+      leaf_sheet_261: 162449555697040922
+      leaf_sheet_262: 5241486808833496390
+      leaf_sheet_263: 4552493996857445983
+      leaf_sheet_264: -289057096417391398
+      leaf_sheet_265: 8815500734435218353
+      leaf_sheet_266: 4914845612904694350
+      leaf_sheet_267: 7936355622780227678
+      leaf_sheet_268: 882507536961048403
+      leaf_sheet_269: -3494935672179479930
+      leaf_sheet_27: 746602197650231843
+      leaf_sheet_270: -3810159095181520845
+      leaf_sheet_271: -2026466391826263534
+      leaf_sheet_272: -7588006580756662413
+      leaf_sheet_273: -7363279300492388577
+      leaf_sheet_274: 8671142395687526137
+      leaf_sheet_275: -5561682798719496350
+      leaf_sheet_276: 4934009273207777462
+      leaf_sheet_277: -5348018960596870112
+      leaf_sheet_278: 8887396720219503992
+      leaf_sheet_279: 3935605008865529377
+      leaf_sheet_28: -7538972167952310879
+      leaf_sheet_280: -1629424429388282463
+      leaf_sheet_281: -7532663245288163692
+      leaf_sheet_282: 4800293346448907121
+      leaf_sheet_283: 6941393444763513289
+      leaf_sheet_284: -5242644250427274087
+      leaf_sheet_285: -4214230127876250676
+      leaf_sheet_286: -2944852455067306550
+      leaf_sheet_287: 209830765014541735
+      leaf_sheet_288: -6361508203958324413
+      leaf_sheet_289: 146856952383032828
+      leaf_sheet_29: -9098529734571615772
+      leaf_sheet_3: -5110419390617560356
+      leaf_sheet_30: -6100503267027276508
+      leaf_sheet_31: 8557229970049537376
+      leaf_sheet_32: -4911221198283787499
+      leaf_sheet_33: 3599011332138615093
+      leaf_sheet_34: -6421233863699672185
+      leaf_sheet_35: 6392957845256028334
+      leaf_sheet_36: 7899995930549747851
+      leaf_sheet_37: -8917381361491179146
+      leaf_sheet_38: 6466645282973877732
+      leaf_sheet_39: 1082855192531625770
+      leaf_sheet_4: -8071504493653247982
+      leaf_sheet_40: -497346626516685170
+      leaf_sheet_41: -1154324370488208174
+      leaf_sheet_42: -9159167720732346826
+      leaf_sheet_43: 5510777684288266650
+      leaf_sheet_44: -280186938979045609
+      leaf_sheet_45: -944477762525687097
+      leaf_sheet_46: -4840833631074626107
+      leaf_sheet_47: -7232018903204587278
+      leaf_sheet_48: 7022608837227452708
+      leaf_sheet_49: -3727990981127300141
+      leaf_sheet_5: -8621985303652766648
+      leaf_sheet_50: -3454397390916262210
+      leaf_sheet_51: -2715220333449411863
+      leaf_sheet_52: -8293211215798143426
+      leaf_sheet_53: 8896159682423780421
+      leaf_sheet_54: -1781676690960601350
+      leaf_sheet_55: 2523764711931044688
+      leaf_sheet_56: -6150136608587847218
+      leaf_sheet_57: -2836202536259035509
+      leaf_sheet_58: 5396453960065293220
+      leaf_sheet_59: 784093749805430927
+      leaf_sheet_6: 1713185772525087366
+      leaf_sheet_60: -4517519960716764422
+      leaf_sheet_61: -3448111885079941984
+      leaf_sheet_62: 726969574574692522
+      leaf_sheet_63: -7840249481292978753
+      leaf_sheet_64: -4382911884393453450
+      leaf_sheet_65: -6857994422116791430
+      leaf_sheet_66: -4836378974069692662
+      leaf_sheet_67: -1047736976135382515
+      leaf_sheet_68: -3443257137113826292
+      leaf_sheet_69: 8430126714584661793
+      leaf_sheet_7: -5864923017806591971
+      leaf_sheet_70: 5231732995859243904
+      leaf_sheet_71: -5902459140028262868
+      leaf_sheet_72: -2942803419444515710
+      leaf_sheet_73: -8301754789791470209
+      leaf_sheet_74: 1506266788956813650
+      leaf_sheet_75: 4846076827326112422
+      leaf_sheet_76: -5966866204049742794
+      leaf_sheet_77: -6558285443775307488
+      leaf_sheet_78: -6763693077430523936
+      leaf_sheet_79: 7417388410114193575
+      leaf_sheet_8: -8552931581802855212
+      leaf_sheet_80: 790799492053616660
+      leaf_sheet_81: 933072238508471687
+      leaf_sheet_82: 3098743553174256943
+      leaf_sheet_83: 2696281095455256638
+      leaf_sheet_84: 4576397292972819319
+      leaf_sheet_85: 8778252765207409195
+      leaf_sheet_86: -8807950797723495360
+      leaf_sheet_87: -1994396914963856950
+      leaf_sheet_88: 8138284661059603138
+      leaf_sheet_89: 3471367895065491573
+      leaf_sheet_9: -8356872091499615931
+      leaf_sheet_90: 5879700588290432012
+      leaf_sheet_91: -2712533677998813744
+      leaf_sheet_92: -6258756469746867064
+      leaf_sheet_93: -1678393838298422072
+      leaf_sheet_94: -5548960429939747409
+      leaf_sheet_95: -6010876498031256312
+      leaf_sheet_96: 5931173860030535546
+      leaf_sheet_97: 3480271986907120551
+      leaf_sheet_98: -5002704284209835985
+      leaf_sheet_99: -233542353505859093
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
