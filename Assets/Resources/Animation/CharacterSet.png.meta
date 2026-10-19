@@ -120,7 +120,7 @@ TextureImporter:
     maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,6 +154,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -161,10 +174,10 @@ TextureImporter:
       name: CharacterSet_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 110
-        width: 27
-        height: 37
+        x: 0
+        y: 120
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,10 +196,10 @@ TextureImporter:
       name: CharacterSet_1
       rect:
         serializedVersion: 2
-        x: 34
-        y: 109
-        width: 27
-        height: 38
+        x: 32
+        y: 120
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,10 +218,10 @@ TextureImporter:
       name: CharacterSet_2
       rect:
         serializedVersion: 2
-        x: 67
-        y: 109
-        width: 27
-        height: 38
+        x: 64
+        y: 120
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -227,10 +240,10 @@ TextureImporter:
       name: CharacterSet_3
       rect:
         serializedVersion: 2
-        x: 99
-        y: 110
-        width: 27
-        height: 37
+        x: 96
+        y: 120
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -249,10 +262,10 @@ TextureImporter:
       name: CharacterSet_4
       rect:
         serializedVersion: 2
-        x: 7
-        y: 71
-        width: 20
-        height: 31
+        x: 0
+        y: 80
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +284,10 @@ TextureImporter:
       name: CharacterSet_5
       rect:
         serializedVersion: 2
-        x: 39
-        y: 70
-        width: 20
-        height: 31
+        x: 32
+        y: 80
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -293,10 +306,10 @@ TextureImporter:
       name: CharacterSet_6
       rect:
         serializedVersion: 2
-        x: 71
-        y: 70
-        width: 20
-        height: 31
+        x: 64
+        y: 80
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +328,10 @@ TextureImporter:
       name: CharacterSet_7
       rect:
         serializedVersion: 2
-        x: 103
-        y: 70
-        width: 20
-        height: 31
+        x: 96
+        y: 80
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -337,10 +350,10 @@ TextureImporter:
       name: CharacterSet_12
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 27
-        height: 37
+        x: 0
+        y: 0
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -359,10 +372,10 @@ TextureImporter:
       name: CharacterSet_8
       rect:
         serializedVersion: 2
-        x: 6
-        y: 38
-        width: 20
-        height: 31
+        x: 0
+        y: 40
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -381,10 +394,10 @@ TextureImporter:
       name: CharacterSet_13
       rect:
         serializedVersion: 2
-        x: 36
-        y: 1
-        width: 27
-        height: 37
+        x: 32
+        y: 0
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -403,10 +416,10 @@ TextureImporter:
       name: CharacterSet_9
       rect:
         serializedVersion: 2
-        x: 38
-        y: 38
-        width: 20
-        height: 31
+        x: 32
+        y: 40
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +438,10 @@ TextureImporter:
       name: CharacterSet_14
       rect:
         serializedVersion: 2
-        x: 69
-        y: 1
-        width: 27
-        height: 37
+        x: 64
+        y: 0
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -447,10 +460,10 @@ TextureImporter:
       name: CharacterSet_10
       rect:
         serializedVersion: 2
-        x: 71
-        y: 38
-        width: 20
-        height: 31
+        x: 64
+        y: 40
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -469,10 +482,10 @@ TextureImporter:
       name: CharacterSet_15
       rect:
         serializedVersion: 2
-        x: 100
-        y: 1
-        width: 27
-        height: 37
+        x: 96
+        y: 0
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -491,10 +504,10 @@ TextureImporter:
       name: CharacterSet_11
       rect:
         serializedVersion: 2
-        x: 102
-        y: 38
-        width: 20
-        height: 31
+        x: 96
+        y: 40
+        width: 32
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
