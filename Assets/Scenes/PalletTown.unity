@@ -14664,6 +14664,7 @@ MonoBehaviour:
   dialogManager: {fileID: 1121729654}
   firstDialogueId: 20
   repeatDialogueId: 25
+  equippedDialogueId: 27
   equipmentUI: {fileID: 2200000083}
 --- !u!1 &1193464241
 GameObject:

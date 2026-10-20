@@ -15,6 +15,51 @@ public static class GuardSceneSetup
     private const string DialogueFolder = "Assets/Data/Dialogs/DialogSO/";
     private const string ToolPath = "Assets/Scripts/Editor/GuardSceneSetup.cs";
 
+    // 저장된 PalletTown의 경비와 공용 DB에 장착 완료 대화만 추가 연결
+    [MenuItem("Tools/Guard/Configure Equipped Dialogue")]
+    public static void ConfigureEquippedDialogue()
+    {
+        // 미저장 사용자 편집이 없는 지정 씬만 저장 대상으로 제한
+        var scene = SceneManager.GetActiveScene();
+        Require(!EditorApplication.isPlayingOrWillChangePlaymode && scene.path == ScenePath && !scene.isDirty,
+            "저장된 PalletTown 편집 모드에서만 적용할 수 있습니다.");
+        var gate = scene.GetRootGameObjects().SelectMany(root => root.GetComponentsInChildren<WeaponGate>(true)).Single();
+        var fields = new SerializedObject(gate);
+        var manager = (DialogManager)fields.FindProperty("dialogManager").objectReferenceValue;
+        Require(manager != null, "경비의 공용 DialogManager 연결이 필요합니다.");
+        var database = (DialogDatabaseSO)new SerializedObject(manager).FindProperty("dialogDatabase").objectReferenceValue;
+        Require(database != null, "공용 대화 DB가 필요합니다.");
+        // 중복 실행 시 기존 에셋과 대사 ID를 보존
+        const string equippedPath = DialogueFolder + "DialogSO_Guard_Equipped.asset";
+        var dialog = AssetDatabase.LoadAssetAtPath<DialogSO>(equippedPath);
+        if (dialog == null)
+        {
+            Require(!File.Exists(equippedPath), "같은 경로의 다른 에셋을 확인하세요.");
+            dialog = ScriptableObject.CreateInstance<DialogSO>();
+            dialog.id = AssetDatabase.FindAssets("t:DialogSO", new[] { "Assets/Data/Dialogs" })
+                .Select(AssetDatabase.GUIDToAssetPath).Select(AssetDatabase.LoadAssetAtPath<DialogSO>)
+                .Where(item => item != null).Select(item => item.id).DefaultIfEmpty(0).Max() + 1;
+            dialog.characterName = "경비";
+            dialog.text = "무기를 장착했구나! 이제 1번도로로 지나가도 좋아. 조심해서 다녀와.";
+            dialog.nextId = 0;
+            AssetDatabase.CreateAsset(dialog, equippedPath);
+        }
+        Require(dialog.id > 0 && !database.dialogs.Any(item => item != null && item != dialog && item.id == dialog.id),
+            "장착 완료 대화 ID가 다른 대화와 중복됩니다.");
+        if (!database.dialogs.Contains(dialog))
+        {
+            Undo.RecordObject(database, "경비 장착 완료 대사 등록");
+            database.dialogs.Add(dialog);
+            EditorUtility.SetDirty(database);
+            AssetDatabase.SaveAssetIfDirty(database);
+        }
+        fields.FindProperty("equippedDialogueId").intValue = dialog.id;
+        fields.ApplyModifiedProperties();
+        EditorSceneManager.MarkSceneDirty(scene);
+        Require(EditorSceneManager.SaveScene(scene), "PalletTown 저장 실패");
+        Debug.Log($"GUARD_EQUIPPED_CONFIGURED: id={dialog.id}", gate);
+    }
+
     // 열린 원본 씬을 보존한 뒤 경비·출구·공용 DB만 연결하고 저장
     [MenuItem("Tools/Guard/Configure PalletTown")]
     public static void Apply()
