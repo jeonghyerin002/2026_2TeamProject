@@ -32,8 +32,7 @@ public sealed class StartMenuController : MonoBehaviour
     public void StartNewGame()
     {
         // 세이브 파일은 유지하고 이전 게임의 런타임 진행도만 지운다.
-        GameSaveSystem.PrepareNewGame();
-        SceneManager.LoadScene("Prologue");
+        SceneFadeIn.LoadScene("Prologue", GameSaveSystem.PrepareNewGame);
     }
 
     public void QuitGame()

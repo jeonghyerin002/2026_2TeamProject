@@ -129,6 +129,7 @@ public sealed class BattleSceneController : MonoBehaviour
             yield break;
         }
 
-        SceneManager.LoadScene(scene);
+        // 암전이 끝난 뒤 원래 맵을 로딩
+        SceneFadeIn.LoadScene(scene);
     }
 }

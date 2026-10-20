@@ -324,6 +324,12 @@ public class NPCInteraction : MonoBehaviour
     // 현재 NPC 전투와 복귀 정보를 등록하고 Battle Scene으로 이동한다
     private void TransitionToBattle()
     {
+        // 다른 전환 중에는 전투 세션과 플레이어 상태를 덮어쓰지 않음
+        if (SceneFadeIn.IsTransitioning)
+        {
+            CancelInteraction();
+            return;
+        }
         PlayerController player = PlayerController.Instance;
 
         if (player == null)
@@ -356,7 +362,12 @@ public class NPCInteraction : MonoBehaviour
         }
 
         player.SetMovementEnabled(false);
-        SceneManager.LoadScene(battleSceneName);
+        if (!SceneFadeIn.LoadScene(battleSceneName))
+        {
+            BattleSession.Clear();
+            player.SetMovementEnabled(true);
+            CancelInteraction();
+        }
     }
 
     // 잘못된 전투 진입 상태를 초기화한다

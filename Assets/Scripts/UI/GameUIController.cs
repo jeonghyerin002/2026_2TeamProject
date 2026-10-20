@@ -169,21 +169,22 @@ public sealed class GameUIController : MonoBehaviour
     // 시작 화면 카메라가 준비된 뒤 기존 플레이어를 정리해 카메라 없는 프레임을 방지한다.
     private void ReturnToStartMenu()
     {
-        if (!canOpenMenu || isReturningToStartMenu || GameSaveSystem.IsBusy)
+        if (!canOpenMenu || isReturningToStartMenu || GameSaveSystem.IsBusy || SceneFadeIn.IsTransitioning)
         {
             return;
         }
-        isReturningToStartMenu = true;
+        // 암전 후 오디오를 정리하고 로딩 완료 후 기존 플레이어를 제거
         var player = PlayerController.Instance;
-        if (player != null)
+        isReturningToStartMenu = SceneFadeIn.LoadScene(StartMenuSceneName, () =>
         {
-            foreach (var listener in player.GetComponentsInChildren<AudioListener>(true))
+            if (player != null)
             {
-                listener.enabled = false;
+                foreach (var listener in player.GetComponentsInChildren<AudioListener>(true))
+                {
+                    listener.enabled = false;
+                }
             }
-        }
-        var operation = SceneManager.LoadSceneAsync(StartMenuSceneName);
-        operation.completed += _ =>
+        }, () =>
         {
             if (player != null)
             {
@@ -191,14 +192,14 @@ public sealed class GameUIController : MonoBehaviour
             }
             // 전투 메뉴에서 복귀한 경우에도 임시 전투 상태를 남기지 않는다.
             BattleSession.Clear();
-        };
+        });
     }
 
     // 키를 누른 프레임마다 한 번만 토글한다. 시작 화면에서는 Esc 메뉴를 사용하지 않는다.
     private void Update()
     {
         var keyboard = Keyboard.current;
-        if (!canOpenMenu || isReturningToStartMenu || GameSaveSystem.IsBusy || keyboard == null)
+        if (!canOpenMenu || isReturningToStartMenu || GameSaveSystem.IsBusy || SceneFadeIn.IsTransitioning || keyboard == null)
         {
             return;
         }

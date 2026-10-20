@@ -38,7 +38,7 @@ public class Door : MonoBehaviour
     // 기존 태그 검사를 유지하고 지정한 출구에서만 실제 무기 장착 상태 확인
     private void TryEnter(Collider2D collision, bool showBlockedDialogue = true)
     {
-        if (isChangingScene)
+        if (isChangingScene || SceneFadeIn.IsTransitioning)
         {
             return;
         }
@@ -72,8 +72,8 @@ public class Door : MonoBehaviour
     }
     void ChangeScene()
     {
-        isChangingScene = true;
-        SceneSpawnManager.nextSpawnID = targetSpawnID;
-        SceneManager.LoadScene(sceneName);
+        // 수락된 전환만 출구를 잠그고 암전 후 도착 위치를 지정
+        isChangingScene = SceneFadeIn.LoadScene(sceneName,
+            () => SceneSpawnManager.nextSpawnID = targetSpawnID);
     }
 }

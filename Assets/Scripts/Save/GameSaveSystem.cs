@@ -66,7 +66,7 @@ public static class GameSaveSystem
     public static bool CanChangeSession(out string message)
     {
         message = "";
-        if (isBusy || BattleSession.IsActive)
+        if (isBusy || BattleSession.IsActive || SceneFadeIn.IsTransitioning)
         {
             message = "전투 또는 Scene 이동 중에는 저장/불러오기를 사용할 수 없습니다.";
             return false;
@@ -277,13 +277,20 @@ public static class GameSaveSystem
             message = "불러오기에 필요한 플레이어 프리팹이 없습니다.";
             return false;
         }
-        pending = save;
-        isBusy = true;
-        BattleSession.Clear();
-        SceneSpawnManager.nextSpawnID = null;
-        NpcBattleProgress.RestoreSave(save.defeatedNpcIds);
-        WorldSaveProgress.Restore(save.completedCutsceneIds, save.worldActors);
-        SceneManager.LoadSceneAsync(save.sceneName);
+        // 현재 화면의 진행 상태는 암전이 완료된 뒤 저장 데이터로 교체
+        if (!SceneFadeIn.LoadScene(save.sceneName, () =>
+        {
+            pending = save;
+            isBusy = true;
+            BattleSession.Clear();
+            SceneSpawnManager.nextSpawnID = null;
+            NpcBattleProgress.RestoreSave(save.defeatedNpcIds);
+            WorldSaveProgress.Restore(save.completedCutsceneIds, save.worldActors);
+        }))
+        {
+            message = "Scene 전환을 시작할 수 없습니다. 씬 등록과 전환 상태를 확인하세요.";
+            return false;
+        }
         message = "게임을 불러오는 중입니다.";
         return true;
     }

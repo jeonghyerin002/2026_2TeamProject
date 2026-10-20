@@ -110,7 +110,8 @@ public sealed class PrologueController : MonoBehaviour, ISerializationCallbackRe
         onCompleted.Invoke();
         if (this != null && isActiveAndEnabled && !string.IsNullOrWhiteSpace(nextSceneName))
         {
-            SceneManager.LoadScene(nextSceneName);
+            // 대화가 끝난 화면에서 암전한 뒤 다음 씬으로 이동
+            SceneFadeIn.LoadScene(nextSceneName);
         }
     }
 
