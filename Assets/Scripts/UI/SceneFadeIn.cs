@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public sealed class SceneFadeIn : MonoBehaviour
 {
     // 검은 화면에서 완전히 드러날 때까지 걸리는 실제 시간(초)
-    private const float FadeDuration = 0.8f;
+    private const float FadeDuration = 0.65f;
     // 이 오브젝트가 소유하고 씬 사이에 유지하는 화면과 실행 중인 코루틴
     private Canvas overlayCanvas;
     private Image overlayImage;
