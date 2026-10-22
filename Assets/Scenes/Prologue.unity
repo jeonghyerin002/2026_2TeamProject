@@ -293,7 +293,7 @@ MonoBehaviour:
   dialogDatabase: {fileID: 0}
   dialogPanel: {fileID: 805158582}
   dialogText: {fileID: 1204573408}
-  typeSpeed: 0.14
+  typeSpeed: 0.1
 --- !u!4 &763943073
 Transform:
   m_ObjectHideFlags: 0
