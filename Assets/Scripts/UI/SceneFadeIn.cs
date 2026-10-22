@@ -16,6 +16,7 @@ public sealed class SceneFadeIn : MonoBehaviour
     // 현재 Play 세션의 전환 소유자와 중복 로딩 방지 상태
     private static SceneFadeIn instance;
     private bool isTransitioning;
+    private bool hasLoadedFirstScene; // 앱 실행 후 첫 씬의 진입 연출 판단 여부
 
     // 씬 교체 요청부터 퇴장·로딩·진입 완료까지 다른 전환을 차단
     public static bool IsTransitioning => instance != null && instance.isTransitioning;
@@ -115,6 +116,18 @@ public sealed class SceneFadeIn : MonoBehaviour
     // 연속 전환 시 이전 연출을 취소하고 새 씬의 첫 화면을 검게 덮음
     private void HandleSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        // 최초 실행 화면이 시작 메뉴인 경우에만 검은 화면 없이 즉시 표시
+        if (!hasLoadedFirstScene)
+        {
+            hasLoadedFirstScene = true;
+            if (scene.name == "StartMenu")
+            {
+                overlayImage.color = new Color(0f, 0f, 0f, 0f);
+                overlayCanvas.enabled = false;
+                return;
+            }
+        }
+
         // 소유한 로딩은 코루틴에서 콜백과 진입 연출까지 순서대로 처리
         if (isTransitioning)
         {
