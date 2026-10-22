@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -29,6 +29,10 @@ public class DialogManager : MonoBehaviour
     private bool hasCutsceneMessage;
     private int messageShownFrame;
     private int lastInputFrame = -1;
+    private bool keepCutscenePanel; // 연속 대사 사이에 패널을 유지하는 예약 설정
+    private CanvasGroup panelFadeGroup; // 대화창 전체의 투명도 조절용 참조
+    private Coroutine panelFadeRoutine; // 입력을 차단하는 대화창 표시 연출
+    private float panelAlpha = 1f; // 연출 이전의 대화창 불투명도
     // 현재 대화를 예약한 소유자와 해당 요청에만 전달할 종료 콜백
     private UnityEngine.Object dialogOwner;
     private Action<bool> dialogCompletion;
@@ -39,7 +43,7 @@ public class DialogManager : MonoBehaviour
     public bool CanShowMessage => isActiveAndEnabled && !isAction && dialogPanel != null && dialogText != null;
 
     // 컷신 전체 동안 UI를 예약하여 이동 중에도 NPC 대화가 끼어들지 않게 한다.
-    public bool TryBeginCutscene(UnityEngine.Object owner)
+    public bool TryBeginCutscene(UnityEngine.Object owner, bool keepPanelBetweenMessages = false)
     {
         if (owner == null || !CanShowMessage)
         {
@@ -47,6 +51,7 @@ public class DialogManager : MonoBehaviour
         }
 
         cutsceneOwner = owner;
+        keepCutscenePanel = keepPanelBetweenMessages;
         isAction = true;
         currentDialog = null;
         hasCutsceneMessage = false;
@@ -65,7 +70,8 @@ public class DialogManager : MonoBehaviour
         return IsCutsceneOwner(owner) && hasCutsceneMessage;
     }
 
-    public bool TryShowCutsceneMessage(UnityEngine.Object owner, string text)
+    // 숨겨진 대화창만 페이드인하고 연속 대사에서는 패널을 유지
+    public bool TryShowCutsceneMessage(UnityEngine.Object owner, string text, float fadeDuration = 0f)
     {
         if (!IsCutsceneOwner(owner) || hasCutsceneMessage || string.IsNullOrWhiteSpace(text))
         {
@@ -73,9 +79,54 @@ public class DialogManager : MonoBehaviour
         }
 
         hasCutsceneMessage = true;
+        var shouldFade = !dialogPanel.activeSelf && fadeDuration > 0f;
+        if (shouldFade)
+        {
+            panelFadeGroup = dialogPanel.GetComponent<CanvasGroup>();
+            if (panelFadeGroup == null)
+            {
+                panelFadeGroup = dialogPanel.AddComponent<CanvasGroup>();
+            }
+            panelAlpha = panelFadeGroup.alpha;
+            panelFadeGroup.alpha = 0f;
+        }
         dialogPanel.SetActive(true);
         StartTypingEffect(text);
+        if (shouldFade)
+        {
+            panelFadeRoutine = StartCoroutine(FadeCutscenePanel(fadeDuration));
+        }
         return true;
+    }
+
+    // 배경 전환 전에 소유자의 대화창만 숨기고 예약과 입력 차단을 유지
+    public bool HideCutscenePanel(UnityEngine.Object owner)
+    {
+        if (!IsCutsceneOwner(owner) || hasCutsceneMessage)
+        {
+            return false;
+        }
+        dialogPanel.SetActive(false);
+        return true;
+    }
+
+    // 실제 시간으로 대화창을 표시하고 완료 프레임의 입력도 차단
+    private IEnumerator FadeCutscenePanel(float duration)
+    {
+        var elapsed = 0f;
+        while (elapsed < duration)
+        {
+            yield return null;
+            if (panelFadeGroup == null)
+            {
+                ClearDialog();
+                yield break;
+            }
+            elapsed += Time.unscaledDeltaTime;
+            panelFadeGroup.alpha = Mathf.Lerp(0f, panelAlpha, elapsed / duration);
+        }
+        messageShownFrame = Time.frameCount;
+        panelFadeRoutine = null;
     }
 
     public void EndCutscene(UnityEngine.Object owner)
@@ -92,7 +143,7 @@ public class DialogManager : MonoBehaviour
     public void AdvanceDialog()
     {
         if (!isActiveAndEnabled || !isAction || dialogPanel == null || dialogText == null ||
-            (cutsceneOwner != null && !hasCutsceneMessage) ||
+            panelFadeRoutine != null || (cutsceneOwner != null && !hasCutsceneMessage) ||
             Time.frameCount == messageShownFrame || Time.frameCount == lastInputFrame)
         {
             return;
@@ -283,7 +334,10 @@ public class DialogManager : MonoBehaviour
             StopTypingEffect();
             isTyping = false;
             hasCutsceneMessage = false;
-            dialogPanel.SetActive(false);
+            if (!keepCutscenePanel)
+            {
+                dialogPanel.SetActive(false);
+            }
             return;
         }
 
@@ -344,6 +398,16 @@ public class DialogManager : MonoBehaviour
         StopTypingEffect();
         isTyping = false;
         isAction = false;
+        if (panelFadeRoutine != null)
+        {
+            StopCoroutine(panelFadeRoutine);
+            panelFadeRoutine = null;
+            if (panelFadeGroup != null)
+            {
+                panelFadeGroup.alpha = panelAlpha;
+            }
+        }
+        keepCutscenePanel = false;
         hasCutsceneMessage = false;
         cutsceneOwner = null;
         currentDialog = null;
