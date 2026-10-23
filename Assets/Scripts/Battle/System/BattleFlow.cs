@@ -10,6 +10,7 @@ using UnityEngine.UI;
 public class BattleFlow : MonoBehaviour
 {
     [SerializeField] private BattleSystem battleSystem;
+    [SerializeField] private BattleSkillPresenter skillPresenter; // 이미지와 효과음의 재생 담당
     [SerializeField] private TMP_Text battleText;
     [SerializeField] private Slider playerHp;
     [SerializeField] private Slider enemyHp;
@@ -46,6 +47,9 @@ public class BattleFlow : MonoBehaviour
         if (turnRoutine != null)
             StopCoroutine(turnRoutine);
 
+        if (skillPresenter != null)
+            skillPresenter.Cancel();
+
         turnRoutine = null;
         running = false;
 
@@ -76,6 +80,9 @@ public class BattleFlow : MonoBehaviour
 
         if (turnRoutine != null)
             StopCoroutine(turnRoutine);
+
+        if (skillPresenter != null)
+            skillPresenter.Cancel();
 
         turnRoutine = null;
         running = false;
@@ -171,17 +178,41 @@ public class BattleFlow : MonoBehaviour
             yield break;
         }
 
-        AnimationRequested?.Invoke(actor, target, skill);
+        BattleResolveResult result = default;
+        string effect = null;
+        if (skillPresenter != null)
+        {
+            yield return skillPresenter.Play(actor == battleSystem.PlayerState,
+                skill != null ? skill.Presentation : null, animationDuration, () =>
+                {
+                    result = BattleResolver.ApplyDamage(actor, target, skill);
+                    effect = BattleResolver.ApplyEffects(actor, target, skill, result);
+                    RefreshState();
+                    return result.Damage > 0;
+                });
 
-        if (actor == battleSystem.PlayerState)
-            onPlayerAnimation.Invoke();
+            if (!skillPresenter.Completed)
+            {
+                battleSystem.StopBattle();
+                yield break;
+            }
+        }
         else
-            onEnemyAnimation.Invoke();
+        {
+            // 재생 담당을 연결하지 않은 기존 씬은 이전 이벤트 경로를 유지한다.
+            AnimationRequested?.Invoke(actor, target, skill);
 
-        if (animationDuration > 0f)
-            yield return new WaitForSeconds(animationDuration);
+            if (actor == battleSystem.PlayerState)
+                onPlayerAnimation.Invoke();
+            else
+                onEnemyAnimation.Invoke();
 
-        BattleResolveResult result = BattleResolver.ApplyDamage(actor, target, skill);
+            if (animationDuration > 0f)
+                yield return new WaitForSeconds(animationDuration);
+
+            result = BattleResolver.ApplyDamage(actor, target, skill);
+            effect = BattleResolver.ApplyEffects(actor, target, skill, result);
+        }
 
         RefreshState();
 
@@ -197,10 +228,6 @@ public class BattleFlow : MonoBehaviour
             if (result.Critical)
                 yield return ShowText("급소에 맞았다!");
         }
-
-        string effect = BattleResolver.ApplyEffects(actor, target, skill, result);
-
-        RefreshState();
 
         if (!string.IsNullOrEmpty(effect))
             yield return ShowText(effect);

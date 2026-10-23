@@ -507,6 +507,8 @@ GameObject:
   - component: {fileID: 291165625}
   - component: {fileID: 291165624}
   - component: {fileID: 291165623}
+  - component: {fileID: 291165627}
+  - component: {fileID: 291165628}
   m_Layer: 0
   m_Name: BattleSystem
   m_TagString: Untagged
@@ -537,8 +539,6 @@ MonoBehaviour:
   turnLabel: {fileID: 1268737507}
   playerFill: {fileID: 820800412}
   enemyFill: {fileID: 1542474453}
-  playerPosition: {fileID: 517308939}
-  enemyPosition: {fileID: 2145747926}
   choices:
   - {fileID: 1632628034}
   - {fileID: 1439971095}
@@ -563,6 +563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleFlow
   battleSystem: {fileID: 291165625}
+  skillPresenter: {fileID: 291165627}
   battleText: {fileID: 1191021382}
   playerHp: {fileID: 0}
   enemyHp: {fileID: 0}
@@ -617,6 +618,49 @@ MonoBehaviour:
   enemyWeapon: {fileID: 11400000, guid: 10cc799ed68a6e347b19a300131f6b2b, type: 2}
   enemyLevel: 20
   experienceReward: 50
+--- !u!114 &291165627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291165622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23dc042005c44b509876495d14a5720a, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::BattleSkillPresenter
+  playerPosition: {fileID: 517308939}
+  enemyPosition: {fileID: 2145747926}
+  effectRoot: {fileID: 1448186425}
+  audioSource: {fileID: 291165628}
+--- !u!82 &291165628
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 291165622}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 0
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
 --- !u!4 &291165626
 Transform:
   m_ObjectHideFlags: 0

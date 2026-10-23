@@ -24,6 +24,8 @@ public enum ElementType
 /// <summary>스킬의 원본 전투 데이터와 추가 효과 비율을 저장한다</summary>
 public class SkillData : ScriptableObject
 {
+    [SerializeField] private SkillPresentationData presentation; // CSV 수치와 별도로 연결하는 스킬 연출
+    public SkillPresentationData Presentation => presentation;
     [SerializeField] private int skillid;                      // 스킬 ID
 
     [SerializeField] private string skillname;            // 스킬 이름

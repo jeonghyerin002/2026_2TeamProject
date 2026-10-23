@@ -1,4 +1,3 @@
-﻿using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -19,8 +18,6 @@ public sealed class BattleSceneUI : MonoBehaviour
     [SerializeField] private TMP_Text turnLabel;
     [SerializeField] private Image playerFill;
     [SerializeField] private Image enemyFill;
-    [SerializeField] private RectTransform playerPosition;
-    [SerializeField] private RectTransform enemyPosition;
     [SerializeField] private Button[] choices;
     [SerializeField] private TMP_Text[] labels;
     [SerializeField] private Button back;
@@ -30,16 +27,9 @@ public sealed class BattleSceneUI : MonoBehaviour
     private Menu menu;
     private int selected;
     private int aetherPage;
-    private Coroutine animationRoutine;
-    private Vector2 playerOrigin;
-    private Vector2 enemyOrigin;
 
-    // 버튼과 전투 위치의 초기 상태를 준비한다
     private void Awake()
     {
-        playerOrigin = playerPosition.anchoredPosition;
-        enemyOrigin = enemyPosition.anchoredPosition;
-
         for (int i = 0; i < choices.Length; i++)
         {
             int index = i;
@@ -53,32 +43,16 @@ public sealed class BattleSceneUI : MonoBehaviour
     private void OnEnable()
     {
         battle.StateChanged += Refresh;
-        flow.AnimationRequested += Animate;
         flow.PresentationEnded += Refresh;
     }
 
-    // 이벤트와 진행 중 공격 연출을 정리한다
     private void OnDisable()
     {
         if (battle != null)
             battle.StateChanged -= Refresh;
 
         if (flow != null)
-        {
-            flow.AnimationRequested -= Animate;
             flow.PresentationEnded -= Refresh;
-        }
-
-        if (animationRoutine != null)
-            StopCoroutine(animationRoutine);
-
-        animationRoutine = null;
-
-        if (playerPosition != null)
-            playerPosition.anchoredPosition = playerOrigin;
-
-        if (enemyPosition != null)
-            enemyPosition.anchoredPosition = enemyOrigin;
     }
 
     // 다른 컴포넌트 초기화 이후 현재 상태를 표시한다
@@ -403,49 +377,5 @@ public sealed class BattleSceneUI : MonoBehaviour
 
         menu = Menu.Root;
         Refresh();
-    }
-
-    // 공격 주체에 맞는 간단한 공격 연출을 시작한다
-    private void Animate(BattleState actor, BattleState target, SkillData skill)
-    {
-        if (animationRoutine != null)
-            StopCoroutine(animationRoutine);
-
-        animationRoutine =
-            StartCoroutine(PlayAttack(actor == battle.PlayerState));
-    }
-
-    // 공격자 돌진과 대상 흔들림을 짧게 재생한다
-    private IEnumerator PlayAttack(bool player)
-    {
-        RectTransform source = player ? playerPosition : enemyPosition;
-        RectTransform target = player ? enemyPosition : playerPosition;
-        Vector2 sourceOrigin = player ? playerOrigin : enemyOrigin;
-        Vector2 targetOrigin = player ? enemyOrigin : playerOrigin;
-
-        float elapsed = 0f;
-
-        while (elapsed < 0.45f)
-        {
-            elapsed += Time.deltaTime;
-
-            float progress = Mathf.Clamp01(elapsed / 0.45f);
-
-            source.anchoredPosition =
-                sourceOrigin +
-                (targetOrigin - sourceOrigin).normalized *
-                (Mathf.Sin(progress * Mathf.PI) * 32f);
-
-            target.anchoredPosition =
-                targetOrigin +
-                Vector2.right *
-                (Mathf.Sin(progress * Mathf.PI * 8f) * 7f * (1f - progress));
-
-            yield return null;
-        }
-
-        source.anchoredPosition = sourceOrigin;
-        target.anchoredPosition = targetOrigin;
-        animationRoutine = null;
     }
 }
