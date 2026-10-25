@@ -102,7 +102,10 @@ public sealed class BattleSceneController : MonoBehaviour
         playerData.ApplyBattleResult(battleSystem.PlayerState);
 
         if (winner == BattleSide.Player)
+        {
             NpcBattleProgress.MarkDefeated(BattleSession.NpcId);
+            BattleSession.RecordVictory();
+        }
 
         resultHandled = true;
     }

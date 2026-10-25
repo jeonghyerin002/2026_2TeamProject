@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac83b93b914cfdf47a7e63fc5de6772a, type: 3}
-  m_Name: DialogSO_Test4
+  m_Name: DialogSO_Sora_BeforeBattle_3
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
-  id: 4
-  characterName: Doctor
-  text: "\uB00C\uC5B4!! "
-  nextId: 0
+  id: 42
+  characterName: Sora
+  text: "너는 어떤 꿈을 가지고 있어?"
+  nextId: 43
   portrait: {fileID: 0}
   choices: []

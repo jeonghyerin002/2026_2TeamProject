@@ -354,7 +354,7 @@ public class NPCInteraction : MonoBehaviour
 
         string returnScene = SceneManager.GetActiveScene().name;
 
-        if (!BattleSession.Begin(npcId, battleData, returnScene, player.transform.position))
+        if (!BattleSession.Begin(npcId, battleData, returnScene, player.transform.position, afterVictoryDialogueId))
         {
             Debug.LogError("NPCInteraction: NPC 전투 데이터 설정을 확인하세요.");
             CancelInteraction();

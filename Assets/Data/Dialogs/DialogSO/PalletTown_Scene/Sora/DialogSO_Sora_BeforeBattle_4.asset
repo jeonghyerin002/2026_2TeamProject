@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac83b93b914cfdf47a7e63fc5de6772a, type: 3}
-  m_Name: DialogSO_Test3
+  m_Name: DialogSO_Sora_BeforeBattle_4
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
-  id: 3
-  characterName: Doctoe_Test
-  text: "\uB00C \uB00C"
+  id: 43
+  characterName: Sora
+  text: "후후, 대답은 승부로 들려줘!"
   nextId: 0
   portrait: {fileID: 0}
   choices: []

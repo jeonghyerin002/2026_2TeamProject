@@ -158,8 +158,8 @@ MonoBehaviour:
   additionalRewardItemIds: 
   dialogManager: {fileID: 1121729654}
   dialogueOnlyId: 0
-  beforeBattleDialogueId: 1
-  afterVictoryDialogueId: 0
+  beforeBattleDialogueId: 40
+  afterVictoryDialogueId: 44
   beforeRewardDialogueId: 0
   afterRewardDialogueId: 0
   battleSceneName: Battle
@@ -4586,8 +4586,8 @@ MonoBehaviour:
   additionalRewardItemIds: 
   dialogManager: {fileID: 1121729654}
   dialogueOnlyId: 0
-  beforeBattleDialogueId: 1
-  afterVictoryDialogueId: 0
+  beforeBattleDialogueId: 30
+  afterVictoryDialogueId: 34
   beforeRewardDialogueId: 0
   afterRewardDialogueId: 0
   battleSceneName: Battle
