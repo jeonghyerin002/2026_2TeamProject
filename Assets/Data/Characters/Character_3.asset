@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CharacterData
   characterid: 3
   charactername: "\uC0B0\uCC45\uC18C\uB140 \uC18C\uB77C"
-  maxhp: 3
+  maxhp: 15
   attack: 3
   defense: 3
   specialattack: 3

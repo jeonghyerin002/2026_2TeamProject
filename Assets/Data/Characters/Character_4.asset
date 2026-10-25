@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   characterid: 4
   charactername: "\uB958\uAC00"
-  maxhp: 15
+  maxhp: 30
   attack: 20
   defense: 10
   specialattack: 20
