@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: b35ea9e32e0c4d64ba7d61e3ab3686d0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3313306681095660020
+    second: Black_heavyStraghtPunch-Sheet_0
+  - first:
+      213: -6144189777344539437
+    second: Black_heavyStraghtPunch-Sheet_1
+  - first:
+      213: -214907100453054172
+    second: Black_heavyStraghtPunch-Sheet_2
+  - first:
+      213: -2519757946746438999
+    second: Black_heavyStraghtPunch-Sheet_3
+  - first:
+      213: 8889727171875374081
+    second: Black_heavyStraghtPunch-Sheet_4
+  - first:
+      213: 1443921433323400231
+    second: Black_heavyStraghtPunch-Sheet_5
+  - first:
+      213: 6878010427253294547
+    second: Black_heavyStraghtPunch-Sheet_6
+  - first:
+      213: 7830527615178016621
+    second: Black_heavyStraghtPunch-Sheet_7
+  - first:
+      213: -8402357382693170106
+    second: Black_heavyStraghtPunch-Sheet_8
+  - first:
+      213: -7751529243330501148
+    second: Black_heavyStraghtPunch-Sheet_9
+  - first:
+      213: 7578969486696246419
+    second: Black_heavyStraghtPunch-Sheet_10
+  - first:
+      213: 3358777932385166602
+    second: Black_heavyStraghtPunch-Sheet_11
+  - first:
+      213: -8897924029296656957
+    second: Black_heavyStraghtPunch-Sheet_12
+  - first:
+      213: -3371427965080992036
+    second: Black_heavyStraghtPunch-Sheet_13
+  - first:
+      213: -7313627756741288908
+    second: Black_heavyStraghtPunch-Sheet_14
+  - first:
+      213: -61747213144841476
+    second: Black_heavyStraghtPunch-Sheet_15
+  - first:
+      213: -4208638798525564592
+    second: Black_heavyStraghtPunch-Sheet_16
+  - first:
+      213: -8621195751277075137
+    second: Black_heavyStraghtPunch-Sheet_17
+  - first:
+      213: -8303761508234279116
+    second: Black_heavyStraghtPunch-Sheet_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 11
+        width: 32
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1a2ae2fda3bfd20800000000000000
+      internalID: 3313306681095660020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 11
+        width: 51
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4dac863f37bbaa0800000000000000
+      internalID: -6144189777344539437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 0
+        width: 57
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42959c9712f740df0800000000000000
+      internalID: -214907100453054172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 5
+        width: 50
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aaf5386f75080dd0800000000000000
+      internalID: -2519757946746438999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 24
+        width: 35
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10405c553c7ae5b70800000000000000
+      internalID: 8889727171875374081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 3
+        width: 26
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c60d4b4e6d90410800000000000000
+      internalID: 1443921433323400231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 34
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d58dd5da0a937f50800000000000000
+      internalID: 6878010427253294547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 31
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67829ac06f9bac60800000000000000
+      internalID: 7830527615178016621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 30
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64451b06a74d46b80800000000000000
+      internalID: -8402357382693170106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 726
+        y: 13
+        width: 28
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e5ab39f8390d6490800000000000000
+      internalID: -7751529243330501148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 14
+        width: 25
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39ced02d798ed2960800000000000000
+      internalID: 7578969486696246419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 5
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a052d33ebb6cc9e20800000000000000
+      internalID: 3358777932385166602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 22
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cd3c531d39348480800000000000000
+      internalID: -8897924029296656957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 4
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd6878bd0284631d0800000000000000
+      internalID: -3371427965080992036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 15
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c9ff3fd46c08a90800000000000000
+      internalID: -7313627756741288908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 16
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf2a1ae9c31a42ff0800000000000000
+      internalID: -61747213144841476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 3
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 059f4f1af49e795c0800000000000000
+      internalID: -4208638798525564592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 7
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f35e50a242c5b5880800000000000000
+      internalID: -8621195751277075137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_heavyStraghtPunch-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 4
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 437422a47ec13cc80800000000000000
+      internalID: -8303761508234279116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Black_heavyStraghtPunch-Sheet_0: 3313306681095660020
+      Black_heavyStraghtPunch-Sheet_1: -6144189777344539437
+      Black_heavyStraghtPunch-Sheet_10: 7578969486696246419
+      Black_heavyStraghtPunch-Sheet_11: 3358777932385166602
+      Black_heavyStraghtPunch-Sheet_12: -8897924029296656957
+      Black_heavyStraghtPunch-Sheet_13: -3371427965080992036
+      Black_heavyStraghtPunch-Sheet_14: -7313627756741288908
+      Black_heavyStraghtPunch-Sheet_15: -61747213144841476
+      Black_heavyStraghtPunch-Sheet_16: -4208638798525564592
+      Black_heavyStraghtPunch-Sheet_17: -8621195751277075137
+      Black_heavyStraghtPunch-Sheet_18: -8303761508234279116
+      Black_heavyStraghtPunch-Sheet_2: -214907100453054172
+      Black_heavyStraghtPunch-Sheet_3: -2519757946746438999
+      Black_heavyStraghtPunch-Sheet_4: 8889727171875374081
+      Black_heavyStraghtPunch-Sheet_5: 1443921433323400231
+      Black_heavyStraghtPunch-Sheet_6: 6878010427253294547
+      Black_heavyStraghtPunch-Sheet_7: 7830527615178016621
+      Black_heavyStraghtPunch-Sheet_8: -8402357382693170106
+      Black_heavyStraghtPunch-Sheet_9: -7751529243330501148
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

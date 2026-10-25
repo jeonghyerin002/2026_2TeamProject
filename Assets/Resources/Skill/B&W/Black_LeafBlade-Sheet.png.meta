@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: cb184e40ee33c5d4c94ea1ecd62983cb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 498909108147704071
+    second: Black_LeafBlade-Sheet_0
+  - first:
+      213: -8090345155280337761
+    second: Black_LeafBlade-Sheet_1
+  - first:
+      213: -7602271042881155346
+    second: Black_LeafBlade-Sheet_2
+  - first:
+      213: -7873192558171539485
+    second: Black_LeafBlade-Sheet_3
+  - first:
+      213: -5464277242854673951
+    second: Black_LeafBlade-Sheet_4
+  - first:
+      213: -1077023205279042986
+    second: Black_LeafBlade-Sheet_5
+  - first:
+      213: 4197383909610844691
+    second: Black_LeafBlade-Sheet_6
+  - first:
+      213: -8938642961972827319
+    second: Black_LeafBlade-Sheet_7
+  - first:
+      213: 8477013058716253565
+    second: Black_LeafBlade-Sheet_8
+  - first:
+      213: -1807610595560200371
+    second: Black_LeafBlade-Sheet_9
+  - first:
+      213: 6793254822467063031
+    second: Black_LeafBlade-Sheet_10
+  - first:
+      213: -4856356449978182859
+    second: Black_LeafBlade-Sheet_11
+  - first:
+      213: 4102819056778182806
+    second: Black_LeafBlade-Sheet_12
+  - first:
+      213: 7312988250698588768
+    second: Black_LeafBlade-Sheet_13
+  - first:
+      213: 5539722975105618134
+    second: Black_LeafBlade-Sheet_14
+  - first:
+      213: 6051809816296790794
+    second: Black_LeafBlade-Sheet_15
+  - first:
+      213: 928959185910998686
+    second: Black_LeafBlade-Sheet_16
+  - first:
+      213: -3274023392506758013
+    second: Black_LeafBlade-Sheet_17
+  - first:
+      213: 119386669685608035
+    second: Black_LeafBlade-Sheet_18
+  - first:
+      213: 1002093818723571006
+    second: Black_LeafBlade-Sheet_19
+  - first:
+      213: 8987697487148195228
+    second: Black_LeafBlade-Sheet_20
+  - first:
+      213: -8033795666714006288
+    second: Black_LeafBlade-Sheet_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701d956c03b7ce600800000000000000
+      internalID: 498909108147704071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 11
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f94863d12f159bf80800000000000000
+      internalID: -8090345155280337761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 8
+        width: 40
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eee84dad3ce4f7690800000000000000
+      internalID: -7602271042881155346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 8
+        width: 35
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e7bfe1151dccb290800000000000000
+      internalID: -7873192558171539485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 31
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e175617cccfa24b0800000000000000
+      internalID: -5464277242854673951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 6
+        width: 41
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6527d72e915ad01f0800000000000000
+      internalID: -1077023205279042986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 34
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3127b465d6a104a30800000000000000
+      internalID: 4197383909610844691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 35
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b6095c59f83f380800000000000000
+      internalID: -8938642961972827319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 23
+        width: 26
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d3129b67664a570800000000000000
+      internalID: 8477013058716253565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 29
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d47e66f8db31ae6e0800000000000000
+      internalID: -1807610595560200371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 33
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fccbd1d44d764e50800000000000000
+      internalID: 6793254822467063031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 26
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5339f50f981ca9cb0800000000000000
+      internalID: -4856356449978182859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 24
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69087f8c13420f830800000000000000
+      internalID: 4102819056778182806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 25
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 062ae717114fc7560800000000000000
+      internalID: 7312988250698588768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 18
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d09d35f1bc01ec40800000000000000
+      internalID: 5539722975105618134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 17
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b979cc6f85cf350800000000000000
+      internalID: 6051809816296790794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 4
+        width: 15
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96af0f257354ec00800000000000000
+      internalID: 928959185910998686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 12
+        width: 24
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38cb05f22155092d0800000000000000
+      internalID: -3274023392506758013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 9
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e07852b8528a100800000000000000
+      internalID: 119386669685608035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 8
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3512a0d40728ed00800000000000000
+      internalID: 1002093818723571006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 8
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9d9326ee37babc70800000000000000
+      internalID: 8987697487148195228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Black_LeafBlade-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 7
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fc607fe769328090800000000000000
+      internalID: -8033795666714006288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Black_LeafBlade-Sheet_0: 498909108147704071
+      Black_LeafBlade-Sheet_1: -8090345155280337761
+      Black_LeafBlade-Sheet_10: 6793254822467063031
+      Black_LeafBlade-Sheet_11: -4856356449978182859
+      Black_LeafBlade-Sheet_12: 4102819056778182806
+      Black_LeafBlade-Sheet_13: 7312988250698588768
+      Black_LeafBlade-Sheet_14: 5539722975105618134
+      Black_LeafBlade-Sheet_15: 6051809816296790794
+      Black_LeafBlade-Sheet_16: 928959185910998686
+      Black_LeafBlade-Sheet_17: -3274023392506758013
+      Black_LeafBlade-Sheet_18: 119386669685608035
+      Black_LeafBlade-Sheet_19: 1002093818723571006
+      Black_LeafBlade-Sheet_2: -7602271042881155346
+      Black_LeafBlade-Sheet_20: 8987697487148195228
+      Black_LeafBlade-Sheet_21: -8033795666714006288
+      Black_LeafBlade-Sheet_3: -7873192558171539485
+      Black_LeafBlade-Sheet_4: -5464277242854673951
+      Black_LeafBlade-Sheet_5: -1077023205279042986
+      Black_LeafBlade-Sheet_6: 4197383909610844691
+      Black_LeafBlade-Sheet_7: -8938642961972827319
+      Black_LeafBlade-Sheet_8: 8477013058716253565
+      Black_LeafBlade-Sheet_9: -1807610595560200371
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
