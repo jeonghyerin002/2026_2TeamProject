@@ -9,7 +9,11 @@ public sealed class BattleSceneUI : MonoBehaviour
 {
     [SerializeField] private BattleSystem battle;
     [SerializeField] private BattleFlow flow;
-    [SerializeField] private GameObject playerUI; // 플레이어 입력 차례에 표시할 대화창과 명령 패널
+    [SerializeField] private GameObject playerUI;     // 대화창과 명령 패널을 담는 공통 부모
+    [SerializeField] private GameObject playerHud;    // 행동 선택 또는 NPC 공격 중 표시할 플레이어 상태
+    [SerializeField] private GameObject enemyHud;     // 행동 선택 또는 플레이어 공격 중 표시할 적 상태
+    [SerializeField] private GameObject commandPanel; // 행동 선택 중에만 표시할 명령 패널
+    [SerializeField] private GameObject dialogue;     // 행동 연출과 결과 문구를 표시할 대화창
     [SerializeField] private TMP_Text message;
     [SerializeField] private TMP_Text playerInfo;
     [SerializeField] private TMP_Text enemyInfo;
@@ -34,9 +38,9 @@ public sealed class BattleSceneUI : MonoBehaviour
 
     private void Awake()
     {
-        if (playerUI == null)
+        if (playerUI == null || playerHud == null || enemyHud == null || commandPanel == null || dialogue == null)
         {
-            Debug.LogError("BattleSceneUI: PlayerUI를 연결하세요.", this);
+            Debug.LogError("BattleSceneUI: PlayerUI, 양측 HUD, Command Panel과 Dialogue를 연결하세요.", this);
             enabled = false;
             return;
         }
@@ -104,11 +108,21 @@ public sealed class BattleSceneUI : MonoBehaviour
     // 현재 전투 상태와 메뉴를 다시 표시한다
     public void Refresh()
     {
-        if (playerUI == null)
+        if (playerUI == null || playerHud == null || enemyHud == null || commandPanel == null || dialogue == null)
             return;
 
         bool canChoose = CanChoose;
-        playerUI.SetActive(canChoose);
+        bool presenting = flow.IsBusy;
+        bool showResult = battle.Phase == TurnPhase.Ended &&
+            battle.PlayerState != null && battle.EnemyState != null &&
+            (battle.PlayerState.IsDead || battle.EnemyState.IsDead);
+
+        // 공통 부모를 유지해야 명령 입력을 숨긴 뒤에도 공격 대사를 표시할 수 있다.
+        playerUI.SetActive(canChoose || presenting || showResult);
+        commandPanel.SetActive(canChoose);
+        dialogue.SetActive(flow.IsShowingMessage || (!presenting && showResult));
+        playerHud.SetActive(canChoose || (presenting && flow.ActingSide == BattleSide.Enemy));
+        enemyHud.SetActive(canChoose || (presenting && flow.ActingSide == BattleSide.Player));
 
         // 숨긴 메뉴에 남은 키보드·게임패드 포커스를 해제해 연출 중 입력을 막는다.
         if (!canChoose && EventSystem.current != null &&

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character_2
   m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CharacterData
   characterid: 2
-  charactername: "\uAF2C\uB9C8 \uD2B8\uB808\uC774\uB108 \uC900\uD638_1\uBC88\uB3C4\uB85C"
+  charactername: "\uAF2C\uB9C8 \uD2B8\uB808\uC774\uB108 \uC900\uD638"
   maxhp: 10
   attack: 4
   defense: 4

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character_4
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   characterid: 4
-  charactername: "\uB958\uAC00_\uAC08\uC0C9\uC2DC\uD2F0"
+  charactername: "\uB958\uAC00"
   maxhp: 25
   attack: 20
   defense: 10

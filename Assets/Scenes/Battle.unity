@@ -244,6 +244,10 @@ MonoBehaviour:
   battle: {fileID: 291165625}
   flow: {fileID: 291165624}
   playerUI: {fileID: 519115707}
+  playerHud: {fileID: 880927410}
+  enemyHud: {fileID: 384069483}
+  commandPanel: {fileID: 455489953}
+  dialogue: {fileID: 1349672733}
   message: {fileID: 1191021382}
   playerInfo: {fileID: 684700634}
   enemyInfo: {fileID: 1927509049}
@@ -281,8 +285,11 @@ MonoBehaviour:
   battleText: {fileID: 1191021382}
   playerHp: {fileID: 0}
   enemyHp: {fileID: 0}
-  textDuration: 1.05
+  textDuration: 1.25
+  attackDelay: 0.2
   animationDuration: 0.5
+  enemyHudHoldDuration: 0.7
+  playerHudHoldDuration: 0.7
   onMessage:
     m_PersistentCalls:
       m_Calls: []
@@ -4367,7 +4374,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -495, y: -190}
+  m_AnchoredPosition: {x: 105, y: -190}
   m_SizeDelta: {x: 500, y: 164}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1350062698
