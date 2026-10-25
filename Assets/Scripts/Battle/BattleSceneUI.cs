@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-/// <summary>전투 화면의 메뉴와 상태 표시를 기존 전투 흐름에 연결한다</summary>
+/// <summary>전투 화면의 메뉴와 상태 표시를 연결하고 HP 바, 숫자와 피해 잔상을 연출한다.</summary>
 public sealed class BattleSceneUI : MonoBehaviour
 {
     [SerializeField] private BattleSystem battle;
@@ -27,6 +27,18 @@ public sealed class BattleSceneUI : MonoBehaviour
     [SerializeField] private TMP_Text[] labels;
     [SerializeField] private Button back;
 
+    [Header("체력 감소 연출")]
+    [SerializeField, Min(0.01f)] private float healthDuration = 0.12f; // 점멸 후 HP 바와 숫자가 감소하는 시간(초)
+    [SerializeField, Min(0f)] private float trailDelay = 0.15f;      // 앞쪽 바 감소 후 잔상이 대기하는 시간(초)
+    [SerializeField, Min(0.01f)] private float trailDuration = 0.25f; // 잔상이 목표 체력까지 줄어드는 시간(초)
+    [SerializeField] private Color trailColor = new Color32(135, 135, 135, 255); // 잃은 체력 구간을 구분하는 회색 잔상
+    [SerializeField, Min(0.01f)] private float healthFlashDuration = 0.05f; // 흰색 점멸과 확대에 사용하는 시간(초)
+    [SerializeField, Range(1f, 1.2f)] private float healthImpactScale = 1.08f; // 타격 순간 HP 바와 잔상의 최대 확대 배율
+    [SerializeField, Min(0f)] private float healthShake = 2f; // HP 패널의 감쇠 흔들림 크기(UI 단위)
+
+    private HealthDisplay playerDisplay; // 플레이어 체력의 표시 상태
+    private HealthDisplay enemyDisplay;  // 적 체력의 표시 상태
+
     private enum Menu { Root, Skills, Aethers, Info, End }
 
     private Menu menu;
@@ -45,6 +57,16 @@ public sealed class BattleSceneUI : MonoBehaviour
             return;
         }
 
+        if (playerFill == null || enemyFill == null || playerHealth == null || enemyHealth == null)
+        {
+            Debug.LogError("BattleSceneUI: 양측 HP Fill과 HP 숫자를 연결하세요.", this);
+            enabled = false;
+            return;
+        }
+
+        playerDisplay = new HealthDisplay(playerFill, playerHealth, trailColor, playerHud.GetComponent<RectTransform>());
+        enemyDisplay = new HealthDisplay(enemyFill, enemyHealth, trailColor, enemyHud.GetComponent<RectTransform>());
+
         for (int i = 0; i < choices.Length; i++)
         {
             int index = i;
@@ -59,6 +81,8 @@ public sealed class BattleSceneUI : MonoBehaviour
     {
         battle.StateChanged += Refresh;
         flow.PresentationEnded += Refresh;
+        if (playerDisplay != null && enemyDisplay != null)
+            Refresh();
     }
 
     private void OnDisable()
@@ -68,6 +92,15 @@ public sealed class BattleSceneUI : MonoBehaviour
 
         if (flow != null)
             flow.PresentationEnded -= Refresh;
+
+        playerDisplay?.Reset();
+        enemyDisplay?.Reset();
+    }
+
+    private void OnDestroy()
+    {
+        playerDisplay?.Dispose();
+        enemyDisplay?.Dispose();
     }
 
     // 다른 컴포넌트 초기화 이후 현재 상태를 표시한다
@@ -79,6 +112,12 @@ public sealed class BattleSceneUI : MonoBehaviour
     // 전투 메뉴의 키보드 입력을 처리한다
     private void Update()
     {
+        // 입력이 막힌 공격 연출 중에도 체력 표시의 시간축은 계속 진행한다.
+        playerDisplay?.Tick(Time.deltaTime, healthDuration, trailDelay, trailDuration,
+            healthFlashDuration, healthImpactScale, healthShake);
+        enemyDisplay?.Tick(Time.deltaTime, healthDuration, trailDelay, trailDuration,
+            healthFlashDuration, healthImpactScale, healthShake);
+
         Keyboard key = Keyboard.current;
 
         if (key == null || !CanChoose || menu == Menu.End)
@@ -133,8 +172,8 @@ public sealed class BattleSceneUI : MonoBehaviour
         if (battle.PlayerState == null || battle.EnemyState == null)
             return;
 
-        ShowUnit(battle.PlayerState, playerInfo, playerHealth, playerFill);
-        ShowUnit(battle.EnemyState, enemyInfo, enemyHealth, enemyFill);
+        ShowUnit(battle.PlayerState, playerInfo, playerDisplay);
+        ShowUnit(battle.EnemyState, enemyInfo, enemyDisplay);
 
         turnLabel.text = $"TURN {battle.TurnNumber:00}";
 
@@ -150,20 +189,224 @@ public sealed class BattleSceneUI : MonoBehaviour
     }
 
     // 캐릭터 이름과 레벨 및 현재 HP를 표시한다
-    private static void ShowUnit(BattleState unit, TMP_Text info, TMP_Text health, Image fill)
+    private static void ShowUnit(BattleState unit, TMP_Text info, HealthDisplay display)
     {
         string status = unit.Status == BattleStatus.None ? "" : $"  [{unit.Status}]";
 
         info.text = $"{unit.Character.Charactername}   <size=75%>Lv.{unit.Level}</size>{status}";
-        health.text = $"{unit.CurrentHp} / {unit.MaxHp}";
+        display?.SetTarget(unit);
+    }
 
-        float ratio = (float)unit.CurrentHp / unit.MaxHp;
+    /// <summary>실제 전투 HP와 별도로 바, 숫자와 피해 잔상의 진행 상태를 유지한다.</summary>
+    private sealed class HealthDisplay
+    {
+        private readonly Image fill;      // 현재 체력을 표시하는 앞쪽 바
+        private readonly Image trail;     // 감소 전 체력을 잠시 유지하는 뒤쪽 바
+        private readonly TMP_Text label;  // 앞쪽 바와 같은 진행도를 사용하는 체력 숫자
+        private readonly RectTransform fillRect;  // 파괴 여부를 직접 확인할 현재 HP 바 영역
+        private readonly RectTransform trailRect; // 파괴 여부를 직접 확인할 잔상 영역
+        private readonly RectTransform panel; // 숫자 크기를 유지하면서 흔들 패널
+        private readonly Vector2 panelOrigin; // 흔들림 종료 후 복귀할 패널 위치
+        private readonly Vector3 fillScale;   // 바의 원래 크기
+        private readonly Vector2 fillOrigin;  // 바 확대 시 기준이 되는 위치
+        private readonly Vector3 trailScale;  // 잔상의 원래 크기
+        private readonly Vector2 trailOrigin; // 잔상 확대 시 기준이 되는 위치
+        private BattleState state;        // 전투 재시작을 구분하는 상태 참조
+        private int target;               // 마지막으로 전달받은 실제 체력
+        private float shown;              // 현재 화면에 표시 중인 체력
+        private float trailHp;            // 잔상에 표시 중인 체력
+        private float startHp;            // 이번 감소 시작 시 앞쪽 바의 체력
+        private float startTrail;         // 이번 감소 시작 시 잔상의 체력
+        private float elapsed;            // 이번 감소 시작 후 경과 시간(초)
+        private bool animating;           // 피해 감소 연출 진행 여부
+        private int lastNumber = -1;      // 숫자가 바뀔 때만 텍스트를 갱신하기 위한 값
 
-        fill.rectTransform.anchorMax = new Vector2(ratio, 1f);
+        private bool HasView => fill != null && fillRect != null &&
+            trail != null && trailRect != null && label != null;
 
-        fill.color = ratio > 0.5f ? new Color32(72, 184, 120, 255) :
-            ratio > 0.2f ? new Color32(235, 188, 72, 255) :
-            new Color32(223, 91, 88, 255);
+        // 기존 바와 같은 크기의 잔상을 한 번 생성하고 바로 뒤에 배치한다.
+        internal HealthDisplay(Image fill, TMP_Text label, Color color, RectTransform panel)
+        {
+            this.fill = fill;
+            this.label = label;
+            this.panel = panel;
+            panelOrigin = panel != null ? panel.anchoredPosition : Vector2.zero;
+            trail = new GameObject("HP Trail", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image)).GetComponent<Image>();
+            trail.gameObject.layer = fill.gameObject.layer;
+            RectTransform rect = trail.rectTransform;
+            RectTransform source = fill.rectTransform;
+            fillRect = source;
+            trailRect = rect;
+            rect.SetParent(source.parent, false);
+            rect.anchorMin = source.anchorMin;
+            rect.anchorMax = source.anchorMax;
+            rect.pivot = source.pivot;
+            rect.sizeDelta = source.sizeDelta;
+            rect.anchoredPosition = source.anchoredPosition;
+            rect.localScale = source.localScale;
+            rect.localRotation = source.localRotation;
+            rect.SetSiblingIndex(source.GetSiblingIndex());
+            trail.sprite = fill.sprite;
+            trail.type = fill.type;
+            trail.color = color;
+            trail.raycastTarget = false;
+            trail.enabled = false;
+            fillScale = source.localScale;
+            fillOrigin = source.anchoredPosition;
+            trailScale = rect.localScale;
+            trailOrigin = rect.anchoredPosition;
+        }
+
+        // 초기 표시와 회복은 즉시 맞추고 피해만 현재 표시값에서 이어서 감소시킨다.
+        internal void SetTarget(BattleState unit)
+        {
+            if (!HasView)
+                return;
+
+            if (state != unit || unit.CurrentHp > target)
+            {
+                state = unit;
+                target = unit.CurrentHp;
+                shown = trailHp = target;
+                animating = false;
+                lastNumber = -1;
+                RestoreImpact();
+                Draw();
+                return;
+            }
+
+            // 문구나 PP 갱신으로 같은 HP가 다시 전달되어도 진행 중인 연출을 재시작하지 않는다.
+            if (target == unit.CurrentHp)
+                return;
+
+            target = unit.CurrentHp;
+            startHp = shown;
+            startTrail = trailHp;
+            elapsed = 0f;
+            animating = true;
+            RestoreImpact();
+            fill.color = Color.white;
+        }
+
+        // 점멸과 확대 후 바와 숫자를 함께 감속시키고 잔상을 뒤따라 줄인다.
+        internal void Tick(float delta, float duration, float delay, float tailDuration,
+            float flashDuration, float impactScale, float shake)
+        {
+            if (!animating || state == null)
+                return;
+
+            if (!HasView)
+            {
+                Reset();
+                return;
+            }
+
+            elapsed += delta;
+            float frontTime = Mathf.Max(0.01f, duration);
+            float tailTime = Mathf.Max(0.01f, tailDuration);
+            float flashTime = Mathf.Max(0.01f, flashDuration);
+            float progress = Mathf.Clamp01((elapsed - flashTime) / frontTime);
+            // 초반에 빠르게 감소하고 끝에서 감속하며 숫자도 같은 표시값을 사용한다.
+            float eased = 1f - (1f - progress) * (1f - progress);
+            shown = Mathf.Lerp(startHp, target, eased);
+            trailHp = Mathf.Lerp(startTrail, target, Mathf.Clamp01((elapsed - flashTime - frontTime - delay) / tailTime));
+            animating = elapsed < flashTime + frontTime + delay + tailTime;
+            Draw();
+
+            float strength = elapsed < flashTime ? Mathf.Clamp01(elapsed / flashTime) : 1f - Mathf.SmoothStep(0f, 1f, progress);
+            float scale = Mathf.Lerp(1f, impactScale, strength);
+            ScaleBar(fillRect, fillScale, fillOrigin, scale);
+            ScaleBar(trailRect, trailScale, trailOrigin, scale);
+            fill.color = Color.Lerp(Color.white, new Color32(75, 75, 75, 255), progress);
+            if (panel != null)
+            {
+                float shakeProgress = Mathf.Clamp01(elapsed / (flashTime + frontTime));
+                panel.anchoredPosition = panelOrigin + Vector2.right *
+                    (Mathf.Sin(shakeProgress * Mathf.PI * 4f) * shake * (1f - shakeProgress));
+            }
+            if (!animating)
+                RestoreImpact();
+        }
+
+        // 왼쪽 끝과 세로 중심을 고정하고 가로 확대는 HP 트랙의 오른쪽 경계로 제한한다.
+        private static void ScaleBar(RectTransform rect, Vector3 originalScale, Vector2 origin, float scale)
+        {
+            Vector2 size = rect.rect.size;
+            float widthScale = scale;
+            RectTransform track = rect.parent as RectTransform;
+            float width = size.x * Mathf.Abs(originalScale.x);
+            if (track != null && width > 0f)
+            {
+                // 풀 체력의 바와 잔상이 HUD 밖으로 돌출되지 않도록 남은 가로 공간만 사용한다.
+                float available = track.rect.width - rect.anchorMin.x * track.rect.width - origin.x;
+                widthScale = Mathf.Min(scale, Mathf.Max(1f, available / width));
+            }
+            rect.localScale = new Vector3(originalScale.x * widthScale, originalScale.y * scale, originalScale.z);
+            rect.anchoredPosition = origin + new Vector2(
+                rect.pivot.x * size.x * originalScale.x * (widthScale - 1f),
+                (rect.pivot.y - 0.5f) * size.y * originalScale.y * (scale - 1f));
+        }
+
+        // 연속 피격과 회복, 비활성화에서도 확대와 흔들림이 누적되지 않도록 복원한다.
+        private void RestoreImpact()
+        {
+            if (fillRect != null)
+            {
+                fillRect.localScale = fillScale;
+                fillRect.anchoredPosition = fillOrigin;
+            }
+            if (fill != null)
+                fill.color = new Color32(75, 75, 75, 255);
+            if (trailRect != null)
+            {
+                trailRect.localScale = trailScale;
+                trailRect.anchoredPosition = trailOrigin;
+            }
+            if (panel != null)
+                panel.anchoredPosition = panelOrigin;
+        }
+
+        // 비활성화 시 진행 중인 표시를 확정하고 다음 활성화에서 다시 초기화한다.
+        internal void Reset()
+        {
+            // 씬 언로드에서는 HUD의 RectTransform이 먼저 파괴될 수 있어 표시 갱신을 분리한다.
+            if (state != null)
+            {
+                target = state.CurrentHp;
+                shown = trailHp = target;
+                Draw();
+            }
+            animating = false;
+            state = null;
+            RestoreImpact();
+        }
+
+        // UI 컴포넌트만 제거되는 경우에도 생성한 잔상 오브젝트를 정리한다.
+        internal void Dispose()
+        {
+            RestoreImpact();
+            if (trail != null)
+                Object.Destroy(trail.gameObject);
+        }
+
+        // 체력 비율과 숫자를 함께 적용하고 잔상은 감소 구간이 남아 있을 때만 표시한다.
+        private void Draw()
+        {
+            if (!HasView || state == null)
+                return;
+
+            float maximum = Mathf.Max(1, state.MaxHp);
+            float ratio = Mathf.Clamp01(shown / maximum);
+            fillRect.anchorMax = new Vector2(ratio, 1f);
+            trailRect.anchorMax = new Vector2(Mathf.Clamp01(trailHp / maximum), 1f);
+            trail.enabled = trailHp > shown;
+            fill.color = new Color32(75, 75, 75, 255);
+            int number = Mathf.Clamp(Mathf.CeilToInt(shown), 0, state.MaxHp);
+            if (number == lastNumber)
+                return;
+            lastNumber = number;
+            label.text = $"{number} / {state.MaxHp}";
+        }
     }
 
     // 현재 메뉴에서 사용할 선택지를 표시한다

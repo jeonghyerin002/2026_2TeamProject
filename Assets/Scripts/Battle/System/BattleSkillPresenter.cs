@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 /// <summary>하나의 시간축으로 전투 이미지와 UI 이펙트 및 효과음을 재생한다.</summary>
 [DisallowMultipleComponent]
@@ -12,12 +13,16 @@ public sealed class BattleSkillPresenter : MonoBehaviour
     [SerializeField] private RectTransform effectRoot;     // UI 이펙트 생성 영역
     [SerializeField] private AudioSource audioSource;      // 스킬 효과음 전용 출력
     [SerializeField, Min(0f)] private float targetOffsetX = 20f; // 대상별 안쪽 방향의 이펙트 보정 거리(UI 단위)
+    [SerializeField, Min(0.01f)] private float hitFlashDuration = 0.18f; // 실제 피격 후 두 번 깜빡이는 시간(초)
+    [SerializeField, Range(0f, 1f)] private float hitFlashAlpha = 0.35f; // 깜빡임 중 원래 투명도에 적용할 배율
 
     private readonly List<(GameObject instance, float end)> spawned = new(); // 생성 이펙트와 종료 시점
     private Vector2 playerOrigin;                        // 재생 시작 시 플레이어 위치
     private Vector2 enemyOrigin;                         // 재생 시작 시 적 위치
     private bool active;                                // 위치 복원이 필요한 재생 상태
     private int generation;                             // 중단된 재생의 후속 처리를 방지하는 번호
+    private Image hitImage;                             // 현재 피격 중인 캐릭터 이미지
+    private Color hitColor;                             // 피격 강조 종료 시 복원할 원래 색상
 
     internal bool Completed { get; private set; }
 
@@ -38,12 +43,18 @@ public sealed class BattleSkillPresenter : MonoBehaviour
         active = true;
         RectTransform source = player ? playerPosition : enemyPosition;
         RectTransform target = player ? enemyPosition : playerPosition;
+        hitImage = target.GetComponent<Image>();
+        if (hitImage != null)
+            hitColor = hitImage.color;
         Vector2 sourceOrigin = player ? playerOrigin : enemyOrigin;
         Vector2 targetOrigin = player ? enemyOrigin : playerOrigin;
         Vector3 direction = (target.position - source.position).normalized;
         Vector2 localDirection = source.parent.InverseTransformVector(direction).normalized;
         float duration = data != null ? data.GetDuration() : Mathf.Max(0.45f, fallbackDuration);
+        float movementDuration = data != null ? Mathf.Max(0.001f, duration) : 0.45f;
         float impact = data != null ? data.ImpactTime : duration;
+        // 설정된 스킬 길이가 짧거나 기본 연출이어도 피격 강조가 끝나기 전에 복원하지 않는다.
+        duration = Mathf.Max(duration, impact + Mathf.Max(0.01f, hitFlashDuration));
         bool[] effectsPlayed = new bool[data != null ? data.Effects.Length : 0];
         bool[] soundsPlayed = new bool[data != null ? data.Sounds.Length : 0];
         float elapsed = 0f;
@@ -61,7 +72,7 @@ public sealed class BattleSkillPresenter : MonoBehaviour
                     yield break;
             }
 
-            float progress = Mathf.Clamp01(elapsed / (data != null ? Mathf.Max(0.001f, duration) : 0.45f));
+            float progress = Mathf.Clamp01(elapsed / movementDuration);
             float move = data != null ? (data.Movement != null ? data.Movement.Evaluate(progress) : 0f) * data.MoveDistance :
                 (elapsed < 0.45f ? Mathf.Sin(progress * Mathf.PI) * 32f : 0f);
             source.anchoredPosition = sourceOrigin + localDirection * move;
@@ -75,6 +86,15 @@ public sealed class BattleSkillPresenter : MonoBehaviour
                 shake = Mathf.Sin(shakeProgress * Mathf.PI * 8f) * data.ShakeStrength * (1f - shakeProgress);
             }
             target.anchoredPosition = targetOrigin + Vector2.right * shake;
+
+            if (hitImage != null && damaged)
+            {
+                float flashProgress = (elapsed - impact) / Mathf.Max(0.01f, hitFlashDuration);
+                Color color = hitColor;
+                if (flashProgress < 1f && Mathf.FloorToInt(flashProgress * 4f) % 2 == 0)
+                    color.a *= hitFlashAlpha;
+                hitImage.color = color;
+            }
 
             if (data != null)
             {
@@ -160,6 +180,9 @@ public sealed class BattleSkillPresenter : MonoBehaviour
     // 연출이 변경한 이미지 위치와 생성 이펙트를 원래 상태로 되돌린다.
     private void Restore()
     {
+        if (hitImage != null)
+            hitImage.color = hitColor;
+        hitImage = null;
         if (active)
         {
             if (playerPosition != null)
