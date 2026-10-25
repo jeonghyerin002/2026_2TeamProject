@@ -9,6 +9,7 @@ public sealed class BattleSceneUI : MonoBehaviour
 {
     [SerializeField] private BattleSystem battle;
     [SerializeField] private BattleFlow flow;
+    [SerializeField] private GameObject playerUI; // 플레이어 입력 차례에 표시할 대화창과 명령 패널
     [SerializeField] private TMP_Text message;
     [SerializeField] private TMP_Text playerInfo;
     [SerializeField] private TMP_Text enemyInfo;
@@ -28,8 +29,18 @@ public sealed class BattleSceneUI : MonoBehaviour
     private int selected;
     private int aetherPage;
 
+    private bool CanChoose => battle.PlayerState != null && battle.EnemyState != null &&
+        battle.Phase == TurnPhase.WaitingPlayer && !flow.IsBusy;
+
     private void Awake()
     {
+        if (playerUI == null)
+        {
+            Debug.LogError("BattleSceneUI: PlayerUI를 연결하세요.", this);
+            enabled = false;
+            return;
+        }
+
         for (int i = 0; i < choices.Length; i++)
         {
             int index = i;
@@ -66,7 +77,7 @@ public sealed class BattleSceneUI : MonoBehaviour
     {
         Keyboard key = Keyboard.current;
 
-        if (key == null || flow.IsBusy || menu == Menu.End)
+        if (key == null || !CanChoose || menu == Menu.End)
             return;
 
         if (key.eKey.wasPressedThisFrame || key.escapeKey.wasPressedThisFrame)
@@ -93,6 +104,18 @@ public sealed class BattleSceneUI : MonoBehaviour
     // 현재 전투 상태와 메뉴를 다시 표시한다
     public void Refresh()
     {
+        if (playerUI == null)
+            return;
+
+        bool canChoose = CanChoose;
+        playerUI.SetActive(canChoose);
+
+        // 숨긴 메뉴에 남은 키보드·게임패드 포커스를 해제해 연출 중 입력을 막는다.
+        if (!canChoose && EventSystem.current != null &&
+            EventSystem.current.currentSelectedGameObject != null &&
+            EventSystem.current.currentSelectedGameObject.transform.IsChildOf(playerUI.transform))
+            EventSystem.current.SetSelectedGameObject(null);
+
         if (battle.PlayerState == null || battle.EnemyState == null)
             return;
 
@@ -138,9 +161,9 @@ public sealed class BattleSceneUI : MonoBehaviour
             choices[i].interactable = false;
         }
 
-        back.interactable = !flow.IsBusy && menu != Menu.Root && menu != Menu.End;
+        back.interactable = CanChoose && menu != Menu.Root && menu != Menu.End;
 
-        if (flow.IsBusy)
+        if (!CanChoose)
         {
             detail.text = "전투 진행 중…";
             return;
@@ -326,7 +349,7 @@ public sealed class BattleSceneUI : MonoBehaviour
     // 선택 메뉴를 이동하거나 선택한 행동을 전투 흐름에 전달한다
     private void Choose(int index)
     {
-        if (flow.IsBusy || menu == Menu.End || !choices[index].interactable)
+        if (!CanChoose || menu == Menu.End || !choices[index].interactable)
             return;
 
         selected = index;
@@ -372,7 +395,7 @@ public sealed class BattleSceneUI : MonoBehaviour
     // 현재 하위 메뉴를 닫고 기본 메뉴로 돌아간다
     private void Back()
     {
-        if (flow.IsBusy || menu == Menu.End)
+        if (!CanChoose || menu == Menu.End)
             return;
 
         menu = Menu.Root;
