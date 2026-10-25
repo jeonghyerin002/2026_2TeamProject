@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+/// <summary>공용 대화 UI와 진행 상태를 관리하고 일반 대화 중 플레이어 이동을 정지한다.</summary>
 public class DialogManager : MonoBehaviour
 {
     public event Action OnDialogFinshed;
@@ -38,6 +39,8 @@ public class DialogManager : MonoBehaviour
     private Action<bool> dialogCompletion;
     // 한 번의 UI 예약 동안 순서대로 표시할 후속 안내 문장
     private readonly Queue<string> pendingMessages = new Queue<string>();
+    private PlayerController dialogPlayer; // 이번 일반 대화에서 이동을 정지한 플레이어
+    private bool previousMovementEnabled;  // 대화 시작 전에 설정되어 있던 이동 가능 상태
 
     public bool IsOpen => isAction;
     public bool CanShowMessage => isActiveAndEnabled && !isAction && dialogPanel != null && dialogText != null;
@@ -160,6 +163,7 @@ public class DialogManager : MonoBehaviour
             return false;
         currentDialog = null;
         isAction = true;
+        StopPlayerMovement();
         dialogPanel.SetActive(true);
         StartTypingEffect(text);
         return true;
@@ -187,6 +191,7 @@ public class DialogManager : MonoBehaviour
         }
         currentDialog = null;
         isAction = true;
+        StopPlayerMovement();
         dialogPanel.SetActive(true);
         StartTypingEffect(messages[0]);
         return true;
@@ -283,9 +288,24 @@ public class DialogManager : MonoBehaviour
         dialogOwner = owner;
         dialogCompletion = onEnded;
         isAction = true;
+        StopPlayerMovement();
         dialogPanel.SetActive(true);
         PlayDialog(dialog);
         return true;
+    }
+
+    // 일반 대화 시작 시 기존 이동 상태를 보관하고 남아 있는 입력과 속도를 지운다.
+    private void StopPlayerMovement()
+    {
+        dialogPlayer = PlayerController.Instance;
+        if (dialogPlayer == null)
+        {
+            Debug.LogError("DialogManager: 대화 중 이동을 정지할 PlayerController가 없습니다.", this);
+            return;
+        }
+
+        previousMovementEnabled = dialogPlayer.IsMovementEnabled;
+        dialogPlayer.SetMovementEnabled(false);
     }
 
     void PlayDialog(DialogSO dialog)
@@ -415,6 +435,13 @@ public class DialogManager : MonoBehaviour
         if (dialogPanel != null)
         {
             dialogPanel.SetActive(false);
+        }
+        // 종료 콜백이 전투나 후속 대화를 시작하기 전에 이전 이동 상태를 복원한다.
+        var player = dialogPlayer;
+        dialogPlayer = null;
+        if (player != null)
+        {
+            player.SetMovementEnabled(previousMovementEnabled);
         }
         completion?.Invoke(completed);
     }
