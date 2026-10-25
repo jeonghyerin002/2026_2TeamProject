@@ -11,6 +11,7 @@ public sealed class BattleSkillPresenter : MonoBehaviour
     [SerializeField] private RectTransform enemyPosition;  // 적 측 이동 대상
     [SerializeField] private RectTransform effectRoot;     // UI 이펙트 생성 영역
     [SerializeField] private AudioSource audioSource;      // 스킬 효과음 전용 출력
+    [SerializeField, Min(0f)] private float targetOffsetX = 20f; // 대상별 안쪽 방향의 이펙트 보정 거리(UI 단위)
 
     private readonly List<(GameObject instance, float end)> spawned = new(); // 생성 이펙트와 종료 시점
     private Vector2 playerOrigin;                        // 재생 시작 시 플레이어 위치
@@ -89,7 +90,22 @@ public sealed class BattleSkillPresenter : MonoBehaviour
                         RectTransform instance = Instantiate(effect.prefab, effectRoot, false);
                         Vector3 position = effect.position == SkillPresentationData.Position.Actor ? source.position :
                             effect.position == SkillPresentationData.Position.Target ? target.position : (source.position + target.position) * 0.5f;
-                        instance.position = position + effectRoot.TransformVector(effect.offset);
+                        Vector2 offset = effect.offset;
+                        // 동일한 연출을 양측에서 공유하되 대상의 몸 안쪽으로 생성 위치를 보정한다.
+                        if (effect.position == SkillPresentationData.Position.Target)
+                        {
+                            // 플레이어 대상은 타겟 영역의 가로 중심을 기준으로 시작점과 방향을 함께 뒤집는다.
+                            if (target == playerPosition)
+                            {
+                                position = target.TransformPoint(new Vector3(target.rect.center.x * 2f, 0f, 0f));
+                                offset.x = -offset.x;
+                                Vector3 scale = instance.localScale;
+                                scale.x = -scale.x;
+                                instance.localScale = scale;
+                            }
+                            offset.x += target == playerPosition ? targetOffsetX : -targetOffsetX;
+                        }
+                        instance.position = position + effectRoot.TransformVector(offset);
                         float start = Mathf.Max(effect.onlyOnDamage ? impact : 0f, effect.time);
                         spawned.Add((instance.gameObject, start + Mathf.Max(0.01f, effect.lifetime)));
                     }
