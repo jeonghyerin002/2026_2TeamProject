@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-/// <summary>전투 화면의 메뉴와 상태 표시를 연결하고 HP 바, 숫자와 피해 잔상을 연출한다.</summary>
+/// <summary>전투 메뉴와 상태 표시를 연결하고 UI 이동·페이드와 HP 피해 연출을 관리한다.</summary>
 public sealed class BattleSceneUI : MonoBehaviour
 {
     [SerializeField] private BattleSystem battle;
@@ -26,6 +26,14 @@ public sealed class BattleSceneUI : MonoBehaviour
     [SerializeField] private Button[] choices;
     [SerializeField] private TMP_Text[] labels;
     [SerializeField] private Button back;
+
+    [Header("UI 표시 연출")]
+    [SerializeField, Min(0f)] private float uiTransitionDuration = 0.25f; // UI가 자기 가로폭만큼 이동하고 페이드하는 시간(초), 0이면 즉시 전환
+
+    private PanelDisplay playerPanel;  // 왼쪽으로 이동하는 플레이어 HUD
+    private PanelDisplay enemyPanel;   // 오른쪽으로 이동하는 적 HUD
+    private PanelDisplay commandView;  // 오른쪽으로 이동하는 명령 패널
+    private PanelDisplay dialogueView; // 명령 패널 퇴장 시 오른쪽에서 왼쪽으로 등장하는 대화창
 
     [Header("체력 감소 연출")]
     [SerializeField, Min(0.01f)] private float healthDuration = 0.12f; // 점멸 후 HP 바와 숫자가 감소하는 시간(초)
@@ -64,8 +72,20 @@ public sealed class BattleSceneUI : MonoBehaviour
             return;
         }
 
-        playerDisplay = new HealthDisplay(playerFill, playerHealth, trailColor, playerHud.GetComponent<RectTransform>());
-        enemyDisplay = new HealthDisplay(enemyFill, enemyHealth, trailColor, enemyHud.GetComponent<RectTransform>());
+        if (playerHud.GetComponent<RectTransform>() == null || enemyHud.GetComponent<RectTransform>() == null ||
+            commandPanel.GetComponent<RectTransform>() == null || dialogue.GetComponent<RectTransform>() == null)
+        {
+            Debug.LogError("BattleSceneUI: HUD, Command Panel과 Dialogue에 RectTransform이 필요합니다.", this);
+            enabled = false;
+            return;
+        }
+
+        playerPanel = new PanelDisplay(playerHud, -1f);
+        enemyPanel = new PanelDisplay(enemyHud, 1f);
+        commandView = new PanelDisplay(commandPanel, 1f);
+        dialogueView = new PanelDisplay(dialogue, 1f, false);
+        playerDisplay = new HealthDisplay(playerFill, playerHealth, trailColor);
+        enemyDisplay = new HealthDisplay(enemyFill, enemyHealth, trailColor);
 
         for (int i = 0; i < choices.Length; i++)
         {
@@ -95,6 +115,10 @@ public sealed class BattleSceneUI : MonoBehaviour
 
         playerDisplay?.Reset();
         enemyDisplay?.Reset();
+        playerPanel?.Reset();
+        enemyPanel?.Reset();
+        commandView?.Reset();
+        dialogueView?.Reset();
     }
 
     private void OnDestroy()
@@ -120,7 +144,7 @@ public sealed class BattleSceneUI : MonoBehaviour
 
         Keyboard key = Keyboard.current;
 
-        if (key == null || !CanChoose || menu == Menu.End)
+        if (key == null || !CanChoose || commandView == null || !commandView.IsReady || menu == Menu.End)
             return;
 
         if (key.eKey.wasPressedThisFrame || key.escapeKey.wasPressedThisFrame)
@@ -144,6 +168,29 @@ public sealed class BattleSceneUI : MonoBehaviour
             Choose(selected);
     }
 
+    private void LateUpdate()
+    {
+        // HP 감소와 잔상 연출이 완료된 뒤의 유지 시간을 확인하고 HUD 퇴장을 시작한다.
+        RefreshHudVisibility();
+        // HP 피격 흔들림과 표시 이동을 마지막에 합성하여 같은 위치를 덮어쓰지 않는다.
+        float delta = Time.unscaledDeltaTime;
+        playerPanel?.Tick(delta, uiTransitionDuration, playerDisplay.ShakeOffset);
+        enemyPanel?.Tick(delta, uiTransitionDuration, enemyDisplay.ShakeOffset);
+        commandView?.Tick(delta, uiTransitionDuration, Vector2.zero);
+        dialogueView?.Tick(delta, uiTransitionDuration, Vector2.zero);
+    }
+
+    // 기절한 대상의 HP 감소 연출이 끝나면 0.3초 유지한 뒤 자동으로 HUD를 숨긴다.
+    private void RefreshHudVisibility()
+    {
+        bool canChoose = CanChoose;
+        bool presenting = flow.IsBusy;
+        playerPanel?.SetVisible(battle.PlayerState != null && !playerDisplay.CanHideAfterDefeat() &&
+            (battle.PlayerState.IsDead || canChoose || (presenting && flow.ActingSide == BattleSide.Enemy)));
+        enemyPanel?.SetVisible(battle.EnemyState != null && !enemyDisplay.CanHideAfterDefeat() &&
+            (battle.EnemyState.IsDead || canChoose || (presenting && flow.ActingSide == BattleSide.Player)));
+    }
+
     // 현재 전투 상태와 메뉴를 다시 표시한다
     public void Refresh()
     {
@@ -157,11 +204,11 @@ public sealed class BattleSceneUI : MonoBehaviour
             (battle.PlayerState.IsDead || battle.EnemyState.IsDead);
 
         // 공통 부모를 유지해야 명령 입력을 숨긴 뒤에도 공격 대사를 표시할 수 있다.
-        playerUI.SetActive(canChoose || presenting || showResult);
-        commandPanel.SetActive(canChoose);
-        dialogue.SetActive(flow.IsShowingMessage || (!presenting && showResult));
-        playerHud.SetActive(canChoose || (presenting && flow.ActingSide == BattleSide.Enemy));
-        enemyHud.SetActive(canChoose || (presenting && flow.ActingSide == BattleSide.Player));
+        // 자식의 퇴장 연출이 끝나기 전에 공통 부모를 꺼서 화면이 끊기지 않게 한다.
+        playerUI.SetActive(true);
+        // 두 패널은 같은 프레임의 진행도로 갱신되어 명령 패널 퇴장과 대화창 진입이 겹친다.
+        commandView?.SetVisible(canChoose);
+        dialogueView?.SetVisible(flow.IsShowingMessage || (!presenting && showResult));
 
         // 숨긴 메뉴에 남은 키보드·게임패드 포커스를 해제해 연출 중 입력을 막는다.
         if (!canChoose && EventSystem.current != null &&
@@ -197,6 +244,78 @@ public sealed class BattleSceneUI : MonoBehaviour
         display?.SetTarget(unit);
     }
 
+    /// <summary>UI의 표시 상태를 보간하여 자기 가로폭만큼 이동하고 선택적 페이드와 입력을 관리한다.</summary>
+    private sealed class PanelDisplay
+    {
+        private readonly RectTransform rect; // 표시 위치와 실제 가로폭을 제공하는 패널
+        private readonly CanvasGroup group;  // 자식 전체의 투명도와 입력을 함께 제어하는 그룹
+        private readonly Vector2 origin;     // 완전히 표시되었을 때의 기준 위치
+        private readonly float direction;    // 퇴장 방향: 왼쪽 -1, 오른쪽 1, 제자리 0
+        private readonly bool fade;          // 대화창은 이동만 사용하고 나머지 UI는 페이드를 함께 적용
+        private readonly float opacity;      // 원래 설정된 최대 불투명도
+        private readonly bool interactable;  // 표시 완료 후 복원할 원래 상호작용 설정
+        private readonly bool blocksRaycasts; // 표시 완료 후 복원할 원래 포인터 차단 설정
+        private float progress;              // 숨김 0부터 완전 표시 1까지의 진행도
+        private bool visible;                // 반복 갱신에도 연출을 재시작하지 않는 목표 표시 상태
+
+        internal bool IsReady => visible && progress >= 1f;
+
+        // 기존 레이아웃을 보존하고 각 패널에 필요한 페이드 그룹만 준비한다.
+        internal PanelDisplay(GameObject target, float direction, bool fade = true)
+        {
+            rect = target.GetComponent<RectTransform>();
+            origin = rect.anchoredPosition;
+            this.direction = direction;
+            this.fade = fade;
+            group = target.GetComponent<CanvasGroup>();
+            if (group == null)
+                group = target.AddComponent<CanvasGroup>();
+            opacity = group.alpha;
+            interactable = group.interactable;
+            blocksRaycasts = group.blocksRaycasts;
+            Reset();
+        }
+
+        // 퇴장 중에는 즉시 입력을 막고 재표시 요청은 현재 진행도에서 반대로 이어간다.
+        internal void SetVisible(bool show)
+        {
+            if (rect == null || group == null || visible == show)
+                return;
+
+            visible = show;
+            group.interactable = false;
+            group.blocksRaycasts = false;
+            if (show)
+                rect.gameObject.SetActive(true);
+        }
+
+        // 스케일이 적용된 가로폭을 부모 좌표로 환산하고 설정에 따라 이동과 페이드를 보간한다.
+        internal void Tick(float delta, float duration, Vector2 shakeOffset)
+        {
+            if (rect == null || group == null)
+                return;
+
+            progress = duration <= 0f ? (visible ? 1f : 0f) :
+                Mathf.MoveTowards(progress, visible ? 1f : 0f, delta / duration);
+            float eased = Mathf.SmoothStep(0f, 1f, progress);
+            float distance = rect.rect.width * Mathf.Abs(rect.localScale.x);
+            rect.anchoredPosition = origin + Vector2.right * (direction * distance * (1f - eased)) + shakeOffset;
+            group.alpha = fade ? opacity * eased : opacity;
+            group.interactable = visible && progress >= 1f && interactable;
+            group.blocksRaycasts = visible && progress >= 1f && blocksRaycasts;
+            if (!visible && progress <= 0f)
+                rect.gameObject.SetActive(false);
+        }
+
+        // 비활성화 시 중간 위치와 입력 상태를 남기지 않고 다음 표시를 숨김 상태에서 시작한다.
+        internal void Reset()
+        {
+            visible = false;
+            progress = 0f;
+            Tick(0f, 0f, Vector2.zero);
+        }
+    }
+
     /// <summary>실제 전투 HP와 별도로 바, 숫자와 피해 잔상의 진행 상태를 유지한다.</summary>
     private sealed class HealthDisplay
     {
@@ -205,8 +324,6 @@ public sealed class BattleSceneUI : MonoBehaviour
         private readonly TMP_Text label;  // 앞쪽 바와 같은 진행도를 사용하는 체력 숫자
         private readonly RectTransform fillRect;  // 파괴 여부를 직접 확인할 현재 HP 바 영역
         private readonly RectTransform trailRect; // 파괴 여부를 직접 확인할 잔상 영역
-        private readonly RectTransform panel; // 숫자 크기를 유지하면서 흔들 패널
-        private readonly Vector2 panelOrigin; // 흔들림 종료 후 복귀할 패널 위치
         private readonly Vector3 fillScale;   // 바의 원래 크기
         private readonly Vector2 fillOrigin;  // 바 확대 시 기준이 되는 위치
         private readonly Vector3 trailScale;  // 잔상의 원래 크기
@@ -220,17 +337,32 @@ public sealed class BattleSceneUI : MonoBehaviour
         private float elapsed;            // 이번 감소 시작 후 경과 시간(초)
         private bool animating;           // 피해 감소 연출 진행 여부
         private int lastNumber = -1;      // 숫자가 바뀔 때만 텍스트를 갱신하기 위한 값
+        private float zeroCompletedAt = -1f; // HP와 잔상 감소 완료 시각(실제 시간, 초), -1이면 대기 시작 전
+
+        internal Vector2 ShakeOffset { get; private set; } // UI 표시 이동에 더할 피격 흔들림 오프셋
+
+        // 체력 숫자와 바, 회색 잔상까지 감소한 후 실제 시간으로 0.3초가 지나면 퇴장을 허용한다.
+        internal bool CanHideAfterDefeat()
+        {
+            if (state == null || !state.IsDead || animating || lastNumber != 0)
+            {
+                zeroCompletedAt = -1f;
+                return false;
+            }
+
+            if (zeroCompletedAt < 0f)
+                zeroCompletedAt = Time.unscaledTime;
+            return Time.unscaledTime - zeroCompletedAt >= 0.3f;
+        }
 
         private bool HasView => fill != null && fillRect != null &&
             trail != null && trailRect != null && label != null;
 
         // 기존 바와 같은 크기의 잔상을 한 번 생성하고 바로 뒤에 배치한다.
-        internal HealthDisplay(Image fill, TMP_Text label, Color color, RectTransform panel)
+        internal HealthDisplay(Image fill, TMP_Text label, Color color)
         {
             this.fill = fill;
             this.label = label;
-            this.panel = panel;
-            panelOrigin = panel != null ? panel.anchoredPosition : Vector2.zero;
             trail = new GameObject("HP Trail", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image)).GetComponent<Image>();
             trail.gameObject.layer = fill.gameObject.layer;
             RectTransform rect = trail.rectTransform;
@@ -270,6 +402,7 @@ public sealed class BattleSceneUI : MonoBehaviour
                 shown = trailHp = target;
                 animating = false;
                 lastNumber = -1;
+                zeroCompletedAt = -1f;
                 RestoreImpact();
                 Draw();
                 return;
@@ -318,12 +451,9 @@ public sealed class BattleSceneUI : MonoBehaviour
             ScaleBar(fillRect, fillScale, fillOrigin, scale);
             ScaleBar(trailRect, trailScale, trailOrigin, scale);
             fill.color = Color.Lerp(Color.white, new Color32(75, 75, 75, 255), progress);
-            if (panel != null)
-            {
-                float shakeProgress = Mathf.Clamp01(elapsed / (flashTime + frontTime));
-                panel.anchoredPosition = panelOrigin + Vector2.right *
-                    (Mathf.Sin(shakeProgress * Mathf.PI * 4f) * shake * (1f - shakeProgress));
-            }
+            float shakeProgress = Mathf.Clamp01(elapsed / (flashTime + frontTime));
+            ShakeOffset = Vector2.right *
+                (Mathf.Sin(shakeProgress * Mathf.PI * 4f) * shake * (1f - shakeProgress));
             if (!animating)
                 RestoreImpact();
         }
@@ -362,8 +492,7 @@ public sealed class BattleSceneUI : MonoBehaviour
                 trailRect.localScale = trailScale;
                 trailRect.anchoredPosition = trailOrigin;
             }
-            if (panel != null)
-                panel.anchoredPosition = panelOrigin;
+            ShakeOffset = Vector2.zero;
         }
 
         // 비활성화 시 진행 중인 표시를 확정하고 다음 활성화에서 다시 초기화한다.
@@ -378,6 +507,7 @@ public sealed class BattleSceneUI : MonoBehaviour
             }
             animating = false;
             state = null;
+            zeroCompletedAt = -1f;
             RestoreImpact();
         }
 
@@ -606,7 +736,7 @@ public sealed class BattleSceneUI : MonoBehaviour
     // 선택 메뉴를 이동하거나 선택한 행동을 전투 흐름에 전달한다
     private void Choose(int index)
     {
-        if (!CanChoose || menu == Menu.End || !choices[index].interactable)
+        if (!CanChoose || commandView == null || !commandView.IsReady || menu == Menu.End || !choices[index].interactable)
             return;
 
         selected = index;
@@ -652,7 +782,7 @@ public sealed class BattleSceneUI : MonoBehaviour
     // 현재 하위 메뉴를 닫고 기본 메뉴로 돌아간다
     private void Back()
     {
-        if (!CanChoose || menu == Menu.End)
+        if (!CanChoose || commandView == null || !commandView.IsReady || menu == Menu.End)
             return;
 
         menu = Menu.Root;

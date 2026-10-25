@@ -268,6 +268,14 @@ MonoBehaviour:
   - {fileID: 2114152823}
   - {fileID: 991998723}
   back: {fileID: 2147061085}
+  uiTransitionDuration: 0.25
+  healthDuration: 0.12
+  trailDelay: 0.15
+  trailDuration: 0.25
+  trailColor: {r: 0.5294118, g: 0.5294118, b: 0.5294118, a: 1}
+  healthFlashDuration: 0.05
+  healthImpactScale: 1.08
+  healthShake: 2
 --- !u!114 &291165624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +378,9 @@ MonoBehaviour:
   enemyPosition: {fileID: 2145747926}
   effectRoot: {fileID: 1448186425}
   audioSource: {fileID: 291165628}
+  targetOffsetX: 20
+  hitFlashDuration: 0.18
+  hitFlashAlpha: 0.35
 --- !u!82 &291165628
 AudioSource:
   m_ObjectHideFlags: 0
