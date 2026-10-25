@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character_3
   m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CharacterData
   characterid: 3
-  charactername: "\uC0B0\uCC45\uC18C\uB140 \uC18C\uB77C"
+  charactername: "\uC0B0\uCC45\uC18C\uB140 \uC18C\uB77C_1\uBC88\uB3C4\uB85C"
   maxhp: 15
   attack: 3
   defense: 3
@@ -22,7 +22,7 @@ MonoBehaviour:
   speed: 3
   level: 1
   weaponid: 20002
-  aetherid: 40002
-  rewardexp: 15
+  aetherid: 40006
+  rewardexp: 37
   weapon: {fileID: 11400000, guid: aca0c30c65442bc468d737903670393a, type: 2}
-  aether: {fileID: 11400000, guid: bf55df5b6609cd2449665ff6d6dbbd37, type: 2}
+  aether: {fileID: 11400000, guid: 15e010a6fcbc50441bd3f6b44c7539bc, type: 2}

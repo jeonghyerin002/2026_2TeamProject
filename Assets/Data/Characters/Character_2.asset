@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character_2
   m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CharacterData
   characterid: 2
-  charactername: "\uAF2C\uB9C8 \uD2B8\uB808\uC774\uB108 \uC900\uD638"
+  charactername: "\uAF2C\uB9C8 \uD2B8\uB808\uC774\uB108 \uC900\uD638_1\uBC88\uB3C4\uB85C"
   maxhp: 10
   attack: 4
   defense: 4
@@ -22,7 +22,7 @@ MonoBehaviour:
   speed: 4
   level: 1
   weaponid: 20002
-  aetherid: 40001
-  rewardexp: 10
+  aetherid: 40006
+  rewardexp: 27
   weapon: {fileID: 11400000, guid: aca0c30c65442bc468d737903670393a, type: 2}
-  aether: {fileID: 11400000, guid: 0a7db67a2fb1a0b45af62da78adbb354, type: 2}
+  aether: {fileID: 11400000, guid: 15e010a6fcbc50441bd3f6b44c7539bc, type: 2}

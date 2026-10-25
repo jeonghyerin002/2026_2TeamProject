@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Character_4
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   characterid: 4
-  charactername: "\uB958\uAC00"
-  maxhp: 30
+  charactername: "\uB958\uAC00_\uAC08\uC0C9\uC2DC\uD2F0"
+  maxhp: 25
   attack: 20
   defense: 10
   specialattack: 20
@@ -23,6 +23,6 @@ MonoBehaviour:
   level: 5
   weaponid: 0
   aetherid: 40005
-  rewardexp: 30
+  rewardexp: 61
   weapon: {fileID: 0}
   aether: {fileID: 11400000, guid: cb2f5112a07ef5c4eae4252ac4786bc6, type: 2}

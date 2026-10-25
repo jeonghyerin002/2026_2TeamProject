@@ -44,9 +44,9 @@ public sealed class BattleState
     private void RefreshSkills()
     {
         List<SkillData> list = new();
-        AddSkills(list, Aether.Skills);
-        if (Weapon != null)
-            AddSkills(list, Weapon.Skills);
+        // 에테르 배열 길이와 무관하게 네 번째 슬롯은 장착 무기의 기술로 유지한다.
+        AddSkills(list, Aether.Skills, 3);
+        AddSkills(list, Weapon != null ? Weapon.Skills : null, 1);
         skills = list.ToArray();
     }
 
@@ -60,13 +60,12 @@ public sealed class BattleState
         return true;
     }
 
-    // 슬롯을 복사하고 같은 SO의 PP를 공유한다
-    private void AddSkills(List<SkillData> list, SkillData[] source)
+    // 장비별 슬롯 수를 유지하고 같은 SO의 PP를 공유한다
+    private void AddSkills(List<SkillData> list, SkillData[] source, int slotCount)
     {
-        if (source == null)
-            return;
-        foreach (SkillData skill in source)
+        for (int i = 0; i < slotCount; i++)
         {
+            SkillData skill = source != null && i < source.Length ? source[i] : null;
             list.Add(skill);
             if (skill != null && !currentPp.ContainsKey(skill))
                 currentPp.Add(skill, Mathf.Max(0, skill.PP));
