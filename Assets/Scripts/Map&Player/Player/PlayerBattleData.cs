@@ -17,8 +17,8 @@ public sealed class PlayerBattleData : MonoBehaviour
     [SerializeField] private AetherData[] equippedAethers = new AetherData[5];
     [SerializeField] private WeaponData weapon;
     [SerializeField] private WeaponData[] ownedWeapons = Array.Empty<WeaponData>();
-    [SerializeField, Range(1, 100)] private int level = 1;
-    [SerializeField, Min(0)] private int experience;
+    [SerializeField, Range(1, LevelProgression.MaxLevel)] private int level = 1; // 누적 경험치에 따른 현재 레벨이다.
+    [SerializeField, Min(0)] private int experience; // 레벨업 시 차감하지 않는 누적 경험치이다.
 
     public CharacterData Character => character;
     public AetherData EquippedAether => equippedAether;
@@ -52,6 +52,8 @@ public sealed class PlayerBattleData : MonoBehaviour
     public WeaponData[] OwnedWeapons => (WeaponData[])ownedWeapons.Clone();
     public int Level => level;
     public int Experience => experience;
+    public bool IsMaxLevel => level >= LevelProgression.MaxLevel;
+    public int ExperienceToNextLevel => IsMaxLevel ? 0 : LevelProgression.GetRequiredExperience(level + 1) - experience;
     public bool IsValid => character != null && equippedAether != null && FindEquipped(equippedAether.itemId) != null && FindOwned(equippedAether.itemId) != null;
 
     public event Action EquipmentChanged;
@@ -120,6 +122,7 @@ public sealed class PlayerBattleData : MonoBehaviour
 
     private void Awake()
     {
+        LevelProgression.Normalize(ref level, ref experience);
         List<WeaponData> uniqueWeapons = new();
         HashSet<int> weaponIds = new();
         foreach (WeaponData item in ownedWeapons ?? Array.Empty<WeaponData>())
@@ -284,6 +287,7 @@ public sealed class PlayerBattleData : MonoBehaviour
         character = catalog.Character(save.characterId);
         level = save.level;
         experience = save.experience;
+        LevelProgression.Normalize(ref level, ref experience);
         ownedAethers = Array.ConvertAll(save.ownedAetherIds, catalog.Aether);
         equippedAethers = Array.ConvertAll(save.equippedAetherIds, catalog.Aether);
         equippedAether = catalog.Aether(save.activeAetherId);
@@ -303,7 +307,13 @@ public sealed class PlayerBattleData : MonoBehaviour
         AetherData aether = state.Aether != null ? FindEquipped(state.Aether.itemId) : null;
         if (aether != null)
             equippedAether = aether;
-        experience += Mathf.Max(0, state.Experience);
+        GainExperience(state.Experience);
         EquipmentChanged?.Invoke();
+    }
+
+    // 전투 보상 등의 경험치를 반영하고 상승한 레벨 수를 반환한다.
+    public int GainExperience(int amount)
+    {
+        return LevelProgression.GainExperience(ref level, ref experience, amount);
     }
 }

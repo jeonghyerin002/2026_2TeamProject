@@ -236,7 +236,8 @@ public sealed class BattleState
     // 경험치를 전투 상태에 누적한다
     public void GainExperience(int amount)
     {
-        Experience += Mathf.Max(0, amount);
+        // 전투 중에도 보상을 제한해 플레이어 데이터에 전달하기 전 오버플로를 방지한다.
+        Experience += Mathf.Min(LevelProgression.MaxExperience - Experience, Mathf.Max(0, amount));
     }
 
     // 데미지만큼 현재 HP를 감소한다

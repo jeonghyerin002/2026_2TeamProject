@@ -99,7 +99,12 @@ public sealed class BattleSceneController : MonoBehaviour
         if (!BattleSession.IsActive || resultHandled || playerData == null)
             return;
 
+        int previousLevel = playerData.Level;
         playerData.ApplyBattleResult(battleSystem.PlayerState);
+
+        // 결과 반영 후 확정된 레벨을 한 번만 등록해 연속 레벨업도 최종 레벨로 표시한다.
+        if (playerData.Level > previousLevel)
+            battleSystem.Publish($"{playerData.Character.Charactername}: 레벨업! Lv.{playerData.Level} 달성!");
 
         if (winner == BattleSide.Player)
         {
