@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 1800524ac91acb14fa0a4586072722df
+guid: 1af530f59a034964b94f061107170a4f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3192555353740433757
-    second: Stage2NpcPixelsheet_0
-  - first:
-      213: 2524866087240295645
-    second: Stage2NpcPixelsheet_1
+      213: 3386777985692454029
+    second: BattleEnemy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 80
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -116,45 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Stage2NpcPixelsheet_0
+      name: Battle_Junho
       rect:
         serializedVersion: 2
-        x: 7
+        x: 4
         y: 0
-        width: 18
-        height: 31
+        width: 20
+        height: 30
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3a6a78612d3c1b3d0800000000000000
-      internalID: -3192555353740433757
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Stage2NpcPixelsheet_1
-      rect:
-        serializedVersion: 2
-        x: 39
-        y: 1
-        width: 18
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd4636b34502a0320800000000000000
-      internalID: 2524866087240295645
+      spriteID: d8ccf4252a0400f20800000000000000
+      internalID: 3386777985692454029
       vertices: []
       indices: 
       edges: []
@@ -163,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a6cd0cae7022d6342b4172e8bbbce297
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Stage2NpcPixelsheet_0: -3192555353740433757
-      Stage2NpcPixelsheet_1: 2524866087240295645
+      Battle_Junho: 3386777985692454029
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

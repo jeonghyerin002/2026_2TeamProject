@@ -4214,7 +4214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnManager
   spawnPoints:
-  - spawnID: Raute_1
+  - spawnID: Route_1
     spawnTransform: {fileID: 1372580673}
 --- !u!212 &1372580672
 SpriteRenderer:

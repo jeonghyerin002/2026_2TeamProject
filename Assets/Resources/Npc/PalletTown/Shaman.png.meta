@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1af530f59a034964b94f061107170a4f
+guid: 7286a9df93675ec4aa7702228dce3572
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3386777985692454029
-    second: BattleEnemy_0
+      213: 910381990941768904
+    second: Shaman2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BattleEnemy_0
+      name: Shaman
       rect:
         serializedVersion: 2
-        x: 4
+        x: 3
         y: 0
-        width: 20
-        height: 30
+        width: 26
+        height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d8ccf4252a0400f20800000000000000
-      internalID: 3386777985692454029
+      spriteID: 8cc3ffbe89352ac00800000000000000
+      internalID: 910381990941768904
       vertices: []
       indices: 
       edges: []
@@ -138,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 7add1664c9cce6947be6637942c3bd68
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BattleEnemy_0: 3386777985692454029
+      Shaman: 910381990941768904
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

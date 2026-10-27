@@ -886,6 +886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BattleSceneController
   battleSystem: {fileID: 291165625}
   battleFlow: {fileID: 291165624}
+  enemyImage: {fileID: 2145747927}
   returnDelay: 2
 --- !u!4 &392900688
 Transform:
@@ -7629,7 +7630,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 714, y: -127}
-  m_SizeDelta: {x: 150, y: 225}
+  m_SizeDelta: {x: 200, y: 225}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2145747927
 MonoBehaviour:

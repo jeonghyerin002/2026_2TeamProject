@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 /// <summary>Battle Scene의 전투 데이터 연결과 전투 종료 후 맵 복귀를 관리한다</summary>
 [DisallowMultipleComponent]
@@ -8,6 +9,7 @@ public sealed class BattleSceneController : MonoBehaviour
 {
     [SerializeField] private BattleSystem battleSystem;
     [SerializeField] private BattleFlow battleFlow;
+    [SerializeField] private Image enemyImage; // NPC 전투 이미지를 표시하는 공통 대상
     [SerializeField, Min(0f)] private float returnDelay = 2f;
 
     private PlayerBattleData playerData;
@@ -83,6 +85,16 @@ public sealed class BattleSceneController : MonoBehaviour
             Debug.LogError("BattleSceneController: NPC CharacterData의 장비 ID와 SO 참조를 확인하세요.");
             return false;
         }
+
+        if (enemyImage == null || enemy.BattleSprite == null)
+        {
+            Debug.LogError("BattleSceneController: Enemy Image와 NPC CharacterData의 Battle Sprite를 연결하세요.", this);
+            return false;
+        }
+
+        // 표시 영역의 크기는 유지하고 NPC별 이미지의 원래 비율을 보존한다.
+        enemyImage.sprite = enemy.BattleSprite;
+        enemyImage.preserveAspect = true;
 
         // 양측 원본 데이터를 전투 시스템에 전달한다
         battleSystem.SetPlayer(playerData.Character, playerData.EquippedAether, playerData.GetBattleAethers(), playerData.Weapon, playerData.Level);

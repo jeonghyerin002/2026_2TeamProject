@@ -15288,8 +15288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd305a6ebeda6544b0acbec64d37320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
-  sceneName: Raute_1
-  targetSpawnID: Raute_1
+  sceneName: Route_1
+  targetSpawnID: Route_1
   requiresEquippedWeapon: 1
   weaponGate: {fileID: 1152813745}
 --- !u!61 &1664456984

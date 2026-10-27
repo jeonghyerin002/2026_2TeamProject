@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-// 캐릭터의 기본 능력치 원본 데이터를 저장한다
+/// <summary>캐릭터의 기본 능력치와 전투 표시용 원본 데이터를 저장한다.</summary>
 public class CharacterData : ScriptableObject
 {
     [SerializeField] private int characterid;                // 캐릭터 ID
@@ -18,6 +18,7 @@ public class CharacterData : ScriptableObject
     [SerializeField, Min(0)] private int rewardexp;
     [SerializeField] private WeaponData weapon;
     [SerializeField] private AetherData aether;
+    [SerializeField] private Sprite battleSprite; // 전투 씬에서 상대 캐릭터를 표시할 이미지
 
 
     public int CharacterId => characterid;
@@ -34,6 +35,7 @@ public class CharacterData : ScriptableObject
     public int RewardExp => rewardexp;
     public WeaponData Weapon => weapon;
     public AetherData Aether => aether;
+    public Sprite BattleSprite => battleSprite;
     public bool IsValid => aether != null && aether.itemId == aetherid &&
         (weaponid == 0 ? weapon == null : weapon != null && weapon.ItemId == weaponid);
 }

@@ -26,3 +26,4 @@ MonoBehaviour:
   rewardexp: 27
   weapon: {fileID: 11400000, guid: aca0c30c65442bc468d737903670393a, type: 2}
   aether: {fileID: 11400000, guid: 15e010a6fcbc50441bd3f6b44c7539bc, type: 2}
+  battleSprite: {fileID: 3386777985692454029, guid: 1af530f59a034964b94f061107170a4f, type: 3}
