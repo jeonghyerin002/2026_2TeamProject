@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,18 @@ public sealed class BattleSkillPresenter : MonoBehaviour
     [SerializeField, Min(0.01f)] private float hitFlashDuration = 0.18f; // 실제 피격 후 두 번 깜빡이는 시간(초)
     [SerializeField, Range(0f, 1f)] private float hitFlashAlpha = 0.35f; // 깜빡임 중 원래 투명도에 적용할 배율
 
+    [Header("피해 숫자")]
+    [SerializeField] private TMP_FontAsset damageFont; // 기존 전투 UI와 같은 글꼴을 사용하는 피해 표시
+    [SerializeField, Min(1f)] private float damageFontSize = 42f; // Canvas 기준 피해 숫자의 글자 크기
+    [SerializeField, Min(0.01f)] private float damageDuration = 0.85f; // 피해 숫자가 곡선을 따라 이동하고 사라지는 전체 시간(초)
+    [SerializeField, Min(0f)] private float damageRise = 100f; // 피격 지점에서 최고점까지 올라갈 높이(UI 단위)
+    [SerializeField, Min(0f)] private float damageTravel = 180f; // 피격 지점에서 바깥쪽으로 이동할 전체 거리(UI 단위)
+    [SerializeField, Min(0f)] private float damageDrop = 20f; // 종료 시 피격 지점보다 아래로 내려갈 거리(UI 단위)
+    [SerializeField, Range(0.1f, 0.9f)] private float damagePeakTime = 0.65f; // 전체 시간 중 최고점에 도달하는 비율, 클수록 낙하가 짧고 빠름
+    [SerializeField, Range(0f, 180f)] private float damageRotation = 75f; // 이동 방향으로 기울어지는 최종 각도(도), 0이면 회전하지 않음
+
+    private readonly List<(TMP_Text text, Vector2 origin, float direction, float elapsed)> damageNumbers = new(); // 발생 위치와 좌우 방향을 유지하며 독립적으로 이동하는 피해 숫자
+
     private readonly List<(GameObject instance, float end)> spawned = new(); // 생성 이펙트와 종료 시점
     private Vector2 playerOrigin;                        // 재생 시작 시 플레이어 위치
     private Vector2 enemyOrigin;                         // 재생 시작 시 적 위치
@@ -29,10 +42,10 @@ public sealed class BattleSkillPresenter : MonoBehaviour
     internal bool Completed { get; private set; }
 
     // 스킬 연출을 단일 시간축으로 실행하고 효과 적용 결과로 피격 표현을 결정한다.
-    internal IEnumerator Play(bool player, SkillPresentationData data, float fallbackDuration, Func<bool> apply,
+    internal IEnumerator Play(bool player, SkillPresentationData data, float fallbackDuration, Func<BattleResolveResult> apply,
         CharacterData playerData = null, CharacterData enemyData = null)
     {
-        Cancel();
+        Cancel(false);
         Completed = false;
         if (data == null)
             data = defaultPresentation;
@@ -90,10 +103,13 @@ public sealed class BattleSkillPresenter : MonoBehaviour
             if (!applied && elapsed >= impact)
             {
                 applied = true;
-                damaged = apply();
+                BattleResolveResult result = apply();
+                damaged = result.Damage > 0;
                 if (token != generation || !isActiveAndEnabled)
                     yield break;
                 UpdateEffects(data, instances, images, effectsPlayed, player, launch, hit, poseTime, impact, true, damaged, true);
+                if (damaged)
+                    ShowDamage(result.Damage, hit, player ? 1f : -1f);
             }
 
             float progress = Mathf.Clamp01(elapsed / movementDuration);
@@ -157,6 +173,99 @@ public sealed class BattleSkillPresenter : MonoBehaviour
         }
     }
 
+    // 스킬과 같은 피격 좌표에 실제 감소한 HP를 표시하고 대상의 바깥쪽 이동 방향을 저장한다.
+    private void ShowDamage(int damage, Vector3 hit, float direction)
+    {
+        TMP_FontAsset font = damageFont != null ? damageFont : TMP_Settings.defaultFontAsset;
+        if (font == null)
+        {
+            Debug.LogError("BattleSkillPresenter: 피해 숫자를 표시할 Damage Font를 연결하세요.", this);
+            return;
+        }
+
+        TMP_Text label = new GameObject("Damage Number", typeof(RectTransform), typeof(CanvasRenderer),
+            typeof(TextMeshProUGUI)).GetComponent<TMP_Text>();
+        label.gameObject.layer = effectRoot.gameObject.layer;
+        RectTransform rect = label.rectTransform;
+        rect.SetParent(effectRoot, false);
+        rect.sizeDelta = new Vector2(240f, 90f);
+        rect.position = hit;
+        rect.localRotation = Quaternion.identity;
+        label.font = font;
+        label.fontSize = damageFontSize;
+        label.fontStyle = FontStyles.Bold;
+        label.alignment = TextAlignmentOptions.Center;
+        label.color = new Color32(255, 225, 120, 255);
+        label.outlineColor = new Color32(45, 30, 20, 255);
+        label.outlineWidth = 0.18f;
+        label.raycastTarget = false;
+        label.text = damage.ToString();
+        damageNumbers.Add((label, rect.anchoredPosition, direction, 0f));
+    }
+
+    private void Update()
+    {
+        // 공격 연출이 끝나도 숫자의 수명을 독립적으로 진행해 다음 공격에서 지우지 않는다.
+        for (int i = damageNumbers.Count - 1; i >= 0; i--)
+        {
+            var number = damageNumbers[i];
+            number.elapsed += Time.deltaTime;
+            float progress = Mathf.Clamp01(number.elapsed / Mathf.Max(0.01f, damageDuration));
+            if (number.text == null || progress >= 1f)
+            {
+                if (number.text != null)
+                {
+                    number.text.gameObject.SetActive(false);
+                    Destroy(number.text.gameObject);
+                }
+                damageNumbers.RemoveAt(i);
+                continue;
+            }
+
+            RectTransform rect = number.text.rectTransform;
+            rect.anchoredPosition = number.origin + GetDamageOffset(progress, number.direction);
+            // 피격 순간에는 정자세를 유지하고 오른쪽 이동은 시계 방향, 왼쪽 이동은 반시계 방향으로 점점 빠르게 기울인다.
+            rect.localRotation = Quaternion.Euler(0f, 0f, -number.direction * damageRotation * progress * progress);
+            rect.localScale = Vector3.one * Mathf.Lerp(1.25f, 1f, Mathf.Clamp01(progress / 0.2f));
+            // 늦게 생성되는 스킬 이펙트에도 숫자가 가려지지 않도록 앞에 유지한다.
+            rect.SetAsLastSibling();
+            number.text.alpha = 1f - Mathf.InverseLerp(0.8f, 1f, progress);
+            damageNumbers[i] = number;
+        }
+    }
+
+    // 최고점까지 완만하게 감속하고, 짧은 낙하 구간에서는 가속해 바깥쪽으로 빠르게 떨어뜨린다.
+    private Vector2 GetDamageOffset(float progress, float direction)
+    {
+        float peak = Mathf.Clamp(damagePeakTime, 0.1f, 0.9f);
+        float height;
+        if (progress < peak)
+        {
+            float ascent = progress / peak;
+            height = damageRise * (1f - (1f - ascent) * (1f - ascent));
+        }
+        else
+        {
+            // 최고점의 수직 속도를 0으로 이어 곡선이 꺾이지 않도록 하고 낙하 속도만 빠르게 높인다.
+            float fall = (progress - peak) / (1f - peak);
+            height = damageRise - (damageRise + damageDrop) * fall * fall;
+        }
+        return new Vector2(direction * damageTravel * progress, height);
+    }
+
+    // 전투 재시작과 비활성화 시 남은 숫자를 즉시 숨기고 제거한다.
+    private void ClearDamage()
+    {
+        foreach (var number in damageNumbers)
+        {
+            if (number.text == null)
+                continue;
+            number.text.gameObject.SetActive(false);
+            Destroy(number.text.gameObject);
+        }
+        damageNumbers.Clear();
+    }
+
     // 피해 조건에 따라 한 번 생성하고 캐시한 이미지 참조로 공통 시간축의 프레임과 접촉점을 갱신한다.
     private void UpdateEffects(SkillPresentationData data, RectTransform[] instances, Image[] images, bool[] played,
         bool player, Vector3 launch, Vector3 hit, float elapsed, float impact, bool applied, bool damaged, bool damageOnly)
@@ -191,11 +300,13 @@ public sealed class BattleSkillPresenter : MonoBehaviour
     }
 
     // 재시작과 비활성화 시 예약 재생을 취소하고 소리와 생성물을 정리한다.
-    internal void Cancel()
+    internal void Cancel(bool clearDamage = true)
     {
         generation++;
         Completed = false;
         Restore();
+        if (clearDamage)
+            ClearDamage();
         if (audioSource != null)
             audioSource.Stop();
     }

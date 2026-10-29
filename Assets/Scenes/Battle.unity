@@ -383,6 +383,14 @@ MonoBehaviour:
   enemyCharacter: {fileID: 11400000, guid: 2560af1f1e69d5744b2d207239007ef5, type: 2}
   hitFlashDuration: 0.18
   hitFlashAlpha: 0.35
+  damageFont: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  damageFontSize: 32
+  damageDuration: 0.5
+  damageRise: 100
+  damageTravel: 180
+  damageDrop: 20
+  damagePeakTime: 0.65
+  damageRotation: 75
 --- !u!82 &291165628
 AudioSource:
   m_ObjectHideFlags: 0
