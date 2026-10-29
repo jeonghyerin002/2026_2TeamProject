@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SkillPresentation_Lunge
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
   duration: 0.6
-  impactTime: 0.2
+  impactTime: 0.3
   moveDistance: 32
   movement:
     serializedVersion: 2
@@ -51,14 +51,39 @@ MonoBehaviour:
   shakeDuration: 0.2
   shakeStrength: 7
   effects:
-  - prefab: {fileID: 4584709926109355795, guid: 239d2bf603942e543aaf382c3d10cf4d, type: 3}
-    time: 0.2
-    position: 1
+  - prefab: {fileID: 4040518767715109495, guid: 8acb2e86ba8a86945a12e41f7061b62c, type: 3}
+    time: 0
+    position: 0
     offset: {x: 0, y: 0}
-    lifetime: 0.2
-    onlyOnDamage: 1
+    lifetime: 0.33333334
+    onlyOnDamage: 0
+    travelToTarget: 0
+    playback: 1
+    animation: {fileID: 7400000, guid: d266dcee868000349be465e922525ab5, type: 2}
+    animationImpactTime: 0.125
+    contactPoint: {x: 0.5, y: 0.5}
+    contactFrames:
+    - time: 0.0
+      point: {x: 0.167799, y: 0.40781}
+    - time: 0.041666668
+      point: {x: 0.276309, y: 0.406102}
+    - time: 0.083333336
+      point: {x: 0.550935, y: 0.433636}
+    - time: 0.125
+      point: {x: 0.69237, y: 0.419388}
+    - time: 0.16666667
+      point: {x: 0.76885, y: 0.469661}
+    - time: 0.20833333
+      point: {x: 0.784531, y: 0.430374}
+    - time: 0.25
+      point: {x: 0.703125, y: 0.527778}
+    - time: 0.29166666
+      point: {x: 0.770833, y: 0.259259}
+    sizeScale: 1
+    rotateToDirection: 1
+    mirrorForEnemy: 1
   sounds:
   - clip: {fileID: 8300000, guid: fe051702ed6a8d54eb32205db3ddf96b, type: 3}
-    time: 0.2
+    time: 0.3
     volume: 0.8
     onlyOnDamage: 1

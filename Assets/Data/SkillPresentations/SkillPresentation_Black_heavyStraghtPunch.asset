@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SkillPresentation_Black_heavyStraghtPunch
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
   duration: 0.6
-  impactTime: 0.2
+  impactTime: 0.3
   moveDistance: 50
   movement:
     serializedVersion: 2
@@ -43,9 +43,34 @@ MonoBehaviour:
   shakeStrength: 10
   effects:
   - prefab: {fileID: 371633063054854796, guid: 7fc785f28f2461845ba5a5214176163b, type: 3}
-    time: 0.2
+    time: 0
     position: 1
-    offset: {x: 0, y: -120}
+    offset: {x: 0, y: 0}
     lifetime: 0.33333334
-    onlyOnDamage: 1
+    onlyOnDamage: 0
+    travelToTarget: 0
+    playback: 1
+    animation: {fileID: 7400000, guid: 86ca48515f65f9a4ba4d6bdee719bf44, type: 2}
+    animationImpactTime: 0.125
+    contactPoint: {x: 0.5, y: 0.5}
+    contactFrames:
+    - time: 0.0
+      point: {x: 0.152604, y: 0.441262}
+    - time: 0.041666668
+      point: {x: 0.280058, y: 0.430537}
+    - time: 0.083333336
+      point: {x: 0.62414, y: 0.443471}
+    - time: 0.125
+      point: {x: 0.713782, y: 0.478931}
+    - time: 0.16666667
+      point: {x: 0.713131, y: 0.512839}
+    - time: 0.20833333
+      point: {x: 0.837989, y: 0.326041}
+    - time: 0.25
+      point: {x: 0.604834, y: 0.723409}
+    - time: 0.29166666
+      point: {x: 0.636336, y: 0.480937}
+    sizeScale: 1
+    rotateToDirection: 1
+    mirrorForEnemy: 1
   sounds: []

@@ -378,7 +378,9 @@ MonoBehaviour:
   enemyPosition: {fileID: 2145747926}
   effectRoot: {fileID: 1448186425}
   audioSource: {fileID: 291165628}
-  targetOffsetX: 20
+  defaultPresentation: {fileID: 11400000, guid: 41c1293655e68df42ac2e40b7c772878, type: 2}
+  playerCharacter: {fileID: 11400000, guid: 2c15917d7f5e5584fb2af2fa2d4b5ec4, type: 2}
+  enemyCharacter: {fileID: 11400000, guid: 2560af1f1e69d5744b2d207239007ef5, type: 2}
   hitFlashDuration: 0.18
   hitFlashAlpha: 0.35
 --- !u!82 &291165628
@@ -7654,7 +7656,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 3386777985692454029, guid: 1af530f59a034964b94f061107170a4f, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1

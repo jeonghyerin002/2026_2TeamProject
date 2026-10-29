@@ -12,7 +12,9 @@ public sealed class BattleSkillPresenter : MonoBehaviour
     [SerializeField] private RectTransform enemyPosition;  // 적 측 이동 대상
     [SerializeField] private RectTransform effectRoot;     // UI 이펙트 생성 영역
     [SerializeField] private AudioSource audioSource;      // 스킬 효과음 전용 출력
-    [SerializeField, Min(0f)] private float targetOffsetX = 20f; // 대상별 안쪽 방향의 이펙트 보정 거리(UI 단위)
+    [SerializeField] private SkillPresentationData defaultPresentation; // 전용 연출이 없는 스킬에 사용할 기본 공격
+    [SerializeField] private CharacterData playerCharacter; // 단독 씬 실행에 사용할 플레이어의 위치 데이터
+    [SerializeField] private CharacterData enemyCharacter;  // 단독 씬 실행에 사용할 상대의 위치 데이터
     [SerializeField, Min(0.01f)] private float hitFlashDuration = 0.18f; // 실제 피격 후 두 번 깜빡이는 시간(초)
     [SerializeField, Range(0f, 1f)] private float hitFlashAlpha = 0.35f; // 깜빡임 중 원래 투명도에 적용할 배율
 
@@ -27,22 +29,37 @@ public sealed class BattleSkillPresenter : MonoBehaviour
     internal bool Completed { get; private set; }
 
     // 스킬 연출을 단일 시간축으로 실행하고 효과 적용 결과로 피격 표현을 결정한다.
-    internal IEnumerator Play(bool player, SkillPresentationData data, float fallbackDuration, Func<bool> apply)
+    internal IEnumerator Play(bool player, SkillPresentationData data, float fallbackDuration, Func<bool> apply,
+        CharacterData playerData = null, CharacterData enemyData = null)
     {
         Cancel();
         Completed = false;
+        if (data == null)
+            data = defaultPresentation;
         if (playerPosition == null || enemyPosition == null || effectRoot == null || audioSource == null)
         {
             Debug.LogError("BattleSkillPresenter: 양측 이미지, 이펙트 영역과 전용 AudioSource를 연결하세요.", this);
             yield break;
         }
 
+        playerData = playerData != null ? playerData : playerCharacter;
+        enemyData = enemyData != null ? enemyData : enemyCharacter;
+        if (playerData == null || enemyData == null)
+        {
+            Debug.LogError("BattleSkillPresenter: 양측 CharacterData의 발사 및 피격 지점을 연결하세요.", this);
+            yield break;
+        }
         int token = generation;
         playerOrigin = playerPosition.anchoredPosition;
         enemyOrigin = enemyPosition.anchoredPosition;
         active = true;
         RectTransform source = player ? playerPosition : enemyPosition;
         RectTransform target = player ? enemyPosition : playerPosition;
+        // 캐릭터의 돌진과 피격 흔들림이 공격 경로와 고정 연출을 끌고 가지 않도록 시작 시 확보한다.
+        CharacterData sourceData = player ? playerData : enemyData;
+        CharacterData targetData = player ? enemyData : playerData;
+        Vector3 launch = BattleSkillGeometry.GetPoint(source, sourceData.BattleLaunch);
+        Vector3 hit = BattleSkillGeometry.GetPoint(target, targetData.BattleHit);
         hitImage = target.GetComponent<Image>();
         if (hitImage != null)
             hitColor = hitImage.color;
@@ -56,6 +73,8 @@ public sealed class BattleSkillPresenter : MonoBehaviour
         // 설정된 스킬 길이가 짧거나 기본 연출이어도 피격 강조가 끝나기 전에 복원하지 않는다.
         duration = Mathf.Max(duration, impact + Mathf.Max(0.01f, hitFlashDuration));
         bool[] effectsPlayed = new bool[data != null ? data.Effects.Length : 0];
+        RectTransform[] instances = new RectTransform[effectsPlayed.Length];
+        Image[] images = new Image[effectsPlayed.Length];
         bool[] soundsPlayed = new bool[data != null ? data.Sounds.Length : 0];
         float elapsed = 0f;
         bool applied = false;
@@ -63,6 +82,10 @@ public sealed class BattleSkillPresenter : MonoBehaviour
 
         while (token == generation && isActiveAndEnabled)
         {
+            // 생성, 클립 시각 및 접촉점을 먼저 갱신한 뒤 같은 프레임에 피해를 적용한다.
+            bool impactFrame = !applied && elapsed >= impact;
+            float poseTime = impactFrame ? impact : elapsed;
+            UpdateEffects(data, instances, images, effectsPlayed, player, launch, hit, poseTime, impact, applied, damaged, false);
             // 프레임이 늦어져도 시점을 통과한 효과는 정확히 한 번 적용한다.
             if (!applied && elapsed >= impact)
             {
@@ -70,6 +93,7 @@ public sealed class BattleSkillPresenter : MonoBehaviour
                 damaged = apply();
                 if (token != generation || !isActiveAndEnabled)
                     yield break;
+                UpdateEffects(data, instances, images, effectsPlayed, player, launch, hit, poseTime, impact, true, damaged, true);
             }
 
             float progress = Mathf.Clamp01(elapsed / movementDuration);
@@ -78,9 +102,7 @@ public sealed class BattleSkillPresenter : MonoBehaviour
             source.anchoredPosition = sourceOrigin + localDirection * move;
 
             float shake = 0f;
-            if (data == null && elapsed < 0.45f)
-                shake = Mathf.Sin(progress * Mathf.PI * 8f) * 7f * (1f - progress);
-            else if (data != null && damaged && data.ShakeDuration > 0f)
+            if (data != null && damaged && data.ShakeDuration > 0f)
             {
                 float shakeProgress = Mathf.Clamp01((elapsed - impact) / data.ShakeDuration);
                 shake = Mathf.Sin(shakeProgress * Mathf.PI * 8f) * data.ShakeStrength * (1f - shakeProgress);
@@ -98,38 +120,6 @@ public sealed class BattleSkillPresenter : MonoBehaviour
 
             if (data != null)
             {
-                for (int i = 0; i < data.Effects.Length; i++)
-                {
-                    SkillPresentationData.Effect effect = data.Effects[i];
-                    if (effect == null || effectsPlayed[i] || elapsed < Mathf.Max(0f, effect.time) ||
-                        (effect.onlyOnDamage && !applied))
-                        continue;
-                    effectsPlayed[i] = true;
-                    if (effect.prefab != null && (!effect.onlyOnDamage || damaged))
-                    {
-                        RectTransform instance = Instantiate(effect.prefab, effectRoot, false);
-                        Vector3 position = effect.position == SkillPresentationData.Position.Actor ? source.position :
-                            effect.position == SkillPresentationData.Position.Target ? target.position : (source.position + target.position) * 0.5f;
-                        Vector2 offset = effect.offset;
-                        // 동일한 연출을 양측에서 공유하되 대상의 몸 안쪽으로 생성 위치를 보정한다.
-                        if (effect.position == SkillPresentationData.Position.Target)
-                        {
-                            // 플레이어 대상은 타겟 영역의 가로 중심을 기준으로 시작점과 방향을 함께 뒤집는다.
-                            if (target == playerPosition)
-                            {
-                                position = target.TransformPoint(new Vector3(target.rect.center.x * 2f, 0f, 0f));
-                                offset.x = -offset.x;
-                                Vector3 scale = instance.localScale;
-                                scale.x = -scale.x;
-                                instance.localScale = scale;
-                            }
-                            offset.x += target == playerPosition ? targetOffsetX : -targetOffsetX;
-                        }
-                        instance.position = position + effectRoot.TransformVector(offset);
-                        float start = Mathf.Max(effect.onlyOnDamage ? impact : 0f, effect.time);
-                        spawned.Add((instance.gameObject, start + Mathf.Max(0.01f, effect.lifetime)));
-                    }
-                }
                 for (int i = 0; i < data.Sounds.Length; i++)
                 {
                     SkillPresentationData.Sound sound = data.Sounds[i];
@@ -144,7 +134,7 @@ public sealed class BattleSkillPresenter : MonoBehaviour
 
             for (int i = spawned.Count - 1; i >= 0; i--)
             {
-                if (elapsed < spawned[i].end)
+                if (poseTime < spawned[i].end)
                     continue;
                 if (spawned[i].instance != null)
                 {
@@ -154,7 +144,7 @@ public sealed class BattleSkillPresenter : MonoBehaviour
                 spawned.RemoveAt(i);
             }
 
-            if (elapsed >= duration)
+            if (elapsed >= duration && !impactFrame)
                 break;
             yield return null;
             elapsed = Mathf.Min(duration, elapsed + Time.deltaTime);
@@ -164,6 +154,39 @@ public sealed class BattleSkillPresenter : MonoBehaviour
         {
             Restore();
             Completed = true;
+        }
+    }
+
+    // 피해 조건에 따라 한 번 생성하고 캐시한 이미지 참조로 공통 시간축의 프레임과 접촉점을 갱신한다.
+    private void UpdateEffects(SkillPresentationData data, RectTransform[] instances, Image[] images, bool[] played,
+        bool player, Vector3 launch, Vector3 hit, float elapsed, float impact, bool applied, bool damaged, bool damageOnly)
+    {
+        if (data == null)
+            return;
+        for (int i = 0; i < data.Effects.Length; i++)
+        {
+            SkillPresentationData.Effect effect = data.Effects[i];
+            if (effect == null || (damageOnly && (!effect.onlyOnDamage || effect.Moves)) ||
+                elapsed < effect.GetStart(impact) || (effect.onlyOnDamage && !effect.Moves && !applied))
+                continue;
+            if (!played[i])
+            {
+                played[i] = true;
+                if (effect.prefab == null || (effect.onlyOnDamage && !effect.Moves && !damaged))
+                    continue;
+                instances[i] = Instantiate(effect.prefab, effectRoot, false);
+                images[i] = instances[i].GetComponent<Image>();
+                if (effect.animation != null)
+                {
+                    // Animator의 별도 시간 진행이 피해 프레임을 앞서거나 뒤따르지 않도록 한다.
+                    Animator animator = instances[i].GetComponent<Animator>();
+                    if (animator != null)
+                        animator.enabled = false;
+                }
+                spawned.Add((instances[i].gameObject, effect.GetEnd(impact)));
+            }
+            if (instances[i] != null)
+                BattleSkillGeometry.Sample(instances[i], images[i], effect, launch, hit, player, elapsed, impact);
         }
     }
 

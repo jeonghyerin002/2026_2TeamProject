@@ -19,6 +19,8 @@ public class CharacterData : ScriptableObject
     [SerializeField] private WeaponData weapon;
     [SerializeField] private AetherData aether;
     [SerializeField] private Sprite battleSprite; // 전투 씬에서 상대 캐릭터를 표시할 이미지
+    [SerializeField] private Vector2 battleLaunch = new(0.5f, 0.5f); // 실제 표시 이미지의 왼쪽 아래가 (0, 0)인 발사 지점, 바깥 좌표도 허용
+    [SerializeField] private Vector2 battleHit = new(0.5f, 0.5f);    // 실제 표시 이미지 안에서 스킬이 닿을 몸 부위
 
 
     public int CharacterId => characterid;
@@ -36,6 +38,8 @@ public class CharacterData : ScriptableObject
     public WeaponData Weapon => weapon;
     public AetherData Aether => aether;
     public Sprite BattleSprite => battleSprite;
+    public Vector2 BattleLaunch => battleLaunch;
+    public Vector2 BattleHit => battleHit;
     public bool IsValid => aether != null && aether.itemId == aetherid &&
         (weaponid == 0 ? weapon == null : weapon != null && weapon.ItemId == weaponid);
 }

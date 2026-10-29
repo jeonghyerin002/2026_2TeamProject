@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SkillPresentation_Black_WaterGun
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
   duration: 0.6
-  impactTime: 0.2
+  impactTime: 0.3
   moveDistance: 50
   movement:
     serializedVersion: 2
@@ -43,9 +43,34 @@ MonoBehaviour:
   shakeStrength: 10
   effects:
   - prefab: {fileID: 5743338100207580545, guid: d47f9c171e0937146929c36096e4178e, type: 3}
-    time: 0.2
+    time: 0
     position: 1
-    offset: {x: 0, y: -120}
+    offset: {x: 0, y: 0}
     lifetime: 0.33333334
-    onlyOnDamage: 1
+    onlyOnDamage: 0
+    travelToTarget: 0
+    playback: 1
+    animation: {fileID: 7400000, guid: 6efe5713ce16a8d418d559532827bcc6, type: 2}
+    animationImpactTime: 0.16666667
+    contactPoint: {x: 0.5, y: 0.5}
+    contactFrames:
+    - time: 0.0
+      point: {x: 0.256328, y: 0.464191}
+    - time: 0.041666668
+      point: {x: 0.276347, y: 0.46571}
+    - time: 0.083333336
+      point: {x: 0.29756, y: 0.461014}
+    - time: 0.125
+      point: {x: 0.68301, y: 0.452639}
+    - time: 0.16666667
+      point: {x: 0.837012, y: 0.468915}
+    - time: 0.20833333
+      point: {x: 0.839908, y: 0.453603}
+    - time: 0.25
+      point: {x: 0.846794, y: 0.402718}
+    - time: 0.29166666
+      point: {x: 0.87066, y: 0.385802}
+    sizeScale: 1
+    rotateToDirection: 1
+    mirrorForEnemy: 1
   sounds: []

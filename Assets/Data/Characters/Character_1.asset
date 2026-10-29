@@ -26,3 +26,5 @@ MonoBehaviour:
   rewardexp: 0
   weapon: {fileID: 0}
   aether: {fileID: 0}
+  battleLaunch: {x: 1.367521, y: 0.501916}
+  battleHit: {x: 0.58, y: 0.32}

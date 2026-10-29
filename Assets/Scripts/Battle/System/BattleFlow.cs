@@ -204,7 +204,7 @@ public class BattleFlow : MonoBehaviour
                     effect = BattleResolver.ApplyEffects(actor, target, skill, result);
                     RefreshState();
                     return result.Damage > 0;
-                });
+                }, battleSystem.PlayerState.Character, battleSystem.EnemyState.Character);
 
             if (!skillPresenter.Completed)
             {

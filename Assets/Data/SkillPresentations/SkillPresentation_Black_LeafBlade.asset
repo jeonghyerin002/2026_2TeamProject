@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SkillPresentation_Black_LeafBlade
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
   duration: 0.6
-  impactTime: 0.2
+  impactTime: 0.3
   moveDistance: 50
   movement:
     serializedVersion: 2
@@ -43,9 +43,34 @@ MonoBehaviour:
   shakeStrength: 10
   effects:
   - prefab: {fileID: 5982753407221192898, guid: a8e90c6f632f9db43862b574afa62e16, type: 3}
-    time: 0.2
+    time: 0
     position: 1
-    offset: {x: 0, y: -120}
+    offset: {x: 0, y: 0}
     lifetime: 0.33333334
-    onlyOnDamage: 1
+    onlyOnDamage: 0
+    travelToTarget: 0
+    playback: 1
+    animation: {fileID: 7400000, guid: b9829b26c61a07d438b977e03353a5b5, type: 2}
+    animationImpactTime: 0.083333336
+    contactPoint: {x: 0.5, y: 0.5}
+    contactFrames:
+    - time: 0.0
+      point: {x: 0.122586, y: 0.444444}
+    - time: 0.041666668
+      point: {x: 0.238017, y: 0.438552}
+    - time: 0.083333336
+      point: {x: 0.740937, y: 0.4114}
+    - time: 0.125
+      point: {x: 0.762331, y: 0.465733}
+    - time: 0.16666667
+      point: {x: 0.754108, y: 0.477168}
+    - time: 0.20833333
+      point: {x: 0.639834, y: 0.325949}
+    - time: 0.25
+      point: {x: 0.640625, y: 0.481481}
+    - time: 0.29166666
+      point: {x: 0.697338, y: 0.403292}
+    sizeScale: 1
+    rotateToDirection: 1
+    mirrorForEnemy: 1
   sounds: []

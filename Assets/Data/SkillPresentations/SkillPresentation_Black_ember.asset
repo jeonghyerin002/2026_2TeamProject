@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SkillPresentation_Black_ember
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
   duration: 0.6
-  impactTime: 0.2
+  impactTime: 0.3
   moveDistance: 50
   movement:
     serializedVersion: 2
@@ -43,9 +43,34 @@ MonoBehaviour:
   shakeStrength: 10
   effects:
   - prefab: {fileID: 2315917363674737247, guid: fbd09ab5c856d534eb5833875339aa71, type: 3}
-    time: 0.2
+    time: 0
     position: 1
-    offset: {x: 0, y: -120}
+    offset: {x: 0, y: 0}
     lifetime: 0.33333334
-    onlyOnDamage: 1
+    onlyOnDamage: 0
+    travelToTarget: 0
+    playback: 1
+    animation: {fileID: 7400000, guid: ec54c0b4deb938c41b3268cf6e13a7cf, type: 2}
+    animationImpactTime: 0.16666667
+    contactPoint: {x: 0.5, y: 0.5}
+    contactFrames:
+    - time: 0.0
+      point: {x: 0.125448, y: 0.448526}
+    - time: 0.041666668
+      point: {x: 0.195159, y: 0.449445}
+    - time: 0.083333336
+      point: {x: 0.705687, y: 0.466379}
+    - time: 0.125
+      point: {x: 0.814428, y: 0.444189}
+    - time: 0.16666667
+      point: {x: 0.809975, y: 0.410465}
+    - time: 0.20833333
+      point: {x: 0.807777, y: 0.392655}
+    - time: 0.25
+      point: {x: 0.713542, y: 0.546296}
+    - time: 0.29166666
+      point: {x: 0.785846, y: 0.461329}
+    sizeScale: 1
+    rotateToDirection: 1
+    mirrorForEnemy: 1
   sounds: []
