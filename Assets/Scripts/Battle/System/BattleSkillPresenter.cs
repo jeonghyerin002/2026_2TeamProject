@@ -11,13 +11,17 @@ public sealed class BattleSkillPresenter : MonoBehaviour
 {
     [SerializeField] private RectTransform playerPosition; // 플레이어 측 이동 대상
     [SerializeField] private RectTransform enemyPosition;  // 적 측 이동 대상
-    [SerializeField] private RectTransform effectRoot;     // UI 이펙트 생성 영역
+    [SerializeField] private RectTransform effectRoot;     // 배경·양측 이미지·생성 이펙트를 함께 흔드는 전투 표시 영역
     [SerializeField] private AudioSource audioSource;      // 스킬 효과음 전용 출력
     [SerializeField] private SkillPresentationData defaultPresentation; // 전용 연출이 없는 스킬에 사용할 기본 공격
     [SerializeField] private CharacterData playerCharacter; // 단독 씬 실행에 사용할 플레이어의 위치 데이터
     [SerializeField] private CharacterData enemyCharacter;  // 단독 씬 실행에 사용할 상대의 위치 데이터
     [SerializeField, Min(0.01f)] private float hitFlashDuration = 0.18f; // 실제 피격 후 두 번 깜빡이는 시간(초)
     [SerializeField, Range(0f, 1f)] private float hitFlashAlpha = 0.35f; // 깜빡임 중 원래 투명도에 적용할 배율
+
+    [Header("피격 화면 흔들림")]
+    [SerializeField, Min(0f)] private float screenShakeStrength = 36f; // 플레이어 피격 기준의 상하 화면 흔들림 최대 거리(UI 단위), NPC 피격은 이 값의 1/1.5 사용
+    [SerializeField, Min(0.01f)] private float screenShakeDuration = 0.32f; // 양측 공통으로 실제 피격 후 화면 흔들림 시간(초)
 
     [Header("피해 숫자")]
     [SerializeField] private TMP_FontAsset damageFont; // 기존 전투 UI와 같은 글꼴을 사용하는 피해 표시
@@ -38,12 +42,16 @@ public sealed class BattleSkillPresenter : MonoBehaviour
     private int generation;                             // 중단된 재생의 후속 처리를 방지하는 번호
     private Image hitImage;                             // 현재 피격 중인 캐릭터 이미지
     private Color hitColor;                             // 피격 강조 종료 시 복원할 원래 색상
+    private Vector2 effectOrigin;                       // 화면 흔들림 종료 시 복원할 전투 표시 영역의 위치
+    private float screenShakeElapsed;                   // 피격 후 화면 흔들림 경과 시간(초)
+    private float screenHitStrength;                    // 이번 피격 대상에 맞춰 확정한 화면 흔들림 강도(UI 단위)
+    private bool screenShaking;                         // 양측 공통으로 실제 피해가 발생한 동안만 화면 흔들림을 실행하는 상태
 
     internal bool Completed { get; private set; }
 
     // 스킬 연출을 단일 시간축으로 실행하고 효과 적용 결과로 피격 표현을 결정한다.
     internal IEnumerator Play(bool player, SkillPresentationData data, float fallbackDuration, Func<BattleResolveResult> apply,
-        CharacterData playerData = null, CharacterData enemyData = null)
+        CharacterData playerData = null, CharacterData enemyData = null, ElementType skillType = ElementType.Normal)
     {
         Cancel(false);
         Completed = false;
@@ -65,6 +73,7 @@ public sealed class BattleSkillPresenter : MonoBehaviour
         int token = generation;
         playerOrigin = playerPosition.anchoredPosition;
         enemyOrigin = enemyPosition.anchoredPosition;
+        effectOrigin = effectRoot.anchoredPosition;
         active = true;
         RectTransform source = player ? playerPosition : enemyPosition;
         RectTransform target = player ? enemyPosition : playerPosition;
@@ -109,7 +118,14 @@ public sealed class BattleSkillPresenter : MonoBehaviour
                     yield break;
                 UpdateEffects(data, instances, images, effectsPlayed, player, launch, hit, poseTime, impact, true, damaged, true);
                 if (damaged)
-                    ShowDamage(result.Damage, hit, player ? 1f : -1f);
+                {
+                    ShowDamage(result, skillType, hit, player ? 1f : -1f);
+                    screenShaking = true;
+                    screenShakeElapsed = 0f;
+                    // player는 공격 주체이므로 플레이어 공격으로 NPC가 맞을 때만 강도를 낮춘다.
+                    screenHitStrength = screenShakeStrength / (player ? 1.5f : 1f);
+                    duration = Mathf.Max(duration, impact + Mathf.Max(0.01f, screenShakeDuration));
+                }
             }
 
             float progress = Mathf.Clamp01(elapsed / movementDuration);
@@ -174,7 +190,7 @@ public sealed class BattleSkillPresenter : MonoBehaviour
     }
 
     // 스킬과 같은 피격 좌표에 실제 감소한 HP를 표시하고 대상의 바깥쪽 이동 방향을 저장한다.
-    private void ShowDamage(int damage, Vector3 hit, float direction)
+    private void ShowDamage(BattleResolveResult result, ElementType skillType, Vector3 hit, float direction)
     {
         TMP_FontAsset font = damageFont != null ? damageFont : TMP_Settings.defaultFontAsset;
         if (font == null)
@@ -192,19 +208,54 @@ public sealed class BattleSkillPresenter : MonoBehaviour
         rect.position = hit;
         rect.localRotation = Quaternion.identity;
         label.font = font;
-        label.fontSize = damageFontSize;
-        label.fontStyle = FontStyles.Bold;
+        var style = GetDamageStyle(result);
+        label.fontSize = style.size;
+        label.fontStyle = style.weight;
         label.alignment = TextAlignmentOptions.Center;
-        label.color = new Color32(255, 225, 120, 255);
-        label.outlineColor = new Color32(45, 30, 20, 255);
-        label.outlineWidth = 0.18f;
+        label.color = GetDamageColor(skillType);
+        // 속성의 색감을 유지한 채 30% 어둡게 만든 외곽선을 두껍게 적용해 숫자의 경계를 구분한다.
+        label.outlineColor = Color.Lerp(label.color, Color.black, 0.3f);
+        label.outlineWidth = 0.525f;
         label.raycastTarget = false;
-        label.text = damage.ToString();
+        label.text = result.Damage.ToString();
         damageNumbers.Add((label, rect.anchoredPosition, direction, 0f));
+    }
+
+    // 급소 또는 유리한 상성은 크게 굵게, 불리한 상성은 작게 표시하며 급소 강조를 우선한다.
+    private (float size, FontStyles weight) GetDamageStyle(BattleResolveResult result)
+    {
+        bool emphasized = result.Critical || result.Effectiveness > 1f;
+        float offset = emphasized ? 4f : result.Effectiveness < 1f ? -2f : 0f;
+        return (Mathf.Max(1f, damageFontSize + offset), emphasized ? FontStyles.Bold : FontStyles.Normal);
+    }
+
+    // 사용한 스킬의 속성을 확정된 피해 숫자 색상표에 연결하며 발버둥과 알 수 없는 값은 일반 색상을 사용한다.
+    private static Color32 GetDamageColor(ElementType type)
+    {
+        return type switch
+        {
+            ElementType.Fire => new Color32(239, 68, 68, 255),
+            ElementType.Water => new Color32(59, 130, 246, 255),
+            ElementType.Grass => new Color32(34, 197, 94, 255),
+            ElementType.Electric => new Color32(250, 204, 21, 255),
+            ElementType.Fighting => new Color32(249, 115, 22, 255),
+            ElementType.Rock => new Color32(51, 51, 51, 255),
+            ElementType.Earth => new Color32(139, 90, 43, 255),
+            _ => new Color32(128, 128, 128, 255)
+        };
     }
 
     private void Update()
     {
+        // 코루틴이 월드 좌표로 이펙트를 배치하기 전에 이전 프레임의 화면 이동을 제거한다.
+        if (active && effectRoot != null)
+            effectRoot.anchoredPosition = effectOrigin;
+        if (screenShaking)
+        {
+            screenShakeElapsed += Time.deltaTime;
+            if (screenShakeElapsed >= Mathf.Max(0.01f, screenShakeDuration))
+                screenShaking = false;
+        }
         // 공격 연출이 끝나도 숫자의 수명을 독립적으로 진행해 다음 공격에서 지우지 않는다.
         for (int i = damageNumbers.Count - 1; i >= 0; i--)
         {
@@ -232,6 +283,22 @@ public sealed class BattleSkillPresenter : MonoBehaviour
             number.text.alpha = 1f - Mathf.InverseLerp(0.8f, 1f, progress);
             damageNumbers[i] = number;
         }
+    }
+
+    private void LateUpdate()
+    {
+        // 이미지 이동과 접촉점 계산을 마친 뒤 공통 부모만 움직여 타격 위치가 흔들림에 밀려 누적되지 않게 한다.
+        if (active && screenShaking && effectRoot != null)
+            effectRoot.anchoredPosition = effectOrigin + GetScreenShakeOffset(screenShakeElapsed,
+                screenShakeDuration, screenHitStrength);
+    }
+
+    // 상하 진동을 감쇠해 강한 충격 후 가로 이동 없이 원래 위치로 돌아오는 화면 이동량을 계산한다.
+    private static Vector2 GetScreenShakeOffset(float elapsed, float duration, float strength)
+    {
+        float progress = Mathf.Clamp01(elapsed / Mathf.Max(0.01f, duration));
+        float fade = (1f - progress) * (1f - progress);
+        return Vector2.up * (Mathf.Sin(elapsed * Mathf.PI * 48f) * Mathf.Max(0f, strength) * fade);
     }
 
     // 최고점까지 완만하게 감속하고, 짧은 낙하 구간에서는 가속해 바깥쪽으로 빠르게 떨어뜨린다.
@@ -319,12 +386,17 @@ public sealed class BattleSkillPresenter : MonoBehaviour
         hitImage = null;
         if (active)
         {
+            if (effectRoot != null)
+                effectRoot.anchoredPosition = effectOrigin;
             if (playerPosition != null)
                 playerPosition.anchoredPosition = playerOrigin;
             if (enemyPosition != null)
                 enemyPosition.anchoredPosition = enemyOrigin;
         }
         active = false;
+        screenShaking = false;
+        screenShakeElapsed = 0f;
+        screenHitStrength = 0f;
         foreach (var effect in spawned)
             if (effect.instance != null)
             {

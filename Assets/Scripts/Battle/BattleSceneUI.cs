@@ -42,7 +42,7 @@ public sealed class BattleSceneUI : MonoBehaviour
     [SerializeField] private Color trailColor = new Color32(135, 135, 135, 255); // 잃은 체력 구간을 구분하는 회색 잔상
     [SerializeField, Min(0.01f)] private float healthFlashDuration = 0.05f; // 흰색 점멸과 확대에 사용하는 시간(초)
     [SerializeField, Range(1f, 1.2f)] private float healthImpactScale = 1.08f; // 타격 순간 HP 바와 잔상의 최대 확대 배율
-    [SerializeField, Min(0f)] private float healthShake = 2f; // HP 패널의 감쇠 흔들림 크기(UI 단위)
+    [SerializeField, Min(0f)] private float healthShake = 2f; // 적 HP 패널의 감쇠 흔들림 크기(UI 단위)
 
     private HealthDisplay playerDisplay; // 플레이어 체력의 표시 상태
     private HealthDisplay enemyDisplay;  // 적 체력의 표시 상태
@@ -172,10 +172,10 @@ public sealed class BattleSceneUI : MonoBehaviour
     {
         // HP 감소와 잔상 연출이 완료된 뒤의 유지 시간을 확인하고 HUD 퇴장을 시작한다.
         RefreshHudVisibility();
-        // HP 피격 흔들림과 표시 이동을 마지막에 합성하여 같은 위치를 덮어쓰지 않는다.
+        // 화면 흔들림과 분리된 HUD는 피격 이동량을 더하지 않고 기존 표시·퇴장 이동만 적용한다.
         float delta = Time.unscaledDeltaTime;
-        playerPanel?.Tick(delta, uiTransitionDuration, playerDisplay.ShakeOffset);
-        enemyPanel?.Tick(delta, uiTransitionDuration, enemyDisplay.ShakeOffset);
+        playerPanel?.Tick(delta, uiTransitionDuration, Vector2.zero);
+        enemyPanel?.Tick(delta, uiTransitionDuration, Vector2.zero);
         commandView?.Tick(delta, uiTransitionDuration, Vector2.zero);
         dialogueView?.Tick(delta, uiTransitionDuration, Vector2.zero);
     }

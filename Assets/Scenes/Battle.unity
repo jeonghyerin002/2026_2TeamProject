@@ -376,13 +376,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BattleSkillPresenter
   playerPosition: {fileID: 517308939}
   enemyPosition: {fileID: 2145747926}
-  effectRoot: {fileID: 1448186425}
+  effectRoot: {fileID: 2100000002}
   audioSource: {fileID: 291165628}
   defaultPresentation: {fileID: 11400000, guid: 41c1293655e68df42ac2e40b7c772878, type: 2}
   playerCharacter: {fileID: 11400000, guid: 2c15917d7f5e5584fb2af2fa2d4b5ec4, type: 2}
   enemyCharacter: {fileID: 11400000, guid: 2560af1f1e69d5744b2d207239007ef5, type: 2}
   hitFlashDuration: 0.18
   hitFlashAlpha: 0.35
+  screenShakeStrength: 36
+  screenShakeDuration: 0.32
   damageFont: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   damageFontSize: 32
   damageDuration: 0.5
@@ -601,7 +603,7 @@ RectTransform:
   - {fileID: 1850772289}
   - {fileID: 903182778}
   - {fileID: 1535385278}
-  m_Father: {fileID: 1448186425}
+  m_Father: {fileID: 2100000002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1391,7 +1393,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1448186425}
+  m_Father: {fileID: 2100000002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -4712,16 +4714,52 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2095145933}
+  - {fileID: 2100000002}
   - {fileID: 1268737505}
-  - {fileID: 1738814816}
-  - {fileID: 359411795}
-  - {fileID: 2145747926}
-  - {fileID: 517308939}
   - {fileID: 384069484}
   - {fileID: 880927411}
   - {fileID: 519115708}
   m_Father: {fileID: 1038901013}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 960, y: 640}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2100000001
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2100000002}
+  m_Layer: 0
+  m_Name: Battle Visuals
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2100000002
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2100000001}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2095145933}
+  - {fileID: 1738814816}
+  - {fileID: 359411795}
+  - {fileID: 2145747926}
+  - {fileID: 517308939}
+  m_Father: {fileID: 1448186425}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5639,7 +5677,7 @@ RectTransform:
   - {fileID: 2027033782}
   - {fileID: 585713607}
   - {fileID: 1328505502}
-  m_Father: {fileID: 1448186425}
+  m_Father: {fileID: 2100000002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -7348,7 +7386,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1448186425}
+  m_Father: {fileID: 2100000002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -7635,7 +7673,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1448186425}
+  m_Father: {fileID: 2100000002}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
