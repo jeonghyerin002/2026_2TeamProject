@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 /// <summary>플레이어의 보유 및 장착 에테르를 맵 UI에 연결함</summary>
@@ -32,7 +31,6 @@ public sealed class AetherEquipmentUI : MonoBehaviour
     private bool ownedDirty;
     private GameObject storageHeading;
     private int closedFrame = -1;
-    private int openedFrame = -1;
     private readonly List<AetherDragSource> ownedViews = new();
 
     public bool IsOpen => equipmentPanel != null && equipmentPanel.activeInHierarchy;
@@ -116,20 +114,13 @@ public sealed class AetherEquipmentUI : MonoBehaviour
 
     private void Update()
     {
-        Keyboard keyboard = Keyboard.current;
-        if (!initialized || keyboard == null)
-            return;
-        if (openedFrame == Time.frameCount)
+        if (!initialized)
             return;
         if (IsOpen && (!playerData.CanEditEquipment || (dialogPanel != null && dialogPanel.activeInHierarchy)))
         {
             SetOpen(false);
             return;
         }
-        if (keyboard.qKey.wasPressedThisFrame)
-            SetOpen(!IsOpen);
-        else if (IsOpen && (keyboard.eKey.wasPressedThisFrame || keyboard.escapeKey.wasPressedThisFrame || (storageMode && keyboard.fKey.wasPressedThisFrame)))
-            SetOpen(false);
     }
 
     private void MarkOwnedDirty() => ownedDirty = true;
@@ -173,7 +164,6 @@ public sealed class AetherEquipmentUI : MonoBehaviour
         if (open)
         {
             if (WeaponInventoryUI.Instance != null) WeaponInventoryUI.Instance.SetOpen(false);
-            openedFrame = Time.frameCount;
             player.SetMovementEnabled(false);
             Refresh();
         }

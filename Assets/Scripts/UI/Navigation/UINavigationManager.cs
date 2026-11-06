@@ -27,6 +27,7 @@ public class UINavigationManager : MonoBehaviour
     public bool CanGoBack => history.Count > 0;
     public bool IsTransitioning => isTransitioning;
     public bool IsOpen => CurrentGroup != null;
+    public event Action<UIGroupData> GroupChanged; // Player 메뉴가 열림과 닫힘에 따른 입력 차단을 갱신한다.
 
     private void Awake()
     {
@@ -168,6 +169,17 @@ public class UINavigationManager : MonoBehaviour
         TryBack();
     }
 
+    // 이동 기록을 바꾸지 않고 다음 유효한 복귀 대상이 지정 그룹인지 확인한다.
+    public bool WillBackTo(UIGroupData group)
+    {
+        foreach (UIGroupData previous in history)
+        {
+            if (previous != CurrentGroup && TryGetAvailableController(previous, out _))
+                return previous == group;
+        }
+        return false;
+    }
+
     public bool TryBack()
     {
         if (!isActiveAndEnabled || isTransitioning)
@@ -247,6 +259,7 @@ public class UINavigationManager : MonoBehaviour
 
             // 콜백 중 Open/Back 재진입을 막아 한 번의 이동을 원자적으로 마친다.
             onGroupChanged?.Invoke(CurrentGroup);
+            GroupChanged?.Invoke(CurrentGroup);
         }
         finally
         {

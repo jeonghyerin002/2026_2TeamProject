@@ -117,9 +117,9 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        if (!movementEnabled || GameSaveSystem.IsBusy || Time.timeScale == 0f || moveInput.sqrMagnitude == 0f)
+        if (!movementEnabled || PlayerMenuUI.BlocksWorldInput || GameSaveSystem.IsBusy || Time.timeScale == 0f || moveInput.sqrMagnitude == 0f)
         {
-            if (GameSaveSystem.IsBusy || Time.timeScale == 0f)
+            if (PlayerMenuUI.BlocksWorldInput || GameSaveSystem.IsBusy || Time.timeScale == 0f)
             {
                 moveInput = Vector2.zero;
                 isFasted = false;
@@ -183,7 +183,7 @@ public class PlayerController : MonoBehaviour
     // 이동 가능 상태에 따라 방향 입력을 저장한다
     private void OnMove(InputValue value)
     {
-        if (!isActiveAndEnabled || !movementEnabled || GameSaveSystem.IsBusy || Time.timeScale == 0f)
+        if (!isActiveAndEnabled || !movementEnabled || PlayerMenuUI.BlocksWorldInput || GameSaveSystem.IsBusy || Time.timeScale == 0f)
         {
             moveInput = Vector2.zero;
             return;
@@ -195,13 +195,13 @@ public class PlayerController : MonoBehaviour
     // 이동 가능 상태에서만 달리기 입력을 저장한다
     private void OnSprint(InputValue value)
     {
-        isFasted = isActiveAndEnabled && movementEnabled && !GameSaveSystem.IsBusy && Time.timeScale != 0f && value.isPressed;
+        isFasted = isActiveAndEnabled && movementEnabled && !PlayerMenuUI.BlocksWorldInput && !GameSaveSystem.IsBusy && Time.timeScale != 0f && value.isPressed;
     }
 
     // 물리 프레임마다 플레이어 이동 속도를 적용한다
     private void FixedUpdate()
     {
-        if (!movementEnabled || GameSaveSystem.IsBusy)
+        if (!movementEnabled || PlayerMenuUI.BlocksWorldInput || GameSaveSystem.IsBusy)
         {
             rb.linearVelocity = Vector2.zero;
             return;

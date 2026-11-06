@@ -1,10 +1,9 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-/// <summary>R 무기 목록. 보유 순서는 플레이어 데이터에, 선택 메뉴는 현재 UI에 저장한다.</summary>
+/// <summary>보유 무기 목록. 보유 순서는 플레이어 데이터에, 선택 메뉴는 현재 UI에 저장한다.</summary>
 [DefaultExecutionOrder(-100)]
 [DisallowMultipleComponent]
 public sealed class WeaponInventoryUI : MonoBehaviour
@@ -50,11 +49,6 @@ public sealed class WeaponInventoryUI : MonoBehaviour
             SetOpen(false);
             return;
         }
-        Keyboard keyboard = Keyboard.current;
-        if (keyboard == null) return;
-        if (keyboard.rKey.wasPressedThisFrame) SetOpen(!IsOpen);
-        else if (IsOpen && (keyboard.qKey.wasPressedThisFrame || keyboard.escapeKey.wasPressedThisFrame || keyboard.eKey.wasPressedThisFrame))
-            SetOpen(false);
     }
 
     public void SetOpen(bool open)
@@ -130,7 +124,7 @@ public sealed class WeaponInventoryUI : MonoBehaviour
         title.anchorMin = title.anchorMax = new Vector2(0.5f, 1);
         title.pivot = new Vector2(0.5f, 1);
         title.anchoredPosition = new Vector2(0, -12);
-        Label(title, "무기 인벤토리  [R]");
+        Label(title, "무기 인벤토리");
 
         RectTransform viewport = Rect("Viewport", root, Vector2.zero);
         Stretch(viewport, new Vector2(20, 20), new Vector2(-20, -88));

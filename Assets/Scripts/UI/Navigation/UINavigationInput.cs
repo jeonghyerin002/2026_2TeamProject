@@ -3,11 +3,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [DisallowMultipleComponent]
+[DefaultExecutionOrder(-200)]
 [RequireComponent(typeof(UINavigationManager))]
 public class UINavigationInput : MonoBehaviour
 {
     [SerializeField, Min(0.01f)] private float selectionRepeatInterval = 0.15f;
     private UINavigationManager navigation;
+    private PlayerMenuUI playerMenu; // Player 내부에 배치된 경우 씬과 플레이 상태를 확인한다.
     private UIGroupController selectionController;
     private int heldDirection;
     private float nextSelectionTime;
@@ -19,12 +21,15 @@ public class UINavigationInput : MonoBehaviour
     private void Awake()
     {
         navigation = GetComponent<UINavigationManager>();
+        playerMenu = GetComponent<PlayerMenuUI>();
     }
 
     private void Update()
     {
         Keyboard keyboard = Keyboard.current;
-        if (keyboard == null || navigation == null || !navigation.isActiveAndEnabled || navigation.IsTransitioning)
+        if (keyboard == null || navigation == null || !navigation.isActiveAndEnabled || navigation.IsTransitioning ||
+            (playerMenu != null && (!playerMenu.CanReceiveInput || playerMenu.IsClosingCategory ||
+                playerMenu.IsReturningToCategory || playerMenu.IsOpeningPanel)))
         {
             ResetSelectionRepeat();
             return;
@@ -33,7 +38,8 @@ public class UINavigationInput : MonoBehaviour
         if (keyboard.qKey.wasPressedThisFrame)
         {
             ResetSelectionRepeat();
-            navigation.ToggleInitialGroup();
+            if (playerMenu == null || !playerMenu.TryCloseCategory())
+                navigation.ToggleInitialGroup();
             return;
         }
 
@@ -47,14 +53,16 @@ public class UINavigationInput : MonoBehaviour
         if (keyboard.eKey.wasPressedThisFrame)
         {
             ResetSelectionRepeat();
-            controller.ExecuteInteraction(back);
+            if (playerMenu == null || (!playerMenu.TryCloseCategory() && !playerMenu.TryReturnToCategory()))
+                controller.ExecuteInteraction(back);
             return;
         }
 
         if (keyboard.fKey.wasPressedThisFrame)
         {
             ResetSelectionRepeat();
-            controller.ExecuteInteraction(confirm);
+            if (playerMenu == null || !playerMenu.TryConfirmCategory())
+                controller.ExecuteInteraction(confirm);
             return;
         }
 

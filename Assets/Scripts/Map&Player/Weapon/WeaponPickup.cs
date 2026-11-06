@@ -30,7 +30,7 @@ public sealed class WeaponPickup : MonoBehaviour
     {
         Keyboard keyboard = Keyboard.current;
         if (keyboard == null || !keyboard.fKey.wasPressedThisFrame || !data.CanEditEquipment ||
-            !dialogManager.CanShowMessage || (equipmentUI != null && equipmentUI.BlocksWorldInput) ||
+            !dialogManager.CanShowMessage || (PlayerMenuUI.BlocksWorldInput || (equipmentUI != null && equipmentUI.BlocksWorldInput)) ||
             AetherStorageTerminal.IsPlayerInRange) return;
         if (((Vector2)(player.transform.position - transform.position)).sqrMagnitude > pickupRange * pickupRange) return;
         if (!data.TryAddWeapon(weapon))

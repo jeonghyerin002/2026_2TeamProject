@@ -90,11 +90,11 @@ public sealed class WeaponGate : MonoBehaviour
         }
         wasTouchingBlocker = isTouchingBlocker;
         if (Time.timeScale == 0f || subscribedData == null ||
-            (equipmentUI != null && equipmentUI.BlocksWorldInput))
+            (PlayerMenuUI.BlocksWorldInput || (equipmentUI != null && equipmentUI.BlocksWorldInput)))
         {
             return;
         }
-        if (pendingPassageAttempt || (Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame))
+        if (pendingPassageAttempt || (Keyboard.current != null && Keyboard.current.fKey.wasPressedThisFrame))
         {
             TryStartBlockedDialogue();
         }
@@ -120,11 +120,11 @@ public sealed class WeaponGate : MonoBehaviour
         }
     }
 
-    // 기존 출구 호출을 유지하며 통행 시도·E 입력 시 현재 장착 조건에 맞는 대화 요청
+    // 기존 출구 호출을 유지하며 통행 시도·F 입력 시 현재 장착 조건에 맞는 대화 요청
     public bool TryStartBlockedDialogue()
     {
         if (!isActiveAndEnabled || isInteracting || Time.timeScale == 0f || dialogManager == null ||
-            !dialogManager.CanShowMessage || (equipmentUI != null && equipmentUI.BlocksWorldInput))
+            !dialogManager.CanShowMessage || (PlayerMenuUI.BlocksWorldInput || (equipmentUI != null && equipmentUI.BlocksWorldInput)))
         {
             return false;
         }

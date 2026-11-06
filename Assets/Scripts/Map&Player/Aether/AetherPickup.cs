@@ -45,7 +45,7 @@ public sealed class AetherPickup : MonoBehaviour
     {
         Keyboard keyboard = Keyboard.current;
         if (keyboard == null || !keyboard.fKey.wasPressedThisFrame || player == null || playerData == null ||
-            !playerData.CanEditEquipment || !dialogManager.CanShowMessage || (equipmentUI != null && equipmentUI.BlocksWorldInput))
+            !playerData.CanEditEquipment || !dialogManager.CanShowMessage || (PlayerMenuUI.BlocksWorldInput || (equipmentUI != null && equipmentUI.BlocksWorldInput)))
             return;
         // 기기와 획득물이 가까울 때 F 입력은 보관함 기기가 먼저 사용한다.
         if (AetherStorageTerminal.IsPlayerInRange)

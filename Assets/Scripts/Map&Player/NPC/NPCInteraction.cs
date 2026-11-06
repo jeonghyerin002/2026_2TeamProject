@@ -104,10 +104,10 @@ public class NPCInteraction : MonoBehaviour
     // 플레이어가 가까이 있을 때 상호작용 입력을 확인한다
     private void Update()
     {
-        if (isInteracting || dialogManager == null || !dialogManager.CanShowMessage || !isPlayerNearby || Keyboard.current == null || (equipmentUI != null && equipmentUI.BlocksWorldInput))
+        if (isInteracting || dialogManager == null || !dialogManager.CanShowMessage || !isPlayerNearby || Keyboard.current == null || (PlayerMenuUI.BlocksWorldInput || (equipmentUI != null && equipmentUI.BlocksWorldInput)))
             return;
 
-        if (Keyboard.current.eKey.wasPressedThisFrame)
+        if (Keyboard.current.fKey.wasPressedThisFrame)
             StartInteraction();
     }
 

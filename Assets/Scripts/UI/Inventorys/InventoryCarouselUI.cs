@@ -15,6 +15,7 @@ public class InventoryCarouselUI : MonoBehaviour
     [SerializeField] private Image selectedItemImage;
     [SerializeField] private Image previousItemImage;
     [SerializeField] private Image nextItemImage;
+    [SerializeField] private bool useSolidPreview; // 아이콘 대신 슬롯 색상으로 Category 시안을 표시한다.
 
     [Header("아이템 이미지")]
     [SerializeField] private Sprite[] itemSprites;
@@ -468,9 +469,10 @@ public class InventoryCarouselUI : MonoBehaviour
         }
     }
 
+    // 색상 시안에서는 스프라이트 없이 사각형을 표시하고 기존 메뉴는 아이콘을 사용한다.
     private void SetPreviewSprite(Image image, int index)
     {
-        image.sprite = GetSprite(index);
-        image.enabled = image.sprite != null;
+        image.sprite = useSolidPreview ? null : GetSprite(index);
+        image.enabled = useSolidPreview ? index >= 0 && index < ItemCount : image.sprite != null;
     }
 }

@@ -22,7 +22,7 @@ public sealed class AetherStorageTerminal : MonoBehaviour
 
     private void Update()
     {
-        if (!InRange || equipmentUI == null || equipmentUI.BlocksWorldInput ||
+        if (PlayerMenuUI.BlocksWorldInput || !InRange || equipmentUI == null || equipmentUI.BlocksWorldInput ||
             BattleSession.IsActive || (dialogManager != null && !dialogManager.CanShowMessage))
             return;
         if (Keyboard.current != null && Keyboard.current.fKey.wasPressedThisFrame)
