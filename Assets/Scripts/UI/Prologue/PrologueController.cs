@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using TMPro;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -26,6 +27,10 @@ public sealed class PrologueController : MonoBehaviour, ISerializationCallbackRe
     [SerializeField] private Image backgroundImage;
     [SerializeField, Min(0f)] private float imageFadeDuration = 2.5f; // 새 이미지가 완전히 겹쳐질 때까지의 실제 시간(초), 0이면 즉시 변경
     [SerializeField, Min(0f)] private float dialogFadeDuration = 0.3f; // 숨겨진 대화창이 나타나는 실제 시간(초), 0이면 즉시 표시
+    [SerializeField] private TMP_FontAsset summaryFont; // 검은 화면에서 사용할 기존 한글 폰트
+    [SerializeField, Min(0f)] private float summaryDuration = 1f; // 세 줄이 모두 나타난 뒤 유지하는 시간(실제 초)
+    [SerializeField, TextArea(3, 3)] private string summaryText =
+        "소원을 이루어 주는 혜성을 향해\n저마다의 꿈이 맞부딪치는 세상에서\n자신의 꿈을 끝까지 지켜 나가는 이야기가 시작된다"; // 씬 이동 전 표시할 세 줄 문장
     // 기존 string 배열의 씬 데이터를 읽기 위한 호환 필드
     [SerializeField, HideInInspector] private string[] messages;
     // 비워 두면 씬을 유지하고 완료 이벤트만 실행
@@ -110,13 +115,29 @@ public sealed class PrologueController : MonoBehaviour, ISerializationCallbackRe
             return;
         }
 
+        CompleteDialogue();
+    }
+
+    // 남은 대사를 중단하고 일반 종료와 동일한 요약 연출을 실행
+    public void SkipDialogue()
+    {
+        if (!isActiveAndEnabled || !isPlaying || hasCompleted || SceneFadeIn.IsTransitioning)
+        {
+            return;
+        }
+        CompleteDialogue();
+    }
+
+    // 대화 종료 경로를 합쳐 요약 문장과 씬 이동이 한 번만 실행되도록 처리
+    private void CompleteDialogue()
+    {
         hasCompleted = true;
         ReleaseDialogue();
         onCompleted.Invoke();
         if (this != null && isActiveAndEnabled && !string.IsNullOrWhiteSpace(nextSceneName))
         {
-            // 대화가 끝난 화면에서 암전한 뒤 다음 씬으로 이동
-            SceneFadeIn.LoadScene(nextSceneName);
+            SceneFadeIn.LoadScene(nextSceneName, transitionText: summaryText,
+                transitionFont: summaryFont, textDuration: summaryDuration);
         }
     }
 
@@ -126,6 +147,11 @@ public sealed class PrologueController : MonoBehaviour, ISerializationCallbackRe
         if (dialogManager == null || dialogueMessages == null || dialogueMessages.Length == 0)
         {
             Fail("Dialog Manager와 한 개 이상의 Messages를 연결하세요.");
+            return;
+        }
+        if (!string.IsNullOrWhiteSpace(summaryText) && summaryFont == null)
+        {
+            Fail("Summary Font에 요약 문장을 표시할 한글 폰트를 연결하세요.");
             return;
         }
         // 빈 문장 때문에 재생 도중 UI가 잠기지 않도록 사전 확인
