@@ -21,4 +21,14 @@ public sealed class GameSaveCatalog : ScriptableObject
     public CharacterData Character(int id) => characters.FirstOrDefault(item => item != null && item.CharacterId == id);
     public AetherData Aether(int id) => aethers.FirstOrDefault(item => item != null && item.itemId == id);
     public WeaponData Weapon(int id) => weapons.FirstOrDefault(item => item != null && item.ItemId == id);
+
+
+    // 에테르와 무기에 연결된 원본 스킬의 고정 ID 조회
+    public SkillData Skill(int id)
+    {
+        // 기존 카탈로그의 스킬 참조 재사용으로 별도 목록 중복 관리 방지
+        return aethers.Where(item => item != null).SelectMany(item => item.Skills ?? Array.Empty<SkillData>())
+            .Concat(weapons.Where(item => item != null).SelectMany(item => item.Skills ?? Array.Empty<SkillData>()))
+            .FirstOrDefault(item => item != null && item.SkillId == id);
+    }
 }

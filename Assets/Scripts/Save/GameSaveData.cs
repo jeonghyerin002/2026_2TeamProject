@@ -23,10 +23,25 @@ public sealed class GameSaveData
     // 보유 무기와 현재 장착 무기. 미장착은 0이다.
     public int[] ownedWeaponIds;
     public int equippedWeaponId;
+
+    // 스킬별 남은 PP와 구형 저장 파일의 기본 빈 목록
+    public SavedSkillPp[] skillPp = Array.Empty<SavedSkillPp>();
+
     // NPC 승리, 일회성 컷신 완료와 컷신이 변경한 월드 대상 위치.
     public string[] defeatedNpcIds;
     public string[] completedCutsceneIds;
     public SavedWorldActor[] worldActors;
+}
+
+/// <summary>
+/// 고정 스킬 ID와 전투 후 남은 PP 저장
+/// </summary>
+[Serializable]
+public sealed class SavedSkillPp
+{
+    // 스킬 식별자와 남은 사용 횟수
+    public int skillId;
+    public int remaining;
 }
 
 /// <summary>컷신으로 이동한 대상의 Scene별 고유 ID와 최종 월드 좌표.</summary>

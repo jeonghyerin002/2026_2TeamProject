@@ -15,6 +15,9 @@ public sealed class BattleState
     private int confusionTurns;
     private int toxicStage;
 
+    // 전투 진입 전 보관한 스킬별 남은 PP
+    private readonly IReadOnlyDictionary<int, int> initialPp;
+
     public CharacterData Character { get; }
     public AetherData Aether { get; private set; }
     public WeaponData Weapon { get; }
@@ -30,7 +33,18 @@ public sealed class BattleState
 
     // 원본 데이터와 선택 장비로 독립적인 전투 상태를 생성한다
     public BattleState(CharacterData character, AetherData aether, WeaponData weapon = null, int level = 1)
+        : this(character, aether, weapon, level, null)
     {
+        // 기존 생성 경로의 최대 PP 초기화 유지
+    }
+
+
+    // 보관한 PP를 포함한 독립 전투 상태 생성
+    public BattleState(CharacterData character, AetherData aether, WeaponData weapon, int level,
+        IReadOnlyDictionary<int, int> initialPp)
+    {
+        // 원본 데이터와 이전 전투의 PP 스냅숏 보관
+        this.initialPp = initialPp;
         Character = character != null ? character : throw new ArgumentNullException(nameof(character));
         Aether = aether != null ? aether : throw new ArgumentNullException(nameof(aether));
         Weapon = weapon;
@@ -68,7 +82,12 @@ public sealed class BattleState
             SkillData skill = source != null && i < source.Length ? source[i] : null;
             list.Add(skill);
             if (skill != null && !currentPp.ContainsKey(skill))
-                currentPp.Add(skill, Mathf.Max(0, skill.PP));
+            {
+                // 첫 장착과 전투 중 에테르 교체 모두 보관한 PP로 초기화
+                int maximum = Mathf.Max(0, skill.PP);
+                int remaining = initialPp != null && initialPp.TryGetValue(skill.SkillId, out int saved) ? saved : maximum;
+                currentPp.Add(skill, Mathf.Clamp(remaining, 0, maximum));
+            }
         }
     }
 
@@ -83,6 +102,25 @@ public sealed class BattleState
     {
         return skill != null && currentPp.TryGetValue(skill, out int pp) ? pp : 0;
     }
+
+
+    // 교체 전 스킬을 포함한 전투 PP 결과의 독립 복사본 반환
+    public Dictionary<int, int> CapturePp()
+    {
+        // 원본 스킬 참조를 저장 가능한 고정 ID로 변환
+        var result = new Dictionary<int, int>();
+
+        foreach (var entry in currentPp)
+        {
+            if (entry.Key != null)
+            {
+                result[entry.Key.SkillId] = entry.Value;
+            }
+        }
+
+        return result;
+    }
+
 
     // 실제 기술 사용 시 PP를 소비한다
     public bool TryConsumePp(SkillData skill)

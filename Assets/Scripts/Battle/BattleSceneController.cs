@@ -98,6 +98,8 @@ public sealed class BattleSceneController : MonoBehaviour
 
         // 양측 원본 데이터를 전투 시스템에 전달한다
         battleSystem.SetPlayer(playerData.Character, playerData.EquippedAether, playerData.GetBattleAethers(), playerData.Weapon, playerData.Level);
+        // 이전 전투와 저장 파일에서 보관한 PP를 새 전투에 전달
+        battleSystem.SetPlayerPp(playerData.CapturePp());
         battleSystem.SetEnemy(enemy, enemy.Aether, enemy.Weapon, enemy.Level, enemy.RewardExp);
 
         // Battle Scene에서 맵 이동 입력이 실행되지 않도록 잠근다

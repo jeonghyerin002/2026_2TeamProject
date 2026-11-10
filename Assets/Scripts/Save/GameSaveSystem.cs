@@ -119,6 +119,7 @@ public static class GameSaveSystem
             activeAetherId = data.EquippedAether != null ? data.EquippedAether.itemId : 0,
             ownedWeaponIds = data.OwnedWeapons.Select(item => item.ItemId).ToArray(),
             equippedWeaponId = data.Weapon != null ? data.Weapon.ItemId : 0,
+            skillPp = data.CapturePpSave(),
             defeatedNpcIds = NpcBattleProgress.CaptureSave(),
             completedCutsceneIds = WorldSaveProgress.CompletedIds,
             worldActors = WorldSaveProgress.Actors
@@ -250,6 +251,16 @@ public static class GameSaveSystem
         {
             return false;
         }
+
+        // 구형 저장의 누락 항목 허용 및 새 PP 항목의 중복과 잘못된 수치 차단
+        if (save.skillPp != null &&
+            (save.skillPp.Any(entry => entry == null || entry.skillId <= 0 || entry.remaining < 0 ||
+                assets.Skill(entry.skillId) == null || entry.remaining > Mathf.Max(0, assets.Skill(entry.skillId).PP)) ||
+             save.skillPp.Select(entry => entry.skillId).Distinct().Count() != save.skillPp.Length))
+        {
+            return false;
+        }
+
         message = "";
         return true;
     }

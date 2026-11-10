@@ -3,15 +3,16 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 /// <summary>
-/// 장착 슬롯 아이콘 표시 및 슬롯 간 드래그 이동과 교환 처리
+/// 장착 슬롯 아이콘 표시와 클릭 상세 조회 및 슬롯 간 드래그 이동과 교환 처리
 /// </summary>
 [DisallowMultipleComponent]
 [RequireComponent(typeof(Image))]
-public sealed class AetherSlotImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler
+public sealed class AetherSlotImage : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IDropHandler, IPointerClickHandler
 {
     // 장착 슬롯 표시 설정
     [Range(0, PlayerBattleData.EquipmentCapacity - 1)]
     [SerializeField] private int slotIndex;             // 표시할 장착 슬롯의 0부터 시작하는 번호
+    [SerializeField] private AetherDetailsUI detailsUI;
 
     // 장착 데이터 및 UI 참조
     private PlayerBattleData playerData;                // 이 UI를 소유한 플레이어의 장착 데이터
@@ -86,6 +87,21 @@ public sealed class AetherSlotImage : MonoBehaviour, IBeginDragHandler, IDragHan
         {
             Destroy(dragImage.gameObject);
         }
+    }
+
+
+    // 왼쪽 클릭한 장착 슬롯의 상세 정보 표시
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        // 드래그 입력과 상세 화면이 없는 슬롯의 클릭 제외
+        if (!isActiveAndEnabled || eventData.button != PointerEventData.InputButton.Left ||
+            eventData.dragging || !eventData.eligibleForClick || detailsUI == null)
+        {
+            return;
+        }
+
+        // 슬롯 번호를 상세 화면에 전달해 현재 장착 데이터 조회
+        detailsUI.ShowSlot(slotIndex);
     }
 
 

@@ -33,6 +33,9 @@ public class BattleSystem : MonoBehaviour
     private SkillData enemySkill;
     private bool actionPending;
 
+    // 다음 전투에 적용할 플레이어의 보관 PP
+    private Dictionary<int, int> playerPp;
+
     public event Action<string> Message;
     public event Action StateChanged;
     public event Action<BattleSide?> BattleEnded;
@@ -47,12 +50,23 @@ public class BattleSystem : MonoBehaviour
     // 외부 플레이어 전투 데이터를 설정한다
     public void SetPlayer(CharacterData character, AetherData aether, AetherData[] aethers, WeaponData weapon, int level)
     {
+        // 기존 호출 경로에서 이전 플레이어의 PP 전달 방지
+        playerPp = null;
         playerCharacter = character;
         playerAether = aether;
         ownedAethers = aethers != null ? (AetherData[])aethers.Clone() : Array.Empty<AetherData>();
         playerWeapon = weapon;
         playerLevel = Mathf.Clamp(level, 1, 100);
     }
+
+
+    // 다음 전투에서 사용할 플레이어 PP의 독립 복사본 보관
+    public void SetPlayerPp(Dictionary<int, int> remainingPp)
+    {
+        // 외부 데이터 변경과 분리한 전투 진입 스냅숏 생성
+        playerPp = remainingPp != null ? new Dictionary<int, int>(remainingPp) : null;
+    }
+
 
     // 외부 NPC 전투 데이터를 설정한다
     public void SetEnemy(CharacterData character, AetherData aether, WeaponData weapon, int level, int reward)
@@ -85,7 +99,7 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        playerState = new BattleState(playerCharacter, startAether, playerWeapon, playerLevel);
+        playerState = new BattleState(playerCharacter, startAether, playerWeapon, playerLevel, playerPp);
         enemyState = new BattleState(enemyCharacter, enemyAether, enemyWeapon, enemyLevel);
 
         fainted.Clear();

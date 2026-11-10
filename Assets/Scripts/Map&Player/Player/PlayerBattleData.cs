@@ -31,6 +31,9 @@ public sealed class PlayerBattleData : MonoBehaviour
     [Min(0)]
     [SerializeField] private int experience; // 레벨업 시 차감하지 않는 누적 경험치
 
+    // 전투와 저장 파일 사이에 유지할 스킬 ID별 남은 PP
+    private readonly Dictionary<int, int> remainingPp = new();
+
     // 전투 및 인벤토리 상태 조회
     public CharacterData Character => character;
     public AetherData EquippedAether
@@ -523,6 +526,44 @@ public sealed class PlayerBattleData : MonoBehaviour
     }
 
 
+    // 원본 최대 PP와 보관한 사용 결과에 따른 남은 횟수 조회
+    public int GetCurrentPp(SkillData skill)
+    {
+        // 미등록 스킬 제외 및 신규 스킬의 최대 횟수 적용
+        if (skill == null)
+        {
+            return 0;
+        }
+
+        int maximum = Mathf.Max(0, skill.PP);
+        return remainingPp.TryGetValue(skill.SkillId, out int remaining) ? Mathf.Clamp(remaining, 0, maximum) : maximum;
+    }
+
+
+    // 전투 진입용 남은 PP 스냅숏 반환
+    public Dictionary<int, int> CapturePp()
+    {
+        // 데이터 소유자의 사전과 분리한 복사본 전달
+        return new Dictionary<int, int>(remainingPp);
+    }
+
+
+    // 고정 스킬 ID와 남은 PP를 저장 데이터로 변환
+    public SavedSkillPp[] CapturePpSave()
+    {
+        // 사용 이력이 있는 스킬의 PP만 저장 목록에 기록
+        var saved = new SavedSkillPp[remainingPp.Count];
+        int index = 0;
+
+        foreach (var entry in remainingPp)
+        {
+            saved[index++] = new SavedSkillPp { skillId = entry.Key, remaining = entry.Value };
+        }
+
+        return saved;
+    }
+
+
     // 검증된 저장 데이터의 ID를 원본 에셋 참조로 복원
     public void RestoreSave(GameSaveData save, GameSaveCatalog catalog)
     {
@@ -537,6 +578,17 @@ public sealed class PlayerBattleData : MonoBehaviour
         RefreshActiveAether();
         ownedWeapons = Array.ConvertAll(save.ownedWeaponIds, catalog.Weapon);
         weapon = catalog.Weapon(save.equippedWeaponId);
+
+        // 이전 세션 PP 제거 및 PP 항목이 없는 구형 저장의 최대 횟수 초기화
+        remainingPp.Clear();
+
+        if (save.skillPp != null)
+        {
+            foreach (SavedSkillPp entry in save.skillPp)
+            {
+                remainingPp.Add(entry.skillId, entry.remaining);
+            }
+        }
 
         // 복원 완료 후 보유 목록과 장비 상태를 UI 구독자에게 통지
         OwnedAethersChanged?.Invoke();
@@ -562,6 +614,12 @@ public sealed class PlayerBattleData : MonoBehaviour
         }
 
         RefreshActiveAether();
+
+        // 교체해 사용한 모든 스킬의 남은 PP를 기존 보관 데이터에 병합
+        foreach (var entry in state.CapturePp())
+        {
+            remainingPp[entry.Key] = entry.Value;
+        }
 
         // 전투 보상 경험치 적용 및 최종 장비 상태 통지
         GainExperience(state.Experience);
