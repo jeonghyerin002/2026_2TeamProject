@@ -32,10 +32,10 @@ MonoBehaviour:
       id: 
       sound: {fileID: 0}
       volume: 0
-  - id: party
-    displayName: Party
-    description: Take a look at the members of your party.
-    sprite: {fileID: 1482657471443917306, guid: b7e044e1fb8bfd346b706142f07907f9, type: 2}
+  - id: Aether
+    displayName: AetherUI
+    description: "\uC5D0\uD14C\uB974 UI"
+    sprite: {fileID: -7809747373835109279, guid: 1703e74d8229c8148af820056f9dace3, type: 3}
     additionalSprites: []
     interaction:
       action: 4
