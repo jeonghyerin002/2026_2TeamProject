@@ -99,7 +99,8 @@ public class BattleSystem : MonoBehaviour
             return;
         }
 
-        playerState = new BattleState(playerCharacter, startAether, playerWeapon, playerLevel, playerPp);
+        // 플레이어의 누적 레벨 성장을 적용하고 적의 원본 능력치 유지
+        playerState = new BattleState(playerCharacter, startAether, playerWeapon, playerLevel, playerPp, true);
         enemyState = new BattleState(enemyCharacter, enemyAether, enemyWeapon, enemyLevel);
 
         fainted.Clear();

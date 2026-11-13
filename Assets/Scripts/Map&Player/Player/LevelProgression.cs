@@ -8,6 +8,19 @@ public static class LevelProgression
     public const int MaxLevel = 100; // 도달할 수 있는 최고 레벨이다.
     public const int MaxExperience = 1000000; // 최고 레벨에 필요한 누적 경험치이자 저장 상한이다.
 
+    // 레벨업별 자동 성장 및 포인트 지급 기준
+    public const int MaxHpPerLevel = 2;
+    public const int StatPerLevel = 1;
+    public const int StatPointsPerLevel = 3;
+
+    // 레벨 1을 기준으로 누적 레벨업 횟수 조회
+    public static int GetGrowthCount(int level)
+    {
+        // 초기 설정과 저장 복원의 레벨 범위를 동일한 기준으로 제한
+        return Math.Max(1, Math.Min(MaxLevel, level)) - 1;
+    }
+
+
     // 해당 레벨에 도달하기 위한 누적 경험치를 반환한다.
     public static int GetRequiredExperience(int level)
     {

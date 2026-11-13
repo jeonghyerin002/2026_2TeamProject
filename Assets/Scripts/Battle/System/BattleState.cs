@@ -18,6 +18,9 @@ public sealed class BattleState
     // 전투 진입 전 보관한 스킬별 남은 PP
     private readonly IReadOnlyDictionary<int, int> initialPp;
 
+    // 전투 시작 시 확정한 플레이어 자동 성장분
+    private readonly int statGrowth;
+
     public CharacterData Character { get; }
     public AetherData Aether { get; private set; }
     public WeaponData Weapon { get; }
@@ -42,6 +45,15 @@ public sealed class BattleState
     // 보관한 PP를 포함한 독립 전투 상태 생성
     public BattleState(CharacterData character, AetherData aether, WeaponData weapon, int level,
         IReadOnlyDictionary<int, int> initialPp)
+        : this(character, aether, weapon, level, initialPp, false)
+    {
+        // 기존 생성 경로의 원본 능력치 계산 유지
+    }
+
+
+    // 플레이어 자동 성장 선택을 포함한 전투 상태 생성
+    public BattleState(CharacterData character, AetherData aether, WeaponData weapon, int level,
+        IReadOnlyDictionary<int, int> initialPp, bool applyLevelGrowth)
     {
         // 원본 데이터와 이전 전투의 PP 스냅숏 보관
         this.initialPp = initialPp;
@@ -49,7 +61,12 @@ public sealed class BattleState
         Aether = aether != null ? aether : throw new ArgumentNullException(nameof(aether));
         Weapon = weapon;
         Level = Mathf.Clamp(level, 1, 100);
-        MaxHp = Scale(Character.MaxHp, Weapon != null ? Weapon.HealthMultiplier : 1f);
+
+        // 플레이어만 자동 성장 적용 후 무기 배율 반영
+        int growthCount = applyLevelGrowth ? LevelProgression.GetGrowthCount(Level) : 0;
+        statGrowth = growthCount * LevelProgression.StatPerLevel;
+        MaxHp = Scale(Character.MaxHp + growthCount * LevelProgression.MaxHpPerLevel,
+            Weapon != null ? Weapon.HealthMultiplier : 1f);
         CurrentHp = MaxHp;
         RefreshSkills();
     }
@@ -156,6 +173,9 @@ public sealed class BattleState
             case BattleStat.SpecialDefense: value = Character.SpecialDefense; multiplier = Weapon != null ? Weapon.SpecialDefenseMultiplier : 1f; break;
             default: value = Character.Speed; multiplier = Weapon != null ? Weapon.SpeedMultiplier : 1f; break;
         }
+
+        // 영구 성장분 합산 후 기존 무기와 전투 중 보정 순서 유지
+        value += statGrowth;
         int rank = ranks[(int)stat];
         float rankMultiplier = rank >= 0 ? (2f + rank) / 2f : 2f / (2f - rank);
         float statusMultiplier = (stat == BattleStat.Speed && Status == BattleStatus.Paralysis) ||

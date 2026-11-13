@@ -92,6 +92,18 @@ public sealed class PlayerBattleData : MonoBehaviour
     public WeaponData[] OwnedWeapons => (WeaponData[])ownedWeapons.Clone();
     public int Level => level;
     public int Experience => experience;
+    // 레벨 1 원본 능력치에 자동 성장을 합산한 장비 적용 전 수치
+    public int MaxHp => character != null ? character.MaxHp + GrowthCount * LevelProgression.MaxHpPerLevel : 0;
+    public int Attack => character != null ? character.Attack + GrowthCount * LevelProgression.StatPerLevel : 0;
+    public int Defense => character != null ? character.Defense + GrowthCount * LevelProgression.StatPerLevel : 0;
+    public int SpecialAttack => character != null ? character.SpecialAttack + GrowthCount * LevelProgression.StatPerLevel : 0;
+    public int SpecialDefense => character != null ? character.SpecialDefense + GrowthCount * LevelProgression.StatPerLevel : 0;
+    public int Speed => character != null ? character.Speed + GrowthCount * LevelProgression.StatPerLevel : 0;
+
+    // 포인트 사용 기능 도입 전 누적 획득량과 보유량의 동일 기준 적용
+    public int StatPoints => GrowthCount * LevelProgression.StatPointsPerLevel;
+    private int GrowthCount => LevelProgression.GetGrowthCount(level);
+
     public bool IsMaxLevel => level >= LevelProgression.MaxLevel;
     public int ExperienceToNextLevel => IsMaxLevel ? 0 : LevelProgression.GetRequiredExperience(level + 1) - experience;
     public bool IsValid => character != null && equippedAether != null && FindEquipped(equippedAether.itemId) != null && FindOwned(equippedAether.itemId) != null;
