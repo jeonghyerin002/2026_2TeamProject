@@ -33642,8 +33642,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "스텟 포인트 : 0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -33779,8 +33779,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "체력"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -33916,8 +33916,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34186,8 +34186,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "+1"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34323,8 +34323,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "공격"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34460,8 +34460,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34730,8 +34730,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "+1"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -34867,8 +34867,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "특수 공격"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35004,8 +35004,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35274,8 +35274,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "+1"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35411,8 +35411,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "방어"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35548,8 +35548,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35818,8 +35818,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "+1"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -35955,8 +35955,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "특수 방어"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36092,8 +36092,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36362,8 +36362,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "+1"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36499,8 +36499,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "스피드"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36636,8 +36636,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36906,8 +36906,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "+1"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -37043,8 +37043,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "체력"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -37180,8 +37180,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "A/D 선택  F 투자  E 돌아가기"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d1725cd53a5879242ad362da024019f8, type: 2}
-  m_sharedMaterial: {fileID: 3709986959856349075, guid: d1725cd53a5879242ad362da024019f8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
+  m_sharedMaterial: {fileID: -8800747733189233425, guid: b1270f6686f9d3e4ba9f7100bacbf362, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
