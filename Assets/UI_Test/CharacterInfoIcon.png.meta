@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 87b91e5f6c35a66a9ec9c6c7ba5c7d2c
+TextureImporter:
+  serializedVersion: 13
+  mipmaps:
+    enableMipMap: 0
+  isReadable: 0
+  textureType: 8
+  spriteMode: 1
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    wrapU: 1
+    wrapV: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites: []
+    spriteID: af88748790fee08e26f4d5a299c4b1e1
+    internalID: 0
+    nameFileIdTable: {}

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 /// <summary>보유 무기 목록. 보유 순서는 플레이어 데이터에, 선택 메뉴는 현재 UI에 저장한다.</summary>
@@ -41,6 +42,8 @@ public sealed class WeaponInventoryUI : MonoBehaviour
         Refresh();
     }
 
+
+    // 화면 사용 조건 검사와 닫기 및 카테고리 복귀 입력 처리
     private void Update()
     {
         if (data == null || panel == null) return;
@@ -49,7 +52,28 @@ public sealed class WeaponInventoryUI : MonoBehaviour
             SetOpen(false);
             return;
         }
+
+        // 기존 Q 메뉴 입력과 중복되지 않는 열린 무기 화면의 입력 처리
+        Keyboard keyboard = Keyboard.current;
+
+        if (!IsOpen || keyboard == null)
+        {
+            return;
+        }
+
+        bool returnToCategory = keyboard.eKey.wasPressedThisFrame;
+
+        if (returnToCategory || keyboard.qKey.wasPressedThisFrame)
+        {
+            SetOpen(false);
+
+            if (returnToCategory && PlayerMenuUI.Instance != null)
+            {
+                PlayerMenuUI.Instance.ReturnFromWeaponInventory();
+            }
+        }
     }
+
 
     public void SetOpen(bool open)
     {

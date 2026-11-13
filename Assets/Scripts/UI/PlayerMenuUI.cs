@@ -174,7 +174,9 @@ public sealed class PlayerMenuUI : MonoBehaviour
     {
         UIGroupController controller = navigation.CurrentController;
         if (!CanReceiveInput || isClosingCategory || controller == null ||
-            controller.transform != categoryPanel || controller.SelectedItem?.Interaction?.Action != UIActionType.OpenGroup)
+            controller.transform != categoryPanel ||
+            (controller.SelectedItem?.Interaction?.Action != UIActionType.OpenGroup &&
+                controller.SelectedItem?.Interaction?.Action != UIActionType.Invoke))
             return false;
 
         // 캐러셀 이동 중 기존 확인 처리와 동일하게 입력을 소비해 전환 방지
@@ -186,6 +188,43 @@ public sealed class PlayerMenuUI : MonoBehaviour
         slideRoutine = StartCoroutine(SlideCategory(true, controller, controller.SelectedIndex));
         return true;
     }
+
+
+    // 가방 카테고리 실행 시 기존 무기 인벤토리 열기
+    public void OpenWeaponInventory(int itemIndex)
+    {
+        // 다른 카테고리와 잘못된 참조 및 메뉴 전환 상태 검사
+        UIGroupController controller = navigation.CurrentController;
+        WeaponInventoryUI inventory = WeaponInventoryUI.Instance;
+
+        if (!CanReceiveInput || controller == null || controller.transform != categoryPanel ||
+            controller.Data.GetItem(itemIndex)?.Id != "inventory" || inventory == null || !inventory.isActiveAndEnabled)
+        {
+            return;
+        }
+
+        // 무기 화면을 먼저 연 뒤 성공한 경우에만 카테고리 닫기
+        inventory.SetOpen(true);
+
+        if (inventory.IsOpen)
+        {
+            navigation.Close();
+        }
+    }
+
+
+    // 무기 화면을 닫은 뒤 카테고리 복귀
+    public void ReturnFromWeaponInventory()
+    {
+        // 제외 씬과 대화 및 전환 중 메뉴 재진입 차단
+        if (!isActiveAndEnabled || !CanReceiveInput || navigation.IsOpen)
+        {
+            return;
+        }
+
+        navigation.OpenInitialGroup();
+    }
+
 
     // Category 복귀 시 현재 패널의 내려가기 연출 후 기존 뒤로 가기 처리
     public bool TryReturnToCategory()

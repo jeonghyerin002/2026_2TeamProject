@@ -1,0 +1,133 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f0bd7e2e15adf48b4f81a61bf46aa9, type: 3}
+  m_Name: CharacterStats
+  m_EditorClassIdentifier: Assembly-CSharp::UIGroupData
+  id: CharacterStats
+  items:
+  - id: Stat0
+    displayName: 체력
+    description: 
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id: 
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id: 
+      sound: {fileID: 0}
+      volume: 1
+  - id: Stat1
+    displayName: 공격
+    description: 
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id: 
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id: 
+      sound: {fileID: 0}
+      volume: 1
+  - id: Stat2
+    displayName: 특수 공격
+    description: 
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id: 
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id: 
+      sound: {fileID: 0}
+      volume: 1
+  - id: Stat3
+    displayName: 방어
+    description: 
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id: 
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id: 
+      sound: {fileID: 0}
+      volume: 1
+  - id: Stat4
+    displayName: 특수 방어
+    description: 
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id: 
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id: 
+      sound: {fileID: 0}
+      volume: 1
+  - id: Stat5
+    displayName: 스피드
+    description: 
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id: 
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id: 
+      sound: {fileID: 0}
+      volume: 1
+  inputBindings: []
+  initialItemIndex: 0
+  wrapSelection: 1
+  repeatSelectionWhileHeld: 0
+  wrapImageStates: 1
+  feedback:
+    id: 
+    sound: {fileID: 0}
+    volume: 1

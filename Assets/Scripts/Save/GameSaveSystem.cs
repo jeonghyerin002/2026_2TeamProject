@@ -113,6 +113,7 @@ public static class GameSaveSystem
             characterId = data.Character != null ? data.Character.CharacterId : 0,
             level = data.Level,
             experience = data.Experience,
+            statInvestments = data.CaptureStatInvestments(),
             ownedAetherIds = data.OwnedAethers.Select(item => item.itemId).ToArray(),
             equippedAetherIds = Enumerable.Range(0, PlayerBattleData.EquipmentCapacity)
                 .Select(index => data.GetEquippedAether(index) != null ? data.GetEquippedAether(index).itemId : 0).ToArray(),
@@ -227,6 +228,7 @@ public static class GameSaveSystem
             !assets.mapScenes.Contains(save.sceneName) || !Application.CanStreamedLevelBeLoaded(save.sceneName) ||
             !Finite(save.position) || assets.Character(save.characterId) == null ||
             save.level < 1 || save.level > 100 || save.experience < 0 ||
+            !PlayerStatAllocation.IsValid(save.statInvestments, save.level) ||
             save.ownedAetherIds == null || save.ownedWeaponIds == null || save.equippedAetherIds == null ||
             save.equippedAetherIds.Length != PlayerBattleData.EquipmentCapacity ||
             save.ownedAetherIds.Length > PlayerBattleData.StorageCapacity + PlayerBattleData.EquipmentCapacity ||

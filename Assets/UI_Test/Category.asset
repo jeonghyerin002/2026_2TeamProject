@@ -20,14 +20,14 @@ MonoBehaviour:
     sprite: {fileID: -7978442113108871747, guid: b7e044e1fb8bfd346b706142f07907f9, type: 2}
     additionalSprites: []
     interaction:
-      action: 4
+      action: 8
       itemIndex: -1
       targetGroup: {fileID: 0}
       feedback:
         id: 
         sound: {fileID: 0}
         volume: 0
-    nextGroup: {fileID: 11400000, guid: 5c0158ecead1cf14fa4c28e4412890fc, type: 2}
+    nextGroup: {fileID: 0}
     feedback:
       id: 
       sound: {fileID: 0}
@@ -50,6 +50,24 @@ MonoBehaviour:
       id: 
       sound: {fileID: 0}
       volume: 0
+  - id: CharacterInfo
+    displayName: 캐릭터 정보
+    description: 캐릭터 능력치와 스텟 포인트
+    sprite: {fileID: 21300000, guid: 87b91e5f6c35a66a9ec9c6c7ba5c7d2c, type: 3}
+    additionalSprites: []
+    interaction:
+      action: 4
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 11400000, guid: 2883c94a3e61e18a291d00bdff7f6b45, type: 2}
+    feedback:
+      id:
+      sound: {fileID: 0}
+      volume: 1
   - id: Setting
     displayName: Setting
     description: Take a look at the members of your party.

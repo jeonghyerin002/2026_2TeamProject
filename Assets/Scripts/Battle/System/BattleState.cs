@@ -20,6 +20,7 @@ public sealed class BattleState
 
     // 전투 시작 시 확정한 플레이어 자동 성장분
     private readonly int statGrowth;
+    private readonly int[] statInvestments;
 
     public CharacterData Character { get; }
     public AetherData Aether { get; private set; }
@@ -54,6 +55,15 @@ public sealed class BattleState
     // 플레이어 자동 성장 선택을 포함한 전투 상태 생성
     public BattleState(CharacterData character, AetherData aether, WeaponData weapon, int level,
         IReadOnlyDictionary<int, int> initialPp, bool applyLevelGrowth)
+        : this(character, aether, weapon, level, initialPp, applyLevelGrowth, null)
+    {
+        // 기존 호출의 미투자 상태 유지
+    }
+
+
+    // 플레이어 투자 복사본을 포함한 전투 상태 생성
+    public BattleState(CharacterData character, AetherData aether, WeaponData weapon, int level,
+        IReadOnlyDictionary<int, int> initialPp, bool applyLevelGrowth, int[] statInvestments)
     {
         // 원본 데이터와 이전 전투의 PP 스냅숏 보관
         this.initialPp = initialPp;
@@ -62,10 +72,14 @@ public sealed class BattleState
         Weapon = weapon;
         Level = Mathf.Clamp(level, 1, 100);
 
+        // 외부 배열 변경과 분리한 투자 스냅숏 보관
+        this.statInvestments = applyLevelGrowth && statInvestments != null && PlayerStatAllocation.IsValid(statInvestments, Level)
+            ? (int[])statInvestments.Clone() : new int[PlayerStatAllocation.Count];
+
         // 플레이어만 자동 성장 적용 후 무기 배율 반영
         int growthCount = applyLevelGrowth ? LevelProgression.GetGrowthCount(Level) : 0;
         statGrowth = growthCount * LevelProgression.StatPerLevel;
-        MaxHp = Scale(Character.MaxHp + growthCount * LevelProgression.MaxHpPerLevel,
+        MaxHp = Scale(Character.MaxHp + growthCount * LevelProgression.MaxHpPerLevel + this.statInvestments[(int)PlayerStat.MaxHp],
             Weapon != null ? Weapon.HealthMultiplier : 1f);
         CurrentHp = MaxHp;
         RefreshSkills();
@@ -174,8 +188,18 @@ public sealed class BattleState
             default: value = Character.Speed; multiplier = Weapon != null ? Weapon.SpeedMultiplier : 1f; break;
         }
 
-        // 영구 성장분 합산 후 기존 무기와 전투 중 보정 순서 유지
-        value += statGrowth;
+        // 전투 단계와 영구 성장 enum의 서로 다른 순서 매핑
+        PlayerStat investmentStat = stat switch
+        {
+            BattleStat.Attack => PlayerStat.Attack,
+            BattleStat.Defense => PlayerStat.Defense,
+            BattleStat.SpecialAttack => PlayerStat.SpecialAttack,
+            BattleStat.SpecialDefense => PlayerStat.SpecialDefense,
+            _ => PlayerStat.Speed
+        };
+
+        // 투자량과 자동 성장 합산 후 기존 무기와 전투 보정 적용
+        value += statGrowth + statInvestments[(int)investmentStat];
         int rank = ranks[(int)stat];
         float rankMultiplier = rank >= 0 ? (2f + rank) / 2f : 2f / (2f - rank);
         float statusMultiplier = (stat == BattleStat.Speed && Status == BattleStatus.Paralysis) ||

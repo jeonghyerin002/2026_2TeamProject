@@ -16,6 +16,9 @@ public sealed class GameSaveData
     public int characterId;
     public int level;
     public int experience;
+
+    // MaxHp, Attack, SpecialAttack, Defense, SpecialDefense, Speed 순서의 누적 투자
+    public int[] statInvestments;
     // 보유 순서, 빈 슬롯을 포함한 장착 순서와 현재 선택 에테르. 빈 항목은 0이다.
     public int[] ownedAetherIds;
     public int[] equippedAetherIds;

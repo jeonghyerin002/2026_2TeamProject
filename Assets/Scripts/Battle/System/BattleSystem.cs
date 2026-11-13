@@ -36,6 +36,9 @@ public class BattleSystem : MonoBehaviour
     // 다음 전투에 적용할 플레이어의 보관 PP
     private Dictionary<int, int> playerPp;
 
+    // 다음 전투에 적용할 누적 투자 복사본
+    private int[] playerStatInvestments;
+
     public event Action<string> Message;
     public event Action StateChanged;
     public event Action<BattleSide?> BattleEnded;
@@ -52,6 +55,7 @@ public class BattleSystem : MonoBehaviour
     {
         // 기존 호출 경로에서 이전 플레이어의 PP 전달 방지
         playerPp = null;
+        playerStatInvestments = null;
         playerCharacter = character;
         playerAether = aether;
         ownedAethers = aethers != null ? (AetherData[])aethers.Clone() : Array.Empty<AetherData>();
@@ -65,6 +69,14 @@ public class BattleSystem : MonoBehaviour
     {
         // 외부 데이터 변경과 분리한 전투 진입 스냅숏 생성
         playerPp = remainingPp != null ? new Dictionary<int, int>(remainingPp) : null;
+    }
+
+
+    // 다음 전투에 적용할 플레이어 투자 내역 보관
+    public void SetPlayerStatInvestments(int[] investments)
+    {
+        // 호출자와 분리한 전투 진입 데이터 복사
+        playerStatInvestments = investments != null ? (int[])investments.Clone() : null;
     }
 
 
@@ -100,7 +112,7 @@ public class BattleSystem : MonoBehaviour
         }
 
         // 플레이어의 누적 레벨 성장을 적용하고 적의 원본 능력치 유지
-        playerState = new BattleState(playerCharacter, startAether, playerWeapon, playerLevel, playerPp, true);
+        playerState = new BattleState(playerCharacter, startAether, playerWeapon, playerLevel, playerPp, true, playerStatInvestments);
         enemyState = new BattleState(enemyCharacter, enemyAether, enemyWeapon, enemyLevel);
 
         fainted.Clear();

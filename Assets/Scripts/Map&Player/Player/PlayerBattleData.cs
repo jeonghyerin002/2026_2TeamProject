@@ -92,16 +92,22 @@ public sealed class PlayerBattleData : MonoBehaviour
     public WeaponData[] OwnedWeapons => (WeaponData[])ownedWeapons.Clone();
     public int Level => level;
     public int Experience => experience;
-    // 레벨 1 원본 능력치에 자동 성장을 합산한 장비 적용 전 수치
-    public int MaxHp => character != null ? character.MaxHp + GrowthCount * LevelProgression.MaxHpPerLevel : 0;
-    public int Attack => character != null ? character.Attack + GrowthCount * LevelProgression.StatPerLevel : 0;
-    public int Defense => character != null ? character.Defense + GrowthCount * LevelProgression.StatPerLevel : 0;
-    public int SpecialAttack => character != null ? character.SpecialAttack + GrowthCount * LevelProgression.StatPerLevel : 0;
-    public int SpecialDefense => character != null ? character.SpecialDefense + GrowthCount * LevelProgression.StatPerLevel : 0;
-    public int Speed => character != null ? character.Speed + GrowthCount * LevelProgression.StatPerLevel : 0;
 
-    // 포인트 사용 기능 도입 전 누적 획득량과 보유량의 동일 기준 적용
-    public int StatPoints => GrowthCount * LevelProgression.StatPointsPerLevel;
+    // 스텟별 누적 투자 및 변경 알림
+    [SerializeField] private int[] statInvestments = new int[PlayerStatAllocation.Count];
+    public event Action StatsChanged;
+
+    // 레벨 1 원본 능력치에 자동 성장을 합산한 장비 적용 전 수치
+    public int MaxHp => character != null ? character.MaxHp + GrowthCount * LevelProgression.MaxHpPerLevel + GetStatInvestment(PlayerStat.MaxHp) : 0;
+    public int Attack => character != null ? character.Attack + GrowthCount * LevelProgression.StatPerLevel + GetStatInvestment(PlayerStat.Attack) : 0;
+    public int Defense => character != null ? character.Defense + GrowthCount * LevelProgression.StatPerLevel + GetStatInvestment(PlayerStat.Defense) : 0;
+    public int SpecialAttack => character != null ? character.SpecialAttack + GrowthCount * LevelProgression.StatPerLevel + GetStatInvestment(PlayerStat.SpecialAttack) : 0;
+    public int SpecialDefense => character != null ? character.SpecialDefense + GrowthCount * LevelProgression.StatPerLevel + GetStatInvestment(PlayerStat.SpecialDefense) : 0;
+    public int Speed => character != null ? character.Speed + GrowthCount * LevelProgression.StatPerLevel + GetStatInvestment(PlayerStat.Speed) : 0;
+
+    // 총 지급량에서 누적 투자를 제외한 남은 포인트
+    public int StatPoints => PlayerStatAllocation.GetRemainingPoints(statInvestments, level);
+
     private int GrowthCount => LevelProgression.GetGrowthCount(level);
 
     public bool IsMaxLevel => level >= LevelProgression.MaxLevel;
@@ -112,6 +118,47 @@ public sealed class PlayerBattleData : MonoBehaviour
     public event Action EquipmentChanged;    // 장착 항목 변경 알림
     public event Action OwnedAethersChanged; // 보유 에테르 목록 변경 알림
     public event Action OwnedWeaponsChanged; // 보유 무기 목록 변경 알림
+
+    // 지정 능력치의 누적 투자 조회
+    public int GetStatInvestment(PlayerStat stat)
+    {
+        // 외부 enum 입력의 배열 범위 검사
+        int index = (int)stat;
+        return index >= 0 && index < statInvestments.Length ? statInvestments[index] : 0;
+    }
+
+
+    // 전투 및 저장용 투자 내역 복사
+    public int[] CaptureStatInvestments()
+    {
+        // 데이터 소유자의 배열 변경 차단
+        return (int[])statInvestments.Clone();
+    }
+
+
+    // 남은 포인트와 스텟별 누적 한도 검사
+    public bool CanInvestStat(PlayerStat stat)
+    {
+        // 전투 중 변경과 잘못된 능력치 및 포인트 부족 차단
+        return character != null && !BattleSession.IsActive &&
+            PlayerStatAllocation.CanInvest(statInvestments, level, stat);
+    }
+
+
+    // 포인트 하나를 소비해 선택 능력치 영구 증가
+    public bool TryInvestStat(PlayerStat stat)
+    {
+        // UI 외부 요청도 같은 투자 규칙으로 검사
+        if (character == null || BattleSession.IsActive ||
+            !PlayerStatAllocation.TryInvest(statInvestments, level, stat))
+        {
+            return false;
+        }
+
+        StatsChanged?.Invoke();
+        return true;
+    }
+
 
     // 항목 ID를 기준으로 무기 보유 여부 조회
     public bool OwnsWeapon(WeaponData item)
@@ -236,6 +283,15 @@ public sealed class PlayerBattleData : MonoBehaviour
     {
         // 저장된 레벨과 경험치 정규화
         LevelProgression.Normalize(ref level, ref experience);
+
+        // 초기 설정의 투자 한도 검사 및 잘못된 데이터 복구
+        if (!PlayerStatAllocation.IsValid(statInvestments, level))
+        {
+            Debug.LogError("PlayerBattleData: 스텟 투자 설정이 올바르지 않습니다", this);
+            statInvestments = new int[PlayerStatAllocation.Count];
+        }
+
+        statInvestments ??= new int[PlayerStatAllocation.Count];
 
         // 보유 무기의 중복 ID 제거 및 장착 무기를 보유 원본으로 정규화
         List<WeaponData> uniqueWeapons = new();
@@ -581,6 +637,7 @@ public sealed class PlayerBattleData : MonoBehaviour
     {
         // 호출부에서 검증된 저장 ID를 카탈로그의 원본 에셋으로 변환
         character = catalog.Character(save.characterId);
+        statInvestments = save.statInvestments != null ? (int[])save.statInvestments.Clone() : new int[PlayerStatAllocation.Count];
         level = save.level;
         experience = save.experience;
         LevelProgression.Normalize(ref level, ref experience);
@@ -601,6 +658,8 @@ public sealed class PlayerBattleData : MonoBehaviour
                 remainingPp.Add(entry.skillId, entry.remaining);
             }
         }
+
+        StatsChanged?.Invoke();
 
         // 복원 완료 후 보유 목록과 장비 상태를 UI 구독자에게 통지
         OwnedAethersChanged?.Invoke();
@@ -643,6 +702,13 @@ public sealed class PlayerBattleData : MonoBehaviour
     public int GainExperience(int amount)
     {
         // 레벨 규칙에 누적 경험치 전달
-        return LevelProgression.GainExperience(ref level, ref experience, amount);
+        int gained = LevelProgression.GainExperience(ref level, ref experience, amount);
+
+        if (gained > 0)
+        {
+            StatsChanged?.Invoke();
+        }
+
+        return gained;
     }
 }
