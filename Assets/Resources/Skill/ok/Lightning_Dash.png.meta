@@ -1,0 +1,923 @@
+fileFormatVersion: 2
+guid: 9c0cd4a13fee6f24f9f236d0d5ec62c2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7532159999875927827
+    second: Lightning_Dash_0
+  - first:
+      213: 5219093174466579680
+    second: Lightning_Dash_1
+  - first:
+      213: 7866642882313589264
+    second: Lightning_Dash_2
+  - first:
+      213: 425581108586910738
+    second: Lightning_Dash_3
+  - first:
+      213: 3229345854302497099
+    second: Lightning_Dash_4
+  - first:
+      213: 8477041694145326373
+    second: Lightning_Dash_5
+  - first:
+      213: 777065991651576398
+    second: Lightning_Dash_6
+  - first:
+      213: -8572919294384932791
+    second: Lightning_Dash_7
+  - first:
+      213: -2935802709970610684
+    second: Lightning_Dash_8
+  - first:
+      213: 4123056749972079608
+    second: Lightning_Dash_9
+  - first:
+      213: 8105318485110704782
+    second: Lightning_Dash_10
+  - first:
+      213: 7295927151376142689
+    second: Lightning_Dash_11
+  - first:
+      213: -3157517593370692226
+    second: Lightning_Dash_12
+  - first:
+      213: 262568253622467005
+    second: Lightning_Dash_13
+  - first:
+      213: -829089387842646636
+    second: Lightning_Dash_14
+  - first:
+      213: 688470418580524922
+    second: Lightning_Dash_15
+  - first:
+      213: -4135115680274588348
+    second: Lightning_Dash_16
+  - first:
+      213: -1259319866117022542
+    second: Lightning_Dash_17
+  - first:
+      213: -7692508589623236177
+    second: Lightning_Dash_18
+  - first:
+      213: -883151381416446429
+    second: Lightning_Dash_19
+  - first:
+      213: -6027534589285514715
+    second: Lightning_Dash_20
+  - first:
+      213: -2967884758358615984
+    second: Lightning_Dash_21
+  - first:
+      213: -533972708533587969
+    second: Lightning_Dash_22
+  - first:
+      213: 4492565644855412526
+    second: Lightning_Dash_23
+  - first:
+      213: -6243296186617431268
+    second: Lightning_Dash_24
+  - first:
+      213: 5838732579155608483
+    second: Lightning_Dash_25
+  - first:
+      213: -691760790338251243
+    second: Lightning_Dash_26
+  - first:
+      213: -8992560128807488668
+    second: Lightning_Dash_27
+  - first:
+      213: 5606699942702024086
+    second: Lightning_Dash_28
+  - first:
+      213: -4926096702720487835
+    second: Lightning_Dash_29
+  - first:
+      213: -4400125748822116869
+    second: Lightning_Dash_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lightning_Dash_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 12
+        width: 34
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de03dff1364687790800000000000000
+      internalID: -7532159999875927827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 13
+        width: 62
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ec0fb91791fd6840800000000000000
+      internalID: 5219093174466579680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_2
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 5
+        width: 63
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 012182fa50eeb2d60800000000000000
+      internalID: 7866642882313589264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 6
+        width: 64
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 214907073c7f7e500800000000000000
+      internalID: 425581108586910738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_4
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 16
+        width: 42
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49a496d1f0f0dc20800000000000000
+      internalID: 3229345854302497099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_5
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 39
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52d25bde18084a570800000000000000
+      internalID: 8477041694145326373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_6
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 36
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4acd6ff661b8ca00800000000000000
+      internalID: 777065991651576398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_7
+      rect:
+        serializedVersion: 2
+        x: 494
+        y: 38
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 948f712b25fd60980800000000000000
+      internalID: -8572919294384932791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_8
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 12
+        width: 14
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40692956dfee147d0800000000000000
+      internalID: -2935802709970610684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_9
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 34
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f3ccdae44a083930800000000000000
+      internalID: 4123056749972079608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 26
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8a4e68e730eb7070800000000000000
+      internalID: 8105318485110704782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_11
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 21
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16117e4b617504560800000000000000
+      internalID: 7295927151376142689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_12
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 28
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e75f7136a7e3e24d0800000000000000
+      internalID: -3157517593370692226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_13
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 23
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db9367e7f64d4a300800000000000000
+      internalID: 262568253622467005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_14
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 24
+        width: 30
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49dc79e289b7e74f0800000000000000
+      internalID: -829089387842646636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_15
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 24
+        width: 22
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f4bd1b230fd8900800000000000000
+      internalID: 688470418580524922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_16
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 28
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44dd514923e1d96c0800000000000000
+      internalID: -4135115680274588348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_17
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 23
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc9081014ff58ee0800000000000000
+      internalID: -1259319866117022542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_18
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 17
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa9add3c138be3590800000000000000
+      internalID: -7692508589623236177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_19
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 15
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 326f6cb6f7a6eb3f0800000000000000
+      internalID: -883151381416446429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_20
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 9
+        width: 21
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 522c14ee935e95ca0800000000000000
+      internalID: -6027534589285514715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_21
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 13
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0581dbb6984ffc6d0800000000000000
+      internalID: -2967884758358615984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_22
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 14
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff2a1496a2f698f0800000000000000
+      internalID: -533972708533587969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_23
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 13
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e270bbfb6acc85e30800000000000000
+      internalID: 4492565644855412526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_24
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 14
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1bfd19523b5b59a0800000000000000
+      internalID: -6243296186617431268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_25
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 20
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a302178858570150800000000000000
+      internalID: 5838732579155608483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_26
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 15
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 516585ee93f5666f0800000000000000
+      internalID: -691760790338251243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_27
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 18
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463b61d1532043380800000000000000
+      internalID: -8992560128807488668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_28
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 6
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69505fe64effecd40800000000000000
+      internalID: 5606699942702024086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_29
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 10
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e4f11062df2abb0800000000000000
+      internalID: -4926096702720487835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_30
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 9
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5786eb1fc9fe2c0800000000000000
+      internalID: -4400125748822116869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lightning_Dash_0: -7532159999875927827
+      Lightning_Dash_1: 5219093174466579680
+      Lightning_Dash_10: 8105318485110704782
+      Lightning_Dash_11: 7295927151376142689
+      Lightning_Dash_12: -3157517593370692226
+      Lightning_Dash_13: 262568253622467005
+      Lightning_Dash_14: -829089387842646636
+      Lightning_Dash_15: 688470418580524922
+      Lightning_Dash_16: -4135115680274588348
+      Lightning_Dash_17: -1259319866117022542
+      Lightning_Dash_18: -7692508589623236177
+      Lightning_Dash_19: -883151381416446429
+      Lightning_Dash_2: 7866642882313589264
+      Lightning_Dash_20: -6027534589285514715
+      Lightning_Dash_21: -2967884758358615984
+      Lightning_Dash_22: -533972708533587969
+      Lightning_Dash_23: 4492565644855412526
+      Lightning_Dash_24: -6243296186617431268
+      Lightning_Dash_25: 5838732579155608483
+      Lightning_Dash_26: -691760790338251243
+      Lightning_Dash_27: -8992560128807488668
+      Lightning_Dash_28: 5606699942702024086
+      Lightning_Dash_29: -4926096702720487835
+      Lightning_Dash_3: 425581108586910738
+      Lightning_Dash_30: -4400125748822116869
+      Lightning_Dash_4: 3229345854302497099
+      Lightning_Dash_5: 8477041694145326373
+      Lightning_Dash_6: 777065991651576398
+      Lightning_Dash_7: -8572919294384932791
+      Lightning_Dash_8: -2935802709970610684
+      Lightning_Dash_9: 4123056749972079608
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

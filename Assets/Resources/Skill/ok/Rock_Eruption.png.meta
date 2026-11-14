@@ -1,0 +1,585 @@
+fileFormatVersion: 2
+guid: 20fbaa5f3dbf8c1459319613c471b1a3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8719213807817558564
+    second: Rock_Eruption_0
+  - first:
+      213: 4859572977786631577
+    second: Rock_Eruption_1
+  - first:
+      213: -201221560384287156
+    second: Rock_Eruption_2
+  - first:
+      213: 2886670284964759487
+    second: Rock_Eruption_3
+  - first:
+      213: -8510436036435851588
+    second: Rock_Eruption_4
+  - first:
+      213: 5167234577085179310
+    second: Rock_Eruption_5
+  - first:
+      213: -1211305129706031863
+    second: Rock_Eruption_6
+  - first:
+      213: 58967221103282306
+    second: Rock_Eruption_7
+  - first:
+      213: 3883782835498327087
+    second: Rock_Eruption_8
+  - first:
+      213: -2407423937643820473
+    second: Rock_Eruption_9
+  - first:
+      213: -7067410272844405522
+    second: Rock_Eruption_10
+  - first:
+      213: 8641748956036120485
+    second: Rock_Eruption_11
+  - first:
+      213: 974077294928060940
+    second: Rock_Eruption_12
+  - first:
+      213: -5522083490852043827
+    second: Rock_Eruption_13
+  - first:
+      213: -973789711181925371
+    second: Rock_Eruption_14
+  - first:
+      213: 5406568785131983678
+    second: Rock_Eruption_15
+  - first:
+      213: 3415662598149690565
+    second: Rock_Eruption_16
+  - first:
+      213: 182237630246977741
+    second: Rock_Eruption_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Rock_Eruption_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 6
+        width: 30
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd57a58fc312ff680800000000000000
+      internalID: -8719213807817558564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 5
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9953f0d40eba07340800000000000000
+      internalID: 4859572977786631577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 6
+        width: 49
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e05249e0e153df0800000000000000
+      internalID: -201221560384287156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_3
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 6
+        width: 41
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7000774538f0820800000000000000
+      internalID: 2886670284964759487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_4
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 25
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb6ce8cd38bd4e980800000000000000
+      internalID: -8510436036435851588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_5
+      rect:
+        serializedVersion: 2
+        x: 377
+        y: 6
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea5274e7874b5b740800000000000000
+      internalID: 5167234577085179310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_6
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 5
+        width: 49
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 905734df664903fe0800000000000000
+      internalID: -1211305129706031863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_7
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 3
+        width: 49
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288c04b006e71d000800000000000000
+      internalID: 58967221103282306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_8
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 3
+        width: 50
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c13a669e7f5e530800000000000000
+      internalID: 3883782835498327087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_9
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 28
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ac7fc0fac179ed0800000000000000
+      internalID: -2407423937643820473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_10
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 24
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee4a9253dc38bed90800000000000000
+      internalID: -7067410272844405522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_11
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 22
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5afb2aab3e8ade770800000000000000
+      internalID: 8641748956036120485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_12
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 7
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02e5fb832e948d00800000000000000
+      internalID: 974077294928060940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_13
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 6
+        width: 39
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc307b3825e9d53b0800000000000000
+      internalID: -5522083490852043827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_14
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 3
+        width: 50
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5043213ca676c72f0800000000000000
+      internalID: -973789711181925371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_15
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 18
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e33d1833aadf70b40800000000000000
+      internalID: 5406568785131983678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_16
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 12
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c4dc4b390fd66f20800000000000000
+      internalID: 3415662598149690565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_17
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 3
+        width: 46
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0849fb820778200800000000000000
+      internalID: 182237630246977741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Rock_Eruption_0: -8719213807817558564
+      Rock_Eruption_1: 4859572977786631577
+      Rock_Eruption_10: -7067410272844405522
+      Rock_Eruption_11: 8641748956036120485
+      Rock_Eruption_12: 974077294928060940
+      Rock_Eruption_13: -5522083490852043827
+      Rock_Eruption_14: -973789711181925371
+      Rock_Eruption_15: 5406568785131983678
+      Rock_Eruption_16: 3415662598149690565
+      Rock_Eruption_17: 182237630246977741
+      Rock_Eruption_2: -201221560384287156
+      Rock_Eruption_3: 2886670284964759487
+      Rock_Eruption_4: -8510436036435851588
+      Rock_Eruption_5: 5167234577085179310
+      Rock_Eruption_6: -1211305129706031863
+      Rock_Eruption_7: 58967221103282306
+      Rock_Eruption_8: 3883782835498327087
+      Rock_Eruption_9: -2407423937643820473
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

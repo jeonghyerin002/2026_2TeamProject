@@ -1,0 +1,949 @@
+fileFormatVersion: 2
+guid: 88b6353e51f5dee4eae8a6ddce1ee7ae
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5388447505979262052
+    second: Power_Kick_0
+  - first:
+      213: 6315433817438537174
+    second: Power_Kick_1
+  - first:
+      213: 6257022221889624866
+    second: Power_Kick_2
+  - first:
+      213: -759754997666746222
+    second: Power_Kick_3
+  - first:
+      213: 5382593910431026126
+    second: Power_Kick_4
+  - first:
+      213: -9043984267653519908
+    second: Power_Kick_5
+  - first:
+      213: 3078224476956034813
+    second: Power_Kick_6
+  - first:
+      213: 6128849373137848211
+    second: Power_Kick_7
+  - first:
+      213: 262162294796144549
+    second: Power_Kick_8
+  - first:
+      213: -7533447495095577004
+    second: Power_Kick_9
+  - first:
+      213: 4936727077837529340
+    second: Power_Kick_10
+  - first:
+      213: -172393016781744207
+    second: Power_Kick_11
+  - first:
+      213: 5867323598124447844
+    second: Power_Kick_12
+  - first:
+      213: 7230442217419630885
+    second: Power_Kick_13
+  - first:
+      213: 5691412866701449898
+    second: Power_Kick_14
+  - first:
+      213: -9176818073122229262
+    second: Power_Kick_15
+  - first:
+      213: 1790076499109109866
+    second: Power_Kick_16
+  - first:
+      213: -1844889620829646245
+    second: Power_Kick_17
+  - first:
+      213: -1972873683615453677
+    second: Power_Kick_18
+  - first:
+      213: -9041823240188657116
+    second: Power_Kick_19
+  - first:
+      213: -3286639569162327358
+    second: Power_Kick_20
+  - first:
+      213: 1903000722522918333
+    second: Power_Kick_21
+  - first:
+      213: -1483743319609672910
+    second: Power_Kick_22
+  - first:
+      213: -6711923336511154114
+    second: Power_Kick_23
+  - first:
+      213: 8533720676133629061
+    second: Power_Kick_24
+  - first:
+      213: 5670444403963207867
+    second: Power_Kick_25
+  - first:
+      213: -1211196001306712741
+    second: Power_Kick_26
+  - first:
+      213: 4734687845649070401
+    second: Power_Kick_27
+  - first:
+      213: -6752909862960075895
+    second: Power_Kick_28
+  - first:
+      213: 629966620908587894
+    second: Power_Kick_29
+  - first:
+      213: -1968434618128220377
+    second: Power_Kick_30
+  - first:
+      213: -4408643666121783343
+    second: Power_Kick_31
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Power_Kick_0
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 16
+        width: 48
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9b3443ea836835b0800000000000000
+      internalID: -5388447505979262052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_1
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 6
+        width: 64
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d5c9eaa89de4a750800000000000000
+      internalID: 6315433817438537174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_2
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 2
+        width: 67
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22bd4774f8865d650800000000000000
+      internalID: 6257022221889624866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_3
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 11
+        width: 43
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290febfdadec475f0800000000000000
+      internalID: -759754997666746222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_4
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 7
+        width: 49
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecb0c61b4a0d2ba40800000000000000
+      internalID: 5382593910431026126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_5
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 7
+        width: 53
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd56a44c9305d7280800000000000000
+      internalID: -9043984267653519908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_6
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 6
+        width: 51
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df680e74adc08ba20800000000000000
+      internalID: 3078224476956034813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_7
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 37
+        width: 26
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397c1c7680c0e0550800000000000000
+      internalID: 6128849373137848211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_8
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 31
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5af43d6d73363a300800000000000000
+      internalID: 262162294796144549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_9
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 36
+        width: 17
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45695c8ca61d37790800000000000000
+      internalID: -7533447495095577004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_10
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 35
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf0ee831f17c28440800000000000000
+      internalID: 4936727077837529340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_11
+      rect:
+        serializedVersion: 2
+        x: 698
+        y: 39
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b757f0f6798b9df0800000000000000
+      internalID: -172393016781744207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_12
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 26
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4687970e9bbec6150800000000000000
+      internalID: 5867323598124447844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_13
+      rect:
+        serializedVersion: 2
+        x: 757
+        y: 17
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529e84263e0b75460800000000000000
+      internalID: 7230442217419630885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_14
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 15
+        width: 54
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaad3dd09d5fbfe40800000000000000
+      internalID: 5691412866701449898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_15
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 18
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f33a27559465a080800000000000000
+      internalID: -9176818073122229262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_16
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 28
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a606c2a7711a7d810800000000000000
+      internalID: 1790076499109109866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_17
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 28
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52d4ac1aa2a566e0800000000000000
+      internalID: -1844889620829646245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_18
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 22
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31e626566d1fe94e0800000000000000
+      internalID: -1972873683615453677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_19
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 9
+        width: 15
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4220fae2badf48280800000000000000
+      internalID: -9041823240188657116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_20
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 23
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca2657a9b28362d0800000000000000
+      internalID: -3286639569162327358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_21
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 24
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd4a491311d86a10800000000000000
+      internalID: 1903000722522918333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_22
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 15
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b7ec0ef4fa86be0800000000000000
+      internalID: -1483743319609672910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_23
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 17
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e38199769457ad2a0800000000000000
+      internalID: -6711923336511154114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_24
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 10
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58ce959cdbddd6670800000000000000
+      internalID: 8533720676133629061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_25
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 5
+        width: 20
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb024d0642771be40800000000000000
+      internalID: 5670444403963207867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_26
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 11
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b556dbc67a7f03fe0800000000000000
+      internalID: -1211196001306712741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_27
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 11
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149b54a928df4b140800000000000000
+      internalID: 4734687845649070401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_28
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 14
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b68021248d842a0800000000000000
+      internalID: -6752909862960075895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_29
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 16
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67b0c93dd471eb800800000000000000
+      internalID: 629966620908587894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_30
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 5
+        width: 20
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72fb2eed427bea4e0800000000000000
+      internalID: -1968434618128220377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Power_Kick_31
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 6
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d7098391f951d2c0800000000000000
+      internalID: -4408643666121783343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Power_Kick_0: -5388447505979262052
+      Power_Kick_1: 6315433817438537174
+      Power_Kick_10: 4936727077837529340
+      Power_Kick_11: -172393016781744207
+      Power_Kick_12: 5867323598124447844
+      Power_Kick_13: 7230442217419630885
+      Power_Kick_14: 5691412866701449898
+      Power_Kick_15: -9176818073122229262
+      Power_Kick_16: 1790076499109109866
+      Power_Kick_17: -1844889620829646245
+      Power_Kick_18: -1972873683615453677
+      Power_Kick_19: -9041823240188657116
+      Power_Kick_2: 6257022221889624866
+      Power_Kick_20: -3286639569162327358
+      Power_Kick_21: 1903000722522918333
+      Power_Kick_22: -1483743319609672910
+      Power_Kick_23: -6711923336511154114
+      Power_Kick_24: 8533720676133629061
+      Power_Kick_25: 5670444403963207867
+      Power_Kick_26: -1211196001306712741
+      Power_Kick_27: 4734687845649070401
+      Power_Kick_28: -6752909862960075895
+      Power_Kick_29: 629966620908587894
+      Power_Kick_3: -759754997666746222
+      Power_Kick_30: -1968434618128220377
+      Power_Kick_31: -4408643666121783343
+      Power_Kick_4: 5382593910431026126
+      Power_Kick_5: -9043984267653519908
+      Power_Kick_6: 3078224476956034813
+      Power_Kick_7: 6128849373137848211
+      Power_Kick_8: 262162294796144549
+      Power_Kick_9: -7533447495095577004
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
