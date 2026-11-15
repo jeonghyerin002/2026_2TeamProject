@@ -199,7 +199,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9161369978383556874, guid: aad195ad29778f24581bf1cc1a0210e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -12301,7 +12301,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9161369978383556874, guid: aad195ad29778f24581bf1cc1a0210e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14165,7 +14165,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: -9161369978383556874, guid: aad195ad29778f24581bf1cc1a0210e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -14491,7 +14491,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3715614272695444078, guid: e14934821efbcb64290ff5b482198cf0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -16217,7 +16217,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2113673231
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16239,7 +16239,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -960, y: -540}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 1930, y: 1090}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2113673232
 MonoBehaviour:
@@ -18787,6 +18787,10 @@ PrefabInstance:
     - target: {fileID: 2138836616, guid: 48c6521a53aa920488cdad3e25dd7fad, type: 3}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2138836619, guid: 48c6521a53aa920488cdad3e25dd7fad, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8700000002, guid: 48c6521a53aa920488cdad3e25dd7fad, type: 3}
       propertyPath: m_IsActive
