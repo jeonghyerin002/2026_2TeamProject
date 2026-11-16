@@ -22,6 +22,13 @@ public class PlayerController : MonoBehaviour
     private bool isWalking;
     private Vector2 animationDirection = Vector2.down;
 
+    // 키보드 방향별 마지막 입력 프레임과 입력 액션 보관
+    private InputAction moveAction;
+    private int leftInputFrame;
+    private int rightInputFrame;
+    private int upInputFrame;
+    private int downInputFrame;
+
     private static readonly int MoveXId = Animator.StringToHash("MoveX");
     private static readonly int MoveYId = Animator.StringToHash("MoveY");
     private static readonly int IsMovingId = Animator.StringToHash("IsMoving");
@@ -38,6 +45,12 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        // 기존 PlayerInput의 이동 액션 참조 캐싱
+        if (TryGetComponent<PlayerInput>(out var playerInput) && playerInput.actions != null)
+        {
+            moveAction = playerInput.actions.FindAction("Player/Move", false);
+        }
 
         if (Instance != null && Instance != this)
         {
@@ -97,6 +110,8 @@ public class PlayerController : MonoBehaviour
     private void OnDisable()
     {
         moveInput = Vector2.zero;
+        // 재활성화 시 이전 키 입력 순서 제거
+        leftInputFrame = rightInputFrame = upInputFrame = downInputFrame = 0;
         isFasted = false;
         if (rb != null)
         {
@@ -112,6 +127,9 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        // 애니메이터 유무와 관계없이 물리 이동에 사용할 키보드 방향 갱신
+        ReadKeyboardMovement();
+
         if (!hasDirectionalAnimation || animator == null || !animator.isActiveAndEnabled)
         {
             return;
@@ -143,7 +161,7 @@ public class PlayerController : MonoBehaviour
         isWalking = true;
     }
 
-    // 멈추면 마지막 방향의 첫 그림을 유지한다.
+    // 마지막 방향의 지정된 정지 그림 표시
     private void ShowStandingPose()
     {
         isWalking = false;
@@ -156,18 +174,65 @@ public class PlayerController : MonoBehaviour
         animator.SetBool(IsMovingId, false);
     }
 
-    // 크기가 같은 동시 입력은 수평 축을 우선하여 대각선 이동을 막는다.
+    // 입력 수집 단계에서 선택된 단일 이동 방향 전달
     private Vector2 GetCardinalInput()
     {
-        if (moveInput == Vector2.zero)
+        return moveInput;
+    }
+
+
+    // 마지막으로 누른 키 우선 및 같은 프레임의 동시 입력은 수평 우선
+    private void ReadKeyboardMovement()
+    {
+        // 입력 차단 중 이전 방향 우선순위 제거
+        var keyboard = Keyboard.current;
+
+        if (keyboard == null || moveAction == null || !moveAction.enabled || !isActiveAndEnabled ||
+            !movementEnabled || PlayerMenuUI.BlocksWorldInput || GameSaveSystem.IsBusy || Time.timeScale == 0f)
         {
-            return Vector2.zero;
+            moveInput = Vector2.zero;
+            leftInputFrame = rightInputFrame = upInputFrame = downInputFrame = 0;
+            return;
         }
-        if (Mathf.Abs(moveInput.x) >= Mathf.Abs(moveInput.y))
+
+        // WASD와 방향키의 새 누름 시점 기록
+        if (keyboard.aKey.wasPressedThisFrame || keyboard.leftArrowKey.wasPressedThisFrame)
         {
-            return moveInput.x < 0f ? Vector2.left : Vector2.right;
+            leftInputFrame = Time.frameCount;
         }
-        return moveInput.y < 0f ? Vector2.down : Vector2.up;
+
+        if (keyboard.dKey.wasPressedThisFrame || keyboard.rightArrowKey.wasPressedThisFrame)
+        {
+            rightInputFrame = Time.frameCount;
+        }
+
+        if (keyboard.wKey.wasPressedThisFrame || keyboard.upArrowKey.wasPressedThisFrame)
+        {
+            upInputFrame = Time.frameCount;
+        }
+
+        if (keyboard.sKey.wasPressedThisFrame || keyboard.downArrowKey.wasPressedThisFrame)
+        {
+            downInputFrame = Time.frameCount;
+        }
+
+        // 놓은 방향은 후보에서 제외하여 계속 누른 이전 방향으로 복귀
+        int left = keyboard.aKey.isPressed || keyboard.leftArrowKey.isPressed ? leftInputFrame : -1;
+        int right = keyboard.dKey.isPressed || keyboard.rightArrowKey.isPressed ? rightInputFrame : -1;
+        int up = keyboard.wKey.isPressed || keyboard.upArrowKey.isPressed ? upInputFrame : -1;
+        int down = keyboard.sKey.isPressed || keyboard.downArrowKey.isPressed ? downInputFrame : -1;
+        int horizontal = Mathf.Max(left, right);
+        int vertical = Mathf.Max(up, down);
+        moveInput = Vector2.zero;
+
+        if (horizontal >= 0 && horizontal >= vertical)
+        {
+            moveInput = right >= left ? Vector2.right : Vector2.left;
+        }
+        else if (vertical >= 0)
+        {
+            moveInput = up >= down ? Vector2.up : Vector2.down;
+        }
     }
 
     // 현재 Scene 카메라의 Y축 정렬 방식을 설정한다
@@ -189,7 +254,8 @@ public class PlayerController : MonoBehaviour
             return;
         }
 
-        moveInput = value.Get<Vector2>();
+        // 합성 벡터 대신 키별 누름 순서로 이동 방향 결정
+        ReadKeyboardMovement();
     }
 
     // 이동 가능 상태에서만 달리기 입력을 저장한다
@@ -227,6 +293,8 @@ public class PlayerController : MonoBehaviour
             return;
 
         moveInput = Vector2.zero;
+        // 이동 제한 해제 후 과거 입력 순서 재사용 방지
+        leftInputFrame = rightInputFrame = upInputFrame = downInputFrame = 0;
         isFasted = false;
         ShowStandingPose();
 
