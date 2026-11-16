@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 /// <summary>플레이어의 보유 및 장착 에테르를 맵 UI에 연결함</summary>
@@ -112,14 +113,28 @@ public sealed class AetherEquipmentUI : MonoBehaviour
         SetOpen(false);
     }
 
+    // 사용 조건 검사와 보관함 닫기 입력 처리
     private void Update()
     {
+        // 초기화 전 입력 처리 중단
         if (!initialized)
+        {
             return;
+        }
+
+        // 전투 또는 대화 시작 시 기존 화면 닫기
         if (IsOpen && (!playerData.CanEditEquipment || (dialogPanel != null && dialogPanel.activeInHierarchy)))
         {
             SetOpen(false);
             return;
+        }
+
+        // 열린 보관함의 E 입력을 기존 닫기 및 이동 복구 경로에 전달
+        Keyboard keyboard = Keyboard.current;
+
+        if (storageMode && IsOpen && keyboard != null && keyboard.eKey.wasPressedThisFrame)
+        {
+            SetOpen(false);
         }
     }
 
