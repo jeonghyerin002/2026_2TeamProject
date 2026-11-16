@@ -208,8 +208,8 @@ public sealed class BattleState
         return Scale(Scale(value, multiplier), rankMultiplier * statusMultiplier);
     }
 
-    // 능력치 배율의 유효 범위를 보장한다
-    private static int Scale(int value, float multiplier)
+    // 전투와 장비 미리보기에서 공유할 배율 검증과 내림 계산
+    internal static int Scale(int value, float multiplier)
     {
         if (float.IsNaN(multiplier) || float.IsInfinity(multiplier) || multiplier <= 0f)
             multiplier = 1f;

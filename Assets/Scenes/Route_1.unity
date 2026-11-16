@@ -26803,7 +26803,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c510643257044e69b77000c3cf1ff3a2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponInventoryUI
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUI
   canvas: {fileID: 1815831426}
   aetherUI: {fileID: 2200000083}
   dialogPanel: {fileID: 506237433}

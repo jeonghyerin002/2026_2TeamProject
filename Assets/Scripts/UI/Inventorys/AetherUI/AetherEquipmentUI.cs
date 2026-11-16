@@ -36,7 +36,7 @@ public sealed class AetherEquipmentUI : MonoBehaviour
 
     public bool IsOpen => equipmentPanel != null && equipmentPanel.activeInHierarchy;
     public bool BlocksWorldInput => IsOpen || closedFrame == Time.frameCount ||
-        (WeaponInventoryUI.Instance != null && WeaponInventoryUI.Instance.BlocksWorldInput);
+        (InventoryUI.Instance != null && InventoryUI.Instance.BlocksWorldInput);
     internal bool CanEdit => storageMode && IsOpen && isActiveAndEnabled && playerData != null && playerData.CanEditEquipment && (dialogPanel == null || !dialogPanel.activeInHierarchy);
     internal bool HasDrag => dragSource != null;
 
@@ -178,7 +178,7 @@ public sealed class AetherEquipmentUI : MonoBehaviour
         opened = open;
         if (open)
         {
-            if (WeaponInventoryUI.Instance != null) WeaponInventoryUI.Instance.SetOpen(false);
+            if (InventoryUI.Instance != null) InventoryUI.Instance.SetOpen(false);
             player.SetMovementEnabled(false);
             Refresh();
         }

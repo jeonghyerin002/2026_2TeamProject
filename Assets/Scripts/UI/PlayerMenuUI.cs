@@ -12,6 +12,8 @@ public sealed class PlayerMenuUI : MonoBehaviour
     [SerializeField] private Canvas menuCanvas;              // 제외 씬에서 숨길 메뉴 화면
     [SerializeField] private RectTransform categoryPanel;    // 화면 아래에서 올라오는 Category 패널
     [SerializeField] private GameObject categoryBackdrop;   // 메뉴 사용 중 월드 화면을 어둡게 덮는 전체 화면 패널
+    // 플레이어 프리팹 Canvas에 저장된 인벤토리 화면
+    [SerializeField] private InventoryPanelView inventoryPanel;
     [SerializeField, Min(0.01f)] private float backdropFadeDuration = 0.25f; // 배경의 페이드 인과 아웃 시간(초)
     private Image backdropImage;                           // 메뉴 패널과 독립적으로 투명도를 조절할 배경 이미지
     private float backdropAlpha;                           // 프리팹에 설정된 배경의 최대 알파값
@@ -37,9 +39,11 @@ public sealed class PlayerMenuUI : MonoBehaviour
     public bool IsClosingCategory => isClosingCategory;
     public bool IsReturningToCategory => returningPanel != null;
     public bool IsOpeningPanel => openingPanel != null;
+    internal InventoryPanelView InventoryPanel => inventoryPanel;
+    internal float PanelSlideDuration => Mathf.Max(0.01f, slideDuration);
     public bool CanReceiveInput => sceneAllowed && !GameSaveSystem.IsBusy &&
         !SceneFadeIn.IsTransitioning && Time.timeScale != 0f && player.IsMovementEnabled &&
-        (WeaponInventoryUI.Instance == null || !WeaponInventoryUI.Instance.IsOpen) &&
+        (InventoryUI.Instance == null || !InventoryUI.Instance.IsOpen) &&
         (equipmentUI == null || !equipmentUI.IsOpen);
     private AetherEquipmentUI equipmentUI; // 현재 씬에서 사용하는 기존 에테르 메뉴
 
@@ -100,7 +104,7 @@ public sealed class PlayerMenuUI : MonoBehaviour
         if (group == null) closedFrame = Time.frameCount;
         bool isCategory = navigation.CurrentController != null && navigation.CurrentController.transform == categoryPanel;
         // 그룹 간 이동 중 배경 유지와 메뉴 종료 후 페이드 아웃
-        SetBackdrop(group != null);
+        SetBackdrop(group != null || (InventoryUI.Instance != null && InventoryUI.Instance.IsOpen));
         if (isCategory)
             slideRoutine = StartCoroutine(SlideCategory());
     }
@@ -190,12 +194,12 @@ public sealed class PlayerMenuUI : MonoBehaviour
     }
 
 
-    // 가방 카테고리 실행 시 기존 무기 인벤토리 열기
+    // 가방 카테고리 실행 시 무기 및 회복 탭 인벤토리 열기
     public void OpenWeaponInventory(int itemIndex)
     {
         // 다른 카테고리와 잘못된 참조 및 메뉴 전환 상태 검사
         UIGroupController controller = navigation.CurrentController;
-        WeaponInventoryUI inventory = WeaponInventoryUI.Instance;
+        InventoryUI inventory = InventoryUI.Instance;
 
         if (!CanReceiveInput || controller == null || controller.transform != categoryPanel ||
             controller.Data.GetItem(itemIndex)?.Id != "inventory" || inventory == null || !inventory.isActiveAndEnabled)
@@ -223,6 +227,14 @@ public sealed class PlayerMenuUI : MonoBehaviour
         }
 
         navigation.OpenInitialGroup();
+    }
+
+
+    // 가방 열림 상태와 카테고리 상태를 전체 화면 배경에 전달
+    internal void RefreshInventoryBackdrop()
+    {
+        // 하위 인벤토리 사용 중에도 기존 CategoryBackdrop 유지
+        SetBackdrop(navigation.IsOpen || (InventoryUI.Instance != null && InventoryUI.Instance.IsOpen));
     }
 
 
@@ -265,7 +277,7 @@ public sealed class PlayerMenuUI : MonoBehaviour
     }
 
     // 배율과 화면 크기를 반영한 패널의 화면 밖 위치 계산
-    private Vector2 GetHiddenPosition(RectTransform panel)
+    internal Vector2 GetHiddenPosition(RectTransform panel)
     {
         Transform parent = panel.parent;
         panel.GetWorldCorners(panelCorners);

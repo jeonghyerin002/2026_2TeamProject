@@ -12633,7 +12633,7 @@ Transform:
   m_GameObject: {fileID: 589978501}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.2, z: 0}
+  m_LocalPosition: {x: 0, y: -0.39, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14616,7 +14616,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.6807002, y: 0.30907005}
+  m_Size: {x: 0.8, y: 0.47}
   m_EdgeRadius: 0
 --- !u!1 &1152813740
 GameObject:
@@ -18632,11 +18632,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c510643257044e69b77000c3cf1ff3a2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponInventoryUI
-  canvas: {fileID: 1815831426}
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryUI
   aetherUI: {fileID: 2200000083}
   dialogPanel: {fileID: 0}
-  textTemplate: {fileID: 2200000074}
 --- !u!1001 &8505028632960153943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18944,6 +18942,14 @@ PrefabInstance:
     - target: {fileID: 2490860394827626405, guid: 48c6521a53aa920488cdad3e25dd7fad, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594739945669649331, guid: 48c6521a53aa920488cdad3e25dd7fad, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2594739945669649331, guid: 48c6521a53aa920488cdad3e25dd7fad, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4554181341618762495, guid: 48c6521a53aa920488cdad3e25dd7fad, type: 3}
       propertyPath: orthographic size

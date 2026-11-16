@@ -15,6 +15,7 @@ MonoBehaviour:
   itemid: 20001
   weaponname: "\uB179\uC2A8\uAC80"
   icon: {fileID: -2486521743634864436, guid: 0d9b4dd1c254988469027d2e0155a017, type: 3}
+  description: "\uCD08\uBCF4\uC790\uAC00 \uC0AC\uC6A9\uD558\uB294 \uBB34\uAE30\uC774\uB2E4"
   healthmultiplier: 1
   attackmultiplier: 1.05
   defensemultiplier: 0.97

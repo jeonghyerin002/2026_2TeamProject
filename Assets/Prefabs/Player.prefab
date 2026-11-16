@@ -9066,6 +9066,7 @@ MonoBehaviour:
   menuCanvas: {fileID: 2138836619}
   categoryPanel: {fileID: 389118965}
   categoryBackdrop: {fileID: 800000000000000010}
+  inventoryPanel: {fileID: 8100000002}
   backdropFadeDuration: 0.25
   slideDuration: 0.25
 --- !u!114 &1578043119
@@ -12816,6 +12817,7 @@ RectTransform:
   - {fileID: 188875488}
   - {fileID: 1657893510}
   - {fileID: 8700000003}
+  - {fileID: 8100000001}
   m_Father: {fileID: 978516485016564843}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12905,7 +12907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8700000003
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19848,3 +19850,32 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1001 &8100000000
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2138836616}
+    m_Modifications: []
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7b2fe1a5203b440a9e461c923d648a79, type: 3}
+--- !u!224 &8100000001 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1001, guid: 7b2fe1a5203b440a9e461c923d648a79, type: 3}
+  m_PrefabInstance: {fileID: 8100000000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8100000002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2153, guid: 7b2fe1a5203b440a9e461c923d648a79, type: 3}
+  m_PrefabInstance: {fileID: 8100000000}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a777ff72842342b7b5943cbaa26a4fe5, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryPanelView
