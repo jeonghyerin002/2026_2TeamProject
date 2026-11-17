@@ -302,6 +302,35 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
     }
 
+
+    // 컷신이 소유한 이동 방향과 속도를 기존 애니메이터에 전달
+    public void SetCutsceneAnimation(Vector2 direction, float speed)
+    {
+        // 이동 종료 시 마지막 방향의 정지 그림 유지
+        if (direction == Vector2.zero)
+        {
+            ShowStandingPose();
+            return;
+        }
+
+        animationDirection = direction;
+        if (direction.x != 0f)
+        {
+            isFacingRight = direction.x > 0f;
+        }
+
+        // 입력 제어가 비활성화된 동안에도 방향별 걷기 상태 갱신
+        if (hasDirectionalAnimation && animator != null && animator.isActiveAndEnabled)
+        {
+            animator.SetFloat(MoveXId, direction.x);
+            animator.SetFloat(MoveYId, direction.y);
+            animator.SetFloat(WalkSpeedId, speed / Mathf.Max(moveSpeed, 0.01f));
+            animator.SetBool(IsMovingId, true);
+            isWalking = true;
+        }
+    }
+
+
     // 불러오기 시 좌표와 방향을 복원하고 이전 이동 입력을 지운다.
     public void RestoreSaveTransform(Vector3 position, bool facingRight)
     {

@@ -321,14 +321,84 @@ public class NPCInteraction : MonoBehaviour
         }
     }
 
-    // 현재 NPC 전투와 복귀 정보를 등록하고 Battle Scene으로 이동한다
-    private void TransitionToBattle()
+
+    // 활성 NPC의 고유 ID로 시작 대화와 입력을 생략한 전투 요청
+    public static bool TryStartForcedBattle(string targetNpcId)
+    {
+        // 빈 ID 및 이미 진행 중인 전투 전환 차단
+        if (string.IsNullOrWhiteSpace(targetNpcId) || BattleSession.IsActive || SceneFadeIn.IsTransitioning)
+        {
+            Debug.LogWarning("NPCInteraction: 유효한 NPC Id와 전투 진입 가능 상태를 확인하세요.");
+            return false;
+        }
+
+        // 이동 단계와 동일한 ID 조회 규칙 재사용
+        if (!TryFindById(targetNpcId, out var targetNpc))
+        {
+            return false;
+        }
+
+        // 기존 NPC 동작 모드와 승리 기록 유지 및 다른 대화 중 전투 차단
+        if (targetNpc.interactionType != InteractionType.Battle ||
+            targetNpc.isInteracting || NpcBattleProgress.IsDefeated(targetNpcId) ||
+            targetNpc.dialogManager == null || !targetNpc.dialogManager.CanShowMessage)
+        {
+            Debug.LogWarning($"NPCInteraction: NPC Id '{targetNpcId}'의 활성 상태, 전투 모드, 승리 기록과 대화 상태를 확인하세요.");
+            return false;
+        }
+
+        // 기존 전투 데이터 검증과 씬 전환을 공통 경로로 요청
+        targetNpc.isInteracting = true;
+        return targetNpc.TransitionToBattle();
+    }
+
+
+    // 이동과 전투에서 사용할 활성 NPC의 고유 ID 조회
+    public static bool TryFindById(string targetNpcId, out NPCInteraction targetNpc)
+    {
+        // 빈 ID와 중복 ID를 허용하지 않는 단일 대상 선택
+        targetNpc = null;
+        if (string.IsNullOrWhiteSpace(targetNpcId))
+        {
+            Debug.LogWarning("NPCInteraction: 조회할 NPC Id가 필요합니다.");
+            return false;
+        }
+
+        foreach (var npc in FindObjectsByType<NPCInteraction>(FindObjectsSortMode.None))
+        {
+            if (!npc.isActiveAndEnabled || npc.npcId != targetNpcId)
+            {
+                continue;
+            }
+
+            if (targetNpc != null)
+            {
+                Debug.LogError($"NPCInteraction: NPC Id '{targetNpcId}'가 중복되어 대상을 선택할 수 없습니다.");
+                targetNpc = null;
+                return false;
+            }
+
+            targetNpc = npc;
+        }
+
+        if (targetNpc == null)
+        {
+            Debug.LogWarning($"NPCInteraction: NPC Id '{targetNpcId}'의 활성 NPC를 찾지 못했습니다.");
+            return false;
+        }
+
+        return true;
+    }
+
+
+    // 현재 NPC 전투와 복귀 정보 등록 및 씬 전환 요청 결과 반환
+    private bool TransitionToBattle()
     {
         // 다른 전환 중에는 전투 세션과 플레이어 상태를 덮어쓰지 않음
         if (SceneFadeIn.IsTransitioning)
         {
             CancelInteraction();
-            return;
+            return false;
         }
         PlayerController player = PlayerController.Instance;
 
@@ -336,7 +406,7 @@ public class NPCInteraction : MonoBehaviour
         {
             Debug.LogError("NPCInteraction: PlayerController가 없습니다.");
             CancelInteraction();
-            return;
+            return false;
         }
 
         PlayerBattleData playerData = player.GetComponent<PlayerBattleData>();
@@ -349,7 +419,7 @@ public class NPCInteraction : MonoBehaviour
                 equipmentUI.ShowMessage("전투를 시작하려면 에테르를 하나 이상 장착하세요.");
             }
             CancelInteraction();
-            return;
+            return false;
         }
 
         string returnScene = SceneManager.GetActiveScene().name;
@@ -358,7 +428,7 @@ public class NPCInteraction : MonoBehaviour
         {
             Debug.LogError("NPCInteraction: NPC 전투 데이터 설정을 확인하세요.");
             CancelInteraction();
-            return;
+            return false;
         }
 
         player.SetMovementEnabled(false);
@@ -367,8 +437,12 @@ public class NPCInteraction : MonoBehaviour
             BattleSession.Clear();
             player.SetMovementEnabled(true);
             CancelInteraction();
+            return false;
         }
+
+        return true;
     }
+
 
     // 잘못된 전투 진입 상태를 초기화한다
     private void CancelInteraction()
