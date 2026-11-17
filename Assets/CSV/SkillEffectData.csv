@@ -20,3 +20,6 @@
 60020,특수공격 1랭크 하락,ModifyStat,Enemy,0,,0,100,-1 rank; storage and negative-rank formula pending.,SpecialAttack
 60021,특수방어 1랭크 하락,ModifyStat,Enemy,0,,0,100,-1 rank; storage and negative-rank formula pending.,SpecialDefense
 60022,스피드 1랭크 하락,ModifyStat,Enemy,0,,0,100,-1 rank; storage and negative-rank formula pending.,Speed
+60023,화상 10%,ApplyStatusEffect,Enemy,70003,1,0,10,,None
+60024,마비 10%,ApplyStatusEffect,Enemy,70001,1,0,10,,None
+60025,자신의 방어 1랭크 하락,ModifyStat,Self,0,,0,100,Defense -1 rank on hit; expires at battle end. Rank storage pending; value unset.,Defense
