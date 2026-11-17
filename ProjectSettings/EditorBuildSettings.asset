@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JinmuHouse.unity
     guid: a9206ac6632fd8848a529d11215dace4
+  - enabled: 1
+    path: Assets/Scenes/MuryeongMountain/M_1.unity
+    guid: c7c600b26ee99834b8d4920899bbc073
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
