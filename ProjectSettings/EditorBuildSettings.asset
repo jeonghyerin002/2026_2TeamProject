@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: 8b1a2aa4ce4bb0447a64742d69c0dd51
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Prologue.unity
     guid: f63e53c4985d1a54e8819caf98514437
   - enabled: 1
@@ -35,6 +35,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MuryeongMountain/M_1.unity
     guid: c7c600b26ee99834b8d4920899bbc073
+  - enabled: 1
+    path: Assets/Scenes/Level_Design/Level_Design.unity
+    guid: 069836a2172eb584b9767f86291e6629
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -31,6 +31,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f89f5420c038b254aa237bb58e4789c9, type: 2}
   - {fileID: 11400000, guid: 15a695d9d7aafcf4bb91a1e0a62b01a2, type: 2}
   mapScenes:
+  - Prologue
   - PalletTown
   - Shrine
   - Route_1
@@ -38,11 +39,14 @@ MonoBehaviour:
   - RoadOfMudo
   - JinmuHouse
   - M_1
+  - Level_Design
   npcIds:
+  - Junho
   - npc_002
   - npc_003
   - npc_raute_1_junho
   - npc_raute_1_sora
+  - Sora
   cutsceneIds:
   - 97936ff9f3cf4aae82a71a50d4f9070d
   actorDefinitions: []
