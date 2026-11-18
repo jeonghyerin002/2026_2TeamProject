@@ -17,6 +17,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2560af1f1e69d5744b2d207239007ef5, type: 2}
   - {fileID: 11400000, guid: 923cc3abfd41c0e4f9aa213e733d091f, type: 2}
   - {fileID: 11400000, guid: 38f9c03382cc01842bb5f39791b0c9a2, type: 2}
+  - {fileID: 11400000, guid: f72d0822a23454d47a0e11dd386c1058, type: 2}
+  - {fileID: 11400000, guid: bde28c59e61f13e4db6f0bf42935079f, type: 2}
+  - {fileID: 11400000, guid: 2cf0601287f34d14e94f0178b3ab1bd8, type: 2}
+  - {fileID: 11400000, guid: d94229a369824574f98f8fd26dd559c1, type: 2}
+  - {fileID: 11400000, guid: fe7ac56608e37ba4487b70ef6a32b4f9, type: 2}
   aethers:
   - {fileID: 11400000, guid: 0a7db67a2fb1a0b45af62da78adbb354, type: 2}
   - {fileID: 11400000, guid: bf55df5b6609cd2449665ff6d6dbbd37, type: 2}
@@ -29,6 +34,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: aca0c30c65442bc468d737903670393a, type: 2}
   - {fileID: 11400000, guid: 2d309f171c0bb4f4ea7cdaf30caee2b8, type: 2}
   - {fileID: 11400000, guid: f89f5420c038b254aa237bb58e4789c9, type: 2}
+  - {fileID: 11400000, guid: 39f02431ef8182f4e9ee8dccb204d2bb, type: 2}
+  - {fileID: 11400000, guid: 631e9959195d00449b4f9cfe27998fff, type: 2}
+  - {fileID: 11400000, guid: c719c7236405f8e4b92a5b4107781fd8, type: 2}
   - {fileID: 11400000, guid: 15a695d9d7aafcf4bb91a1e0a62b01a2, type: 2}
   mapScenes:
   - Prologue
