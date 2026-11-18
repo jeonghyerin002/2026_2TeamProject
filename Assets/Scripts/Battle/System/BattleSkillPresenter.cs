@@ -362,7 +362,8 @@ public sealed class BattleSkillPresenter : MonoBehaviour
                 spawned.Add((instances[i].gameObject, effect.GetEnd(impact)));
             }
             if (instances[i] != null)
-                BattleSkillGeometry.Sample(instances[i], images[i], effect, launch, hit, player, elapsed, impact);
+                BattleSkillGeometry.Sample(instances[i], images[i], effect, launch, hit, player, elapsed, impact,
+                    player ? playerPosition : enemyPosition);
         }
     }
 

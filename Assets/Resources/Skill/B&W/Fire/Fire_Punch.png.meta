@@ -162,6 +162,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -685,14 +698,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fire_Punch_Frame_00: 4113714932432010757
-      Fire_Punch_Frame_01: 2677294739142727905
-      Fire_Punch_Frame_02: 1913516809640218048
-      Fire_Punch_Frame_03: 7438951342250360060
-      Fire_Punch_Frame_04: 7051221022642428807
-      Fire_Punch_Frame_05: 4154603759931347734
-      Fire_Punch_Frame_06: 5769283379400029668
-      Fire_Punch_Frame_07: 530650669225276308
       Fire_Punch_0: -1672880072476815711
       Fire_Punch_1: 5484988700351379969
       Fire_Punch_10: 6287555518006857670
@@ -708,6 +713,14 @@ TextureImporter:
       Fire_Punch_7: 5987151664693014680
       Fire_Punch_8: -8464364616279718776
       Fire_Punch_9: -4020413471836901380
+      Fire_Punch_Frame_00: 4113714932432010757
+      Fire_Punch_Frame_01: 2677294739142727905
+      Fire_Punch_Frame_02: 1913516809640218048
+      Fire_Punch_Frame_03: 7438951342250360060
+      Fire_Punch_Frame_04: 7051221022642428807
+      Fire_Punch_Frame_05: 4154603759931347734
+      Fire_Punch_Frame_06: 5769283379400029668
+      Fire_Punch_Frame_07: 530650669225276308
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6900243996cf48bdace7d5f0e019c0bf, type: 3}
-  m_Name: SkillPresentation_Aura
+  m_Name: 50009_Aura
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
   duration: 0.6
   impactTime: 0.3
@@ -44,17 +44,54 @@ MonoBehaviour:
   effects:
   - prefab: {fileID: 2315917363674737247, guid: 996762cc129e4091a0dadfa7a26ff60f, type: 3}
     time: 0
-    position: 1
+    position: 0
     offset: {x: 0, y: 0}
-    lifetime: 0.333333333
+    lifetime: 0.33333334
     onlyOnDamage: 0
     travelToTarget: 0
-    playback: 1
+    playback: 3
     animation: {fileID: 7400000, guid: 46c2da81aab841f8a901d693688028c4, type: 2}
     animationImpactTime: 0.125
-    contactPoint: {x: 0.5, y: 0.5}
+    contactPoint: {x: 0.5, y: 0.06}
     contactFrames: []
-    sizeScale: 1
-    rotateToDirection: 1
+    sizeScale: 1.5
+    rotateToDirection: 0
     mirrorForEnemy: 1
-  sounds: []
+    useActorAnchor: 1
+    actorAnchor: {x: 0.5, y: 0}
+    enemySizeScale: 0.6
+    targetApproachOffset: {x: 0, y: 0}
+    travelStartOffset: {x: 0, y: 0}
+    travelEndOffset: {x: 0, y: 0}
+    approachProgress:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    directionAngleOffset: 0
+    directionRotationEndTime: 0
+    initialRotationEuler: {x: 0, y: 0, z: 0}
+    initialRotationZ:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetX:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetY:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  sounds:
+  - clip: {fileID: 8300000, guid: d986e32e815c8474b81fae0366ad8f40, type: 3}
+    time: 0
+    volume: 0.3
+    onlyOnDamage: 0

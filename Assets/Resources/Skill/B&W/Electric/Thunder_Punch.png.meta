@@ -186,6 +186,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -885,14 +898,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Thunder_Punch_Frame_00: 611258513296684525
-      Thunder_Punch_Frame_01: 6931344661479122778
-      Thunder_Punch_Frame_02: 5251735895791550323
-      Thunder_Punch_Frame_03: 6187704593871483048
-      Thunder_Punch_Frame_04: 5479851041448723658
-      Thunder_Punch_Frame_05: 8191665403992448565
-      Thunder_Punch_Frame_06: 3817177859481479108
-      Thunder_Punch_Frame_07: 2591170241473141115
       Thunder_Punch_0: 2068354821484132307
       Thunder_Punch_1: 8004739633201142785
       Thunder_Punch_10: 525796744282663081
@@ -916,6 +921,14 @@ TextureImporter:
       Thunder_Punch_7: 5330353764091911887
       Thunder_Punch_8: -2779609166874815381
       Thunder_Punch_9: 812013359355745183
+      Thunder_Punch_Frame_00: 611258513296684525
+      Thunder_Punch_Frame_01: 6931344661479122778
+      Thunder_Punch_Frame_02: 5251735895791550323
+      Thunder_Punch_Frame_03: 6187704593871483048
+      Thunder_Punch_Frame_04: 5479851041448723658
+      Thunder_Punch_Frame_05: 8191665403992448565
+      Thunder_Punch_Frame_06: 3817177859481479108
+      Thunder_Punch_Frame_07: 2591170241473141115
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

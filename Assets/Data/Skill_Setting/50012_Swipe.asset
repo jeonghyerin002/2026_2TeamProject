@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6900243996cf48bdace7d5f0e019c0bf, type: 3}
-  m_Name: SkillPresentation_Slash
+  m_Name: 50012_Swipe
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
   duration: 0.6
-  impactTime: 0.3
+  impactTime: 0.1
   moveDistance: 50
   movement:
     serializedVersion: 2
@@ -42,19 +42,53 @@ MonoBehaviour:
   shakeDuration: 0.25
   shakeStrength: 10
   effects:
-  - prefab: {fileID: 2315917363674737247, guid: f14f002876e64653a2ab00bc0726bd76, type: 3}
+  - prefab: {fileID: 2315917363674737247, guid: fdf097f2291d4d62b83cb8416fa85273, type: 3}
     time: 0
     position: 1
     offset: {x: 0, y: 0}
-    lifetime: 0.333333333
+    lifetime: 0.33333334
     onlyOnDamage: 0
     travelToTarget: 0
-    playback: 1
-    animation: {fileID: 7400000, guid: ae2d8d64278e484183546823f08aba56, type: 2}
+    playback: 0
+    animation: {fileID: 7400000, guid: 27fd9b1dc65141a6b142d7c658a35f86, type: 2}
     animationImpactTime: 0.125
     contactPoint: {x: 0.5, y: 0.5}
     contactFrames: []
     sizeScale: 1
     rotateToDirection: 1
     mirrorForEnemy: 1
-  sounds: []
+    targetApproachOffset: {x: 0, y: 0}
+    travelStartOffset: {x: 0, y: 0}
+    travelEndOffset: {x: 0, y: 0}
+    approachProgress:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    directionAngleOffset: 0
+    directionRotationEndTime: 0
+    initialRotationEuler: {x: 0, y: 0, z: 0}
+    initialRotationZ:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetX:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetY:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  sounds:
+  - clip: {fileID: 8300000, guid: c74b84f937899944c821423c94a0e598, type: 3}
+    time: 0
+    volume: 0.3
+    onlyOnDamage: 0

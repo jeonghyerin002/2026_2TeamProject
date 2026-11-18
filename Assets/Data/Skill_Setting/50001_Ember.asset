@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6900243996cf48bdace7d5f0e019c0bf, type: 3}
-  m_Name: SkillPresentation_Black_WaterGun
+  m_Name: 50001_Ember
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
   duration: 0.6
   impactTime: 0.3
@@ -42,7 +42,7 @@ MonoBehaviour:
   shakeDuration: 0.25
   shakeStrength: 10
   effects:
-  - prefab: {fileID: 5743338100207580545, guid: d47f9c171e0937146929c36096e4178e, type: 3}
+  - prefab: {fileID: 2315917363674737247, guid: fbd09ab5c856d534eb5833875339aa71, type: 3}
     time: 0
     position: 1
     offset: {x: 0, y: 0}
@@ -50,27 +50,61 @@ MonoBehaviour:
     onlyOnDamage: 0
     travelToTarget: 0
     playback: 1
-    animation: {fileID: 7400000, guid: 6efe5713ce16a8d418d559532827bcc6, type: 2}
+    animation: {fileID: 7400000, guid: ec54c0b4deb938c41b3268cf6e13a7cf, type: 2}
     animationImpactTime: 0.16666667
     contactPoint: {x: 0.5, y: 0.5}
     contactFrames:
-    - time: 0.0
-      point: {x: 0.256328, y: 0.464191}
+    - time: 0
+      point: {x: 0.125448, y: 0.448526}
     - time: 0.041666668
-      point: {x: 0.276347, y: 0.46571}
+      point: {x: 0.195159, y: 0.449445}
     - time: 0.083333336
-      point: {x: 0.29756, y: 0.461014}
+      point: {x: 0.705687, y: 0.466379}
     - time: 0.125
-      point: {x: 0.68301, y: 0.452639}
+      point: {x: 0.814428, y: 0.444189}
     - time: 0.16666667
-      point: {x: 0.837012, y: 0.468915}
+      point: {x: 0.809975, y: 0.410465}
     - time: 0.20833333
-      point: {x: 0.839908, y: 0.453603}
+      point: {x: 0.807777, y: 0.392655}
     - time: 0.25
-      point: {x: 0.846794, y: 0.402718}
+      point: {x: 0.713542, y: 0.546296}
     - time: 0.29166666
-      point: {x: 0.87066, y: 0.385802}
+      point: {x: 0.785846, y: 0.461329}
     sizeScale: 1
     rotateToDirection: 1
     mirrorForEnemy: 1
-  sounds: []
+    targetApproachOffset: {x: 0, y: 0}
+    travelStartOffset: {x: 0, y: 0}
+    travelEndOffset: {x: 0, y: 0}
+    approachProgress:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    directionAngleOffset: 0
+    directionRotationEndTime: 0
+    initialRotationEuler: {x: 0, y: 0, z: 0}
+    initialRotationZ:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetX:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetY:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  sounds:
+  - clip: {fileID: 8300000, guid: 2c7e3cde480b6b04ba36117aea17ca68, type: 3}
+    time: 0.25
+    volume: 1
+    onlyOnDamage: 0

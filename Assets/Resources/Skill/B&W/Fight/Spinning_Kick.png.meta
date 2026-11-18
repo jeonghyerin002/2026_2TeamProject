@@ -165,6 +165,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -710,14 +723,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Spinning_Kick_Frame_00: 7709049752520969249
-      Spinning_Kick_Frame_01: 3962657170958088985
-      Spinning_Kick_Frame_02: 2339242894599205364
-      Spinning_Kick_Frame_03: 2502553099109032312
-      Spinning_Kick_Frame_04: 1337348844502339600
-      Spinning_Kick_Frame_05: 826453226639106524
-      Spinning_Kick_Frame_06: 8357933698998583004
-      Spinning_Kick_Frame_07: 1124629245107139412
       Spinning_Kick_0: 7233143592269639790
       Spinning_Kick_1: -9198072431070469094
       Spinning_Kick_10: 3677592168406650599
@@ -734,6 +739,14 @@ TextureImporter:
       Spinning_Kick_7: 8188288058844565015
       Spinning_Kick_8: 6686344309879630299
       Spinning_Kick_9: -1831880291973605271
+      Spinning_Kick_Frame_00: 7709049752520969249
+      Spinning_Kick_Frame_01: 3962657170958088985
+      Spinning_Kick_Frame_02: 2339242894599205364
+      Spinning_Kick_Frame_03: 2502553099109032312
+      Spinning_Kick_Frame_04: 1337348844502339600
+      Spinning_Kick_Frame_05: 826453226639106524
+      Spinning_Kick_Frame_06: 8357933698998583004
+      Spinning_Kick_Frame_07: 1124629245107139412
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

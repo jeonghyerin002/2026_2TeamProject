@@ -10,50 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6900243996cf48bdace7d5f0e019c0bf, type: 3}
-  m_Name: SkillPresentation_Lunge
+  m_Name: 50006_MachPunch
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
   duration: 0.6
   impactTime: 0.3
-  moveDistance: 32
+  moveDistance: 50
   movement:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3
-      tangentMode: 69
+      time: 0.005039215
+      value: 0.8153839
+      inSlope: -0.7218411
+      outSlope: -0.7218411
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.33333334
-      value: 1
-      inSlope: 3
-      outSlope: -1.5000001
-      tangentMode: 69
+      time: 0.65844727
+      value: 0.3437271
+      inSlope: -0.7218411
+      outSlope: -0.7218411
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: -1.5000001
-      outSlope: 0
-      tangentMode: 69
-      weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  shakeDuration: 0.2
-  shakeStrength: 7
+  shakeDuration: 0.25
+  shakeStrength: 10
   effects:
   - prefab: {fileID: 4040518767715109495, guid: 8acb2e86ba8a86945a12e41f7061b62c, type: 3}
     time: 0
-    position: 0
+    position: 1
     offset: {x: 0, y: 0}
     lifetime: 0.33333334
     onlyOnDamage: 0
@@ -63,7 +54,7 @@ MonoBehaviour:
     animationImpactTime: 0.125
     contactPoint: {x: 0.5, y: 0.5}
     contactFrames:
-    - time: 0.0
+    - time: 0
       point: {x: 0.167799, y: 0.40781}
     - time: 0.041666668
       point: {x: 0.276309, y: 0.406102}
@@ -82,8 +73,38 @@ MonoBehaviour:
     sizeScale: 1
     rotateToDirection: 1
     mirrorForEnemy: 1
+    targetApproachOffset: {x: 0, y: 0}
+    travelStartOffset: {x: 0, y: 0}
+    travelEndOffset: {x: 0, y: 0}
+    approachProgress:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    directionAngleOffset: 0
+    directionRotationEndTime: 0
+    initialRotationEuler: {x: 0, y: 0, z: 0}
+    initialRotationZ:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetX:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetY:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
   sounds:
-  - clip: {fileID: 8300000, guid: fe051702ed6a8d54eb32205db3ddf96b, type: 3}
-    time: 0.3
-    volume: 0.8
-    onlyOnDamage: 1
+  - clip: {fileID: 8300000, guid: 3ae4e3949e66b644888d3ed5694cb8ac, type: 3}
+    time: 0.23
+    volume: 1
+    onlyOnDamage: 0

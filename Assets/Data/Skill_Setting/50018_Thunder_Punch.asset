@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6900243996cf48bdace7d5f0e019c0bf, type: 3}
-  m_Name: SkillPresentation_Fire_Punch
+  m_Name: 50018_Thunder_Punch
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
-  duration: 0.5
-  impactTime: 0.16
+  duration: 0.5391667
+  impactTime: 0.185
   moveDistance: 50
   movement:
     serializedVersion: 2
@@ -42,7 +42,7 @@ MonoBehaviour:
   shakeDuration: 0.18
   shakeStrength: 18
   effects:
-  - prefab: {fileID: 2315917363674737247, guid: 5bcec2745e4c4c099d90b6678ac162f3, type: 3}
+  - prefab: {fileID: 2315917363674737247, guid: de228edf7fcb42b4851949105663caa7, type: 3}
     time: 0.035
     position: 1
     offset: {x: 0, y: 0}
@@ -50,11 +50,45 @@ MonoBehaviour:
     onlyOnDamage: 0
     travelToTarget: 0
     playback: 2
-    animation: {fileID: 7400000, guid: aecc5af862db47fd9f0a81c4e28b0b83, type: 2}
+    animation: {fileID: 7400000, guid: b5b139b34f0f4585b2bd66bea13b2ea7, type: 2}
     animationImpactTime: 0.0625
     contactPoint: {x: 0.5, y: 0.5}
     contactFrames: []
-    sizeScale: 0.7776
+    sizeScale: 0.96
     rotateToDirection: 1
     mirrorForEnemy: 1
-  sounds: []
+    targetApproachOffset: {x: 0, y: 0}
+    travelStartOffset: {x: 0, y: 0}
+    travelEndOffset: {x: 0, y: 0}
+    approachProgress:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    directionAngleOffset: 0
+    directionRotationEndTime: 0
+    initialRotationEuler: {x: 0, y: 0, z: 0}
+    initialRotationZ:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetX:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetY:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  sounds:
+  - clip: {fileID: 8300000, guid: 05c7752e2a6358a46869a5068bb4ee19, type: 3}
+    time: 0
+    volume: 0.3
+    onlyOnDamage: 0

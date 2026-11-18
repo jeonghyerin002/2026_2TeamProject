@@ -222,6 +222,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1185,14 +1198,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Hadouken_Frame_00: 5042283580646600378
-      Hadouken_Frame_01: 8269191431794801242
-      Hadouken_Frame_02: 5066509976402196711
-      Hadouken_Frame_03: 2107216959995682051
-      Hadouken_Frame_04: 7012385501546537535
-      Hadouken_Frame_05: 6860804994355078463
-      Hadouken_Frame_06: 5679597346078366468
-      Hadouken_Frame_07: 7252517726842067207
       Hadouken_0: -8245537074723217445
       Hadouken_1: -7503427207475520113
       Hadouken_10: -4068433893412064104
@@ -1228,6 +1233,14 @@ TextureImporter:
       Hadouken_7: -4160057612811040133
       Hadouken_8: -4916762699088027350
       Hadouken_9: -7995435240454111640
+      Hadouken_Frame_00: 5042283580646600378
+      Hadouken_Frame_01: 8269191431794801242
+      Hadouken_Frame_02: 5066509976402196711
+      Hadouken_Frame_03: 2107216959995682051
+      Hadouken_Frame_04: 7012385501546537535
+      Hadouken_Frame_05: 6860804994355078463
+      Hadouken_Frame_06: 5679597346078366468
+      Hadouken_Frame_07: 7252517726842067207
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

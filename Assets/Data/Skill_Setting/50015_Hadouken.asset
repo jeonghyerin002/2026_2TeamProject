@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6900243996cf48bdace7d5f0e019c0bf, type: 3}
-  m_Name: SkillPresentation_Black_heavyStraghtPunch
+  m_Name: 50015_Hadouken
   m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
   duration: 0.6
   impactTime: 0.3
@@ -42,7 +42,7 @@ MonoBehaviour:
   shakeDuration: 0.25
   shakeStrength: 10
   effects:
-  - prefab: {fileID: 371633063054854796, guid: 7fc785f28f2461845ba5a5214176163b, type: 3}
+  - prefab: {fileID: 2315917363674737247, guid: ddc103d648d8480587f0c908c38f276e, type: 3}
     time: 0
     position: 1
     offset: {x: 0, y: 0}
@@ -50,27 +50,63 @@ MonoBehaviour:
     onlyOnDamage: 0
     travelToTarget: 0
     playback: 1
-    animation: {fileID: 7400000, guid: 86ca48515f65f9a4ba4d6bdee719bf44, type: 2}
+    animation: {fileID: 7400000, guid: f0f07837f12b47e18c8d25d18eaae5df, type: 2}
     animationImpactTime: 0.125
     contactPoint: {x: 0.5, y: 0.5}
     contactFrames:
-    - time: 0.0
-      point: {x: 0.152604, y: 0.441262}
+    - time: 0
+      point: {x: 0.5, y: 0.49074075}
     - time: 0.041666668
-      point: {x: 0.280058, y: 0.430537}
+      point: {x: 0.5, y: 0.49074075}
     - time: 0.083333336
-      point: {x: 0.62414, y: 0.443471}
+      point: {x: 0.5, y: 0.5}
     - time: 0.125
-      point: {x: 0.713782, y: 0.478931}
+      point: {x: 0.5, y: 0.5}
     - time: 0.16666667
-      point: {x: 0.713131, y: 0.512839}
+      point: {x: 0.50177073, y: 0.50255376}
     - time: 0.20833333
-      point: {x: 0.837989, y: 0.326041}
+      point: {x: 0.08392315, y: 0.38264894}
     - time: 0.25
-      point: {x: 0.604834, y: 0.723409}
+      point: {x: 0.34868422, y: 0.8021442}
     - time: 0.29166666
-      point: {x: 0.636336, y: 0.480937}
+      point: {x: 0.05263158, y: 0.49074075}
+    - time: 0.33333334
+      point: {x: 0.05263158, y: 0.49074075}
     sizeScale: 1
     rotateToDirection: 1
     mirrorForEnemy: 1
-  sounds: []
+    targetApproachOffset: {x: 0, y: 0}
+    travelStartOffset: {x: 0, y: 0}
+    travelEndOffset: {x: 0, y: 0}
+    approachProgress:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    directionAngleOffset: 0
+    directionRotationEndTime: 0
+    initialRotationEuler: {x: 0, y: 0, z: 0}
+    initialRotationZ:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetX:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetY:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  sounds:
+  - clip: {fileID: 8300000, guid: 33b2515bc65f23448b9b20a55f4e4152, type: 3}
+    time: 0
+    volume: 0.3
+    onlyOnDamage: 0

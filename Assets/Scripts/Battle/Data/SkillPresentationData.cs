@@ -38,6 +38,58 @@ public sealed class SkillPresentationData : ScriptableObject
         public bool rotateToDirection = true;                // 공격 경로에 맞춘 이미지 회전 여부
         public bool mirrorForEnemy = true;                   // 적 공격에 적용할 좌우반전 여부
 
+        // 공격자 이미지 기준의 고정 위치와 NPC 전용 크기 배율
+        [SerializeField] private bool useActorAnchor;
+        [SerializeField] private Vector2 actorAnchor = new(0.5f, 0f);
+        [SerializeField, Min(0.01f)] private float enemySizeScale = 1f;
+
+        public bool UseActorAnchor => useActorAnchor;
+        public Vector2 ActorAnchor => actorAnchor;
+        public float EnemySizeScale => Mathf.Max(0.01f, enemySizeScale);
+
+        // Target 주변에서 출발하는 이동 연출의 시작 위치 보정
+        [SerializeField] private Vector2 targetApproachOffset;
+
+        public Vector2 TargetApproachOffset => targetApproachOffset; // 영벡터이면 기존 공격자 발사점 사용
+
+        // 도착점에 영향을 주지 않는 이동 연출의 시작 위치 보정
+        [SerializeField] private Vector2 travelStartOffset;
+
+        public Vector2 TravelStartOffset => travelStartOffset;
+
+        // 시작점에 영향을 주지 않는 이동 연출의 도착 위치 보정
+        [SerializeField] private Vector2 travelEndOffset;
+
+        public Vector2 TravelEndOffset => travelEndOffset;
+
+        // 도착 전 구간별 속도와 애니메이션 진행률의 공통 보정
+        [SerializeField] private AnimationCurve approachProgress;
+
+        public AnimationCurve ApproachProgress => approachProgress;
+
+        // 원본 그림의 기울기 보정과 클립 내부의 방향 회전 종료 시각
+        [SerializeField] private float directionAngleOffset;
+        [SerializeField, Min(0f)] private float directionRotationEndTime;
+
+        public float DirectionAngleOffset => directionAngleOffset;
+        public float DirectionRotationEndTime => directionRotationEndTime; // 0이면 클립 끝까지 방향 회전 유지
+
+        // 방향 회전 종료 시각 전까지 사용할 고정 입체 각도
+        [SerializeField] private Vector3 initialRotationEuler;
+        [SerializeField] private AnimationCurve initialRotationZ;
+
+        public Vector3 InitialRotationEuler => initialRotationEuler; // 영벡터이면 기존 방향 회전 사용
+        public AnimationCurve InitialRotationZ => initialRotationZ;
+
+        // UI 평면에서 적용할 클립 시각별 가로 및 세로 위치 보정
+        [SerializeField] private AnimationCurve frameOffsetX;
+        [SerializeField] private AnimationCurve frameOffsetY;
+        [SerializeField] private bool mirrorFrameOffsetForEnemy;
+
+        public AnimationCurve FrameOffsetX => frameOffsetX;
+        public AnimationCurve FrameOffsetY => frameOffsetY;
+        public bool MirrorFrameOffsetForEnemy => mirrorFrameOffsetForEnemy;
+
         public bool Moves => playback == Playback.Travel || (playback == Playback.Legacy && travelToTarget);
 
         // 피해 전에 표시해야 하는 이동과 실제 피해에 종속된 고정 연출을 구분한다.

@@ -228,6 +228,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1235,14 +1248,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Close_Combat_Frame_00: 4660674651114847501
-      Close_Combat_Frame_01: 8399258676465710651
-      Close_Combat_Frame_02: 5224184256768464160
-      Close_Combat_Frame_03: 1059717323348833974
-      Close_Combat_Frame_04: 7235527907925956204
-      Close_Combat_Frame_05: 6188873618747395567
-      Close_Combat_Frame_06: 7691734241569744173
-      Close_Combat_Frame_07: 1691457388307462444
       Close_Combat_0: 5026411223393029232
       Close_Combat_1: 2247627624113015566
       Close_Combat_10: -5079831225462746615
@@ -1280,6 +1285,14 @@ TextureImporter:
       Close_Combat_7: 2357939099556541478
       Close_Combat_8: 7530260396361999876
       Close_Combat_9: -301728381482475852
+      Close_Combat_Frame_00: 4660674651114847501
+      Close_Combat_Frame_01: 8399258676465710651
+      Close_Combat_Frame_02: 5224184256768464160
+      Close_Combat_Frame_03: 1059717323348833974
+      Close_Combat_Frame_04: 7235527907925956204
+      Close_Combat_Frame_05: 6188873618747395567
+      Close_Combat_Frame_06: 7691734241569744173
+      Close_Combat_Frame_07: 1691457388307462444
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

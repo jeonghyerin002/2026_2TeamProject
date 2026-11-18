@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6900243996cf48bdace7d5f0e019c0bf, type: 3}
+  m_Name: 50014_Slash
+  m_EditorClassIdentifier: Assembly-CSharp::SkillPresentationData
+  duration: 0.6
+  impactTime: 0.2
+  moveDistance: 50
+  movement:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  shakeDuration: 0.25
+  shakeStrength: 10
+  effects:
+  - prefab: {fileID: 2315917363674737247, guid: f14f002876e64653a2ab00bc0726bd76, type: 3}
+    time: 0
+    position: 1
+    offset: {x: 0, y: 0}
+    lifetime: 0.33333334
+    onlyOnDamage: 0
+    travelToTarget: 0
+    playback: 2
+    animation: {fileID: 7400000, guid: ae2d8d64278e484183546823f08aba56, type: 2}
+    animationImpactTime: 0.125
+    contactPoint: {x: 0.5, y: 0.5}
+    contactFrames: []
+    sizeScale: 1
+    rotateToDirection: 0
+    mirrorForEnemy: 1
+    useActorAnchor: 0
+    actorAnchor: {x: 0.5, y: 0}
+    enemySizeScale: 1
+    targetApproachOffset: {x: 0, y: 0}
+    travelStartOffset: {x: 0, y: 0}
+    travelEndOffset: {x: 0, y: 0}
+    approachProgress:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    directionAngleOffset: 0
+    directionRotationEndTime: 0
+    initialRotationEuler: {x: 0, y: 0, z: 0}
+    initialRotationZ:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetX:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: -80
+        inSlope: 640
+        outSlope: 640
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.125
+        value: 0
+        inSlope: 640
+        outSlope: 480
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.33333334
+        value: 100
+        inSlope: 480
+        outSlope: 480
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    frameOffsetY:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 80
+        inSlope: -640
+        outSlope: -640
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.125
+        value: 0
+        inSlope: -640
+        outSlope: -480
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 0.33333334
+        value: -100
+        inSlope: -480
+        outSlope: -480
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    mirrorFrameOffsetForEnemy: 1
+  sounds:
+  - clip: {fileID: 8300000, guid: f85fa3a04e452f74387a01faf98f35c7, type: 3}
+    time: 0
+    volume: 0.4
+    onlyOnDamage: 0
