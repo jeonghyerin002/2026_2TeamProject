@@ -1,0 +1,1027 @@
+fileFormatVersion: 2
+guid: 2d26d1db99acdbf4fb44f298683b9c01
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8245537074723217445
+    second: Hadouken_0
+  - first:
+      213: -7503427207475520113
+    second: Hadouken_1
+  - first:
+      213: -6157883562694848895
+    second: Hadouken_2
+  - first:
+      213: -9220861323400362528
+    second: Hadouken_3
+  - first:
+      213: -6189715316885662924
+    second: Hadouken_4
+  - first:
+      213: 290162626098551173
+    second: Hadouken_5
+  - first:
+      213: -995283789226125324
+    second: Hadouken_6
+  - first:
+      213: -4160057612811040133
+    second: Hadouken_7
+  - first:
+      213: -4916762699088027350
+    second: Hadouken_8
+  - first:
+      213: -7995435240454111640
+    second: Hadouken_9
+  - first:
+      213: -4068433893412064104
+    second: Hadouken_10
+  - first:
+      213: -672102814147340846
+    second: Hadouken_11
+  - first:
+      213: 3156418025435299481
+    second: Hadouken_12
+  - first:
+      213: -6385260079689366093
+    second: Hadouken_13
+  - first:
+      213: 2139887179889792915
+    second: Hadouken_14
+  - first:
+      213: 389875196486885677
+    second: Hadouken_15
+  - first:
+      213: 7773816656830317279
+    second: Hadouken_16
+  - first:
+      213: -6812583724700558912
+    second: Hadouken_17
+  - first:
+      213: 1848823891252789189
+    second: Hadouken_18
+  - first:
+      213: -7982108058261253760
+    second: Hadouken_19
+  - first:
+      213: 2656013480907123782
+    second: Hadouken_20
+  - first:
+      213: 250631555339891311
+    second: Hadouken_21
+  - first:
+      213: -6362076438300768579
+    second: Hadouken_22
+  - first:
+      213: 5799695678708815063
+    second: Hadouken_23
+  - first:
+      213: 990630257636686098
+    second: Hadouken_24
+  - first:
+      213: 3121622891973593963
+    second: Hadouken_25
+  - first:
+      213: 2139036999808112701
+    second: Hadouken_26
+  - first:
+      213: -7182340857409444520
+    second: Hadouken_27
+  - first:
+      213: 4715492752081699471
+    second: Hadouken_28
+  - first:
+      213: 7566055349420140409
+    second: Hadouken_29
+  - first:
+      213: 6982240056235933949
+    second: Hadouken_30
+  - first:
+      213: -339638573569623929
+    second: Hadouken_31
+  - first:
+      213: 5880365545635165389
+    second: Hadouken_32
+  - first:
+      213: 4946585287733301122
+    second: Hadouken_33
+  - first:
+      213: -3109950678436530380
+    second: Hadouken_34
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Hadouken_0
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 10
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf1fce97b7f19d80800000000000000
+      internalID: -8245537074723217445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_1
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 10
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8d9b6ca5b87ed790800000000000000
+      internalID: -7503427207475520113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_2
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 4
+        width: 39
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18e4b5d868dca8aa0800000000000000
+      internalID: -6157883562694848895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_3
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 41
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e545970b7be80080800000000000000
+      internalID: -9220861323400362528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_4
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 36
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4335c3cb6b6b91aa0800000000000000
+      internalID: -6189715316885662924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_5
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 32
+        width: 19
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 589d2bffe5dd60400800000000000000
+      internalID: 290162626098551173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_6
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 39
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7d87cbaaa0032f0800000000000000
+      internalID: -995283789226125324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_7
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 35
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7a0d3f54a18446c0800000000000000
+      internalID: -4160057612811040133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_8
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 39
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a21a7f3106624cbb0800000000000000
+      internalID: -4916762699088027350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_9
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 31
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86eb71ca2028a0190800000000000000
+      internalID: -7995435240454111640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_10
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 39
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 894b30fede40a87c0800000000000000
+      internalID: -4068433893412064104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_11
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 32
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5153e2d063ca6f0800000000000000
+      internalID: -672102814147340846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_12
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 15
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99ef5b08879ddcb20800000000000000
+      internalID: 3156418025435299481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_13
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 15
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b502afb9cff267a0800000000000000
+      internalID: -6385260079689366093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_14
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 6
+        width: 16
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3975eb07d0862bd10800000000000000
+      internalID: 2139887179889792915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_15
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 29
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d212651fc6d196500800000000000000
+      internalID: 389875196486885677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_16
+      rect:
+        serializedVersion: 2
+        x: 362
+        y: 17
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2c26bdf0522eb60800000000000000
+      internalID: 7773816656830317279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_17
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 25
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c99d9e6237d471a0800000000000000
+      internalID: -6812583724700558912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_18
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 28
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cfb06a988758a910800000000000000
+      internalID: 1848823891252789189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_19
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 23
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0811e84130bd93190800000000000000
+      internalID: -7982108058261253760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_20
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 27
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64c2e10503e0cd420800000000000000
+      internalID: 2656013480907123782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_21
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 21
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f62b989521c6a7300800000000000000
+      internalID: 250631555339891311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_22
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 17
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db64335ef2d55b7a0800000000000000
+      internalID: -6362076438300768579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_23
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 19
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d49ecedd78ac7050800000000000000
+      internalID: 5799695678708815063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_24
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 219303288fc6fbd00800000000000000
+      internalID: 990630257636686098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_25
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 9
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b40de2b7b325b20800000000000000
+      internalID: 3121622891973593963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_26
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 4
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d38daf671d26fad10800000000000000
+      internalID: 2139036999808112701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_27
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 13
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855e55a3b03335c90800000000000000
+      internalID: -7182340857409444520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_28
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 7
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8242cc9cabc07140800000000000000
+      internalID: 4715492752081699471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_29
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 5
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977a12de047000960800000000000000
+      internalID: 7566055349420140409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_30
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 11
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df042707656e5e060800000000000000
+      internalID: 6982240056235933949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_31
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 6
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 788bc5e448c594bf0800000000000000
+      internalID: -339638573569623929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_32
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 11
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4b709ee414b9150800000000000000
+      internalID: 5880365545635165389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_33
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 3
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28f448e6c1dc5a440800000000000000
+      internalID: 4946585287733301122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hadouken_34
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 5
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4373ecec55c37d4d0800000000000000
+      internalID: -3109950678436530380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Hadouken_0: -8245537074723217445
+      Hadouken_1: -7503427207475520113
+      Hadouken_10: -4068433893412064104
+      Hadouken_11: -672102814147340846
+      Hadouken_12: 3156418025435299481
+      Hadouken_13: -6385260079689366093
+      Hadouken_14: 2139887179889792915
+      Hadouken_15: 389875196486885677
+      Hadouken_16: 7773816656830317279
+      Hadouken_17: -6812583724700558912
+      Hadouken_18: 1848823891252789189
+      Hadouken_19: -7982108058261253760
+      Hadouken_2: -6157883562694848895
+      Hadouken_20: 2656013480907123782
+      Hadouken_21: 250631555339891311
+      Hadouken_22: -6362076438300768579
+      Hadouken_23: 5799695678708815063
+      Hadouken_24: 990630257636686098
+      Hadouken_25: 3121622891973593963
+      Hadouken_26: 2139036999808112701
+      Hadouken_27: -7182340857409444520
+      Hadouken_28: 4715492752081699471
+      Hadouken_29: 7566055349420140409
+      Hadouken_3: -9220861323400362528
+      Hadouken_30: 6982240056235933949
+      Hadouken_31: -339638573569623929
+      Hadouken_32: 5880365545635165389
+      Hadouken_33: 4946585287733301122
+      Hadouken_34: -3109950678436530380
+      Hadouken_4: -6189715316885662924
+      Hadouken_5: 290162626098551173
+      Hadouken_6: -995283789226125324
+      Hadouken_7: -4160057612811040133
+      Hadouken_8: -4916762699088027350
+      Hadouken_9: -7995435240454111640
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

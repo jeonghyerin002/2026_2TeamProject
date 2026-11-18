@@ -1,0 +1,1079 @@
+fileFormatVersion: 2
+guid: da3ba83e7643f6b4d8397dc2f48f0064
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5026411223393029232
+    second: Close_Combat_0
+  - first:
+      213: 2247627624113015566
+    second: Close_Combat_1
+  - first:
+      213: 7652790850370498061
+    second: Close_Combat_2
+  - first:
+      213: 5359686258878301218
+    second: Close_Combat_3
+  - first:
+      213: -7243273375899112084
+    second: Close_Combat_4
+  - first:
+      213: -8849887224570371227
+    second: Close_Combat_5
+  - first:
+      213: -6750143629036408467
+    second: Close_Combat_6
+  - first:
+      213: 2357939099556541478
+    second: Close_Combat_7
+  - first:
+      213: 7530260396361999876
+    second: Close_Combat_8
+  - first:
+      213: -301728381482475852
+    second: Close_Combat_9
+  - first:
+      213: -5079831225462746615
+    second: Close_Combat_10
+  - first:
+      213: -3569442233082978028
+    second: Close_Combat_11
+  - first:
+      213: -795949753779205997
+    second: Close_Combat_12
+  - first:
+      213: -7091184812289053598
+    second: Close_Combat_13
+  - first:
+      213: 2847101581894919700
+    second: Close_Combat_14
+  - first:
+      213: -5011620281351004385
+    second: Close_Combat_15
+  - first:
+      213: -2305928782611632246
+    second: Close_Combat_16
+  - first:
+      213: -1605165621146406113
+    second: Close_Combat_17
+  - first:
+      213: 7998022181511724078
+    second: Close_Combat_18
+  - first:
+      213: 1057743338915192565
+    second: Close_Combat_19
+  - first:
+      213: -4899534195961970764
+    second: Close_Combat_20
+  - first:
+      213: -6087319057698017719
+    second: Close_Combat_21
+  - first:
+      213: 287646680495580728
+    second: Close_Combat_22
+  - first:
+      213: -7391175907316540137
+    second: Close_Combat_23
+  - first:
+      213: -7337842424671766781
+    second: Close_Combat_24
+  - first:
+      213: -2413584217610971366
+    second: Close_Combat_25
+  - first:
+      213: -3596660342323623597
+    second: Close_Combat_26
+  - first:
+      213: 1793671027799435753
+    second: Close_Combat_27
+  - first:
+      213: -556501241011612639
+    second: Close_Combat_28
+  - first:
+      213: -348721221803348770
+    second: Close_Combat_29
+  - first:
+      213: -1312095688746755322
+    second: Close_Combat_30
+  - first:
+      213: -4116417068113842490
+    second: Close_Combat_31
+  - first:
+      213: 1445620710850393516
+    second: Close_Combat_32
+  - first:
+      213: -2735669778470898216
+    second: Close_Combat_33
+  - first:
+      213: -6291667819781745756
+    second: Close_Combat_34
+  - first:
+      213: 6507732945780957601
+    second: Close_Combat_35
+  - first:
+      213: -3676484474321450400
+    second: Close_Combat_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Close_Combat_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 29
+        width: 33
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07cc069606661c540800000000000000
+      internalID: 5026411223393029232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_1
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 29
+        width: 27
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0b8c9a6a6d213f10800000000000000
+      internalID: 2247627624113015566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_2
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 31
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0e61b07bbc243a60800000000000000
+      internalID: 7652790850370498061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 46
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 224cbff614e616a40800000000000000
+      internalID: 5359686258878301218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_4
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 44
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6d2d7abd39ba7b90800000000000000
+      internalID: -7243273375899112084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_5
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 43
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 563273d3572ee2580800000000000000
+      internalID: -8849887224570371227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_6
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 38
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d613b68122ca252a0800000000000000
+      internalID: -6750143629036408467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_7
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 2
+        width: 56
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624721f3e1519b020800000000000000
+      internalID: 2357939099556541478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_8
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 41
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4066957feebd08860800000000000000
+      internalID: 7530260396361999876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_9
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 38
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be551bb2ab00dbf0800000000000000
+      internalID: -301728381482475852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_10
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 30
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9021b5f1a60d089b0800000000000000
+      internalID: -5079831225462746615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_11
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 35
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 411efc2633bc67ec0800000000000000
+      internalID: -3569442233082978028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_12
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 16
+        width: 28
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3984ee28ae734f4f0800000000000000
+      internalID: -795949753779205997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 19
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26cadd2ebfc079d90800000000000000
+      internalID: -7091184812289053598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_14
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 20
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 416ac4cddcfe28720800000000000000
+      internalID: 2847101581894919700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 33
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1f1ee428e5237ab0800000000000000
+      internalID: -5011620281351004385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_16
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 9
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fa5135df1bfffd0800000000000000
+      internalID: -2305928782611632246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_17
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 29
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1336e14f5e49b9e0800000000000000
+      internalID: -1605165621146406113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_18
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 30
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c73ba7cceaefe60800000000000000
+      internalID: 7998022181511724078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_19
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 12
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fe539b66fbddae00800000000000000
+      internalID: 1057743338915192565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_20
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 27
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bfbecc8b9b510cb0800000000000000
+      internalID: -4899534195961970764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_21
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 24
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94ea17ba19f758ba0800000000000000
+      internalID: -6087319057698017719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_22
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 8
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83662c3c12dedf300800000000000000
+      internalID: 287646680495580728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_23
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 30
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71dd8f32ca44d6990800000000000000
+      internalID: -7391175907316540137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_24
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 6
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 307f5ab313fba2a90800000000000000
+      internalID: -7337842424671766781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_25
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 26
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a171fc911f9318ed0800000000000000
+      internalID: -2413584217610971366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_26
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 16
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359c01e7978161ec0800000000000000
+      internalID: -3596660342323623597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_27
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e925e7eb4664e810800000000000000
+      internalID: 1793671027799435753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_28
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 124507cd119e648f0800000000000000
+      internalID: -556501241011612639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_29
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 12
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edc65c875e7192bf0800000000000000
+      internalID: -348721221803348770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_30
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 4
+        width: 25
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b9de04cef7acde0800000000000000
+      internalID: -1312095688746755322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_31
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 2
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ce28bb7c7c8fd6c0800000000000000
+      internalID: -4116417068113842490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_32
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 6
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca57f269060ef0410800000000000000
+      internalID: 1445620710850393516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_33
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 15
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d57877a4d2f80ad0800000000000000
+      internalID: -2735669778470898216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_34
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 8
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3172dd3718fa8a0800000000000000
+      internalID: -6291667819781745756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_35
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 11
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a1616e72ac105a50800000000000000
+      internalID: 6507732945780957601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Close_Combat_36
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 5
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06ac4d579d08afcc0800000000000000
+      internalID: -3676484474321450400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Close_Combat_0: 5026411223393029232
+      Close_Combat_1: 2247627624113015566
+      Close_Combat_10: -5079831225462746615
+      Close_Combat_11: -3569442233082978028
+      Close_Combat_12: -795949753779205997
+      Close_Combat_13: -7091184812289053598
+      Close_Combat_14: 2847101581894919700
+      Close_Combat_15: -5011620281351004385
+      Close_Combat_16: -2305928782611632246
+      Close_Combat_17: -1605165621146406113
+      Close_Combat_18: 7998022181511724078
+      Close_Combat_19: 1057743338915192565
+      Close_Combat_2: 7652790850370498061
+      Close_Combat_20: -4899534195961970764
+      Close_Combat_21: -6087319057698017719
+      Close_Combat_22: 287646680495580728
+      Close_Combat_23: -7391175907316540137
+      Close_Combat_24: -7337842424671766781
+      Close_Combat_25: -2413584217610971366
+      Close_Combat_26: -3596660342323623597
+      Close_Combat_27: 1793671027799435753
+      Close_Combat_28: -556501241011612639
+      Close_Combat_29: -348721221803348770
+      Close_Combat_3: 5359686258878301218
+      Close_Combat_30: -1312095688746755322
+      Close_Combat_31: -4116417068113842490
+      Close_Combat_32: 1445620710850393516
+      Close_Combat_33: -2735669778470898216
+      Close_Combat_34: -6291667819781745756
+      Close_Combat_35: 6507732945780957601
+      Close_Combat_36: -3676484474321450400
+      Close_Combat_4: -7243273375899112084
+      Close_Combat_5: -8849887224570371227
+      Close_Combat_6: -6750143629036408467
+      Close_Combat_7: 2357939099556541478
+      Close_Combat_8: 7530260396361999876
+      Close_Combat_9: -301728381482475852
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
