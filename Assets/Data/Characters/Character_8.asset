@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a87bc4cf336e64741bc09dfb755d76c6, type: 3}
+  m_Name: Character_8
+  m_EditorClassIdentifier: Assembly-CSharp::CharacterData
+  characterid: 8
+  charactername: "\uC9C4\uBB34\uAC00\uBB38 \uAC00\uC8FC"
+  maxhp: 110
+  attack: 90
+  defense: 100
+  specialattack: 90
+  specialdefense: 100
+  speed: 90
+  level: 38
+  weaponid: 20007
+  aetherid: 40008
+  rewardexp: 5000
+  weapon: {fileID: 11400000, guid: c719c7236405f8e4b92a5b4107781fd8, type: 2}
+  aether: {fileID: 0}
+  battleSprite: {fileID: 0}
+  battleLaunch: {x: 0.5, y: 0.5}
+  battleHit: {x: 0.5, y: 0.5}

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b9b3656d66fc34d9f2ffb219cecf1b, type: 3}
+  m_Name: Item_20007
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponData
+  itemid: 20007
+  weaponname: "\uC9C4\uBB34\uAC00 \uAC74\uD2C0\uB9BF"
+  icon: {fileID: 0}
+  description: 
+  healthmultiplier: 1
+  attackmultiplier: 1.1
+  defensemultiplier: 1
+  specialattackmultiplier: 1
+  specialdefensemultiplier: 1
+  speedmultiplier: 1.1
+  skills:
+  - {fileID: 11400000, guid: 51b6eadb2119d9840bb42a17cdeb5a11, type: 2}
