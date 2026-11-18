@@ -95,6 +95,30 @@ TextureImporter:
   - first:
       213: -4400125748822116869
     second: Lightning_Dash_30
+  - first:
+      213: 1012008657384728388
+    second: Lightning_Dash_Frame_00
+  - first:
+      213: 1822118685171716981
+    second: Lightning_Dash_Frame_01
+  - first:
+      213: 7544579553350873800
+    second: Lightning_Dash_Frame_02
+  - first:
+      213: 1700843763516858186
+    second: Lightning_Dash_Frame_03
+  - first:
+      213: 8803385701150022031
+    second: Lightning_Dash_Frame_04
+  - first:
+      213: 2567087559944029978
+    second: Lightning_Dash_Frame_05
+  - first:
+      213: 7353013794610910296
+    second: Lightning_Dash_Frame_06
+  - first:
+      213: 6445584196277682991
+    second: Lightning_Dash_Frame_07
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -871,6 +895,182 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_Frame_00
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e1e550e6a7c48488bd87a7c3de7ea91
+      internalID: 1012008657384728388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_Frame_01
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 68
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f60ba1e13b34b6e970114bd233cd561
+      internalID: 1822118685171716981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_Frame_02
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 0
+        width: 67
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4274081498045f18f7f0acf36f5e1af
+      internalID: 7544579553350873800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_Frame_03
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 68
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183c1ab70d4f40d3b7061db7f60e0ac6
+      internalID: 1700843763516858186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_Frame_04
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ef61974c9844ef80d093661390bf77
+      internalID: 8803385701150022031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_Frame_05
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 0
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e971778e7e048ce9c1709b090644588
+      internalID: 2567087559944029978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_Frame_06
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 0
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de7691608b24ed0b135715965f9f66d
+      internalID: 7353013794610910296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lightning_Dash_Frame_07
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 0
+        width: 14
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f982b9b556f4f9aa586e6da1a3f0abf
+      internalID: 6445584196277682991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -885,6 +1085,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Lightning_Dash_Frame_00: 1012008657384728388
+      Lightning_Dash_Frame_01: 1822118685171716981
+      Lightning_Dash_Frame_02: 7544579553350873800
+      Lightning_Dash_Frame_03: 1700843763516858186
+      Lightning_Dash_Frame_04: 8803385701150022031
+      Lightning_Dash_Frame_05: 2567087559944029978
+      Lightning_Dash_Frame_06: 7353013794610910296
+      Lightning_Dash_Frame_07: 6445584196277682991
       Lightning_Dash_0: -7532159999875927827
       Lightning_Dash_1: 5219093174466579680
       Lightning_Dash_10: 8105318485110704782

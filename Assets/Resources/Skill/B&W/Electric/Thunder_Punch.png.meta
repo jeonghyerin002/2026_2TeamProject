@@ -71,6 +71,30 @@ TextureImporter:
   - first:
       213: 9060963933564321548
     second: Thunder_Punch_22
+  - first:
+      213: 611258513296684525
+    second: Thunder_Punch_Frame_00
+  - first:
+      213: 6931344661479122778
+    second: Thunder_Punch_Frame_01
+  - first:
+      213: 5251735895791550323
+    second: Thunder_Punch_Frame_02
+  - first:
+      213: 6187704593871483048
+    second: Thunder_Punch_Frame_03
+  - first:
+      213: 5479851041448723658
+    second: Thunder_Punch_Frame_04
+  - first:
+      213: 8191665403992448565
+    second: Thunder_Punch_Frame_05
+  - first:
+      213: 3817177859481479108
+    second: Thunder_Punch_Frame_06
+  - first:
+      213: 2591170241473141115
+    second: Thunder_Punch_Frame_07
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -671,6 +695,182 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Thunder_Punch_Frame_00
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 0
+        width: 24
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50882b9e7df044c087634355e619acee
+      internalID: 611258513296684525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder_Punch_Frame_01
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebedbcdcaaac4585b8ef4df4a5faacd1
+      internalID: 6931344661479122778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder_Punch_Frame_02
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c9e14df8f94792a3d20ed876cea39c
+      internalID: 5251735895791550323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder_Punch_Frame_03
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 0
+        width: 53
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 292633ad972a4848b5f71246ca6eac8d
+      internalID: 6187704593871483048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder_Punch_Frame_04
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 738279d0021d499397912a4b1ab518a7
+      internalID: 5479851041448723658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder_Punch_Frame_05
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 0
+        width: 38
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c93f0bd3db548a8bd9bbd219e395965
+      internalID: 8191665403992448565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder_Punch_Frame_06
+      rect:
+        serializedVersion: 2
+        x: 437
+        y: 0
+        width: 30
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b8391c50a0408ea975519cd557abac
+      internalID: 3817177859481479108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Thunder_Punch_Frame_07
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 0
+        width: 25
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2faee7117e464624ae1b8d18291dba38
+      internalID: 2591170241473141115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -685,6 +885,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Thunder_Punch_Frame_00: 611258513296684525
+      Thunder_Punch_Frame_01: 6931344661479122778
+      Thunder_Punch_Frame_02: 5251735895791550323
+      Thunder_Punch_Frame_03: 6187704593871483048
+      Thunder_Punch_Frame_04: 5479851041448723658
+      Thunder_Punch_Frame_05: 8191665403992448565
+      Thunder_Punch_Frame_06: 3817177859481479108
+      Thunder_Punch_Frame_07: 2591170241473141115
       Thunder_Punch_0: 2068354821484132307
       Thunder_Punch_1: 8004739633201142785
       Thunder_Punch_10: 525796744282663081

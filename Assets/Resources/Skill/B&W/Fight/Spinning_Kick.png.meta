@@ -50,6 +50,30 @@ TextureImporter:
   - first:
       213: 5667779791616161201
     second: Spinning_Kick_15
+  - first:
+      213: 7709049752520969249
+    second: Spinning_Kick_Frame_00
+  - first:
+      213: 3962657170958088985
+    second: Spinning_Kick_Frame_01
+  - first:
+      213: 2339242894599205364
+    second: Spinning_Kick_Frame_02
+  - first:
+      213: 2502553099109032312
+    second: Spinning_Kick_Frame_03
+  - first:
+      213: 1337348844502339600
+    second: Spinning_Kick_Frame_04
+  - first:
+      213: 826453226639106524
+    second: Spinning_Kick_Frame_05
+  - first:
+      213: 8357933698998583004
+    second: Spinning_Kick_Frame_06
+  - first:
+      213: 1124629245107139412
+    second: Spinning_Kick_Frame_07
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -496,6 +520,182 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Spinning_Kick_Frame_00
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 52
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421600e275724af2873b98810a4886a6
+      internalID: 7709049752520969249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spinning_Kick_Frame_01
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 0
+        width: 68
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13ce51c0b7cb493f9ed26429efb4164b
+      internalID: 3962657170958088985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spinning_Kick_Frame_02
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 63
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f10bcbc839c8498ab05af8dfb2608a30
+      internalID: 2339242894599205364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spinning_Kick_Frame_03
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 0
+        width: 66
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2811894697254ae18d939693d3c327b7
+      internalID: 2502553099109032312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spinning_Kick_Frame_04
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 0
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb173a3120cd4afc9917966e79ed1acc
+      internalID: 1337348844502339600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spinning_Kick_Frame_05
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 0
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3e0b8cc9a6749ac9e2f85f1676ca86f
+      internalID: 826453226639106524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spinning_Kick_Frame_06
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 0
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b7c114c352044abb33a1fb9897810ec
+      internalID: 8357933698998583004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spinning_Kick_Frame_07
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 0
+        width: 31
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2202979e5e140bd9639d4609849eab7
+      internalID: 1124629245107139412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -510,6 +710,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Spinning_Kick_Frame_00: 7709049752520969249
+      Spinning_Kick_Frame_01: 3962657170958088985
+      Spinning_Kick_Frame_02: 2339242894599205364
+      Spinning_Kick_Frame_03: 2502553099109032312
+      Spinning_Kick_Frame_04: 1337348844502339600
+      Spinning_Kick_Frame_05: 826453226639106524
+      Spinning_Kick_Frame_06: 8357933698998583004
+      Spinning_Kick_Frame_07: 1124629245107139412
       Spinning_Kick_0: 7233143592269639790
       Spinning_Kick_1: -9198072431070469094
       Spinning_Kick_10: 3677592168406650599

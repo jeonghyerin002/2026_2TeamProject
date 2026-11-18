@@ -68,6 +68,30 @@ TextureImporter:
   - first:
       213: -473561466641775986
     second: Slash_21
+  - first:
+      213: 7922636550341840452
+    second: Slash_Frame_00
+  - first:
+      213: 6125896832922385270
+    second: Slash_Frame_01
+  - first:
+      213: 632951269623068866
+    second: Slash_Frame_02
+  - first:
+      213: 6783993440150794739
+    second: Slash_Frame_03
+  - first:
+      213: 8141084712457450433
+    second: Slash_Frame_04
+  - first:
+      213: 1386248436970378935
+    second: Slash_Frame_05
+  - first:
+      213: 3760436372541853752
+    second: Slash_Frame_06
+  - first:
+      213: 8996702405516051516
+    second: Slash_Frame_07
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -646,6 +670,182 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Slash_Frame_00
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 0
+        width: 14
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac054e7b0fd74adeb8b6ee5401332f53
+      internalID: 7922636550341840452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slash_Frame_01
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 26
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c006fb295abb4bcbb95a47bdb45c5d80
+      internalID: 6125896832922385270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slash_Frame_02
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e340395615f443ab5a4959a916f6134
+      internalID: 632951269623068866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slash_Frame_03
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 46
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5174cec38844649b40a3d517a02adef
+      internalID: 6783993440150794739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slash_Frame_04
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 19
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c685897fcca4f599f0f1da1ddce7cdb
+      internalID: 8141084712457450433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slash_Frame_05
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 0
+        width: 26
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec3bbf71e4b457c94ad8ad1fc1cf136
+      internalID: 1386248436970378935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slash_Frame_06
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 0
+        width: 15
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ba8ee426fd94a289349db200dc865be
+      internalID: 3760436372541853752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slash_Frame_07
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 0
+        width: 10
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb3570b1bde4222bbf6666c72f6c7bc
+      internalID: 8996702405516051516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -660,6 +860,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Slash_Frame_00: 7922636550341840452
+      Slash_Frame_01: 6125896832922385270
+      Slash_Frame_02: 632951269623068866
+      Slash_Frame_03: 6783993440150794739
+      Slash_Frame_04: 8141084712457450433
+      Slash_Frame_05: 1386248436970378935
+      Slash_Frame_06: 3760436372541853752
+      Slash_Frame_07: 8996702405516051516
       Slash_0: 4176362632249098406
       Slash_1: -3696019449777573715
       Slash_10: -7470132098068099360

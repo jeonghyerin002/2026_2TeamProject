@@ -56,6 +56,42 @@ TextureImporter:
   - first:
       213: 182237630246977741
     second: Rock_Eruption_17
+  - first:
+      213: 8095788585994269083
+    second: Rock_Eruption_Frame_00
+  - first:
+      213: 3474190784671669905
+    second: Rock_Eruption_Frame_01
+  - first:
+      213: 7928709620749915743
+    second: Rock_Eruption_Frame_02
+  - first:
+      213: 3265038076359456697
+    second: Rock_Eruption_Frame_03
+  - first:
+      213: 7277029921596170341
+    second: Rock_Eruption_Frame_04
+  - first:
+      213: 931745521697316200
+    second: Rock_Eruption_Frame_05
+  - first:
+      213: 7951790574320237438
+    second: Rock_Eruption_Frame_06
+  - first:
+      213: 2375876627623381906
+    second: Rock_Eruption_Frame_07
+  - first:
+      213: 8009029745717089798
+    second: Rock_Eruption_Frame_08
+  - first:
+      213: 4554743970748328306
+    second: Rock_Eruption_Frame_09
+  - first:
+      213: 6407927862419757152
+    second: Rock_Eruption_Frame_10
+  - first:
+      213: 2775199984735338735
+    second: Rock_Eruption_Frame_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -546,6 +582,270 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_00
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 0
+        width: 18
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23fae2574d7f4404b57f70498604035c
+      internalID: 8095788585994269083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_01
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 0
+        width: 28
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcdf175ef1504ba7824988fd0a1d7393
+      internalID: 3474190784671669905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_02
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df6ae15c4cd4f8a86bbc1b075d68dec
+      internalID: 7928709620749915743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_03
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 0
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f6dae970f54599addc112a4f5f4ef8
+      internalID: 3265038076359456697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_04
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 0
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa976cbeda84975a3868f4e72058fc6
+      internalID: 7277029921596170341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_05
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 0
+        width: 39
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 341586c7cf9d4bdc9c1077bf923139d7
+      internalID: 931745521697316200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_06
+      rect:
+        serializedVersion: 2
+        x: 378
+        y: 0
+        width: 43
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dfac52eadbf4cd093e2b1788a8f331d
+      internalID: 7951790574320237438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_07
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 0
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8aaf42034c0434fa091b13ba07d2668
+      internalID: 2375876627623381906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_08
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 0
+        width: 47
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c181298329554d7ca54eab2ba6445b72
+      internalID: 8009029745717089798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_09
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 0
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e4f0ccb5dc4c53b96708ec198490b0
+      internalID: 4554743970748328306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_10
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 0
+        width: 48
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24be7acb08d74adcbaaca695ad73740c
+      internalID: 6407927862419757152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rock_Eruption_Frame_11
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 0
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c269040e344d2a9e381c5615153940
+      internalID: 2775199984735338735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -560,6 +860,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Rock_Eruption_Frame_00: 8095788585994269083
+      Rock_Eruption_Frame_01: 3474190784671669905
+      Rock_Eruption_Frame_02: 7928709620749915743
+      Rock_Eruption_Frame_03: 3265038076359456697
+      Rock_Eruption_Frame_04: 7277029921596170341
+      Rock_Eruption_Frame_05: 931745521697316200
+      Rock_Eruption_Frame_06: 7951790574320237438
+      Rock_Eruption_Frame_07: 2375876627623381906
+      Rock_Eruption_Frame_08: 8009029745717089798
+      Rock_Eruption_Frame_09: 4554743970748328306
+      Rock_Eruption_Frame_10: 6407927862419757152
+      Rock_Eruption_Frame_11: 2775199984735338735
       Rock_Eruption_0: -8719213807817558564
       Rock_Eruption_1: 4859572977786631577
       Rock_Eruption_10: -7067410272844405522

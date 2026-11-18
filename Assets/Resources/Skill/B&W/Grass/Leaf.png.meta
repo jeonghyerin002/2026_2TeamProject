@@ -119,6 +119,30 @@ TextureImporter:
   - first:
       213: -6586617240347386024
     second: Leaf_38
+  - first:
+      213: 7471165184269820460
+    second: Leaf_Frame_00
+  - first:
+      213: 1880045651504747643
+    second: Leaf_Frame_01
+  - first:
+      213: 3677149999927900263
+    second: Leaf_Frame_02
+  - first:
+      213: 3519642268603575342
+    second: Leaf_Frame_03
+  - first:
+      213: 6599363355830873834
+    second: Leaf_Frame_04
+  - first:
+      213: 4028332656041522766
+    second: Leaf_Frame_05
+  - first:
+      213: 9038166895396938513
+    second: Leaf_Frame_06
+  - first:
+      213: 4782142192202380171
+    second: Leaf_Frame_07
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -1071,6 +1095,182 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Leaf_Frame_00
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 0
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555dcd64eee64dde846fb42030b57551
+      internalID: 7471165184269820460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf_Frame_01
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 0
+        width: 37
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118520ef1a534806b7c315445253d5f3
+      internalID: 1880045651504747643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf_Frame_02
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 0
+        width: 36
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11f02cf2dc474b01b085166c27b59c34
+      internalID: 3677149999927900263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf_Frame_03
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 0
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78df9490e7cc4834928fea24189caef5
+      internalID: 3519642268603575342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf_Frame_04
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 0
+        width: 42
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11fa690c89294d26a8b63a30759c8f01
+      internalID: 6599363355830873834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf_Frame_05
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 0
+        width: 45
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4304cb5bc4b4747a7007e39dced2178
+      internalID: 4028332656041522766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf_Frame_06
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 0
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f1cc9bf2eb4c6b9de0f9d1f71199ae
+      internalID: 9038166895396938513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Leaf_Frame_07
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 0
+        width: 34
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39414f20653f476ca9fbe9732d023649
+      internalID: 4782142192202380171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1085,6 +1285,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      Leaf_Frame_00: 7471165184269820460
+      Leaf_Frame_01: 1880045651504747643
+      Leaf_Frame_02: 3677149999927900263
+      Leaf_Frame_03: 3519642268603575342
+      Leaf_Frame_04: 6599363355830873834
+      Leaf_Frame_05: 4028332656041522766
+      Leaf_Frame_06: 9038166895396938513
+      Leaf_Frame_07: 4782142192202380171
       Leaf_0: 7647240639167449756
       Leaf_1: 7778570650710507745
       Leaf_10: 901071191922327875
