@@ -234,6 +234,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1285,14 +1298,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Flame_Frame_00: 1348673514636910303
-      Flame_Frame_01: 3108869262595727703
-      Flame_Frame_02: 5030859859614949418
-      Flame_Frame_03: 4119723471009897502
-      Flame_Frame_04: 753159855439054134
-      Flame_Frame_05: 1508868472679382677
-      Flame_Frame_06: 5092064446238862749
-      Flame_Frame_07: 5700976952236644233
       Flame_0: 403208247147482157
       Flame_1: -376618679879410969
       Flame_10: -3114188084293079610
@@ -1332,6 +1337,14 @@ TextureImporter:
       Flame_7: 5338284842835012558
       Flame_8: 2864937601137935926
       Flame_9: 8519909974603880484
+      Flame_Frame_00: 1348673514636910303
+      Flame_Frame_01: 3108869262595727703
+      Flame_Frame_02: 5030859859614949418
+      Flame_Frame_03: 4119723471009897502
+      Flame_Frame_04: 753159855439054134
+      Flame_Frame_05: 1508868472679382677
+      Flame_Frame_06: 5092064446238862749
+      Flame_Frame_07: 5700976952236644233
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

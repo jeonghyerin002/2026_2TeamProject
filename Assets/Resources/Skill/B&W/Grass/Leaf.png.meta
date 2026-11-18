@@ -234,6 +234,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1285,14 +1298,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Leaf_Frame_00: 7471165184269820460
-      Leaf_Frame_01: 1880045651504747643
-      Leaf_Frame_02: 3677149999927900263
-      Leaf_Frame_03: 3519642268603575342
-      Leaf_Frame_04: 6599363355830873834
-      Leaf_Frame_05: 4028332656041522766
-      Leaf_Frame_06: 9038166895396938513
-      Leaf_Frame_07: 4782142192202380171
       Leaf_0: 7647240639167449756
       Leaf_1: 7778570650710507745
       Leaf_10: 901071191922327875
@@ -1332,6 +1337,14 @@ TextureImporter:
       Leaf_7: -1200531620086444834
       Leaf_8: -6813762061975521377
       Leaf_9: 5834091416726674371
+      Leaf_Frame_00: 7471165184269820460
+      Leaf_Frame_01: 1880045651504747643
+      Leaf_Frame_02: 3677149999927900263
+      Leaf_Frame_03: 3519642268603575342
+      Leaf_Frame_04: 6599363355830873834
+      Leaf_Frame_05: 4028332656041522766
+      Leaf_Frame_06: 9038166895396938513
+      Leaf_Frame_07: 4782142192202380171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

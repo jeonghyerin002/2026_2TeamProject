@@ -183,6 +183,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -860,18 +873,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Rock_Eruption_Frame_00: 8095788585994269083
-      Rock_Eruption_Frame_01: 3474190784671669905
-      Rock_Eruption_Frame_02: 7928709620749915743
-      Rock_Eruption_Frame_03: 3265038076359456697
-      Rock_Eruption_Frame_04: 7277029921596170341
-      Rock_Eruption_Frame_05: 931745521697316200
-      Rock_Eruption_Frame_06: 7951790574320237438
-      Rock_Eruption_Frame_07: 2375876627623381906
-      Rock_Eruption_Frame_08: 8009029745717089798
-      Rock_Eruption_Frame_09: 4554743970748328306
-      Rock_Eruption_Frame_10: 6407927862419757152
-      Rock_Eruption_Frame_11: 2775199984735338735
       Rock_Eruption_0: -8719213807817558564
       Rock_Eruption_1: 4859572977786631577
       Rock_Eruption_10: -7067410272844405522
@@ -890,6 +891,18 @@ TextureImporter:
       Rock_Eruption_7: 58967221103282306
       Rock_Eruption_8: 3883782835498327087
       Rock_Eruption_9: -2407423937643820473
+      Rock_Eruption_Frame_00: 8095788585994269083
+      Rock_Eruption_Frame_01: 3474190784671669905
+      Rock_Eruption_Frame_02: 7928709620749915743
+      Rock_Eruption_Frame_03: 3265038076359456697
+      Rock_Eruption_Frame_04: 7277029921596170341
+      Rock_Eruption_Frame_05: 931745521697316200
+      Rock_Eruption_Frame_06: 7951790574320237438
+      Rock_Eruption_Frame_07: 2375876627623381906
+      Rock_Eruption_Frame_08: 8009029745717089798
+      Rock_Eruption_Frame_09: 4554743970748328306
+      Rock_Eruption_Frame_10: 6407927862419757152
+      Rock_Eruption_Frame_11: 2775199984735338735
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

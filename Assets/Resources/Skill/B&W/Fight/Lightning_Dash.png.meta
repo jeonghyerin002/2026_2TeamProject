@@ -210,6 +210,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1085,14 +1098,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Lightning_Dash_Frame_00: 1012008657384728388
-      Lightning_Dash_Frame_01: 1822118685171716981
-      Lightning_Dash_Frame_02: 7544579553350873800
-      Lightning_Dash_Frame_03: 1700843763516858186
-      Lightning_Dash_Frame_04: 8803385701150022031
-      Lightning_Dash_Frame_05: 2567087559944029978
-      Lightning_Dash_Frame_06: 7353013794610910296
-      Lightning_Dash_Frame_07: 6445584196277682991
       Lightning_Dash_0: -7532159999875927827
       Lightning_Dash_1: 5219093174466579680
       Lightning_Dash_10: 8105318485110704782
@@ -1124,6 +1129,14 @@ TextureImporter:
       Lightning_Dash_7: -8572919294384932791
       Lightning_Dash_8: -2935802709970610684
       Lightning_Dash_9: 4123056749972079608
+      Lightning_Dash_Frame_00: 1012008657384728388
+      Lightning_Dash_Frame_01: 1822118685171716981
+      Lightning_Dash_Frame_02: 7544579553350873800
+      Lightning_Dash_Frame_03: 1700843763516858186
+      Lightning_Dash_Frame_04: 8803385701150022031
+      Lightning_Dash_Frame_05: 2567087559944029978
+      Lightning_Dash_Frame_06: 7353013794610910296
+      Lightning_Dash_Frame_07: 6445584196277682991
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

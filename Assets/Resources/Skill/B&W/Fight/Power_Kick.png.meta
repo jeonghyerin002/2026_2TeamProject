@@ -225,6 +225,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1210,18 +1223,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Power_Kick_Frame_00: 483983148253450793
-      Power_Kick_Frame_01: 3028878412338811232
-      Power_Kick_Frame_02: 4850501128514047897
-      Power_Kick_Frame_03: 8668816447814933935
-      Power_Kick_Frame_04: 6267650952313502681
-      Power_Kick_Frame_05: 5288982415532560058
-      Power_Kick_Frame_06: 5561944487993146352
-      Power_Kick_Frame_07: 9176025977297286915
-      Power_Kick_Frame_08: 622424926968386557
-      Power_Kick_Frame_09: 6604797133482808746
-      Power_Kick_Frame_10: 493444255882786972
-      Power_Kick_Frame_11: 1951765217106990970
       Power_Kick_0: -5388447505979262052
       Power_Kick_1: 6315433817438537174
       Power_Kick_10: 4936727077837529340
@@ -1254,6 +1255,18 @@ TextureImporter:
       Power_Kick_7: 6128849373137848211
       Power_Kick_8: 262162294796144549
       Power_Kick_9: -7533447495095577004
+      Power_Kick_Frame_00: 483983148253450793
+      Power_Kick_Frame_01: 3028878412338811232
+      Power_Kick_Frame_02: 4850501128514047897
+      Power_Kick_Frame_03: 8668816447814933935
+      Power_Kick_Frame_04: 6267650952313502681
+      Power_Kick_Frame_05: 5288982415532560058
+      Power_Kick_Frame_06: 5561944487993146352
+      Power_Kick_Frame_07: 9176025977297286915
+      Power_Kick_Frame_08: 622424926968386557
+      Power_Kick_Frame_09: 6604797133482808746
+      Power_Kick_Frame_10: 493444255882786972
+      Power_Kick_Frame_11: 1951765217106990970
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

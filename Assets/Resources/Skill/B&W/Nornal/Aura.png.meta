@@ -195,6 +195,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -960,14 +973,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Aura_Frame_00: 1617580675363646185
-      Aura_Frame_01: 8094820996736123412
-      Aura_Frame_02: 3341260869467001664
-      Aura_Frame_03: 3382753501426329738
-      Aura_Frame_04: 7797063652467553300
-      Aura_Frame_05: 8221084046098351246
-      Aura_Frame_06: 8832838445936871636
-      Aura_Frame_07: 4220207219353779848
       Aura_0: 2141188580037841102
       Aura_1: 2120041081805082778
       Aura_10: -1350475916671074921
@@ -994,6 +999,14 @@ TextureImporter:
       Aura_7: 8654538635558515733
       Aura_8: -7755772896456330151
       Aura_9: -1302364513852824838
+      Aura_Frame_00: 1617580675363646185
+      Aura_Frame_01: 8094820996736123412
+      Aura_Frame_02: 3341260869467001664
+      Aura_Frame_03: 3382753501426329738
+      Aura_Frame_04: 7797063652467553300
+      Aura_Frame_05: 8221084046098351246
+      Aura_Frame_06: 8832838445936871636
+      Aura_Frame_07: 4220207219353779848
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

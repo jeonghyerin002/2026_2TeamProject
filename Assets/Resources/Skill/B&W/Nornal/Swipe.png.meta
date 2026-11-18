@@ -162,6 +162,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -685,14 +698,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Swipe_Frame_00: 1880427377843949577
-      Swipe_Frame_01: 1567072409873617191
-      Swipe_Frame_02: 5715851010256124362
-      Swipe_Frame_03: 4004509027251529233
-      Swipe_Frame_04: 1584181555249985915
-      Swipe_Frame_05: 4132069314915698124
-      Swipe_Frame_06: 3778213424299010051
-      Swipe_Frame_07: 1452673635975139387
       Swipe_0: 8329702953330457827
       Swipe_1: 4152589018177861604
       Swipe_10: 7039066811129662975
@@ -708,6 +713,14 @@ TextureImporter:
       Swipe_7: -1355684660635518606
       Swipe_8: -8252419791343597410
       Swipe_9: 381396907623789851
+      Swipe_Frame_00: 1880427377843949577
+      Swipe_Frame_01: 1567072409873617191
+      Swipe_Frame_02: 5715851010256124362
+      Swipe_Frame_03: 4004509027251529233
+      Swipe_Frame_04: 1584181555249985915
+      Swipe_Frame_05: 4132069314915698124
+      Swipe_Frame_06: 3778213424299010051
+      Swipe_Frame_07: 1452673635975139387
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
