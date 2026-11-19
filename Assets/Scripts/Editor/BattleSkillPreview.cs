@@ -431,7 +431,7 @@ public sealed class BattleSkillPreview : EditorWindow
             if (effects[i] == null)
                 continue;
             SkillPresentationData.Effect effect = presentation.Effects[i];
-            bool visible = elapsed >= effect.GetStart(presentation.ImpactTime) && elapsed <= effect.GetEnd(presentation.ImpactTime);
+            bool visible = elapsed >= effect.GetStart(presentation.ImpactTime) && elapsed < effect.GetEnd(presentation.ImpactTime);
             effects[i].gameObject.SetActive(visible);
             if (visible)
                 BattleSkillGeometry.Sample(effects[i], images[i], effect, launch, hit, playerAttacks, elapsed,

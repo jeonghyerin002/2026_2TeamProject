@@ -90,13 +90,18 @@ public sealed class SkillPresentationData : ScriptableObject
         public AnimationCurve FrameOffsetY => frameOffsetY;
         public bool MirrorFrameOffsetForEnemy => mirrorFrameOffsetForEnemy;
 
+        // 지정 프레임의 이미지와 자세를 수명 종료까지 유지하는 선택 설정
+        [SerializeField, Tooltip("음수이면 일반 재생, 0 이상이면 해당 클립 시각의 자세를 Lifetime 동안 유지")] private float heldAnimationTime = -1f;
+
+        public float HeldAnimationTime => heldAnimationTime;
+
         public bool Moves => playback == Playback.Travel || (playback == Playback.Legacy && travelToTarget);
 
         // 피해 전에 표시해야 하는 이동과 실제 피해에 종속된 고정 연출을 구분한다.
         public float GetStart(float impact) => Mathf.Max(onlyOnDamage && !Moves ? impact : 0f, time);
 
-        // 도착 이후에도 남은 애니메이션 프레임을 재생할 수 있는 종료 시점을 반환한다.
-        public float GetEnd(float impact) => animation != null ?
+        // 일반 클립의 남은 재생 시간 또는 고정 프레임의 유지 수명으로 종료 시점 계산
+        public float GetEnd(float impact) => animation != null && HeldAnimationTime < 0f ?
             Mathf.Max(impact, GetStart(impact)) + Mathf.Max(0.01f, animation.length - Mathf.Clamp(animationImpactTime, 0f, animation.length)) :
             Mathf.Max(GetStart(impact) + Mathf.Max(0.01f, lifetime), Moves ? impact + 0.01f : 0f);
     }
@@ -125,9 +130,10 @@ public sealed class SkillPresentationData : ScriptableObject
     {
         get
         {
+            // 고정 이미지의 등장 시각과 독립적으로 실제 이동 연출의 피격 시각 계산
             float impact = Mathf.Max(0f, impactTime);
             foreach (Effect effect in Effects)
-                if (effect != null && effect.Moves)
+                if (effect != null && effect.Moves && effect.HeldAnimationTime < 0f)
                     impact = Mathf.Max(impact, Mathf.Max(0f, effect.time) + 0.01f);
             return impact;
         }
@@ -163,7 +169,8 @@ public sealed class SkillPresentationData : ScriptableObject
                     effect.animationImpactTime = Mathf.Clamp(effect.animationImpactTime, 0f, Mathf.Max(0f, effect.animation.length - 0.001f));
                 if (effect.contactFrames != null)
                     Array.Sort(effect.contactFrames, (a, b) => a.time.CompareTo(b.time));
-                if (effect.Moves)
+                // 고정 이미지는 등장 시각을 보존하고 이동 연출만 피격 이전으로 제한
+                if (effect.Moves && effect.HeldAnimationTime < 0f)
                     effect.time = Mathf.Clamp(effect.time, 0f, Mathf.Max(0f, ImpactTime - 0.01f));
                 else if (effect.onlyOnDamage)
                     effect.time = Mathf.Max(ImpactTime, effect.time);

@@ -59,6 +59,14 @@ public static class BattleSkillGeometry
 
         float clipTime = elapsed < arrival ? progress * effect.animationImpactTime :
             effect.animationImpactTime + elapsed - arrival;
+
+        // 유지 이미지는 원본 클립 시각으로 이동 진행률과 자세를 함께 고정
+        if (effect.HeldAnimationTime >= 0f)
+        {
+            clipTime = effect.HeldAnimationTime;
+            progress = effect.animationImpactTime > 0f ? Mathf.Clamp01(clipTime / effect.animationImpactTime) : 1f;
+        }
+
         Vector2 contact = effect.contactPoint;
         if (effect.animation != null)
         {
