@@ -13,6 +13,7 @@ public sealed class AetherSlotImage : MonoBehaviour, IBeginDragHandler, IDragHan
     [Range(0, PlayerBattleData.EquipmentCapacity - 1)]
     [SerializeField] private int slotIndex;             // 표시할 장착 슬롯의 0부터 시작하는 번호
     [SerializeField] private AetherDetailsUI detailsUI;
+    [SerializeField] private Sprite fallbackIcon;
 
     // 장착 데이터 및 UI 참조
     private PlayerBattleData playerData;                // 이 UI를 소유한 플레이어의 장착 데이터
@@ -220,9 +221,9 @@ public sealed class AetherSlotImage : MonoBehaviour, IBeginDragHandler, IDragHan
             return;
         }
 
-        // 장착 데이터의 아이콘을 슬롯 이미지에 전달하고 빈 슬롯은 투명 처리
+        // 원본 아이콘 우선 표시 및 미등록 이미지의 기존 기본 에테르 리소스 사용
         AetherData aether = playerData.GetEquippedAether(slotIndex);
-        iconImage.sprite = aether != null ? aether.Icon : null;
+        iconImage.sprite = aether != null ? (aether.Icon != null ? aether.Icon : fallbackIcon) : null;
         iconImage.color = iconImage.sprite != null ? Color.white : Color.clear;
         iconImage.preserveAspect = true;
 

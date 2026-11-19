@@ -14,6 +14,11 @@ public sealed class CharacterStatsUI : MonoBehaviour
     [SerializeField] private Button[] increaseButtons;
     [SerializeField] private UIGroupController group;
 
+    // 개선된 화면의 선택 위치와 투자 가능 상태 표시
+    [SerializeField] private RectTransform selectionHighlight;
+    [SerializeField] private TMP_Text[] increaseLabels;
+    private static readonly Color UnavailableTextColor = new Color(0.4f, 0.44f, 0.44f, 1f);
+
     // 활성 화면의 데이터 구독 대상
     private PlayerBattleData playerData;
     private PlayerMenuUI playerMenu;
@@ -77,11 +82,35 @@ public sealed class CharacterStatsUI : MonoBehaviour
     }
 
 
+    // 기존 메뉴의 선택 이벤트를 행 강조에 반영
+    public void RefreshSelection(int index)
+    {
+        // 선택 가능한 행과 선택 표시 참조 확인
+        bool hasSelection = increaseButtons != null && index >= 0 && index < increaseButtons.Length &&
+            increaseButtons[index] != null;
+
+        if (selectionHighlight != null)
+        {
+            selectionHighlight.gameObject.SetActive(hasSelection);
+
+            if (hasSelection)
+            {
+                Vector2 position = selectionHighlight.anchoredPosition;
+                position.y = ((RectTransform)increaseButtons[index].transform).anchoredPosition.y;
+                selectionHighlight.anchoredPosition = position;
+            }
+        }
+    }
+
+
     // 장비 적용 전 스텟과 남은 포인트 및 버튼 상태 갱신
     private void Refresh()
     {
         // 데이터 변경 이벤트와 화면 재진입에 동일한 조회 적용
-        pointsText.text = $"스텟 포인트 : {playerData.StatPoints}";
+        pointsText.text = selectionHighlight != null
+            ? $"남은 포인트  <b>{playerData.StatPoints}</b>"
+            : $"스텟 포인트 : {playerData.StatPoints}";
+
         for (int i = 0; i < PlayerStatAllocation.Count; i++)
         {
             int value = (PlayerStat)i switch
@@ -95,6 +124,15 @@ public sealed class CharacterStatsUI : MonoBehaviour
             };
             valueTexts[i].text = value.ToString();
             increaseButtons[i].interactable = playerData.CanInvestStat((PlayerStat)i);
+
+            // 구형 화면의 기존 색상 유지 및 새 버튼의 명도 대비 반영
+            if (increaseLabels != null && i < increaseLabels.Length && increaseLabels[i] != null)
+            {
+                increaseLabels[i].color = increaseButtons[i].interactable ? Color.white : UnavailableTextColor;
+            }
         }
+
+        // 투자 직후와 화면 재진입에 현재 선택의 강조 동기화
+        RefreshSelection(group.SelectedIndex);
     }
 }

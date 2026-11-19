@@ -17,7 +17,7 @@ MonoBehaviour:
   - id: inventory
     displayName: Inventory
     description: Open your Bag and check the items inside.
-    sprite: {fileID: -7978442113108871747, guid: b7e044e1fb8bfd346b706142f07907f9, type: 2}
+    sprite: {fileID: -5073793629799276423, guid: 19a23eee7ca9289439e2a7e12eb62f76, type: 3}
     additionalSprites: []
     interaction:
       action: 8
@@ -35,7 +35,7 @@ MonoBehaviour:
   - id: Aether
     displayName: AetherUI
     description: "\uC5D0\uD14C\uB974 UI"
-    sprite: {fileID: -7809747373835109279, guid: 1703e74d8229c8148af820056f9dace3, type: 3}
+    sprite: {fileID: -7188600351601640364, guid: 64475f6e90c5b7f4595cf7d784643106, type: 3}
     additionalSprites: []
     interaction:
       action: 4
@@ -51,27 +51,27 @@ MonoBehaviour:
       sound: {fileID: 0}
       volume: 0
   - id: CharacterInfo
-    displayName: 캐릭터 정보
-    description: 캐릭터 능력치와 스텟 포인트
-    sprite: {fileID: 21300000, guid: 87b91e5f6c35a66a9ec9c6c7ba5c7d2c, type: 3}
+    displayName: "\uCE90\uB9AD\uD130 \uC815\uBCF4"
+    description: "\uCE90\uB9AD\uD130 \uB2A5\uB825\uCE58\uC640 \uC2A4\uD15F \uD3EC\uC778\uD2B8"
+    sprite: {fileID: 1319931129317565034, guid: 3d8dd2afbbf401d43809eaeb934c4ccc, type: 3}
     additionalSprites: []
     interaction:
       action: 4
       itemIndex: -1
       targetGroup: {fileID: 0}
       feedback:
-        id:
+        id: 
         sound: {fileID: 0}
         volume: 1
     nextGroup: {fileID: 11400000, guid: 2883c94a3e61e18a291d00bdff7f6b45, type: 2}
     feedback:
-      id:
+      id: 
       sound: {fileID: 0}
       volume: 1
   - id: Setting
     displayName: Setting
     description: Take a look at the members of your party.
-    sprite: {fileID: 6194237872147809408, guid: dcab639f22579ba4185c903f981c191f, type: 3}
+    sprite: {fileID: 8321174602501964377, guid: 3bbc1139cfcb5ad408dbf77135a33ad4, type: 3}
     additionalSprites: []
     interaction:
       action: 4
