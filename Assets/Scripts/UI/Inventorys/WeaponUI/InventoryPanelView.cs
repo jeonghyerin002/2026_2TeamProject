@@ -21,6 +21,10 @@ public sealed class InventoryPanelView : MonoBehaviour
     [SerializeField] private Button[] categoryButtons;
     [SerializeField] private SlotView[] slots;
 
+    // 기본 슬롯과 선택 슬롯의 테두리 이미지
+    [SerializeField] private Sprite normalSlotSprite;
+    [SerializeField] private Sprite selectedSlotSprite;
+
     // 카테고리 아이콘의 확대와 선택 밑줄
     [SerializeField] private RectTransform[] categoryIcons;
     [SerializeField] private Image[] categoryUnderlines;
@@ -160,6 +164,14 @@ public sealed class InventoryPanelView : MonoBehaviour
             SlotView slot = slots[i];
             slot.Button.interactable = item != null;
             slot.Background.color = item != null && item == selected ? accent : border;
+
+            // 연결된 슬롯 이미지로 선택 상태 표시 및 원본 색상 유지
+            if (normalSlotSprite != null && selectedSlotSprite != null)
+            {
+                slot.Background.sprite = item != null && item == selected ? selectedSlotSprite : normalSlotSprite;
+                slot.Background.color = Color.white;
+            }
+
             slot.Icon.sprite = item != null ? item.Icon : null;
             slot.Icon.enabled = slot.Icon.sprite != null;
             slot.Name.text = item != null ? item.WeaponName : "";
