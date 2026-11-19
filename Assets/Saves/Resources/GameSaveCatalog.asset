@@ -49,11 +49,16 @@ MonoBehaviour:
   - M_1
   - Level_Design
   npcIds:
+  - Gaju
+  - Jiisu
+  - Jinho
+  - Jinsu
   - Junho
   - npc_002
   - npc_003
   - npc_raute_1_junho
   - npc_raute_1_sora
+  - Ryuga
   - Sora
   cutsceneIds:
   - 51c1220a1dca462195decce996f0b3dc
