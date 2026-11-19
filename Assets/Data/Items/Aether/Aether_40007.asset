@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26f425007a1e13744abbf148bbbbefa9, type: 3}
+  m_Name: Aether_40007
+  m_EditorClassIdentifier: Assembly-CSharp::AetherData
+  itemid: 40007
+  aethername: "\uC88B\uC740 \uACA9\uD22C NPC \uC5D0\uD14C\uB974"
+  aethertype: 5
+  icon: {fileID: 0}
+  skills:
+  - {fileID: 11400000, guid: a02c632d0e8d0774e9700aafd9c267b4, type: 2}
+  - {fileID: 11400000, guid: 473a489904b94524ebfbe5f259591d84, type: 2}
+  - {fileID: 0}

@@ -25,7 +25,7 @@ MonoBehaviour:
   aetherid: 40008
   rewardexp: 5000
   weapon: {fileID: 11400000, guid: c719c7236405f8e4b92a5b4107781fd8, type: 2}
-  aether: {fileID: 0}
-  battleSprite: {fileID: 0}
+  aether: {fileID: 11400000, guid: 131b7d41da7a9d049a1caa5ff5a48035, type: 2}
+  battleSprite: {fileID: -1186574672538923045, guid: f77f9f0ff9cff3f48b1aaa6fa1dcc48e, type: 3}
   battleLaunch: {x: 0.5, y: 0.5}
   battleHit: {x: 0.5, y: 0.5}
