@@ -66,5 +66,10 @@ MonoBehaviour:
   - Cut_1
   - cutscene:GlobalObjectId_V1-2-0410e4c993f738b46b16128797407174-989188743-0
   - cutscene:GlobalObjectId_V1-2-c7c600b26ee99834b8d4920899bbc073-964168850-0
+  - cutscene:GlobalObjectId_V1-2-d0e40e3f8cdcb17428a5260dfd7d807c-1407427615-0
+  - cutscene:GlobalObjectId_V1-2-d0e40e3f8cdcb17428a5260dfd7d807c-1408450703-0
+  - cutscene:GlobalObjectId_V1-2-d0e40e3f8cdcb17428a5260dfd7d807c-1981353916-0
+  - cutscene:GlobalObjectId_V1-2-d632566e33d8f2e42a3678e3873d8267-1559438457-0
+  - cutscene:GlobalObjectId_V1-2-d632566e33d8f2e42a3678e3873d8267-1574603984-0
   actorDefinitions: []
   playerPrefab: {fileID: 3376243757928980639, guid: 64f3e68f8cff9c440a7a0dfafd10e3e3, type: 3}

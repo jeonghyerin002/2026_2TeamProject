@@ -1,5 +1,5 @@
 ﻿characterid,charactername,maxhp,attack,defense,specialattack,specialdefense,speed,level,weaponid,aetherid,rewardexp
-1,Player,20,10,10,10,10,10,1,,,0
+1,주인공,20,10,10,10,10,10,1,,,0
 2,꼬마 트레이너 준호,10,4,4,4,4,4,1,20002,40006,27
 3,산책소녀 소라,25,3,3,3,3,3,1,20002,40006,67
 4,류가,30,9,13,5,13,15,5,,40005,300

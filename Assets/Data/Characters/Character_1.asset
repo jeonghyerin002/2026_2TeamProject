@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character_1
   m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CharacterData
   characterid: 1
-  charactername: Player
+  charactername: "\uC8FC\uC778\uACF5"
   maxhp: 20
   attack: 10
   defense: 10
