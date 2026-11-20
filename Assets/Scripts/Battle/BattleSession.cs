@@ -10,6 +10,9 @@ public static class BattleSession
     public static bool IsActive { get; private set; }
     public static int VictoryDialogueId { get; private set; } // 이번 전투에서 승리했을 때만 복귀 후 자동 출력할 대화 ID
 
+    // 대사 ID가 없어도 승리 보상을 처리할 결과 상태
+    public static bool HasVictory { get; private set; }
+
     private static int afterVictoryDialogueId; // 전투를 시작한 NPC에 설정된 승리 후 대화 ID
 
     // NPC 전투와 복귀 정보를 등록한다
@@ -24,6 +27,7 @@ public static class BattleSession
         ReturnPosition = returnPosition;
         afterVictoryDialogueId = victoryDialogueId;
         VictoryDialogueId = 0;
+        HasVictory = false;
         IsActive = true;
         return true;
     }
@@ -31,8 +35,12 @@ public static class BattleSession
     // 현재 전투의 플레이어 승리가 확정된 경우에만 자동 대화를 예약한다.
     public static void RecordVictory()
     {
+        // 활성 전투의 승리만 복귀 처리에 전달
         if (IsActive)
+        {
             VictoryDialogueId = afterVictoryDialogueId;
+            HasVictory = true;
+        }
     }
 
     // Domain Reload가 꺼져 있어도 새 실행의 전투 정보를 초기화함
@@ -52,5 +60,6 @@ public static class BattleSession
         IsActive = false;
         afterVictoryDialogueId = 0;
         VictoryDialogueId = 0;
+        HasVictory = false;
     }
 }

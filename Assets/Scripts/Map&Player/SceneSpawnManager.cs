@@ -48,15 +48,21 @@ public class SceneSpawnManager : MonoBehaviour
 
         // 세션을 지우기 전에 이번 전투의 승리 대사만 확보하여 재진입 시 중복 출력을 막는다.
         int victoryDialogueId = BattleSession.VictoryDialogueId;
+        // 대사 미설정 승리와 패배를 구분하고 복귀 NPC 식별자 보관
+        bool hasVictory = BattleSession.HasVictory;
+        string npcId = BattleSession.NpcId;
         nextSpawnID = null;
         BattleSession.Clear();
-        if (victoryDialogueId > 0)
-            victoryDialogueRoutine = StartCoroutine(ShowVictoryDialogue(victoryDialogueId));
+        if (hasVictory)
+        {
+            victoryDialogueRoutine = StartCoroutine(ShowVictoryDialogue(npcId, victoryDialogueId));
+        }
+
         return true;
     }
 
     // 모든 Start와 맵 진입 연출이 끝나면 승리한 NPC의 대사를 한 번 자동 시작한다.
-    private IEnumerator ShowVictoryDialogue(int dialogueId)
+    private IEnumerator ShowVictoryDialogue(string npcId, int dialogueId)
     {
         yield return null;
 
@@ -71,8 +77,20 @@ public class SceneSpawnManager : MonoBehaviour
         while (SceneFadeIn.IsTransitioning || (dialogManager != null && !dialogManager.CanShowMessage))
             yield return null;
 
-        if (dialogManager != null)
+        // 복귀한 NPC에서 기존 승리 대사와 보상 지급을 연속 처리
+        if (dialogManager != null && NPCInteraction.TryFindById(npcId, out var npc))
+        {
+            if (!npc.TryShowVictoryResult())
+            {
+                Debug.LogWarning("SceneSpawnManager: NPC 승리 대사와 보상 처리를 시작하지 못했습니다. NPC에게 다시 대화하세요.", this);
+            }
+        }
+        else if (dialogManager != null && dialogueId > 0)
+        {
+            // NPC가 비활성 상태인 맵에서도 기존 승리 대사 출력 유지
             dialogManager.StartDialog(dialogueId);
+        }
+
         victoryDialogueRoutine = null;
     }
 

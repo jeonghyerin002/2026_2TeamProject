@@ -2938,7 +2938,7 @@ MonoBehaviour:
   battleData: {fileID: 11400000, guid: d94229a369824574f98f8fd26dd559c1, type: 2}
   interactionType: 0
   rewardItemId: 0
-  additionalRewardItemIds: 
+  additionalRewardItemIds: 479c0000
   dialogManager: {fileID: 1669179934}
   dialogueOnlyId: 0
   beforeBattleDialogueId: 30

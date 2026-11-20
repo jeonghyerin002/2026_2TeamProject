@@ -333,7 +333,9 @@ public class DialogManager : MonoBehaviour
                 }
                 else
                 {
-                    EndDialog();
+                    // 끊어진 대사 연결을 정상 완료로 처리하여 전투나 보상을 실행하지 않도록 취소
+                    Debug.LogWarning($"DialogManager: 다음 대화 {currentDialog.nextId}을 찾을 수 없어 대화를 취소했습니다.", this);
+                    ClearDialog();
                 }
             }
             else if (currentDialog == null && pendingMessages.Count > 0)

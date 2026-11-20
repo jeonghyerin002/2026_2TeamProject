@@ -67,6 +67,7 @@ public sealed class NPCInteractionEditor : Editor
                 return !hasMixedTypes && type == NPCInteraction.InteractionType.DialogueOnly;
             case "rewardItemId":
             case "additionalRewardItemIds":
+                return !hasMixedTypes && type != NPCInteraction.InteractionType.DialogueOnly;
             case "beforeRewardDialogueId":
             case "afterRewardDialogueId":
                 return !hasMixedTypes && type == NPCInteraction.InteractionType.GiveItem;

@@ -25,14 +25,13 @@ public class NPCInteraction : MonoBehaviour
     // 이번 NPC가 대화 완료 후 실행할 동작, 기존 에셋은 전투로 유지
     [SerializeField, InspectorName("대화 후 동작")]
     private InteractionType interactionType = InteractionType.Battle;
-    // 기존 보상 필드를 첫 번째 아이템으로 유지, 종류별 지급 수량은 1개
-    [SerializeField, Min(0), InspectorName("보상 ItemId")]
-    [Tooltip("아이템 지급 모드에서 사용합니다. 기존 카탈로그의 무기·에테르 ID를 입력하세요. 이미 보유한 아이템은 중복 지급하지 않습니다.")]
-    private int rewardItemId;
+    // 승리 및 비전투 지급에서 공유하는 첫 번째 아이템과 종류별 지급 수량 1개
+    [Min(0), InspectorName("보상 ItemId")]
+    [Tooltip("전투 승리 또는 아이템 지급 모드의 보상입니다. 카탈로그의 무기·에테르 ID를 입력하세요. 전투 모드에서 0이면 첫 보상을 생략합니다. 이미 보유한 아이템은 중복 지급하지 않습니다.")]
+    [SerializeField] private int rewardItemId;
     // 첫 번째 보상 뒤에 입력한 순서대로 지급할 추가 무기·에테르 ID
-    [SerializeField]
     [Tooltip("첫 번째 Reward Item Id 다음에 지급할 아이템 ID 목록입니다. 같은 ID는 한 번만 처리합니다.")]
-    private int[] additionalRewardItemIds = System.Array.Empty<int>();
+    [SerializeField] private int[] additionalRewardItemIds = System.Array.Empty<int>();
 
     [Header("Dialogue")]
     // 씬의 공용 대화 UI 서비스
@@ -124,6 +123,12 @@ public class NPCInteraction : MonoBehaviour
         battlePending = pendingInteractionType == InteractionType.Battle && !NpcBattleProgress.IsDefeated(npcId);
         rewardPending = pendingInteractionType == InteractionType.GiveItem && !HasRewardItem();
 
+        // 저장된 승리 기록이 있는 NPC에서 공간 부족 등으로 놓친 보상 재시도
+        if (pendingInteractionType == InteractionType.Battle && !battlePending)
+        {
+            rewardPending = HasConfiguredBattleReward() && !HasRewardItem();
+        }
+
         // 일반 대화와 전투의 기존 시작 ID는 유지하고 아이템 모드만 별도 ID로 분기
         int dialogId = pendingInteractionType == InteractionType.Battle && !battlePending
             ? afterVictoryDialogueId : beforeBattleDialogueId;
@@ -150,7 +155,14 @@ public class NPCInteraction : MonoBehaviour
             return;
         }
 
-        // 보상은 유효한 대화를 정상 완료한 경우에만 지급하며 ID 누락 시 생략
+        // 전투 승리 기록이 있는 경우에는 대사 미설정 상태에서도 보상 지급
+        if (rewardPending && pendingInteractionType == InteractionType.Battle)
+        {
+            OnDialogCompleted(true);
+            return;
+        }
+
+        // 비전투 아이템 지급 모드의 기존 대화 필수 조건 유지
         if (rewardPending)
         {
             Debug.LogWarning("NPCInteraction: 아이템 지급에는 양수의 시작 대화 ID가 필요합니다.", this);
@@ -185,7 +197,7 @@ public class NPCInteraction : MonoBehaviour
         }
 
         // 인벤토리 변경 알림의 재진입 전에 이전 상호작용 상태 해제
-        var shouldGiveItem = pendingInteractionType == InteractionType.GiveItem && rewardPending;
+        var shouldGiveItem = rewardPending;
         CancelInteraction();
         if (shouldGiveItem)
         {
@@ -193,12 +205,41 @@ public class NPCInteraction : MonoBehaviour
         }
     }
 
+
+    // 전투 복귀 후 승리 대사를 재생하고 정상 종료 시 미보유 보상 지급
+    public bool TryShowVictoryResult()
+    {
+        // 저장된 승리 기록과 공용 대화창 사용 가능 상태 확인
+        if (!isActiveAndEnabled || interactionType != InteractionType.Battle || isInteracting ||
+            !NpcBattleProgress.IsDefeated(npcId) || dialogManager == null || !dialogManager.CanShowMessage)
+        {
+            return false;
+        }
+
+        // 일반 재대화와 동일한 대사 선택 및 보상 검증 경로 사용
+        StartInteraction();
+        return true;
+    }
+
+
+    // 선택적인 전투 보상 목록의 설정 여부 확인
+    private bool HasConfiguredBattleReward()
+    {
+        // 첫 보상의 0은 생략하고 추가 목록은 개별 지급 단계에서 검증
+        return rewardItemId != 0 || (additionalRewardItemIds != null && additionalRewardItemIds.Length > 0);
+    }
+
+
     // 첫 번째 보상부터 추가 목록까지 같은 ID는 한 번만 처리하는 순서 제공
     private IEnumerable<int> GetRewardItemIds()
     {
         // 인벤토리의 중복 보유 제한에 맞춰 목록의 첫 등장 순서 유지
         var seenIds = new HashSet<int> { rewardItemId };
-        yield return rewardItemId;
+        if (interactionType != InteractionType.Battle || rewardItemId != 0)
+        {
+            yield return rewardItemId;
+        }
+
         if (additionalRewardItemIds == null)
         {
             yield break;
