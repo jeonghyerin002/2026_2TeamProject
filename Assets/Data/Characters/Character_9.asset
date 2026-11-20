@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   characterid: 9
   charactername: "\uC544\uD2B8\uB9AC\uC628"
-  maxhp: 155
-  attack: 121
-  defense: 102
+  maxhp: 95
+  attack: 101
+  defense: 89
   specialattack: 43
   specialdefense: 67
   speed: 92
-  level: 40
+  level: 30
   weaponid: 20004
   aetherid: 40004
   rewardexp: 6320

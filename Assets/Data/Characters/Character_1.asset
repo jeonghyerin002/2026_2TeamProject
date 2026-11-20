@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Game.Data.CharacterData
   characterid: 1
   charactername: Player
-  maxhp: 10
+  maxhp: 20
   attack: 10
   defense: 10
   specialattack: 10
@@ -26,5 +26,6 @@ MonoBehaviour:
   rewardexp: 0
   weapon: {fileID: 0}
   aether: {fileID: 0}
+  battleSprite: {fileID: 0}
   battleLaunch: {x: 1.367521, y: 0.501916}
   battleHit: {x: 0.58, y: 0.32}

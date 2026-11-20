@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   characterid: 5
   charactername: "\uAF2C\uB9C8 \uD2B8\uB808\uC774\uB108 \uC9C4\uD638"
-  maxhp: 35
+  maxhp: 31
   attack: 10
   defense: 6
   specialattack: 5
@@ -23,7 +23,7 @@ MonoBehaviour:
   level: 2
   weaponid: 20002
   aetherid: 40003
-  rewardexp: 61
+  rewardexp: 111
   weapon: {fileID: 11400000, guid: aca0c30c65442bc468d737903670393a, type: 2}
   aether: {fileID: 11400000, guid: 400714b112bb2c14c867dcdc898c1245, type: 2}
   battleSprite: {fileID: 3386777985692454029, guid: 1af530f59a034964b94f061107170a4f, type: 3}
