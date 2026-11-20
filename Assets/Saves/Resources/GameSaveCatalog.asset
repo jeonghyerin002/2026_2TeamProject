@@ -69,6 +69,6 @@ MonoBehaviour:
   - Sora
   cutsceneIds:
   - 51c1220a1dca462195decce996f0b3dc
-  - 97936ff9f3cf4aae82a71a50d4f9070d
+  - Cut_1
   actorDefinitions: []
   playerPrefab: {fileID: 3376243757928980639, guid: 64f3e68f8cff9c440a7a0dfafd10e3e3, type: 3}

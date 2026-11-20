@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f0bd7e2e15adf48b4f81a61bf46aa9, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: Assembly-CSharp::UIGroupData
+  id: Settings
+  items:
+  - id: Save
+    displayName: Save
+    description:
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id:
+      sound: {fileID: 0}
+      volume: 1
+  - id: Load
+    displayName: Load
+    description:
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id:
+      sound: {fileID: 0}
+      volume: 1
+  - id: Exit
+    displayName: Exit
+    description:
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id:
+      sound: {fileID: 0}
+      volume: 1
+  inputBindings:
+  - key: 37
+    repeatWhileHeld: 0
+    interaction:
+      action: 1
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+  - key: 33
+    repeatWhileHeld: 0
+    interaction:
+      action: 2
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+  initialItemIndex: 0
+  wrapSelection: 1
+  repeatSelectionWhileHeld: 1
+  wrapImageStates: 1
+  feedback:
+    id:
+    sound: {fileID: 0}
+    volume: 1

@@ -81,7 +81,7 @@ MonoBehaviour:
         id: 
         sound: {fileID: 0}
         volume: 0
-    nextGroup: {fileID: 11400000, guid: 2aa68dfd00a97b54a85a43c90d28cc68, type: 2}
+    nextGroup: {fileID: 11400000, guid: c62ff1dcf0074e30aca295e18f8506dc, type: 2}
     feedback:
       id: 
       sound: {fileID: 0}

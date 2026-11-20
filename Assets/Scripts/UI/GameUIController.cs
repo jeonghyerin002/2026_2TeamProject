@@ -1,12 +1,11 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Scripting.APIUpdating;
 
-/// <summary>모든 Scene에서 공통 저장/불러오기 UI를 제공하고 시작 화면에서는 Esc 메뉴를 숨긴다.</summary>
+/// <summary>플레이어 설정 메뉴와 시작 화면의 저장 및 불러오기 요청 처리</summary>
 [MovedFrom(true, sourceNamespace: "", sourceAssembly: "Assembly-CSharp")]
 [DisallowMultipleComponent]
 public sealed class GameUIController : MonoBehaviour
@@ -32,6 +31,11 @@ public sealed class GameUIController : MonoBehaviour
     private bool canOpenMenu;
     private bool isReturningToStartMenu;
 
+    // 플레이어 카테고리에서 사용하는 설정 및 불러오기 그룹
+    [SerializeField] private UINavigationManager navigation;
+    [SerializeField] private UIGroupData settingsGroup;
+    [SerializeField] private UIGroupData loadGroup;
+
     // Domain Reload 없이 재실행할 때 기존 정적 참조를 초기화한다.
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void ResetInstance() => instance = null;
@@ -41,20 +45,35 @@ public sealed class GameUIController : MonoBehaviour
     {
         if (instance != null && instance != this)
         {
-            gameObject.SetActive(false);
-            Destroy(gameObject);
-            return;
+            // 플레이어 자식 메뉴를 우선하고 시작 화면용 독립 메뉴 정리
+            if (GetComponentInParent<PlayerController>() != null && instance.GetComponentInParent<PlayerController>() == null)
+            {
+                instance.gameObject.SetActive(false);
+                Destroy(instance.gameObject);
+            }
+            else
+            {
+                gameObject.SetActive(false);
+                Destroy(gameObject);
+                return;
+            }
         }
         if (gameUIPanel == null || exitButtonObject == null ||
             !exitButtonObject.TryGetComponent(out exitButton) || saveButton == null || loadButton == null ||
-            loadSlotButton == null || closeLoadButton == null || deleteSaveButton == null || loadPanel == null || loadSummary == null || saveMessage == null)
+            loadSlotButton == null || closeLoadButton == null || deleteSaveButton == null || loadPanel == null || loadSummary == null || saveMessage == null ||
+            (GetComponentInParent<PlayerController>() != null && (navigation == null || settingsGroup == null || loadGroup == null)))
         {
             Debug.LogError("GameUIController: 공통 메뉴의 패널, 버튼과 텍스트를 연결하세요.", this);
             enabled = false;
             return;
         }
         instance = this;
-        DontDestroyOnLoad(gameObject);
+        // 자식 메뉴는 플레이어의 영속 수명을 공유하고 독립 메뉴만 별도 유지
+        if (transform.parent == null)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+
         RefreshMenuForScene(SceneManager.GetActiveScene());
     }
 
@@ -90,7 +109,7 @@ public sealed class GameUIController : MonoBehaviour
         deleteSaveButton.onClick.RemoveListener(DeleteSelectedSave);
     }
 
-    // 새 Scene에 들어갈 때 슬롯 미리보기와 Esc 메뉴를 닫는다.
+    // 새 씬 진입 시 슬롯 미리보기와 설정 메뉴 초기화
     private void HandleActiveSceneChanged(Scene previousScene, Scene nextScene) => RefreshMenuForScene(nextScene);
     private void RefreshMenuForScene(Scene scene)
     {
@@ -104,6 +123,19 @@ public sealed class GameUIController : MonoBehaviour
     // 시작 화면의 불러오기 버튼도 같은 슬롯 미리보기를 연다.
     public static void ShowSavedGame()
     {
+        // 시작 화면 복귀로 플레이어 메뉴가 파괴된 경우 독립 메뉴 재생성
+        if (instance == null)
+        {
+            var menu = Resources.Load<GameObject>("GameMenu");
+            if (menu == null)
+            {
+                Debug.LogError("GameUIController: 시작 화면용 GameMenu 프리팹이 없습니다.");
+                return;
+            }
+
+            Instantiate(menu);
+        }
+
         if (instance != null)
         {
             instance.OpenLoadPanel();
@@ -120,7 +152,19 @@ public sealed class GameUIController : MonoBehaviour
     // 파일이 없거나 손상되었으면 내용을 안내하고 슬롯 클릭을 비활성화한다.
     private void OpenLoadPanel()
     {
-        loadPanel.SetActive(true);
+        // 플레이어 메뉴에서는 기존 그룹 이동 기록과 월드 입력 차단 재사용
+        if (navigation != null)
+        {
+            if (!navigation.TryOpenGroup(loadGroup))
+            {
+                return;
+            }
+        }
+        else
+        {
+            loadPanel.SetActive(true);
+        }
+
         loadPanel.transform.SetAsLastSibling();
         RefreshSaveSlot();
     }
@@ -137,8 +181,30 @@ public sealed class GameUIController : MonoBehaviour
         }
         // 파일은 UTC로 보존하고 사용자에게는 운영체제의 현지 시각으로 표시한다.
         var savedTime = DateTimeOffset.Parse(save.savedAtUtc).ToLocalTime();
-        loadSummary.text = $"저장 시각: {savedTime:yyyy-MM-dd HH:mm:ss}\nScene: {save.sceneName}\n레벨: {save.level}";
+        // 저장된 씬 식별자를 표시용 장소명으로 변환 후 세 줄 요약 전달
+        var sceneDisplayName = GetSceneDisplayName(save.sceneName);
+        loadSummary.text = $"저장 시각: {savedTime:yyyy-MM-dd HH:mm:ss}\n{sceneDisplayName}\n레벨: {save.level}";
     }
+
+
+    // 저장 요약에 사용할 씬별 한글 장소명 조회
+    private static string GetSceneDisplayName(string sceneName)
+    {
+        // 지정된 맵의 표시명 반환 및 미등록 씬의 기존 이름 보존
+        return sceneName switch
+        {
+            "PalletTown" => "태초마을",
+            "Route_1" => "1번 도로",
+            "Shrine" => "신사",
+            "RoadOfMudo" => "무도의 길",
+            "BrownCity" => "갈색마을",
+            "JinmuHouse" => "진무가문 저택",
+            "M_1" => "무령산",
+            "Level_Design" => "개발자맵",
+            _ => sceneName
+        };
+    }
+
 
     // 클릭 직전에 파일을 다시 검증하므로 미리보기 이후 파일 변경도 안전하게 처리한다.
     private void LoadSelectedSave()
@@ -152,7 +218,18 @@ public sealed class GameUIController : MonoBehaviour
     }
 
     // 패널을 닫으면 기존 메뉴 또는 시작 화면으로 돌아간다.
-    private void CloseLoadPanel() => loadPanel.SetActive(false);
+    private void CloseLoadPanel()
+    {
+        // 시작 화면은 패널만 닫고 플레이어 메뉴는 이전 설정 그룹으로 복귀
+        if (navigation != null && navigation.CurrentGroup == loadGroup)
+        {
+            navigation.Back();
+        }
+        else
+        {
+            loadPanel.SetActive(false);
+        }
+    }
 
     // 삭제 결과를 표시하고 파일이 없는 슬롯은 불러오기와 삭제 모두 비활성화한다.
     private void DeleteSelectedSave()
@@ -195,24 +272,65 @@ public sealed class GameUIController : MonoBehaviour
         });
     }
 
-    // 키를 누른 프레임마다 한 번만 토글한다. 시작 화면에서는 Esc 메뉴를 사용하지 않는다.
-    private void Update()
+
+    // 설정 그룹에서 선택한 기존 버튼 동작 실행
+    public void InvokeSettingsItem(int index)
     {
-        var keyboard = Keyboard.current;
-        if (!canOpenMenu || isReturningToStartMenu || GameSaveSystem.IsBusy || SceneFadeIn.IsTransitioning || keyboard == null)
+        // 다른 그룹의 지연 확인 요청과 전환 중 중복 실행 차단
+        if (navigation == null || navigation.CurrentGroup != settingsGroup || isReturningToStartMenu ||
+            GameSaveSystem.IsBusy || SceneFadeIn.IsTransitioning)
         {
             return;
         }
-        if (keyboard.escapeKey.wasPressedThisFrame)
+
+        var button = index == 0 ? saveButton : index == 1 ? loadButton : index == 2 ? exitButton : null;
+        if (button != null && button.IsInteractable())
         {
-            if (loadPanel.activeSelf)
-            {
-                CloseLoadPanel();
-                return;
-            }
-            gameUIPanel.SetActive(!gameUIPanel.activeSelf);
+            button.onClick.Invoke();
         }
     }
+
+
+    // 불러오기 그룹에서 선택한 슬롯과 삭제 및 닫기 버튼 실행
+    public void InvokeLoadItem(int index)
+    {
+        // 빈 슬롯과 저장 처리 중 비활성 버튼 실행 차단
+        if (navigation == null || navigation.CurrentGroup != loadGroup || GameSaveSystem.IsBusy || SceneFadeIn.IsTransitioning)
+        {
+            return;
+        }
+
+        var button = index == 0 ? loadSlotButton : index == 1 ? deleteSaveButton : index == 2 ? closeLoadButton : null;
+        if (button != null && button.IsInteractable())
+        {
+            button.onClick.Invoke();
+        }
+    }
+
+
+    // 설정 그룹의 키보드 선택 상태를 기존 버튼 강조 표시로 전달
+    public void SelectSettingsItem(int index)
+    {
+        // 그룹의 선택 순서와 저장 및 불러오기 및 종료 버튼 대응
+        var button = index == 0 ? saveButton : index == 1 ? loadButton : index == 2 ? exitButton : null;
+        if (button != null)
+        {
+            button.Select();
+        }
+    }
+
+
+    // 불러오기 그룹의 키보드 선택 상태를 기존 버튼 강조 표시로 전달
+    public void SelectLoadItem(int index)
+    {
+        // 그룹의 선택 순서와 슬롯 및 삭제 및 닫기 버튼 대응
+        var button = index == 0 ? loadSlotButton : index == 1 ? deleteSaveButton : index == 2 ? closeLoadButton : null;
+        if (button != null)
+        {
+            button.Select();
+        }
+    }
+
 
     // 현재 소유자가 파괴될 때만 정적 참조를 비운다.
     private void OnDestroy()

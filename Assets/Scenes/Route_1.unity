@@ -5356,7 +5356,7 @@ MonoBehaviour:
   interactionType: 0
   rewardItemId: 0
   additionalRewardItemIds: 
-  dialogManager: {fileID: 0}
+  dialogManager: {fileID: 1121729654}
   dialogueOnlyId: 0
   beforeBattleDialogueId: 30
   afterVictoryDialogueId: 34

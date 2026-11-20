@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f0bd7e2e15adf48b4f81a61bf46aa9, type: 3}
+  m_Name: Load
+  m_EditorClassIdentifier: Assembly-CSharp::UIGroupData
+  id: Load
+  items:
+  - id: LoadSlot
+    displayName: LoadSlot
+    description:
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id:
+      sound: {fileID: 0}
+      volume: 1
+  - id: Delete
+    displayName: Delete
+    description:
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id:
+      sound: {fileID: 0}
+      volume: 1
+  - id: Close
+    displayName: Close
+    description:
+    sprite: {fileID: 0}
+    additionalSprites: []
+    interaction:
+      action: 8
+      itemIndex: -1
+      targetGroup: {fileID: 0}
+      feedback:
+        id:
+        sound: {fileID: 0}
+        volume: 1
+    nextGroup: {fileID: 0}
+    feedback:
+      id:
+      sound: {fileID: 0}
+      volume: 1
+  inputBindings: []
+  initialItemIndex: 0
+  wrapSelection: 1
+  repeatSelectionWhileHeld: 1
+  wrapImageStates: 1
+  feedback:
+    id:
+    sound: {fileID: 0}
+    volume: 1
