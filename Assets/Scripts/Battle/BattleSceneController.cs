@@ -127,6 +127,11 @@ public sealed class BattleSceneController : MonoBehaviour
             NpcBattleProgress.MarkDefeated(BattleSession.NpcId);
             BattleSession.RecordVictory();
         }
+        else if (winner == BattleSide.Enemy)
+        {
+            // 보상과 승리 기록 없이 플레이어 패배 대화만 예약
+            BattleSession.RecordDefeat();
+        }
 
         resultHandled = true;
     }

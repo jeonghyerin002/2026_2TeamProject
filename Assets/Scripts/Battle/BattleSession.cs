@@ -15,8 +15,12 @@ public static class BattleSession
 
     private static int afterVictoryDialogueId; // 전투를 시작한 NPC에 설정된 승리 후 대화 ID
 
+    // 플레이어 패배 시 복귀 맵에 전달할 대화 설정과 결과
+    private static int afterDefeatDialogueId;
+    public static int DefeatDialogueId { get; private set; }
+
     // NPC 전투와 복귀 정보를 등록한다
-    public static bool Begin(string npcId, CharacterData enemy, string returnScene, Vector3 returnPosition, int victoryDialogueId = 0)
+    public static bool Begin(string npcId, CharacterData enemy, string returnScene, Vector3 returnPosition, int victoryDialogueId = 0, int defeatDialogueId = 0)
     {
         if (string.IsNullOrEmpty(npcId) || enemy == null || !enemy.IsValid || string.IsNullOrEmpty(returnScene))
             return false;
@@ -26,6 +30,8 @@ public static class BattleSession
         ReturnScene = returnScene;
         ReturnPosition = returnPosition;
         afterVictoryDialogueId = victoryDialogueId;
+        afterDefeatDialogueId = defeatDialogueId;
+        DefeatDialogueId = 0;
         VictoryDialogueId = 0;
         HasVictory = false;
         IsActive = true;
@@ -43,6 +49,17 @@ public static class BattleSession
         }
     }
 
+    // 플레이어 패배에만 복귀 후 대화 예약
+    public static void RecordDefeat()
+    {
+        // 무승부와 미완료 전투를 제외한 호출 결과 전달
+        if (IsActive)
+        {
+            DefeatDialogueId = afterDefeatDialogueId;
+        }
+    }
+
+
     // Domain Reload가 꺼져 있어도 새 실행의 전투 정보를 초기화함
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
     private static void Reset()
@@ -59,6 +76,8 @@ public static class BattleSession
         ReturnPosition = default;
         IsActive = false;
         afterVictoryDialogueId = 0;
+        afterDefeatDialogueId = 0;
+        DefeatDialogueId = 0;
         VictoryDialogueId = 0;
         HasVictory = false;
     }

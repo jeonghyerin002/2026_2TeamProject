@@ -59,6 +59,8 @@ public sealed class NPCInteractionEditor : Editor
         {
             case "beforeBattleDialogueId":
             case "afterVictoryDialogueId":
+            case "afterVictoryRepeatDialogueId":
+            case "afterDefeatDialogueId":
             case "battleData":
             case "battleSceneName":
             case "equipmentUI":

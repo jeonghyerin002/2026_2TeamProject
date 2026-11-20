@@ -45,6 +45,12 @@ public class NPCInteraction : MonoBehaviour
     [SerializeField] private int beforeBattleDialogueId = 1;
     [Tooltip("전투 모드에서 해당 NPC에게 승리한 뒤 사용할 대화 ID입니다.")]
     [SerializeField] private int afterVictoryDialogueId;
+    // 승리 후 일반 상호작용에서 사용할 별도 대화, 0이면 기존 승리 대화 유지
+    [Tooltip("승리 후 다시 말을 걸 때 사용할 대화 ID입니다. 0이면 승리 직후 대화를 사용합니다.")]
+    [SerializeField, Min(0)] private int afterVictoryRepeatDialogueId;
+    // 플레이어 패배 후 맵 복귀 시 자동 출력할 대화
+    [Tooltip("플레이어가 패배한 뒤 자동 출력할 대화 ID입니다. 0이면 대화를 생략합니다. 강제 전투에도 적용됩니다.")]
+    [SerializeField, Min(0)] private int afterDefeatDialogueId;
     // 아이템 모드의 수령 전 대사, 0이면 기존 시작 대화 ID를 사용하여 설정 보존
     [SerializeField, Min(0)]
     [Tooltip("아이템을 받기 전의 대화 ID입니다. 0이면 기존 Before Battle Dialogue Id를 사용합니다.")]
@@ -110,8 +116,8 @@ public class NPCInteraction : MonoBehaviour
             StartInteraction();
     }
 
-    // 동작 모드를 캡처하고 전투 승리 또는 보상 보유 여부에 따라 대화 선택
-    private void StartInteraction()
+    // 동작 모드와 승리 직후 여부를 캡처하여 대화 및 보상 경로 선택
+    private void StartInteraction(bool isVictoryResult = false)
     {
         if (!isActiveAndEnabled || dialogManager == null || !dialogManager.CanShowMessage)
         {
@@ -132,6 +138,14 @@ public class NPCInteraction : MonoBehaviour
         // 일반 대화와 전투의 기존 시작 ID는 유지하고 아이템 모드만 별도 ID로 분기
         int dialogId = pendingInteractionType == InteractionType.Battle && !battlePending
             ? afterVictoryDialogueId : beforeBattleDialogueId;
+
+        // 맵 복귀 자동 대화는 승리 대사 유지, 이후 재대화만 전용 대사 선택
+        if (pendingInteractionType == InteractionType.Battle && !battlePending &&
+            !isVictoryResult && afterVictoryRepeatDialogueId > 0)
+        {
+            dialogId = afterVictoryRepeatDialogueId;
+        }
+
         if (pendingInteractionType == InteractionType.DialogueOnly)
         {
             dialogId = dialogueOnlyId > 0 ? dialogueOnlyId : beforeBattleDialogueId;
@@ -216,8 +230,8 @@ public class NPCInteraction : MonoBehaviour
             return false;
         }
 
-        // 일반 재대화와 동일한 대사 선택 및 보상 검증 경로 사용
-        StartInteraction();
+        // 재대화 전용 ID를 제외한 승리 직후 대사와 기존 보상 검증 경로 사용
+        StartInteraction(true);
         return true;
     }
 
@@ -465,7 +479,7 @@ public class NPCInteraction : MonoBehaviour
 
         string returnScene = SceneManager.GetActiveScene().name;
 
-        if (!BattleSession.Begin(npcId, battleData, returnScene, player.transform.position, afterVictoryDialogueId))
+        if (!BattleSession.Begin(npcId, battleData, returnScene, player.transform.position, afterVictoryDialogueId, afterDefeatDialogueId))
         {
             Debug.LogError("NPCInteraction: NPC 전투 데이터 설정을 확인하세요.");
             CancelInteraction();

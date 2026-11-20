@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac83b93b914cfdf47a7e63fc5de6772a, type: 3}
+  m_Name: DialogSO_Ryuga_AfterVictory_6
+  m_EditorClassIdentifier: Assembly-CSharp::DialogSO
+  id: 65
+  characterName: Ryuga
+  text: "이 정도로 네 꿈이 내 꿈보다 대단해지는 건 아니니까"
+  nextId: 0
+  portrait: {fileID: 0}
+  choices: []

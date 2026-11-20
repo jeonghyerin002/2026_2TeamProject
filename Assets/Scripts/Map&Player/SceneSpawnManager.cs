@@ -17,7 +17,7 @@ public class SceneSpawnManager : MonoBehaviour
     [Header("Spawn Points List")]
     [SerializeField] private SpawnPoint[] spawnPoints;
 
-    private Coroutine victoryDialogueRoutine; // 맵 진입 연출과 공용 UI 준비를 기다리는 자동 대화
+    private Coroutine victoryDialogueRoutine; // 맵 진입 연출과 공용 UI 준비를 기다리는 승패 자동 대화
 
     // 전투 복귀 위치 또는 기존 Spawn ID 위치를 적용한다
     private void Start()
@@ -46,8 +46,9 @@ public class SceneSpawnManager : MonoBehaviour
         player.transform.position = BattleSession.ReturnPosition;
         player.SetMovementEnabled(true);
 
-        // 세션을 지우기 전에 이번 전투의 승리 대사만 확보하여 재진입 시 중복 출력을 막는다.
+        // 세션 초기화 전 이번 전투의 승패 대화 ID 확보 및 재진입 중복 출력 방지
         int victoryDialogueId = BattleSession.VictoryDialogueId;
+        int defeatDialogueId = BattleSession.DefeatDialogueId;
         // 대사 미설정 승리와 패배를 구분하고 복귀 NPC 식별자 보관
         bool hasVictory = BattleSession.HasVictory;
         string npcId = BattleSession.NpcId;
@@ -56,6 +57,11 @@ public class SceneSpawnManager : MonoBehaviour
         if (hasVictory)
         {
             victoryDialogueRoutine = StartCoroutine(ShowVictoryDialogue(npcId, victoryDialogueId));
+        }
+        else if (defeatDialogueId > 0)
+        {
+            // 패배 대화는 승리 보상 처리와 분리하여 한 번만 출력
+            victoryDialogueRoutine = StartCoroutine(ShowDefeatDialogue(defeatDialogueId));
         }
 
         return true;
@@ -93,6 +99,35 @@ public class SceneSpawnManager : MonoBehaviour
 
         victoryDialogueRoutine = null;
     }
+
+    // 맵 연출과 공용 UI 준비 후 플레이어 패배 대화 시작
+    private IEnumerator ShowDefeatDialogue(int dialogueId)
+    {
+        // 맵의 Start 초기화 완료 대기
+        yield return null;
+
+        var dialogManager = FindFirstObjectByType<DialogManager>();
+        if (dialogManager == null)
+        {
+            Debug.LogError("SceneSpawnManager: 패배 대사를 출력할 공용 DialogManager가 없습니다.", this);
+            victoryDialogueRoutine = null;
+            yield break;
+        }
+
+        // 암전과 기존 대화 종료 후 예약한 대화 ID 전달
+        while (SceneFadeIn.IsTransitioning || (dialogManager != null && !dialogManager.CanShowMessage))
+        {
+            yield return null;
+        }
+
+        if (dialogManager != null)
+        {
+            dialogManager.StartDialog(dialogueId);
+        }
+
+        victoryDialogueRoutine = null;
+    }
+
 
     private void OnDisable()
     {
