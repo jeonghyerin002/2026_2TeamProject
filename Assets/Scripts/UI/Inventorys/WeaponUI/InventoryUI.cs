@@ -11,7 +11,7 @@ using UnityEngine.InputSystem;
 [DisallowMultipleComponent]
 public sealed class InventoryUI : MonoBehaviour
 {
-    // 기존 씬의 장비 UI와 대화 제한 참조
+    // 보관함이 배치된 씬의 선택적 장비 UI와 대화 제한 참조
     [SerializeField] private AetherEquipmentUI aetherUI;
     [SerializeField] private GameObject dialogPanel;
 
@@ -52,9 +52,9 @@ public sealed class InventoryUI : MonoBehaviour
         menu = PlayerMenuUI.Instance;
         panelView = menu != null ? menu.InventoryPanel : null;
 
-        if (data == null || aetherUI == null || panelView == null || !panelView.Initialize())
+        if (data == null || panelView == null || !panelView.Initialize())
         {
-            Debug.LogError("InventoryUI: 플레이어 프리팹의 Inventory Panel과 장비 UI를 연결하세요", this);
+            Debug.LogError("InventoryUI: 플레이어 데이터와 프리팹의 Inventory Panel을 연결하세요", this);
             enabled = false;
             return;
         }
@@ -183,7 +183,8 @@ public sealed class InventoryUI : MonoBehaviour
             return;
         }
 
-        if (open)
+        // 보관함이 있는 씬에서만 두 장비 화면의 동시 열림 방지
+        if (open && aetherUI != null)
         {
             aetherUI.SetOpen(false);
         }
