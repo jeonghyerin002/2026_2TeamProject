@@ -13,6 +13,11 @@ public sealed class SceneFadeIn : MonoBehaviour
     private const float FadeDuration = 0.65f;
     private const float TextCharacterInterval = 0.08f; // 요약 문장의 글자별 출력 간격(실제 초)
     private const float TextFadeOutDuration = 1.5f; // 요약 전체가 사라지는 시간(실제 초)
+
+    // FHD 기준 전환 화면 배치와 요약 글자 크기
+    private static readonly Vector2 ReferenceResolution = new Vector2(1920f, 1080f);
+    private const float TransitionFontSize = 32f;
+
     // 이 오브젝트가 소유하고 씬 사이에 유지하는 화면과 실행 중인 코루틴
     private Canvas overlayCanvas;
     private Image overlayImage;
@@ -70,6 +75,13 @@ public sealed class SceneFadeIn : MonoBehaviour
         var canvas = root.AddComponent<Canvas>();
         canvas.renderMode = RenderMode.ScreenSpaceOverlay;
         canvas.sortingOrder = short.MaxValue;
+
+        // 씬 전환 도중 해상도가 바뀌어도 동일한 기준 좌표와 글자 비율 유지
+        var scaler = root.AddComponent<CanvasScaler>();
+        scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
+        scaler.referenceResolution = ReferenceResolution;
+        scaler.screenMatchMode = CanvasScaler.ScreenMatchMode.MatchWidthOrHeight;
+        scaler.matchWidthOrHeight = 0.5f;
 
         // 별도 텍스처 없이 화면 전체를 덮으며 입력은 기존 씬이 계속 처리
         var panel = new GameObject("Black Overlay", typeof(RectTransform), typeof(CanvasRenderer), typeof(Image));
@@ -208,7 +220,7 @@ public sealed class SceneFadeIn : MonoBehaviour
         transitionLabel.textWrappingMode = TextWrappingModes.NoWrap;
         transitionLabel.enableAutoSizing = true;
         transitionLabel.fontSizeMin = 1f;
-        transitionLabel.fontSizeMax = Screen.height * (32f / 1080f);
+        transitionLabel.fontSizeMax = TransitionFontSize;
         transitionLabel.raycastTarget = false;
     }
 
