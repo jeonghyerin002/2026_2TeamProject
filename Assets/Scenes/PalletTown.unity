@@ -14680,7 +14680,7 @@ MonoBehaviour:
     pathPoints: []
   - type: 1
     target: {fileID: 0}
-    text: "\uC0B6\uC740 \uC120\uD0DD\uC5D0 \uC5F0\uC18D\uC774\uB2C8 \uC2E0\uC911\uD558\uAC8C
+    text: "\uC0B6\uC740 \uC120\uD0DD\uC758 \uC5F0\uC18D\uC774\uB2C8 \uC2E0\uC911\uD558\uAC8C
       \uACB0\uC815\uD574"
     axis: 0
     coordinate: 0
