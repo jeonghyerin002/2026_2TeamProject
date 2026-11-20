@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 101
   characterName: Gaju
-  text: "나는 진무가문의 가주다\n이름은… 허허, 불리지 않은 지 오래라 나조차 잊고 살았구나"
-  nextId: 102
+  text: "나는 진무가문의 가주다"
+  nextId: 171
   portrait: {fileID: 0}
   choices: []

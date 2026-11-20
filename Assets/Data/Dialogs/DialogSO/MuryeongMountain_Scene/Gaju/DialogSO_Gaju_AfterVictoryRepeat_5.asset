@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 144
   characterName: Gaju
-  text: "첫 번째 시험에서는 보법의 기초를 익히게 된다\n어디에 발을 딛고 어떻게 움직여야 하는지 몸으로 배워라"
-  nextId: 145
+  text: "첫 번째 시험에서는 보법의 기초를 익히게 된다"
+  nextId: 167
   portrait: {fileID: 0}
   choices: []

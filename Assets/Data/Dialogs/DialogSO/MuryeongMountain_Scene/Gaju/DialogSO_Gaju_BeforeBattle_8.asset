@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 107
   characterName: Gaju
-  text: "자, 네가 품은 뜻이 얼마나 굳건한지\n네 무도로 보여다오!"
-  nextId: 0
+  text: "자, 네가 품은 뜻이 얼마나 굳건한지"
+  nextId: 175
   portrait: {fileID: 0}
   choices: []

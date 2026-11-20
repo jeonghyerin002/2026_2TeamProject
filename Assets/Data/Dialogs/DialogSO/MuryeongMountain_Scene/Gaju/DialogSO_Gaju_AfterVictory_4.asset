@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 123
   characterName: Gaju
-  text: "몸이 지치고 길이 보이지 않을 때에도\n스스로를 다스릴 수 있어야 하지"
-  nextId: 124
+  text: "몸이 지치고 길이 보이지 않을 때에도"
+  nextId: 163
   portrait: {fileID: 0}
   choices: []

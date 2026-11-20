@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 122
   characterName: Gaju
-  text: "다만 명심하거라\n뛰어난 무공만으로는 그분의 인정을 받을 수 없다"
-  nextId: 123
+  text: "다만 명심하거라"
+  nextId: 162
   portrait: {fileID: 0}
   choices: []

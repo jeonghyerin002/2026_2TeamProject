@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 145
   characterName: Gaju
-  text: "두 번째 시험에서는 그 흐름을 기억해야 한다\n눈으로 좇는 데 그치지 말고 이어지는 발걸음을 마음에 새기거라"
-  nextId: 146
+  text: "두 번째 시험에서는 그 흐름을 기억해야 한다"
+  nextId: 168
   portrait: {fileID: 0}
   choices: []

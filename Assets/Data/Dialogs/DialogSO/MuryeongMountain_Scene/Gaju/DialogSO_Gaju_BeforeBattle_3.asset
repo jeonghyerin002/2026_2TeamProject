@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 102
   characterName: Gaju
-  text: "오래전, 나 역시 너처럼 이 산에 올랐다\n그리고 한 분의 시험을 받았지"
-  nextId: 103
+  text: "오래전, 나 역시 너처럼 이 산에 올랐다"
+  nextId: 172
   portrait: {fileID: 0}
   choices: []

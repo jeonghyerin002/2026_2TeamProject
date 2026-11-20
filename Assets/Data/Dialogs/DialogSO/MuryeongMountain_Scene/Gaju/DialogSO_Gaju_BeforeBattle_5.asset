@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 104
   characterName: Gaju
-  text: "나는 시험을 통과하여 그분 곁에서 수련할 자격을 얻었다\n지금은 그 뜻을 받들어 이곳을 찾는 이들의 자질을 살피고 있지"
-  nextId: 105
+  text: "나는 시험을 통과하여 그분 곁에서 수련할 자격을 얻었다"
+  nextId: 174
   portrait: {fileID: 0}
   choices: []

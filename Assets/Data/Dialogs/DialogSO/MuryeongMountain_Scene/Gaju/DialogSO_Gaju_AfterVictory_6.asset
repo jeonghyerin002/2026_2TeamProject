@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 125
   characterName: Gaju
-  text: "좋다\n내 시험은 통과했다\n이제 다음 시험으로 나아가거라"
-  nextId: 0
+  text: "좋다"
+  nextId: 164
   portrait: {fileID: 0}
   choices: []

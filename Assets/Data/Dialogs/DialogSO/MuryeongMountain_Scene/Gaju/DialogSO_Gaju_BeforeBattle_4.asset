@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 103
   characterName: Gaju
-  text: "그분의 이름은 아트리온\n열두 전설 중 하나이자, 무령산을 수호하는 무도의 신수다"
-  nextId: 104
+  text: "그분의 이름은 아트리온"
+  nextId: 173
   portrait: {fileID: 0}
   choices: []

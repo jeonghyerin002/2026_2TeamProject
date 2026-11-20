@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 147
   characterName: Gaju
-  text: "서두르지 마라\n발걸음 하나에도 네 수련의 깊이가 드러나는 법이니"
-  nextId: 148
+  text: "서두르지 마라"
+  nextId: 170
   portrait: {fileID: 0}
   choices: []

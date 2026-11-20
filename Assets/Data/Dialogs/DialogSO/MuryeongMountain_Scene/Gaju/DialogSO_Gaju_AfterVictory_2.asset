@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 121
   characterName: Gaju
-  text: "네 움직임에는 망설임이 없었다\n여기까지 오른 것이 우연은 아니었구나"
-  nextId: 122
+  text: "네 움직임에는 망설임이 없었다"
+  nextId: 161
   portrait: {fileID: 0}
   choices: []

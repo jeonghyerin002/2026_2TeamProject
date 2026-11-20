@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 146
   characterName: Gaju
-  text: "마지막 시험에서는 흐름을 읽고 정확한 순간에 움직여야 한다\n마음이 급하면 발이 앞서고 망설이면 때를 놓치게 되지"
-  nextId: 147
+  text: "마지막 시험에서는 흐름을 읽고 정확한 순간에 움직여야 한다"
+  nextId: 169
   portrait: {fileID: 0}
   choices: []

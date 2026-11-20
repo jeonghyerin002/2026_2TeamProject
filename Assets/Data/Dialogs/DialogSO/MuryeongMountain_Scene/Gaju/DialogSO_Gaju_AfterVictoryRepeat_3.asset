@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 142
   characterName: Gaju
-  text: "그분께서는 늘 말씀하셨지\n제 몸과 마음조차 다스리지 못하는 자는 아무리 큰 힘을 지녀도 그 힘에 휘둘릴 뿐이라고"
-  nextId: 143
+  text: "그분께서는 늘 말씀하셨지"
+  nextId: 166
   portrait: {fileID: 0}
   choices: []

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogSO
   id: 120
   characterName: Gaju
-  text: "허허… 훌륭하구나\n이 늙은이도 아직 배울 것이 남아 있었군"
-  nextId: 121
+  text: "허허… 훌륭하구나"
+  nextId: 160
   portrait: {fileID: 0}
   choices: []
