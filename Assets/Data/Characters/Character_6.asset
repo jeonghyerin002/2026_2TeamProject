@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterData
   characterid: 6
   charactername: "\uBB34\uD22C\uAC00 \uC9C4\uC218"
-  maxhp: 49
-  attack: 42
-  defense: 30
-  specialattack: 20
+  maxhp: 39
+  attack: 29
+  defense: 21
+  specialattack: 14
   specialdefense: 30
   speed: 32
-  level: 10
+  level: 7
   weaponid: 20006
   aetherid: 40007
-  rewardexp: 2200
+  rewardexp: 4000
   weapon: {fileID: 11400000, guid: 631e9959195d00449b4f9cfe27998fff, type: 2}
   aether: {fileID: 11400000, guid: 55e43874bf28305459bedcc46af26ef2, type: 2}
   battleSprite: {fileID: 5444564357936889437, guid: 1ddce3845f3c7b443a0df154aa1b6ebf, type: 3}
