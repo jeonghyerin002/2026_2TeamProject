@@ -17093,10 +17093,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6344986420424349151, guid: 5531d1229aabd0648b0da309aa7047b6, type: 3}
-      propertyPath: npcId
-      value: npc:GlobalObjectId_V1-2-d632566e33d8f2e42a3678e3873d8267-6344986420424349151-6212034677599608924
-      objectReference: {fileID: 0}
-    - target: {fileID: 6344986420424349151, guid: 5531d1229aabd0648b0da309aa7047b6, type: 3}
       propertyPath: equipmentUI
       value: 
       objectReference: {fileID: 2200000083}

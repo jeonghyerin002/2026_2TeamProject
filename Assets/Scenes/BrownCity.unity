@@ -36827,10 +36827,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9103671687444021136, guid: 0d96fa1e8a2fad6439a9081f86e9be1f, type: 3}
-      propertyPath: npcId
-      value: Ryuga
-      objectReference: {fileID: 0}
-    - target: {fileID: 9103671687444021136, guid: 0d96fa1e8a2fad6439a9081f86e9be1f, type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 517031099}

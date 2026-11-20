@@ -752,10 +752,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5565242482444979055, guid: 3e1500151ea601e4f9a27b8f750fe34b, type: 3}
-      propertyPath: npcId
-      value: Junho
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565242482444979055, guid: 3e1500151ea601e4f9a27b8f750fe34b, type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 1121729654}
@@ -6407,10 +6403,6 @@ PrefabInstance:
     - target: {fileID: 4753790697964965509, guid: fb7e0527b8565aa44804cf181538f489, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240030155245817583, guid: fb7e0527b8565aa44804cf181538f489, type: 3}
-      propertyPath: npcId
-      value: Jinho
       objectReference: {fileID: 0}
     - target: {fileID: 7240030155245817583, guid: fb7e0527b8565aa44804cf181538f489, type: 3}
       propertyPath: dialogManager
@@ -12705,10 +12697,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1154798299396186742, guid: a565ab410ddd2804db73ab0e77cf0a16, type: 3}
       propertyPath: m_Name
-      value: Sora
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101365026514589730, guid: a565ab410ddd2804db73ab0e77cf0a16, type: 3}
-      propertyPath: npcId
       value: Sora
       objectReference: {fileID: 0}
     - target: {fileID: 5101365026514589730, guid: a565ab410ddd2804db73ab0e77cf0a16, type: 3}

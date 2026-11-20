@@ -13032,10 +13032,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5565242482444979055, guid: 3e1500151ea601e4f9a27b8f750fe34b, type: 3}
-      propertyPath: npcId
-      value: npc:GlobalObjectId_V1-2-069836a2172eb584b9767f86291e6629-5565242482444979055-848623625917305984
-      objectReference: {fileID: 0}
-    - target: {fileID: 5565242482444979055, guid: 3e1500151ea601e4f9a27b8f750fe34b, type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 392603362}
@@ -13145,10 +13141,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9103671687444021136, guid: 0d96fa1e8a2fad6439a9081f86e9be1f, type: 3}
-      propertyPath: npcId
-      value: npc:GlobalObjectId_V1-2-069836a2172eb584b9767f86291e6629-9103671687444021136-878733322684464697
-      objectReference: {fileID: 0}
-    - target: {fileID: 9103671687444021136, guid: 0d96fa1e8a2fad6439a9081f86e9be1f, type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 392603362}
@@ -13212,10 +13204,6 @@ PrefabInstance:
     - target: {fileID: 3832029104723393680, guid: 26d6043cf8f8c1b408ac48a4a6c77f00, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5087582609371750844, guid: 26d6043cf8f8c1b408ac48a4a6c77f00, type: 3}
-      propertyPath: npcId
-      value: npc:GlobalObjectId_V1-2-069836a2172eb584b9767f86291e6629-5087582609371750844-4139683315179437801
       objectReference: {fileID: 0}
     - target: {fileID: 5087582609371750844, guid: 26d6043cf8f8c1b408ac48a4a6c77f00, type: 3}
       propertyPath: dialogManager
@@ -13283,10 +13271,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7240030155245817583, guid: fb7e0527b8565aa44804cf181538f489, type: 3}
-      propertyPath: npcId
-      value: npc:GlobalObjectId_V1-2-069836a2172eb584b9767f86291e6629-7240030155245817583-4525586385402914408
-      objectReference: {fileID: 0}
-    - target: {fileID: 7240030155245817583, guid: fb7e0527b8565aa44804cf181538f489, type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 392603362}
@@ -13310,10 +13294,6 @@ PrefabInstance:
     - target: {fileID: 1154798299396186742, guid: a565ab410ddd2804db73ab0e77cf0a16, type: 3}
       propertyPath: m_Name
       value: Sora
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101365026514589730, guid: a565ab410ddd2804db73ab0e77cf0a16, type: 3}
-      propertyPath: npcId
-      value: npc:GlobalObjectId_V1-2-069836a2172eb584b9767f86291e6629-5101365026514589730-4750900615437981180
       objectReference: {fileID: 0}
     - target: {fileID: 5101365026514589730, guid: a565ab410ddd2804db73ab0e77cf0a16, type: 3}
       propertyPath: dialogManager
@@ -13417,10 +13397,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4397152686036114143, guid: 92a08fe0a4cab16478892b0abf34c819, type: 3}
-      propertyPath: npcId
-      value: npc:GlobalObjectId_V1-2-069836a2172eb584b9767f86291e6629-4397152686036114143-4980348548895730951
-      objectReference: {fileID: 0}
-    - target: {fileID: 4397152686036114143, guid: 92a08fe0a4cab16478892b0abf34c819, type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 392603362}
@@ -13488,10 +13464,6 @@ PrefabInstance:
     - target: {fileID: 4341743834952286421, guid: c8b4613941660f946828bba2c3e0a1db, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7307210134988456707, guid: c8b4613941660f946828bba2c3e0a1db, type: 3}
-      propertyPath: npcId
-      value: npc:GlobalObjectId_V1-2-069836a2172eb584b9767f86291e6629-7307210134988456707-8357485523163933858
       objectReference: {fileID: 0}
     - target: {fileID: 7307210134988456707, guid: c8b4613941660f946828bba2c3e0a1db, type: 3}
       propertyPath: dialogManager

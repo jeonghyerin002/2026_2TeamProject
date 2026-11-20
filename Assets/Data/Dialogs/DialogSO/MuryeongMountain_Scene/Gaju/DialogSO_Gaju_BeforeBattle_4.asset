@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac83b93b914cfdf47a7e63fc5de6772a, type: 3}
+  m_Name: DialogSO_Gaju_BeforeBattle_4
+  m_EditorClassIdentifier: Assembly-CSharp::DialogSO
+  id: 103
+  characterName: Gaju
+  text: "그분의 이름은 아트리온\n열두 전설 중 하나이자, 무령산을 수호하는 무도의 신수다"
+  nextId: 104
+  portrait: {fileID: 0}
+  choices: []

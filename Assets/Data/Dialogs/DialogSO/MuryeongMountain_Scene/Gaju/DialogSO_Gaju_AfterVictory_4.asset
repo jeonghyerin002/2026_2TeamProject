@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac83b93b914cfdf47a7e63fc5de6772a, type: 3}
+  m_Name: DialogSO_Gaju_AfterVictory_4
+  m_EditorClassIdentifier: Assembly-CSharp::DialogSO
+  id: 123
+  characterName: Gaju
+  text: "몸이 지치고 길이 보이지 않을 때에도\n스스로를 다스릴 수 있어야 하지"
+  nextId: 124
+  portrait: {fileID: 0}
+  choices: []

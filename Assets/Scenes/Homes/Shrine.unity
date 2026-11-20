@@ -4429,10 +4429,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3070460917888390550, guid: 166567075d1cfa94ab7a0d9fef9674ac, type: 3}
-      propertyPath: npcId
-      value: npc:GlobalObjectId_V1-2-fd5f6127197320141a0bdabdaf9fb86f-3070460917888390550-7431505959234675027
-      objectReference: {fileID: 0}
-    - target: {fileID: 3070460917888390550, guid: 166567075d1cfa94ab7a0d9fef9674ac, type: 3}
       propertyPath: equipmentUI
       value: 
       objectReference: {fileID: 2200000083}

@@ -159,8 +159,9 @@ MonoBehaviour:
   additionalRewardItemIds: 
   dialogManager: {fileID: 0}
   dialogueOnlyId: 0
-  beforeBattleDialogueId: 30
-  afterVictoryDialogueId: 34
+  beforeBattleDialogueId: 100
+  afterVictoryDialogueId: 120
+  afterVictoryRepeatDialogueId: 140
   afterDefeatDialogueId: 0
   beforeRewardDialogueId: 0
   afterRewardDialogueId: 0

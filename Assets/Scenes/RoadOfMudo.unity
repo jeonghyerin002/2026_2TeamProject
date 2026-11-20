@@ -328,10 +328,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7307210134988456707, guid: c8b4613941660f946828bba2c3e0a1db, type: 3}
-      propertyPath: npcId
-      value: Jinsu
-      objectReference: {fileID: 0}
-    - target: {fileID: 7307210134988456707, guid: c8b4613941660f946828bba2c3e0a1db, type: 3}
       propertyPath: dialogManager
       value: 
       objectReference: {fileID: 929950588}
@@ -19137,10 +19133,6 @@ PrefabInstance:
     - target: {fileID: 4350641262722461811, guid: 92a08fe0a4cab16478892b0abf34c819, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4397152686036114143, guid: 92a08fe0a4cab16478892b0abf34c819, type: 3}
-      propertyPath: npcId
-      value: Jisu
       objectReference: {fileID: 0}
     - target: {fileID: 4397152686036114143, guid: 92a08fe0a4cab16478892b0abf34c819, type: 3}
       propertyPath: dialogManager

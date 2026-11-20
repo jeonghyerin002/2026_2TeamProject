@@ -135,11 +135,11 @@ public static class GameSaveAutoRegistration
     private static IEnumerable<T> Components<T>(Scene scene) where T : Component =>
         scene.GetRootGameObjects().SelectMany(root => root.GetComponentsInChildren<T>(true));
 
-    // 신규 NPC/컷신과 컷신 대상은 저장 ID를 얻고, 복제된 대상은 별도의 ID를 얻는다.
+    // 프리팹 NPC ID 유지 및 나머지 저장 대상의 고유 ID 준비
     public static void PrepareScene(Scene scene, bool undo)
     {
         var seenNpc = new HashSet<string>();
-        foreach (var npc in Components<NPCInteraction>(scene)) EnsureIdentity(npc, "npcId", "npc", seenNpc, undo);
+        foreach (var npc in Components<NPCInteraction>(scene)) PreserveNpcIdentity(npc, seenNpc, undo);
         var seenCutscene = new HashSet<string>();
         foreach (var cutscene in Components<TriggerCutscene>(scene))
         {
@@ -162,7 +162,7 @@ public static class GameSaveAutoRegistration
         foreach (var actor in Components<PersistentWorldActor>(scene)) EnsureIdentity(actor, "persistentId", "actor", seenActor, undo);
     }
 
-    // 기존 ID는 유지하고 오브젝트 소유 정보가 복제된 경우에만 새 ID를 만든다.
+    // NPC 외 저장 대상의 소유 정보와 복제 여부 확인
     private static void EnsureIdentity(Component item, string field, string category, HashSet<string> seen, bool undo)
     {
         var state = new SerializedObject(item);
@@ -187,6 +187,46 @@ public static class GameSaveAutoRegistration
         if (undo)
         {
             PrefabUtility.RecordPrefabInstancePropertyModifications(item);
+            EditorSceneManager.MarkSceneDirty(item.gameObject.scene);
+        }
+    }
+
+
+    // NPC ID 자동 재발급 없이 프리팹 원본 또는 기존 직렬화 값 유지
+    private static void PreserveNpcIdentity(NPCInteraction item, HashSet<string> seen, bool undo)
+    {
+        // 씬 처리 중 프리팹 연결이 사라진 경우에도 기존 NPC ID 유지
+        var state = new SerializedObject(item);
+        var id = state.FindProperty("npcId");
+        var value = id.stringValue;
+        var source = PrefabUtility.GetCorrespondingObjectFromSource(item);
+        if (source != null)
+        {
+            // 연결된 원본이 있으면 프리팹에 저장된 ID를 기준으로 복원
+            value = new SerializedObject(source).FindProperty("npcId").stringValue;
+        }
+
+        // 누락과 중복은 설정 오류로 전달하고 사용자 지정 ID 변경 금지
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            throw new InvalidOperationException("NPC ID를 지정하세요: " + item.name);
+        }
+
+        if (!seen.Add(value))
+        {
+            throw new InvalidOperationException("중복 NPC ID: " + value);
+        }
+
+        // 프리팹 연결이 없는 플레이 및 빌드용 씬은 직렬화 값 그대로 사용
+        if (source == null || (id.stringValue == value && !id.prefabOverride))
+        {
+            return;
+        }
+
+        // 원본과의 연결 복원으로 이후 프리팹 ID 변경도 그대로 상속
+        PrefabUtility.RevertPropertyOverride(id, undo ? InteractionMode.UserAction : InteractionMode.AutomatedAction);
+        if (undo)
+        {
             EditorSceneManager.MarkSceneDirty(item.gameObject.scene);
         }
     }
@@ -255,7 +295,7 @@ public static class GameSaveAutoRegistration
                     if (preview) EditorSceneManager.ClosePreviewScene(scene);
                 }
             }
-            if (npcs.Distinct().Count() != npcs.Count || cutscenes.Distinct().Count() != cutscenes.Count ||
+            if (cutscenes.Distinct().Count() != cutscenes.Count ||
                 actors.Select(actor => actor.id).Distinct().Count() != actors.Count)
                 throw new InvalidOperationException("Scene 사이에 저장 ID가 중복됩니다. 복제한 Scene의 대상을 확인하세요.");
             var before = EditorJsonUtility.ToJson(catalog);
@@ -263,7 +303,8 @@ public static class GameSaveAutoRegistration
             catalog.aethers = Collect(catalog.aethers, (AetherData item) => item.itemId);
             catalog.weapons = Collect(catalog.weapons, (WeaponData item) => item.ItemId);
             catalog.mapScenes = maps;
-            catalog.npcIds = npcs.OrderBy(id => id).ToArray();
+            // 여러 씬에 배치된 동일 NPC의 전투 진행 상태를 원본 ID 하나로 공유
+            catalog.npcIds = npcs.Distinct().OrderBy(id => id).ToArray();
             catalog.cutsceneIds = cutscenes.OrderBy(id => id).ToArray();
             catalog.actorDefinitions = actors.OrderBy(actor => actor.id).ToArray();
             if (before != EditorJsonUtility.ToJson(catalog))
