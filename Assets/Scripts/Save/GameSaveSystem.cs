@@ -297,6 +297,9 @@ public static class GameSaveSystem
             isBusy = true;
             BattleSession.Clear();
             SceneSpawnManager.nextSpawnID = null;
+            // 불러온 진행에 이전 세션의 출입구 복귀 기록을 적용하지 않도록 초기화
+            Door.ClearReturnPoints();
+
             NpcBattleProgress.RestoreSave(save.defeatedNpcIds);
             WorldSaveProgress.Restore(save.completedCutsceneIds, save.worldActors);
         }))
@@ -332,6 +335,9 @@ public static class GameSaveSystem
         pending = null;
         BattleSession.Clear();
         SceneSpawnManager.nextSpawnID = null;
+        // 새 진행의 첫 진입에는 씬에 등록된 기본 도착 지점 사용
+        Door.ClearReturnPoints();
+
         NpcBattleProgress.RestoreSave(Array.Empty<string>());
         WorldSaveProgress.Restore(Array.Empty<string>(), Array.Empty<SavedWorldActor>());
     }

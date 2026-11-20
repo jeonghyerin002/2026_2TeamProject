@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSpawnManager
   spawnPoints:
-  - spawnID: 'JinmuHouse '
+  - spawnID: JinmuHouse
     spawnTransform: {fileID: 81325520}
 --- !u!212 &81325519
 SpriteRenderer:
@@ -220,7 +220,7 @@ Transform:
   m_GameObject: {fileID: 81325517}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.01, y: 0.13, z: 0}
+  m_LocalPosition: {x: 0, y: -1.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12308,7 +12308,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
   sceneName: BrownCity
-  targetSpawnID: BrownCity
+  targetSpawnID: BrownCity_FromJinmuHouse
+  returnSpawnID: JinmuHouse
   requiresEquippedWeapon: 1
   weaponGate: {fileID: 0}
 --- !u!61 &1507294524
