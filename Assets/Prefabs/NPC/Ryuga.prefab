@@ -162,7 +162,7 @@ MonoBehaviour:
   beforeBattleDialogueId: 30
   afterVictoryDialogueId: 60
   afterVictoryRepeatDialogueId: 66
-  afterDefeatDialogueId: 0
+  afterDefeatDialogueId: 176
   beforeRewardDialogueId: 0
   afterRewardDialogueId: 0
   battleSceneName: Battle
