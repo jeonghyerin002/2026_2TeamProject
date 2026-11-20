@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
+/// <summary>
+/// 출입 조건 확인과 플레이어 이동 정지를 포함한 씬 전환 요청
+/// </summary>
 public class Door : MonoBehaviour
 {
     [Header("Scene Setting")]
@@ -70,10 +72,39 @@ public class Door : MonoBehaviour
 
         }
     }
-    void ChangeScene()
+
+
+    // 감지 직후 이동 정지 후 목적지 씬 로딩 완료 시 기존 이동 상태 복구
+    private void ChangeScene()
     {
-        // 수락된 전환만 출구를 잠그고 암전 후 도착 위치를 지정
+        // 지속 플레이어의 기존 이동 상태 보관 후 입력과 물리 속도 즉시 초기화
+        var player = PlayerController.Instance;
+        if (player == null)
+        {
+            Debug.LogError("Door: 씬을 이동할 PlayerController가 없습니다.", this);
+            return;
+        }
+
+        var wasMovementEnabled = player.IsMovementEnabled;
+        player.SetMovementEnabled(false);
+
+        // 출발 씬의 Door 파괴 후에도 사용할 도착 ID와 플레이어 참조 전달
+        var spawnID = targetSpawnID;
         isChangingScene = SceneFadeIn.LoadScene(sceneName,
-            () => SceneSpawnManager.nextSpawnID = targetSpawnID);
+            () => SceneSpawnManager.nextSpawnID = spawnID,
+            () =>
+            {
+                // 목적지 로딩 완료 후 이번 전환이 제한한 이동 상태 복구
+                if (player != null)
+                {
+                    player.SetMovementEnabled(wasMovementEnabled);
+                }
+            });
+
+        // 잘못된 씬 설정이나 중복 요청 거절 시 출발 씬에서 이동 상태 복구
+        if (!isChangingScene)
+        {
+            player.SetMovementEnabled(wasMovementEnabled);
+        }
     }
 }
